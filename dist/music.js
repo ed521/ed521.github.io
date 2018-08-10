@@ -23,7 +23,8 @@ const ap = new APlayer({
         name: 'Butter-Fly',
         artist: 'コバソロ & 七穂',
         url: 'https://www.dropbox.com/s/evy7ro9uzthh23t/Butter-Fly.mp3?dl=1',
-        cover: '/music/Butter-Fly.jpg'
+        cover: '/music/Butter-Fly.jpg',
+		lrc: '/music/Butter-Fly.lrc'
       },
       {
         name: 'Catch the Moment',
@@ -36,7 +37,8 @@ const ap = new APlayer({
         name: 'Baby Dont Know Why',
         artist: 'Ms.OOJA (Nightcore)',
         url: 'https://www.dropbox.com/s/z56ylrcmirenxwt/Baby%20Dont%20Know%20Why.mp3?dl=1',
-        cover: '/music/Baby Dont Know Why.jpg'
+        cover: '/music/Baby Dont Know Why.png',
+		lrc: '/music/Baby Dont Know Why.lrc'
       },
 	  {
         name: '打上花火',
