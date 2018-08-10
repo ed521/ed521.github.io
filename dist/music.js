@@ -34,7 +34,7 @@ const ap = new APlayer({
       },
 	  {
         name: 'Baby Dont Know Why',
-        artist: 'Nightcore',
+        artist: 'Ms.OOJA (Nightcore)',
         url: 'https://www.dropbox.com/s/z56ylrcmirenxwt/Baby%20Dont%20Know%20Why.mp3?dl=1',
         cover: '/music/Baby Dont Know Why.jpg'
       },
@@ -72,6 +72,13 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/an8fjqsp6a4j1tz/%E5%91%8A%E7%99%BD%E6%B0%A3%E7%90%83.mp3?dl=1',
         cover: '/music/告白氣球.jpg',
 		lrc: '/music/告白氣球.lrc'
+      },
+	  {
+        name: 'I Really Like You',
+        artist: 'Carly Rae Jepsen (Nightcore)',
+        url: 'https://www.dropbox.com/s/5r2dj9s8bjchid0/I%20Really%20Like%20You.mp3?dl=1',
+        cover: '/music/I Really Like You.jpg',
+		lrc: '/music/I Really Like You.lrc'
       }
     ]
 });
