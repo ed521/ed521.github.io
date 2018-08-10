@@ -37,7 +37,7 @@ const ap = new APlayer({
         name: 'Baby Dont Know Why',
         artist: 'Ms.OOJA (Nightcore)',
         url: 'https://www.dropbox.com/s/z56ylrcmirenxwt/Baby%20Dont%20Know%20Why.mp3?dl=1',
-        cover: '/music/Baby Dont Know Why.png',
+        cover: '/music/Baby Dont Know Why.jpg',
 		lrc: '/music/Baby Dont Know Why.lrc'
       },
 	  {
