@@ -41,6 +41,13 @@ const ap = new APlayer({
 		lrc: '/music/Baby Dont Know Why.lrc'
       },
 	  {
+        name: 'LOSER',
+        artist: '米津玄師',
+        url: 'https://www.dropbox.com/s/ejqhblc330b99bc/LOSER.mp3?dl=1',
+        cover: '/music/LOSER.jpg',
+		lrc: '/music/LOSER.lrc'
+      },
+	  {
         name: '打上花火',
         artist: 'DAOKO × 米津玄師',
         url: 'https://www.dropbox.com/s/40rfbozfxpf2t86/%E6%89%93%E4%B8%8A%E8%8A%B1%E7%81%AB.mp3?dl=1',
@@ -53,6 +60,13 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/xhyyn6367bt0nb5/%E5%85%89%E5%B9%B4%E4%B9%8B%E5%A4%96.mp3?dl=1',
         cover: '/music/光年之外.jpg',
 		lrc: '/music/光年之外.lrc'
+      },
+	  {
+        name: '再見',
+        artist: '鄧紫棋',
+        url: 'https://www.dropbox.com/s/uaevhz9wieblf7h/%E5%86%8D%E8%A6%8B.mp3?dl=1',
+        cover: '/music/再見.jpg',
+		lrc: '/music/再見.lrc'
       },
 	  {
         name: '漂向北方',
