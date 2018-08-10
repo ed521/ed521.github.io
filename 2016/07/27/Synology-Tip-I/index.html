@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-TW">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+<meta name="google-site-verification" content="ChDrfBcKsWqfBQORQHrgM9Gm52vn9PeXdjEJqCvfhKE" />
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('請輸入文章密碼') !== '') {
+                alert('密碼錯誤！');
+                if (history.length === 1) {
+                    location.replace("http://ed521.ddns.net"); // 這裡替換成你的首頁
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.4.0',
+    sidebar: {"position":"left","width":280,"display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ I-1 攝影機安裝教學I-2 『即時影像』&amp;amp;『快照』I-3 『時間線』I-4 『智慧搜尋』I-5 『錄影』I-6 使用者設定I-7 行動裝置《DS cam》">
+<meta name="keywords" content="Synology NAS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Synology Tip I. 監控篇">
+<meta property="og:url" content="http://ed521.ddns.net/2016/07/27/Synology-Tip-I/index.html">
+<meta property="og:site_name" content="ED Blog">
+<meta property="og:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ I-1 攝影機安裝教學I-2 『即時影像』&amp;amp;『快照』I-3 『時間線』I-4 『智慧搜尋』I-5 『錄影』I-6 使用者設定I-7 行動裝置《DS cam》">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-l1tmTNivKcc/V5hhQ8US4EI/AAAAAAAAAgk/wHof3rbxUREsfFe_j1oVroo5-CtvaAJJgCCo/s1024/s01.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-1mLcufYrcH8/V5hhRGvaKmI/AAAAAAAAAg0/OVUqbdW9r2gaCwpeesqffgupVzE0DOw1QCCo/s1024/s02.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-P6SmZFtuKms/V5hhkHFDRzI/AAAAAAAAAjQ/z5tDrBC06hY1I2OhrXSeutwzACUwo-WSACCo/s1280/I-1.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-h3wQKuC-T0w/V5hhQxwq00I/AAAAAAAAAgg/7xhctjOoDNMuXZW2y4Md14jqd4DjtvlVACCo/s1024/s02-1.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Uqg_nM17fv0/V5hhQ5ZfVlI/AAAAAAAAAgo/l3KiIpP8CGEi8FbhUNJyT5ZZ-9M_-zo0ACCo/s1024/s02-2.JPG">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-2_aLHxUsnG8/V5hhReg-G6I/AAAAAAAAAgs/VHDrRIPyVS86f_kincy2xw6Ow8k-85kbgCCo/s1024/s03.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-VUL2I69YxVo/V5hhRWJEG7I/AAAAAAAAAgw/X-dDkYCrGx8tXe7-dP5SM1rBHesoGx58wCCo/s1024/s04.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-n7buQXzbLO4/V5hhRsQqmtI/AAAAAAAAAg4/3hqfCp2hRWcUGsvYTRsAW2DfRGiXOxo9ACCo/s1024/s05.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-iy9zeR8ThgI/V5hhSBIzlzI/AAAAAAAAAhM/oNwpLExIUloEVqM2YYGkBM2MgE7jLlIlwCCo/s1024/s06.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-kt9r3Sq1y50/V5hhRlMDEmI/AAAAAAAAAg8/eWzmWo3PJGMlT0v9jqUaL4C97h5_AwDtQCCo/s1024/s06-1.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-J_Vfb6frz7M/V5hhRodADPI/AAAAAAAAAhA/XHoW-OxSkwMqzXzS_h0aD45EnEeWBWlgQCCo/s1024/s06-2.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-KANyyPBs6Bc/V5hhkIc-cDI/AAAAAAAAAjY/Q0RJ6g5j6UMQzMwqKof-q07Ki1sr-pGoACCo/s1280/I-2.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-DdU9JKEp1rs/V5hhSJoWOfI/AAAAAAAAAhE/9DmVAoGYqfsm3a7VLZ1U4FMp_pBxQhfxQCCo/s1024/s07.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-hG1uX5ciwvE/V5hhSEH00wI/AAAAAAAAAhI/2mFMminsNFw0ul7Sly87g77YxR-LvuU1ACCo/s1024/s08.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-RROvcDt7yg4/V5hhSaJQWSI/AAAAAAAAAhQ/MWqmMNexxvUjGusMZsfnywaJNx4s-jLsACCo/s1024/s09.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-kzLc1M4XuFY/V5hhSglzTPI/AAAAAAAAAhU/kbNEHVICD_MOxjJe4LV1T55qqU_9ZcjHACCo/s1024/s10.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-aT234bDKzx4/V5hhSnZrIqI/AAAAAAAAAhY/XcUe-R1gu2g2ZwS_rZp4h1CcFKAOfwYlQCCo/s1024/s11.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-5WBnoZA8MHA/V5hhTc5N-3I/AAAAAAAAAhk/n6Wux5s7Di4vNl0oO1Mirv1mIy0vprySgCCo/s1024/s12.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-SUx4_JvIie4/V5hhUKsd5aI/AAAAAAAAAhw/5fWMC1iJeFkXJ8YnldtFJ8HgC39L2vr6QCCo/s1024/s13.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-suLBo2qEMQg/V5hhTMSuxLI/AAAAAAAAAhc/UkmG8-UH2gMW7HAYGxA8QLecbOi9ppXgQCCo/s1024/s14.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Fy8tX0bHzZ8/V5hhTWh99EI/AAAAAAAAAjw/myalAumPK2w3ThCkNL3UfC42roO3SsnlgCCo/s1024/s15.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-vKkYut-lsbc/V5hhT536DDI/AAAAAAAAAjw/yO_LiGu3kJwsOhnYh9tc78pw8ZLWSdnqACCo/s1024/s16.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-RtXpI_6OIEA/V5hhkFv7LKI/AAAAAAAAAjU/HuLJfRwARDUiArw_VdMIMYgQD_Jw_0-WwCCo/s1280/I-3.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-WfQGqNwItpI/V5hhT2ZYQCI/AAAAAAAAAjw/2iGXkJoKz8k396bgWxBS-d2pK6Ju8G4RQCCo/s1024/s17.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-l5Xt9Io32PM/V5hhUOjY_5I/AAAAAAAAAjw/tHmZ0_0LO-wd7-D0Zn6O7QazbmBxh2AhACCo/s1024/s18.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-VQnhBnf-Jxs/V5hhUVjzz1I/AAAAAAAAAjw/EGecRAi_Hlwl3JS1iCNaT_9H76_F8gU7gCCo/s1024/s19.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-kMNgPnhtkhY/V5hhUT2uVLI/AAAAAAAAAjw/nEopJ2csX8Apb172rct0uY3rXTl7SLmWACCo/s1024/s20.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-5AIbprrUetU/V5hhUvO4YdI/AAAAAAAAAjw/qvJxf5H4N4wH-HLgdAC-NaGkqHOuxemfQCCo/s1024/s21.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-8g09_1XtcWE/V5hhkjDv3pI/AAAAAAAAAjc/-cLTt__stcUr8Sl6AlXlu1KyJeYobysmwCCo/s1280/I-4.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-W2Q-EGs4lvE/V5hhU-gfBQI/AAAAAAAAAjw/niT-K-Y6SX07NXacUsBD1nohUm9bxlWWgCCo/s1024/s22.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-G1pIXjkmAc8/V5hhU4pZW9I/AAAAAAAAAjw/AhTQKzmPaS0hCtvmKNgXmxc_fGjFTdO9gCCo/s1024/s23.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-D4kLbJL8YVo/V5hhVHtiu_I/AAAAAAAAAjw/0boCo9D0b44IY-z2FnWqcZmJxjrA3WYygCCo/s1024/s24.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-hx3P8bcX0lU/V5hhVDo-FHI/AAAAAAAAAjw/N_Yn7TduPAEbP677dmGDIRZzEFKSav1_ACCo/s1024/s25.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-HdR7jqi20fs/V5hhkhx21ZI/AAAAAAAAAjg/CkMW-JRrwxU6EbUAjTXVknL58nrr3rXSACCo/s1280/I-5.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-ETxXlUkyVkI/V5hhVX2PWGI/AAAAAAAAAjw/ztrhUgXMC4EGAf3hP6I6pIYXvRUMcqdmwCCo/s1024/s26.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-SMTyuZKnBaE/V5hhVRVuRwI/AAAAAAAAAjw/S9_3CknAm7EWiI332cUt0Irge0ASg5tjACCo/s1024/s27.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-WO_ygFzMexA/V5hhVnKHB7I/AAAAAAAAAjw/VEG0kxUlN-QAkxOwzFjjB3fQmpcXBzjVwCCo/s1024/s28.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-5LpCF_yxLeg/V5hhVghlLhI/AAAAAAAAAjw/uON6vnbEbbIDbHn-M_Quc9uk-naNDyV6QCCo/s1024/s29.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-M-IomDwvOyM/V5hhV69GYVI/AAAAAAAAAjw/nQBhMmuVmowuEOywBykqPrO_Ih8k3IgFQCCo/s1024/s30.gif">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-u6ift7-BPMA/V5hhk2aFH0I/AAAAAAAAAjk/ns2L-E2yCTgSF_lxyL7vAzClmKyCet0yQCCo/s1280/I-6.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-YHOA8qh4rr4/V5hhWHov5kI/AAAAAAAAAjw/wXyOeGZLKBUPrI69eCw3S_imfi59O7YkgCCo/s1024/s31.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-FyedGDFbb10/V5hhWEcs22I/AAAAAAAAAjw/7ZBBJv6OwpEMbYEZnSu0tw5Y44U3H2L7QCCo/s1024/s32.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-i45kx7CA124/V5hhWNYYfrI/AAAAAAAAAjw/SMnrvCy37PETZjmjNlyPx-Rytp9SP8i7QCCo/s1024/s33.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/--gClsDRHVuU/V5hhWQwkX2I/AAAAAAAAAjw/U7C8kd8NlS0fgqO3_QlaPpoY_06xYLy8wCCo/s1024/s34.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-0O-PUT6z6e8/V5hhk8_l2yI/AAAAAAAAAjo/I_Q00DwBTdY1jN-6lL_L0HPuUSb3j1AMwCCo/s1280/I-7.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-kIARHLfJHC0/V5hhWQFoh5I/AAAAAAAAAjw/jZdB80SsWmIE1Oz2Vx_6GFE2BZINhKiRwCCo/s720/s35.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-jUjRB6030sI/V5hhWqROtaI/AAAAAAAAAjw/YMgzqARz8MErSFUYEYGz4waWwGSg-5WiwCCo/s720/s36.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-8UGkK1QDgHY/V5hhW9YpWMI/AAAAAAAAAjw/QRfW_aPjrKIljk-3SXrYVxqKxzOgKkOCgCCo/s1024/s37.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-xamOiOP002g/V5hhWxAo0QI/AAAAAAAAAjw/xDBKX-LWmAkHzIhXD4Dji7NRqBd4stK2QCCo/s1024/s38.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-4deD65BxjUc/V5hhXHfHBXI/AAAAAAAAAjw/sipiv4ihDx4sdx1hT61lzhmEggXTEKIMQCCo/s800/s39.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-L0TpU3UUPxg/V5hhXU_7hyI/AAAAAAAAAjw/7gjgmEZEG9QdlQKB6pL3FPCVO1kjrNmeQCCo/s800/s40.png">
+<meta property="og:updated_time" content="2018-05-25T09:34:17.208Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Synology Tip I. 監控篇">
+<meta name="twitter:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ I-1 攝影機安裝教學I-2 『即時影像』&amp;amp;『快照』I-3 『時間線』I-4 『智慧搜尋』I-5 『錄影』I-6 使用者設定I-7 行動裝置《DS cam》">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/-l1tmTNivKcc/V5hhQ8US4EI/AAAAAAAAAgk/wHof3rbxUREsfFe_j1oVroo5-CtvaAJJgCCo/s1024/s01.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ED Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://ed521.ddns.net/2016/07/27/Synology-Tip-I/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Synology Tip I. 監控篇 | ED Blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-61473305-3');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ED Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">歡迎來到 ED Blog</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首頁</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />關於</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />標籤<span class="badge">11</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分類<span class="badge">6</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />歸檔<span class="badge">36</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-dsm-登入">
+    <a href="https:/notp.ddns.net:5001" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />DSM 登入</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ed521.ddns.net/2016/07/27/Synology-Tip-I/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EDEN">
+      <meta itemprop="description" content="歡迎來到 ED Blog">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ED Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Synology Tip I. 監控篇
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2016-07-27 13:38:00" itemprop="dateCreated datePublished" datetime="2016-07-27T13:38:00+08:00">2016-07-27</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/NAS/" itemprop="url" rel="index"><span itemprop="name">NAS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/27/Synology-Tip-I/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/07/27/Synology-Tip-I/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/27/Synology-Tip-I/" class="leancloud_visitors" data-flag-title="Synology Tip I. 監控篇">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>※本文章為<a href="http://ed521.ddns.net/Synology-DS916plus/" target="_blank">NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！</a>之分支※</p>
+<p><a href="#I-1">I-1 攝影機安裝教學</a><br><a href="#I-2">I-2 『即時影像』&amp;『快照』</a><br><a href="#I-3">I-3 『時間線』</a><br><a href="#I-4">I-4 『智慧搜尋』</a><br><a href="#I-5">I-5 『錄影』</a><br><a href="#I-6">I-6 使用者設定</a><br><a href="#I-7">I-7 行動裝置《DS cam》</a></p>
+<a id="more"></a>
+<p>『<span style="color: #800080;">Surveillance Station</span>』是網頁介面的應用程式，可<span style="color: #800000;">管理網路攝影機來保衛家庭或辦公室環境的安全</span>。使用『<span style="color: #800080;">Surveillance Station</span>』可以觀看並錄製即時影像、設定排程錄影，還能透過網頁、行動裝置來播放錄製好的事件。</p>
+<p><img src="https://lh3.googleusercontent.com/-l1tmTNivKcc/V5hhQ8US4EI/AAAAAAAAAgk/wHof3rbxUREsfFe_j1oVroo5-CtvaAJJgCCo/s1024/s01.png"></p>
+<p>『<span style="color: #800080;">Surveillance Station</span>』擁有各式各樣的功能，如<span style="color: #800000;">快照、日誌、即時影像、時間線、智慧搜尋</span>等等。</p>
+<p><img src="https://lh3.googleusercontent.com/-1mLcufYrcH8/V5hhRGvaKmI/AAAAAAAAAg0/OVUqbdW9r2gaCwpeesqffgupVzE0DOw1QCCo/s1024/s02.png"></p>
+<p><a id="I-1" name="I-1"></a><br><img src="https://lh3.googleusercontent.com/-P6SmZFtuKms/V5hhkHFDRzI/AAAAAAAAAjQ/z5tDrBC06hY1I2OhrXSeutwzACUwo-WSACCo/s1280/I-1.png"></p>
+<p>在安裝IP攝影機之前，請先確認以下事項：</p>
+<ol>
+<li><p>您的IP網路攝影機使否有在Synology官方裡的<a href="https://www.synology.com/zh-tw/compatibility/camera" target="_blank">網路攝影機（IP Cam）支援清單</a>中。</p>
+</li>
+<li><p>安裝完網路攝影機後，進入路由器管理畫面，確認是否與NAS在同一區域網路內；如果有，記錄下該IP Cam的區網位置。(例如這台的位址是192.168.0.164)</p>
+</li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/-h3wQKuC-T0w/V5hhQxwq00I/AAAAAAAAAgg/7xhctjOoDNMuXZW2y4Md14jqd4DjtvlVACCo/s1024/s02-1.png"></p>
+<p>筆者本次測試的攝影機為小蟻智慧攝影機夜視版，並把它裝在家中大門口的角落上方。(<span style="color: #800000;"><strong>注意：小蟻攝影機並未在官方支援清單中，除了需進入NAS系統內部增加設定檔，還要讓攝影機刷韌體開啟RTSP服務，因此請挑選官方支援的IP CAM!!!</strong></span>)</p>
+<p><img src="https://lh3.googleusercontent.com/-Uqg_nM17fv0/V5hhQ5ZfVlI/AAAAAAAAAgo/l3KiIpP8CGEi8FbhUNJyT5ZZ-9M_-zo0ACCo/s1024/s02-2.JPG"></p>
+<p>前置作業完成後，就可以開始安裝攝影機了唷！打開『<span style="color: #800080;">網路攝影機</span>』，按一下”<span style="color: #0000ff;">新增</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-2_aLHxUsnG8/V5hhReg-G6I/AAAAAAAAAgs/VHDrRIPyVS86f_kincy2xw6Ow8k-85kbgCCo/s1024/s03.png"></p>
+<p>“<span style="color: #0000ff;">完整設定</span>“還會設定攝影機的錄影模式/排程等，這邊先選擇”<span style="color: #0000ff;">快速設定</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-VUL2I69YxVo/V5hhRWJEG7I/AAAAAAAAAgw/X-dDkYCrGx8tXe7-dP5SM1rBHesoGx58wCCo/s1024/s04.png"></p>
+<p>輸入相關設定，如剛記下來的IP、品牌型號、使用者帳密等等。(注意DSC-Ants此型號為筆者個別加入的，預設是沒有的)</p>
+<p><img src="https://lh3.googleusercontent.com/-n7buQXzbLO4/V5hhRsQqmtI/AAAAAAAAAg4/3hqfCp2hRWcUGsvYTRsAW2DfRGiXOxo9ACCo/s1024/s05.png"></p>
+<p>如果NAS有讀到攝影機，會看到該網路攝影機顯示在正常欄位；如果位於”已斷線”代表連線未成功。</p>
+<p><img src="https://lh3.googleusercontent.com/-iy9zeR8ThgI/V5hhSBIzlzI/AAAAAAAAAhM/oNwpLExIUloEVqM2YYGkBM2MgE7jLlIlwCCo/s1024/s06.png"></p>
+<p>由於剛才選擇”快速設定”，在攝影機的「<span style="color: #0000ff;">錄影設定</span>」→「<span style="color: #0000ff;">錄影</span>」有基本相關設定；例如”<span style="color: #0000ff;">限制存檔資料夾大小</span>“若設定為10GB，那麼超過的容量就會<span style="color: #800000;">從最舊的影片開始刪除，也就是所謂的”循環錄影”</span>。(「<span style="color: #0000ff;">錄影設定</span>」→「<span style="color: #0000ff;">進階</span>」可設定空間到達上限時，要進行循環錄影還是停止錄影)</p>
+<p><img src="https://lh3.googleusercontent.com/-kt9r3Sq1y50/V5hhRlMDEmI/AAAAAAAAAg8/eWzmWo3PJGMlT0v9jqUaL4C97h5_AwDtQCCo/s1024/s06-1.png"></p>
+<p>「<span style="color: #0000ff;">錄影設定</span>」→「<span style="color: #0000ff;">排程</span>」則可以選擇錄影條件(預設為連續錄影)；例如下圖的設定方式為：每天晚上十一點~六點為”動作偵測錄影”，其餘為”連續錄影”。(後面的『<span style="color: #800080;">智慧搜尋</span>』會測試”動作偵測”功能)</p>
+<p><img src="https://lh3.googleusercontent.com/-J_Vfb6frz7M/V5hhRodADPI/AAAAAAAAAhA/XHoW-OxSkwMqzXzS_h0aD45EnEeWBWlgQCCo/s1024/s06-2.png"></p>
+<p><a id="I-2" name="I-2"></a><br><img src="https://lh3.googleusercontent.com/-KANyyPBs6Bc/V5hhkIc-cDI/AAAAAAAAAjY/Q0RJ6g5j6UMQzMwqKof-q07Ki1sr-pGoACCo/s1280/I-2.png"></p>
+<p>『<span style="color: #800080;">Surveillance Station</span>』只要是顯示影像畫面的地方，就需要裝一個外掛套件(才能顯示影像)；不過目前『<span style="color: #800080;">Surveillance Station</span>』的外掛套件不支援Chrome、IE、Microsoft Edge等網頁瀏覽器，實測後只有Firefox可以使用，是筆者認為比較可惜的地方。</p>
+<p><img src="https://lh3.googleusercontent.com/-DdU9JKEp1rs/V5hhSJoWOfI/AAAAAAAAAhE/9DmVAoGYqfsm3a7VLZ1U4FMp_pBxQhfxQCCo/s1024/s07.png"></p>
+<p>用Firefox瀏覽器開啟『<span style="color: #800080;">Surveillance Station</span>』→『<span style="color: #800080;">即時影像</span>』會顯示該IP CAM目前的影像；左側面板中，上方的方向鍵是提供給具有旋轉功能的攝影機使用。</p>
+<p><img src="https://lh3.googleusercontent.com/-hG1uX5ciwvE/V5hhSEH00wI/AAAAAAAAAhI/2mFMminsNFw0ul7Sly87g77YxR-LvuU1ACCo/s1024/s08.png"></p>
+<p>按下左側面板的”<span style="color: #0000ff;">管理</span>“，這裡可以新增每台攝影機的排列顯示方式。(最多還能一次顯示64台!!)</p>
+<p><img src="https://lh3.googleusercontent.com/-RROvcDt7yg4/V5hhSaJQWSI/AAAAAAAAAhQ/MWqmMNexxvUjGusMZsfnywaJNx4s-jLsACCo/s1024/s09.png"></p>
+<p>不過筆者只有安裝一台網路攝影機，其他畫面都是黑的。</p>
+<p><img src="https://lh3.googleusercontent.com/-kzLc1M4XuFY/V5hhSglzTPI/AAAAAAAAAhU/kbNEHVICD_MOxjJe4LV1T55qqU_9ZcjHACCo/s1024/s10.png"></p>
+<p>回到Auto(預設)畫面，當滑鼠移到右下角有更多功能，從左到右分別是<span style="color: #000000;">：即時播放、編輯(設定，也就是『網路攝影機』程式)、快照、拖曳放大(影像放大)、暫停和手動錄影</span>。</p>
+<p><img src="https://lh3.googleusercontent.com/-aT234bDKzx4/V5hhSnZrIqI/AAAAAAAAAhY/XcUe-R1gu2g2ZwS_rZp4h1CcFKAOfwYlQCCo/s1024/s11.png"></p>
+<p>使用”<span style="color: #0000ff;">拖曳放大</span>“，能把畫面拉到某一個點放大。</p>
+<p><img src="https://lh3.googleusercontent.com/-5WBnoZA8MHA/V5hhTc5N-3I/AAAAAAAAAhk/n6Wux5s7Di4vNl0oO1Mirv1mIy0vprySgCCo/s1024/s12.png"></p>
+<p>左側面板有個”全螢幕”圖示，按一下就能放大至全螢幕。(按右鍵退出)</p>
+<p><img src="https://lh3.googleusercontent.com/-SUx4_JvIie4/V5hhUKsd5aI/AAAAAAAAAhw/5fWMC1iJeFkXJ8YnldtFJ8HgC39L2vr6QCCo/s1024/s13.png"></p>
+<p>如果點選”<span style="color: #0000ff;">快照</span>“，畫面會立即擷取並暫存至右上角；此時可以下載、編輯或刪除。(擷取的快照會立即存放至NAS)</p>
+<p><img src="https://lh3.googleusercontent.com/-suLBo2qEMQg/V5hhTMSuxLI/AAAAAAAAAhc/UkmG8-UH2gMW7HAYGxA8QLecbOi9ppXgQCCo/s1024/s14.png"></p>
+<p>快照的<span style="color: #0000ff;">編輯</span>(會新開”快照編輯器”視窗)還能對影像進行旋轉、模糊(下圖左)、遮罩(下圖右)，功能太強大了！</p>
+<p><img src="https://lh3.googleusercontent.com/-Fy8tX0bHzZ8/V5hhTWh99EI/AAAAAAAAAjw/myalAumPK2w3ThCkNL3UfC42roO3SsnlgCCo/s1024/s15.png"></p>
+<p>打開『<span style="color: #800080;">快照</span>』，之前快照的所有相片都會顯示於此；如果是編輯過的影像，攝影機名稱後面會顯示”已修改”字樣。(『<span style="color: #800080;">快照</span>』內的影像包含『<span style="color: #800080;">Surveillance Station</span>』具有快照功能的其他程式，如『<span style="color: #800080;">時間線</span>』、『<span style="color: #800080;">錄影</span>』等)</p>
+<p><img src="https://lh3.googleusercontent.com/-vKkYut-lsbc/V5hhT536DDI/AAAAAAAAAjw/yO_LiGu3kJwsOhnYh9tc78pw8ZLWSdnqACCo/s1024/s16.png"></p>
+<p><a id="I-3" name="I-3"></a><br><img src="https://lh3.googleusercontent.com/-RtXpI_6OIEA/V5hhkFv7LKI/AAAAAAAAAjU/HuLJfRwARDUiArw_VdMIMYgQD_Jw_0-WwCCo/s1280/I-3.png"></p>
+<p>多數網路攝影機提供的內建介面，如果想要看過去某段時間的影片，都會有延遲(也就是點到該時間，還要花時間讀取)；甚至某些攝影機只提供下載影片的功能(不支援線上播放)，非常麻煩。</p>
+<p>而Synology的『<span style="color: #800080;">時間線</span>』能夠”即時”看到過去的錄影，點一下時間軸的任何點就會立刻播放。</p>
+<p><img src="https://lh3.googleusercontent.com/-WfQGqNwItpI/V5hhT2ZYQCI/AAAAAAAAAjw/2iGXkJoKz8k396bgWxBS-d2pK6Ju8G4RQCCo/s1024/s17.png"></p>
+<p>影像畫面左下角旁有放大鏡可以放大時間軸，能更準確地按下特定時間點。</p>
+<p><img src="https://lh3.googleusercontent.com/-l5Xt9Io32PM/V5hhUOjY_5I/AAAAAAAAAjw/tHmZ0_0LO-wd7-D0Zn6O7QazbmBxh2AhACCo/s1024/s18.png"></p>
+<p>畫面左下角有四個功能，從左到右分別是：快照、拖曳放大(影像放大)、下載和進階。</p>
+<p><img src="https://lh3.googleusercontent.com/-VQnhBnf-Jxs/V5hhUVjzz1I/AAAAAAAAAjw/EGecRAi_Hlwl3JS1iCNaT_9H76_F8gU7gCCo/s1024/s19.png"></p>
+<p>“<span style="color: #0000ff;">進階</span>“可調整畫面的亮度、對比、彩度和銳利度。如果在畫面影像非常模糊時，這個功能就會很有用。(舉例來說，<span style="color: #800000;">調高銳利度就有利於畫面模糊時，對於影像的辨識度</span>)</p>
+<p><img src="https://lh3.googleusercontent.com/-kMNgPnhtkhY/V5hhUT2uVLI/AAAAAAAAAjw/nEopJ2csX8Apb172rct0uY3rXTl7SLmWACCo/s1024/s20.png"></p>
+<p>“<span style="color: #0000ff;">下載</span>“能把該段影片下載，例如預設為30分鐘影片會分段儲存，那麼該段影片就是30分鐘長。</p>
+<p><img src="https://lh3.googleusercontent.com/-5AIbprrUetU/V5hhUvO4YdI/AAAAAAAAAjw/qvJxf5H4N4wH-HLgdAC-NaGkqHOuxemfQCCo/s1024/s21.png"></p>
+<p><a id="I-4" name="I-4"></a><br><img src="https://lh3.googleusercontent.com/-8g09_1XtcWE/V5hhkjDv3pI/AAAAAAAAAjc/-cLTt__stcUr8Sl6AlXlu1KyJeYobysmwCCo/s1280/I-4.png"></p>
+<p>『<span style="color: #800080;">智慧搜尋</span>』能以<span style="color: #800000;">特定的行動或行為(如：一般的移動、遺失/外來物件、畫面遮蔽等)為條件來搜尋錄影檔案</span>。設定搜尋條件後，智慧搜尋將對指定的錄影檔案進行搜尋，並自動找出任何符合的錄影檔案提供檢視。</p>
+<p><img src="https://lh3.googleusercontent.com/-W2Q-EGs4lvE/V5hhU-gfBQI/AAAAAAAAAjw/niT-K-Y6SX07NXacUsBD1nohUm9bxlWWgCCo/s1024/s22.png"></p>
+<p>特定的行動搜尋方式一共有下列六項：</p>
+<p><span style="color: #008000;"><strong>動作偵測</strong></span>：搜尋選定範圍內是否有動作出現。<br><span style="color: #008000;"><strong>遺失物件</strong></span>：搜尋選定範圍內是否有物件遺失。<br><span style="color: #008000;"><strong>外來物件</strong></span>：搜尋選定範圍內是否有外來物件。<br><span style="color: #008000;"><strong>畫面遮蔽</strong></span>：搜尋攝影機鏡頭遭遮蔽而無法有效監控環境的時間。<br><span style="color: #008000;"><strong>畫面失焦</strong></span>：搜尋攝影機失焦而無法有效監控環境的時間。<br><span style="color: #008000;"><strong>禁止逗留區</strong></span>：搜尋人影或物體進入限制區域，及逗留時間超過限定秒數的時間。</p>
+<p><img src="https://lh3.googleusercontent.com/-G1pIXjkmAc8/V5hhU4pZW9I/AAAAAAAAAjw/AhTQKzmPaS0hCtvmKNgXmxc_fGjFTdO9gCCo/s1024/s23.png"></p>
+<p>選定好搜尋方式和偵測區域，以及開始搜尋的時間，按下畫面下方的播放鍵就會開始搜尋了；搜尋完畢後(或是搜尋一段時間後)，右側會出現符合搜尋條件的錄影檔。</p>
+<p><img src="https://lh3.googleusercontent.com/-D4kLbJL8YVo/V5hhVHtiu_I/AAAAAAAAAjw/0boCo9D0b44IY-z2FnWqcZmJxjrA3WYygCCo/s1024/s24.png"></p>
+<p>按一下影片會新開”錄影播放器視窗”，動作發生的前後會多錄個十幾秒。</p>
+<p><img src="https://lh3.googleusercontent.com/-hx3P8bcX0lU/V5hhVDo-FHI/AAAAAAAAAjw/N_Yn7TduPAEbP677dmGDIRZzEFKSav1_ACCo/s1024/s25.png"></p>
+<p>附上『<span style="color: #800080;">智慧搜尋</span>』的實測影片。經測試過後，筆者發現搜尋時是利用電腦的硬體來搜尋(因為搜尋時CPU資源為99%)；而測試電腦為i5處理器，10秒時間大約能搜尋一分鐘的影片，這意味著<span style="color: #800000;">更高階的處理器能搜尋地更快速</span>。(畫面為黑白是因為攝影機開啟紅外線補光燈)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5QkkV-XvYts?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p><a id="I-5" name="I-5"></a><br><img src="https://lh3.googleusercontent.com/-HdR7jqi20fs/V5hhkhx21ZI/AAAAAAAAAjg/CkMW-JRrwxU6EbUAjTXVknL58nrr3rXSACCo/s1280/I-5.png"></p>
+<p>『<span style="color: #800080;">錄影</span>』把所有網路攝影機的影片都放在此；從下圖可知，錄製30分鐘的影片(720p)大約需要125~150MB左右。</p>
+<p><img src="https://lh3.googleusercontent.com/-ETxXlUkyVkI/V5hhVX2PWGI/AAAAAAAAAjw/ztrhUgXMC4EGAf3hP6I6pIYXvRUMcqdmwCCo/s1024/s26.png"></p>
+<p>任點一個影片會開啟”錄影播放器”線上播放。左下角的功能從左到右分別為：快照、拖曳放大(影像放大)、播放時間/時間戳記(於右上角切換顯示)、固定顯示比例(切換畫面比例)、時段分割播放、下載和進階(切換亮度、飽和度等)。(不過筆者認為可加入影片倍率播放的功能)</p>
+<p><img src="https://lh3.googleusercontent.com/-SMTyuZKnBaE/V5hhVRVuRwI/AAAAAAAAAjw/S9_3CknAm7EWiI332cUt0Irge0ASg5tjACCo/s1024/s27.png"></p>
+<p>比較特別的功能是”時段分割播放”，該影片會分割為四個畫面，分別距離4分鐘左右播放，如此一來能更方便找尋需要的畫面。</p>
+<p><img src="https://lh3.googleusercontent.com/-WO_ygFzMexA/V5hhVnKHB7I/AAAAAAAAAjw/VEG0kxUlN-QAkxOwzFjjB3fQmpcXBzjVwCCo/s1024/s28.png"></p>
+<p>不過影片的安全性有多強呢？會不會被人駭進去遠端刪除？因此筆者建議<span style="color: #800000;">將Surveillance資料夾的所有群組權限都調整為”唯讀”或”禁止存取”</span>；如此一來，在DSM的『<span style="color: #800080;">File Station</span>』中，影片就無法被刪除(只有”唯讀”功能)，即使是admin管理員帳號!!!</p>
+<p><img src="https://lh3.googleusercontent.com/-5LpCF_yxLeg/V5hhVghlLhI/AAAAAAAAAjw/uON6vnbEbbIDbHn-M_Quc9uk-naNDyV6QCCo/s1024/s29.png"></p>
+<p>順帶一提，影片資料夾為”年月日AM/PM”命名方式，影片檔名則為”機器年月日-錄影起始時間-xxxxxxx”。</p>
+<p><img src="https://lh3.googleusercontent.com/-M-IomDwvOyM/V5hhV69GYVI/AAAAAAAAAjw/nQBhMmuVmowuEOywBykqPrO_Ih8k3IgFQCCo/s1024/s30.gif"></p>
+<p><a id="I-6" name="I-6"></a><br><img src="https://lh3.googleusercontent.com/-u6ift7-BPMA/V5hhk2aFH0I/AAAAAAAAAjk/ns2L-E2yCTgSF_lxyL7vAzClmKyCet0yQCCo/s1280/I-6.png"></p>
+<p>除了admin管理員可以使用『<span style="color: #800080;">Surveillance Station</span>』，使用者可以到『<span style="color: #800080;">使用者</span>』自行新增觀看攝影機畫面的權限。</p>
+<p><img src="https://lh3.googleusercontent.com/-YHOA8qh4rr4/V5hhWHov5kI/AAAAAAAAAjw/wXyOeGZLKBUPrI69eCw3S_imfi59O7YkgCCo/s1024/s31.png"></p>
+<p>下一步能設定這位使用者為”觀看者”(僅能觀看監視畫面)還是”管理者”(具有完整權限)。</p>
+<p><img src="https://lh3.googleusercontent.com/-FyedGDFbb10/V5hhWEcs22I/AAAAAAAAAjw/7ZBBJv6OwpEMbYEZnSu0tw5Y44U3H2L7QCCo/s1024/s32.png"></p>
+<p>最後是詳細的權限設定：例如該名使用者使用那些功能。</p>
+<p><img src="https://lh3.googleusercontent.com/-i45kx7CA124/V5hhWNYYfrI/AAAAAAAAAjw/SMnrvCy37PETZjmjNlyPx-Rytp9SP8i7QCCo/s1024/s33.png"></p>
+<p>設定完成後，NAS會幫這個使用者新增一個只能存取『<span style="color: #800080;">Surveillance Station</span>』的帳號(也就是其他功能都會關閉)，『<span style="color: #800080;">File Station</span>』也只能存取家目錄與預設為”可讀寫”權限的共享資料夾。</p>
+<p><img src="https://lh3.googleusercontent.com/--gClsDRHVuU/V5hhWQwkX2I/AAAAAAAAAjw/U7C8kd8NlS0fgqO3_QlaPpoY_06xYLy8wCCo/s1024/s34.png"></p>
+<p><a id="I-7" name="I-7"></a><br><img src="https://lh3.googleusercontent.com/-0O-PUT6z6e8/V5hhk8_l2yI/AAAAAAAAAjo/I_Q00DwBTdY1jN-6lL_L0HPuUSb3j1AMwCCo/s1280/I-7.png"></p>
+<p>『<span style="color: #800080;">Surveillance Station</span>』的行動裝置名稱為《<span style="color: #800080;">DS cam</span>》。</p>
+<p><img src="https://lh3.googleusercontent.com/-kIARHLfJHC0/V5hhWQFoh5I/AAAAAAAAAjw/jZdB80SsWmIE1Oz2Vx_6GFE2BZINhKiRwCCo/s720/s35.png"></p>
+<p>登入後，手機畫面會列出所有的攝影機；點一下左圖右上角的”<span style="color: #0000ff;">六方格</span>“，會進入”<span style="color: #0000ff;">多路觀看</span>“。(Android手機)</p>
+<p><img src="https://lh3.googleusercontent.com/-jUjRB6030sI/V5hhWqROtaI/AAAAAAAAAjw/YMgzqARz8MErSFUYEYGz4waWwGSg-5WiwCCo/s720/s36.png"></p>
+<p>不過從上圖的”<span style="color: #0000ff;">多路觀看</span>“可知，錄影畫面的FPS為2.5FPS左右，畫面非常的卡。(Android手機)</p>
+<p><img src="https://lh3.googleusercontent.com/-8UGkK1QDgHY/V5hhW9YpWMI/AAAAAAAAAjw/QRfW_aPjrKIljk-3SXrYVxqKxzOgKkOCgCCo/s1024/s37.png"></p>
+<p>行動平台支援手指拖曳放大畫面的功能，比電腦方便多了。(Android手機)</p>
+<p><img src="https://lh3.googleusercontent.com/-xamOiOP002g/V5hhWxAo0QI/AAAAAAAAAjw/xDBKX-LWmAkHzIhXD4Dji7NRqBd4stK2QCCo/s1024/s38.png"></p>
+<p>接下來看到ios裝置，<span style="color: #800000;">監視畫面就非常的流暢，和電腦版相同</span>。(iPad平板)</p>
+<p><img src="https://lh3.googleusercontent.com/-4deD65BxjUc/V5hhXHfHBXI/AAAAAAAAAjw/sipiv4ihDx4sdx1hT61lzhmEggXTEKIMQCCo/s800/s39.png"></p>
+<p>最後是手指拖曳放大畫面的功能，720p的畫面放這麼大居然能這麼清楚(電腦版的錄影畫面甚至還會有鋸齒狀)。(iPad平板)</p>
+<p><img src="https://lh3.googleusercontent.com/-L0TpU3UUPxg/V5hhXU_7hyI/AAAAAAAAAjw/7gjgmEZEG9QdlQKB6pL3FPCVO1kjrNmeQCCo/s800/s40.png"></p>
+<p>小結：</p>
+<ol>
+<li><p>『Surveillance Station』目前不支援主要幾個瀏覽器，建議可開發Windows 專用app。</p>
+</li>
+<li><p>在行動裝置裡，ios比Android畫面順暢太多。</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/synology/" rel="tag"># Synology NAS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/27/Synology-Tip-H/" rel="next" title="Synology Tip H. 架VPN/郵件伺服器篇">
+                <i class="fa fa-chevron-left"></i> Synology Tip H. 架VPN/郵件伺服器篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/28/Synology-DS916plus/" rel="prev" title="NAS教戰手冊，讓Synology DS916+ "易"發不可收拾！">
+                NAS教戰手冊，讓Synology DS916+ "易"發不可收拾！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="EDEN" />
+            
+              <p class="site-author-name" itemprop="name">EDEN</p>
+              <p class="site-description motion-element" itemprop="description">歡迎來到 ED Blog</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分類</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">標籤</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+		  
+		
+			<div class="links-of-blogroll motion-element links-of-blogroll-block">
+			<div class="links-of-blogroll-title">
+			<!-- modify icon to fire by szw -->
+			<i class="fa fa-history fa-" aria-hidden="true"></i>
+			近期文章
+				</div>
+				<ul class="links-of-blogroll-list">
+				
+				
+				<li>
+            <a href="/2018/08/01/AfoBot/" title="簡單動動口，即可享受影音娛樂！QNAP Afobot 阿福寶 帶給您全新體驗的智能居家助理！" target="_self">簡單動動口，即可享受影音娛樂！QNAP Afobot 阿福寶 帶給您全新體驗的智能居家助理！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/07/29/LIVA-Q/" title="口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！" target="_self">口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/05/22/EQL/" title="智慧生活、便利無窮！EQL智能小管家 開啟您居家生活的智能大門！" target="_self">智慧生活、便利無窮！EQL智能小管家 開啟您居家生活的智能大門！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/03/04/PC-cillin-2018/" title="防毒寶典八式！PC-cillin 2018 雲端版 修煉防毒、即刻開始！" target="_self">防毒寶典八式！PC-cillin 2018 雲端版 修煉防毒、即刻開始！</a>
+			</li>
+			
+				<li>
+            <a href="/2017/07/10/Asustor-AS6404T-basic/" title="家庭影音的絕佳選擇！ASUSTOR AS6404T NAS 搭配 ADM 3.0，全新介面強勢登場！（基本應用篇）" target="_self">家庭影音的絕佳選擇！ASUSTOR AS6404T NAS 搭配 ADM 3.0，全新介面強勢登場！（基本應用篇）</a>
+			</li>
+			
+			</ul>
+			</div>
+		
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://ed521-disqus-com.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://ed521.ddns.net/2016/07/27/Synology-Tip-I/';
+        this.page.identifier = '2016/07/27/Synology-Tip-I/';
+        this.page.title = 'Synology Tip I. 監控篇';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ed521-disqus-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("GWiCMTV5FLEllSQFcUkDE7Xh-gzGzoHsz", "LRR0nwwgaz0D0e3jsglLs02O");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+  
+  
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+</html>

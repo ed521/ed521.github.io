@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-TW">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+<meta name="google-site-verification" content="ChDrfBcKsWqfBQORQHrgM9Gm52vn9PeXdjEJqCvfhKE" />
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('請輸入文章密碼') !== '') {
+                alert('密碼錯誤！');
+                if (history.length === 1) {
+                    location.replace("http://ed521.ddns.net"); // 這裡替換成你的首頁
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.4.0',
+    sidebar: {"position":"left","width":280,"display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ G-1 利用WordPress架設部落格G-2 利用Discuz架設論壇G-3 使用自製網頁架站">
+<meta name="keywords" content="Synology NAS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Synology Tip G. 架站篇">
+<meta property="og:url" content="http://ed521.ddns.net/2016/07/27/Synology-Tip-G/index.html">
+<meta property="og:site_name" content="ED Blog">
+<meta property="og:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ G-1 利用WordPress架設部落格G-2 利用Discuz架設論壇G-3 使用自製網頁架站">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-XyN7nHYmNFA/V5hYmvqwi4I/AAAAAAAAAc8/LIQ18GztOkUe_vjDx2PYe4Sc6aiKF-3zgCCo/s1024/x00.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-OBDJ4jtSqg8/V5hYt8BFxhI/AAAAAAAAAfw/RICRyA0Zn8wXUdMj2cUcBjZt3EB-TaCsACCo/s1280/G-1.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-rUBbZDfh7Vw/V5hYmhjoGeI/AAAAAAAAAc4/4aGdVuuXpHkI6Gp9jHMOS1Ym0pINMMp5wCCo/s1024/x01.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-49qd1ww13WQ/V5hYmkcf0WI/AAAAAAAAAc0/uWscq9SnJGEGgTH7Zdqe1wr7jpBrl3xzgCCo/s1024/x02.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-qN90JdcMmOA/V5hYm5b5jDI/AAAAAAAAAdA/ecW8cCg5WoQZnAVwKblfeomnNM_qijgwQCCo/s1024/x03.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-N3Pd4eqD4r0/V5hYm8nrklI/AAAAAAAAAdE/M_Ds7RpLF-ISrUB7elQ1gwVscd3A2BJdQCCo/s1024/x04.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Yk8VUrO2qsg/V5hYnJrH7JI/AAAAAAAAAdI/wUT1Cwrnrg0lAdUhUaMRu0-rRy2nsSuwQCCo/s1024/x05.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-KW3k-x39SSQ/V5hYnShg-cI/AAAAAAAAAdQ/NFJAMv9EWHMy41etk_Nc1MNE3V8hgBxggCCo/s1024/x06.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Ujr1xoM7Uy8/V5hYnfXQBBI/AAAAAAAAAdM/qhpA_CdZGdgIejsktgCdJeIXR6a4Ho40QCCo/s1024/x07.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-yfZ1on1yq2M/V5hYnW-gYYI/AAAAAAAAAdU/N1KINFHGfCknaehrNSGf716zQEff3cwIgCCo/s1024/x08.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-AJ8C3bjK6FQ/V5hYnmdKYWI/AAAAAAAAAdY/G3zVeo0blQEzQR1ZMRnAhYpIs0ypiwR7gCCo/s1024/x09.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-BVsfgXilRcQ/V5hYn-2OMiI/AAAAAAAAAdc/kjdylfrazD0g0CTBNJzmozYDQtIkNaoiACCo/s1024/x10.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-c7iv98J5qXA/V5hYn5d9ElI/AAAAAAAAAdg/kQpRqacuYmAiRO_P9KqQ2oovkVoLMGX8wCCo/s1024/x11.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-ao9w1SHsbpk/V5hYoP0QTRI/AAAAAAAAAdk/w1ON3Wu2IfslFC-tZYzgCOGsmaejIPOcgCCo/s1024/x12.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-H-jFpZ_D3dw/V5hYoLsFxzI/AAAAAAAAAdo/nqFM0qz33MI-pAXtkcacgr8a1TubnuCdACCo/s1024/x13.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-QeVd-tPpjJY/V5hYoT48C5I/AAAAAAAAAdw/0o8HmXem70o6SeJarx7N1w2-m6pFf_V6QCCo/s1024/x14.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-9pWefW5oKEQ/V5hYod0P95I/AAAAAAAAAds/MqWQ6FKkqYgPae1Cm8LD6W-62Xgk6maGgCCo/s1024/x15.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-2Xi_uNZeBdM/V5hYovELn1I/AAAAAAAAAd0/Xg27kLj1s6MoEA1-r1vsqz8SG2D0-j86ACCo/s1024/x16.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-_MsrTQItyJY/V5hYo8t48RI/AAAAAAAAAd4/b4E6AiQ9UQ0PVQePzUEj9H0QPRaV9VEZgCCo/s1024/x17.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-2L3lvEwh0vg/V5hYozjpIzI/AAAAAAAAAd8/Jva9ZFwLFMwCZv82KyQTybc44fijhB4ewCCo/s1024/x18.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-_CztQImIkKo/V5hYpEgHNjI/AAAAAAAAAeA/XX9V5-kDxSEKvI2iNEpF0zfyvEmnECGdACCo/s1024/x19.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-vgTI9WEkQLo/V5hYpCMeDLI/AAAAAAAAAeE/skhS6rN9L7UcMKDjUELy2EGRtQS_oclwgCCo/s1024/x20.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-ifbS2pvetfE/V5hYpbnZLoI/AAAAAAAAAeI/RnYb2sanwKkD2xQ9TrysMLgsv_lcDPngACCo/s1024/x21.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-1Hoj55L4QyM/V5hYpQhi12I/AAAAAAAAAeM/cv9lRwadmrc3aK6fViKQd8tCm_iIsAycACCo/s1024/x22.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-VwyhkJK4KJQ/V5hYpkLqqeI/AAAAAAAAAeY/wEqAcJ-53Xg6ne-7LieZIFyukn9qMClVACCo/s720/x23-1.gif">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-alWxKhBO9hI/V5hYp1PHL3I/AAAAAAAAAeU/R9QR1mxT1sUpSw0odbqPbdfuLLAYxMWsQCCo/s720/x23-2.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-44xMmmSsjXo/V5hYp-LAsGI/AAAAAAAAAeQ/UJ0jjja4OCo7UHAgL21l6ujbxNTg7QFiQCCo/s720/x23-3.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-BT0Xu034hSM/V5hYtwDTAgI/AAAAAAAAAfs/hEwlaPrwXVoZArexviUVIqoeoBu2FSo8wCCo/s1280/G-2.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-VcGqLd9MAKo/V5hYqXRHCeI/AAAAAAAAAeg/GXCyByZ29-URNlTrJjyfbEbA4sttzNlRACCo/s1024/x24.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-IH_UcWUtRcA/V5hYqcMNkxI/AAAAAAAAAek/LkRjxLiHw9QLnDnwEEU4QaYvj2CADx31ACCo/s1024/x25.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-uw8vugPXoBY/V5hYqsy43PI/AAAAAAAAAeo/UtDE4o3GQ0U4Pjkobog6dTm2WsozYaFvACCo/s1024/x26.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-d_ybdb2cLbw/V5hYq2tjs-I/AAAAAAAAAes/fdT4LEQs_gM18xl4W1S1l-3fascMW0ZvgCCo/s1024/x27.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-q1RPsNTp-38/V5hYq-nBlwI/AAAAAAAAAew/x8bMKPCA9b4BcdH77NArynsRnJTj0Az7QCCo/s1024/x28.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-g3xWNc7R-10/V5hcJqqXS9I/AAAAAAAAAgM/kMWWDy0HtpwhHYfPdXVfT1YYlP1s38_qACCo/s1024/x29.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-NiOc9jJ6H-I/V5hYrFlnxxI/AAAAAAAAAe4/YgKd-WjG2KsE_pRtbfHBxd_z5NWeiFg4wCCo/s1024/x30.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-iPwgD8JZes8/V5hYrUy2YDI/AAAAAAAAAe8/QzXoHOxc4gEogTm-thPA7CDhWXYcApzOgCCo/s1024/x31.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-GHUgzoWKOzE/V5hYrYb5pAI/AAAAAAAAAfA/e7pTLZpzHkoDwEFTEVCRMdiiJHPgfnPuACCo/s1024/x32.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-yMPpaeAix9g/V5hYrk1v-YI/AAAAAAAAAfE/kcXCZME_zHgwfcvCEjp9Zifs2kQb5ddnwCCo/s1024/x33.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-ns2r1LP79CE/V5hYrmScYHI/AAAAAAAAAfI/VjAsItGh-ow-W4LEpq5-mWgUY8-Fip2DACCo/s1024/x34.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-s5W1FDUSt-Q/V5hYrxTT5SI/AAAAAAAAAfM/jBpho2SXlpwv3jouy2GnLayDU8KtAhWRwCCo/s1024/x35.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/--UzXWuKOpns/V5hYsNzS1EI/AAAAAAAAAfQ/yJdvv3ycOF4GEHAuOpx-3k2syhm6fi11gCCo/s1024/x36.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-715YlSC0PCE/V5hYsAuAqvI/AAAAAAAAAfU/2AqR-O0iCeESERrkC6QURIUqiILYYQqVQCCo/s1024/x37.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-FV9J0zyAimI/V5hYsJsU-jI/AAAAAAAAAfY/O_IzUxupRUoKfFP3soKnr8jKlaJAy1JwgCCo/s1024/x38.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-j_jgs6SZn_U/V5hYsbZ9-mI/AAAAAAAAAfc/vQ1f7wu8B18pyeAviI-oxdarEw1__o3LwCCo/s1024/x39.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-rEjbMx3tQEs/V5hYt-xY1NI/AAAAAAAAAgE/aEmgth6XPyYyI2u6sN7xN9QecaKnAxu4QCCo/s1280/G-3.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-VTEQJTZyf5w/V5hYsnBAYBI/AAAAAAAAAfk/UGKhBodgSs8-xvpCs-uUArqdm0pRkwjhACCo/s1024/x40.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-ysXginAY08M/V5hYsgRK_EI/AAAAAAAAAfg/Y1yNy5aUvEAA12_7EOsGOc59C3dj8gB4QCCo/s1024/x41.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/--GyGLXN97qk/V5hYsxht1AI/AAAAAAAAAfo/NU8A87R8vjg27EpDiZqWf9nDIu94amrcgCCo/s1024/x42.png">
+<meta property="og:updated_time" content="2018-05-25T09:36:13.990Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Synology Tip G. 架站篇">
+<meta name="twitter:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ G-1 利用WordPress架設部落格G-2 利用Discuz架設論壇G-3 使用自製網頁架站">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/-XyN7nHYmNFA/V5hYmvqwi4I/AAAAAAAAAc8/LIQ18GztOkUe_vjDx2PYe4Sc6aiKF-3zgCCo/s1024/x00.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ED Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://ed521.ddns.net/2016/07/27/Synology-Tip-G/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Synology Tip G. 架站篇 | ED Blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-61473305-3');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ED Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">歡迎來到 ED Blog</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首頁</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />關於</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />標籤<span class="badge">11</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分類<span class="badge">6</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />歸檔<span class="badge">36</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-dsm-登入">
+    <a href="https:/notp.ddns.net:5001" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />DSM 登入</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ed521.ddns.net/2016/07/27/Synology-Tip-G/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EDEN">
+      <meta itemprop="description" content="歡迎來到 ED Blog">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ED Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Synology Tip G. 架站篇
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2016-07-27 13:35:00" itemprop="dateCreated datePublished" datetime="2016-07-27T13:35:00+08:00">2016-07-27</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/NAS/" itemprop="url" rel="index"><span itemprop="name">NAS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/27/Synology-Tip-G/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/07/27/Synology-Tip-G/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/27/Synology-Tip-G/" class="leancloud_visitors" data-flag-title="Synology Tip G. 架站篇">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>※本文章為<a href="http://ed521.ddns.net/Synology-DS916plus/" target="_blank">NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！</a>之分支※</p>
+<p><a href="#G-1">G-1 利用WordPress架設部落格</a><br><a href="#G-2">G-2 利用Discuz架設論壇</a><br><a href="#G-3">G-3 使用自製網頁架站</a></p>
+<a id="more"></a>
+<p>在『<span style="color: #800080;">Web Station</span>』的「<span style="color: #0000ff;">一般設定</span>」裡，有一個叫”<span style="color: #0000ff;">啟動個人網站</span>“的功能，開啟後每個使用者都能把架站用的檔案上傳到家目錄內的”www資料夾”，來建立個人網站。</p>
+<p><img src="https://lh3.googleusercontent.com/-XyN7nHYmNFA/V5hYmvqwi4I/AAAAAAAAAc8/LIQ18GztOkUe_vjDx2PYe4Sc6aiKF-3zgCCo/s1024/x00.png"></p>
+<p><a id="G-1" name="G-1"></a><br><img src="https://lh3.googleusercontent.com/-OBDJ4jtSqg8/V5hYt8BFxhI/AAAAAAAAAfw/RICRyA0Zn8wXUdMj2cUcBjZt3EB-TaCsACCo/s1280/G-1.png"></p>
+<p>Synology本身有提供WordPress的套件，安裝一下就可以使用了；不過為了考量安裝一個以上WordPress的使用者，這裡提供”利用安裝檔安裝”的教學。</p>
+<p>在架站之前需要先到『<span style="color: #800080;">套件中心</span>』安裝『<span style="color: #800080;">Web Station</span>』和『<span style="color: #800080;">phpMyAdmin</span>』。(安裝『<span style="color: #800080;">Web Station</span>』時，『<span style="color: #800080;">PHP 5.6</span>』會要求一起安裝)</p>
+<p><img src="https://lh3.googleusercontent.com/-rUBbZDfh7Vw/V5hYmhjoGeI/AAAAAAAAAc4/4aGdVuuXpHkI6Gp9jHMOS1Ym0pINMMp5wCCo/s1024/x01.png"></p>
+<p>這時NAS會幫我們建立一個web資料夾，裡面會有一個index.html檔。</p>
+<p><img src="https://lh3.googleusercontent.com/-49qd1ww13WQ/V5hYmkcf0WI/AAAAAAAAAc0/uWscq9SnJGEGgTH7Zdqe1wr7jpBrl3xzgCCo/s1024/x02.png"></p>
+<p>這個index.html是什麼呢？只要將網址列的port:5000拿掉，也就是192.168.0.121，就能看到這個網頁了唷！(輸入sy916.ddns.net也會有相同結果)</p>
+<p><img src="https://lh3.googleusercontent.com/-qN90JdcMmOA/V5hYm5b5jDI/AAAAAAAAAdA/ecW8cCg5WoQZnAVwKblfeomnNM_qijgwQCCo/s1024/x03.png"></p>
+<p>為了要安裝最新的WordPress，請到它的<a href="https://tw.WordPress.org/" target="_blank">官方網址</a>，將最新的安裝檔下載下來。</p>
+<p><img src="https://lh3.googleusercontent.com/-N3Pd4eqD4r0/V5hYm8nrklI/AAAAAAAAAdE/M_Ds7RpLF-ISrUB7elQ1gwVscd3A2BJdQCCo/s1024/x04.png"></p>
+<p>接著將此檔案上傳到web資料夾內解壓縮。(如果要輸入NAS網址就顯示此部落格，就必須放在路徑\web下)</p>
+<p><img src="https://lh3.googleusercontent.com/-Yk8VUrO2qsg/V5hYnJrH7JI/AAAAAAAAAdI/wUT1Cwrnrg0lAdUhUaMRu0-rRy2nsSuwQCCo/s1024/x05.png"></p>
+<p>不過解壓縮後會出現一個”WordPress”資料夾，需將裡面的檔案全部剪下，丟到前面的路徑(也就是路徑\web)</p>
+<p><img src="https://lh3.googleusercontent.com/-KW3k-x39SSQ/V5hYnShg-cI/AAAAAAAAAdQ/NFJAMv9EWHMy41etk_Nc1MNE3V8hgBxggCCo/s1024/x06.png"></p>
+<p>把WordPress空資料夾和原本的index.html檔刪除(<span style="color: #800000;">裡面會有index.html和index.php，要刪除的是index.html</span>，注意別刪錯了!!!)</p>
+<p><img src="https://lh3.googleusercontent.com/-Ujr1xoM7Uy8/V5hYnfXQBBI/AAAAAAAAAdM/qhpA_CdZGdgIejsktgCdJeIXR6a4Ho40QCCo/s1024/x07.png"></p>
+<p>輸入192.168.0.121(區網)或是sy916.ddns.net(區網or外網)，WordPress的安裝畫面就出現了！(如果還是出現原本預設網站，請試著<span style="color: #800000;">重新整理網頁</span>)</p>
+<p><img src="https://lh3.googleusercontent.com/-yfZ1on1yq2M/V5hYnW-gYYI/AAAAAAAAAdU/N1KINFHGfCknaehrNSGf716zQEff3cwIgCCo/s1024/x08.png"></p>
+<p>不過在安裝WordPress之前，我們會需要先到phpMyAdmin建立WordPress的專屬資料庫。請到DSM開啟『<span style="color: #800080;">phpMyAdmin</span>』套件(會開新分頁)，<span style="color: #800000;">帳號輸入root(密碼欄位空白)來登入</span>。</p>
+<p><img src="https://lh3.googleusercontent.com/-AJ8C3bjK6FQ/V5hYnmdKYWI/AAAAAAAAAdY/G3zVeo0blQEzQR1ZMRnAhYpIs0ypiwR7gCCo/s1024/x09.png"></p>
+<p>成功登入後，到「<span style="color: #0000ff;">使用者帳號</span>」頁面，為root帳號新增密碼；先到主機名稱”127.0.0.1”，按一下旁邊的”編輯權限”。</p>
+<p><img src="https://lh3.googleusercontent.com/-BVsfgXilRcQ/V5hYn-2OMiI/AAAAAAAAAdc/kjdylfrazD0g0CTBNJzmozYDQtIkNaoiACCo/s1024/x10.png"></p>
+<p>輸入密碼後，按下右下角的”<span style="color: #0000ff;">執行</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-c7iv98J5qXA/V5hYn5d9ElI/AAAAAAAAAdg/kQpRqacuYmAiRO_P9KqQ2oovkVoLMGX8wCCo/s1024/x11.png"></p>
+<p>接著主機名稱為”<span style="color: #000000;">localhost”</span>也要建立密碼(可以輸入相同的)，確認兩個主機名稱的密碼皆為”是”即可。</p>
+<p><img src="https://lh3.googleusercontent.com/-ao9w1SHsbpk/V5hYoP0QTRI/AAAAAAAAAdk/w1ON3Wu2IfslFC-tZYzgCOGsmaejIPOcgCCo/s1024/x12.png"></p>
+<p>到「<span style="color: #0000ff;">資料庫</span>」頁面，建立一個名為”WordPress”的資料庫(名稱自訂)，編碼選擇”utf8_unicode_ci”，按下”<span style="color: #0000ff;">建立</span>“後就能關閉此分頁。</p>
+<p><img src="https://lh3.googleusercontent.com/-H-jFpZ_D3dw/V5hYoLsFxzI/AAAAAAAAAdo/nqFM0qz33MI-pAXtkcacgr8a1TubnuCdACCo/s1024/x13.png"></p>
+<p>由於web伺服器是使用一個叫<span style="color: #800000;">http的使用者群組</span>來存放資料，需要提供讀寫web資料夾的權限，因此進入『<span style="color: #800080;">控制台</span>』→「<span style="color: #0000ff;">使用者群組</span>」，選擇”http”群組按下”<span style="color: #0000ff;">編輯</span>“，再到「<span style="color: #0000ff;">權限</span>」頁面並把web資料夾設為”<span style="color: #0000ff;">可讀寫</span>“狀態。</p>
+<p><img src="https://lh3.googleusercontent.com/-QeVd-tPpjJY/V5hYoT48C5I/AAAAAAAAAdw/0o8HmXem70o6SeJarx7N1w2-m6pFf_V6QCCo/s1024/x14.png"></p>
+<p>回到WordPress的安裝畫面，按下”<span style="color: #0000ff;">衝吧</span>“進行下一步；輸入剛才建立的資料庫名稱，以及登入phpMyAdmin時所用的帳密(帳號為root)，後兩個設定不用更動。</p>
+<p><img src="https://lh3.googleusercontent.com/-9pWefW5oKEQ/V5hYod0P95I/AAAAAAAAAds/MqWQ6FKkqYgPae1Cm8LD6W-62Xgk6maGgCCo/s1024/x15.png"></p>
+<p>成功的話會出現以下畫面，按下”<span style="color: #0000ff;">開始安裝</span>“繼續。</p>
+<p><img src="https://lh3.googleusercontent.com/-2Xi_uNZeBdM/V5hYovELn1I/AAAAAAAAAd0/Xg27kLj1s6MoEA1-r1vsqz8SG2D0-j86ACCo/s1024/x16.png"></p>
+<p>若出現下圖，就代表<span style="color: #0000ff;"><span style="color: #800000;">尚未提供WordPress”讀寫web資料夾的權限”</span></span>，請將http的使用者群組對於web資料夾的讀寫權限打開。(上上上張圖)</p>
+<p><img src="https://lh3.googleusercontent.com/-_MsrTQItyJY/V5hYo8t48RI/AAAAAAAAAd4/b4E6AiQ9UQ0PVQePzUEj9H0QPRaV9VEZgCCo/s1024/x17.png"></p>
+<p>輸入網站標題、管理帳密和E-mail。(WordPress控制台還可以做更改)</p>
+<p><img src="https://lh3.googleusercontent.com/-2L3lvEwh0vg/V5hYozjpIzI/AAAAAAAAAd8/Jva9ZFwLFMwCZv82KyQTybc44fijhB4ewCCo/s1024/x18.png"></p>
+<p>WordPress安裝完成！</p>
+<p><img src="https://lh3.googleusercontent.com/-_CztQImIkKo/V5hYpEgHNjI/AAAAAAAAAeA/XX9V5-kDxSEKvI2iNEpF0zfyvEmnECGdACCo/s1024/x19.png"></p>
+<p>下圖為WordPress登入介面；如果要進入此登入介面，只要在網址後面加上/wp-login.php。(如：<a href="http://sy916.ddns.net/wp-login.php" target="_blank" rel="noopener">http://sy916.ddns.net/wp-login.php</a>)</p>
+<p><img src="https://lh3.googleusercontent.com/-vgTI9WEkQLo/V5hYpCMeDLI/AAAAAAAAAeE/skhS6rN9L7UcMKDjUELy2EGRtQS_oclwgCCo/s1024/x20.png"></p>
+<p>下面就是剛架設好的部落格。</p>
+<p><img src="https://lh3.googleusercontent.com/-ifbS2pvetfE/V5hYpbnZLoI/AAAAAAAAAeI/RnYb2sanwKkD2xQ9TrysMLgsv_lcDPngACCo/s1024/x21.png"></p>
+<p>WordPress的控制台：在這裡可以新增文章、外掛，修改主題等。</p>
+<p><img src="https://lh3.googleusercontent.com/-1Hoj55L4QyM/V5hYpQhi12I/AAAAAAAAAeM/cv9lRwadmrc3aK6fViKQd8tCm_iIsAycACCo/s1024/x22.png"></p>
+<p>《<span style="color: #800080;">Wordpress</span>》也有自己的app。打開app後，點選”<span style="color: #0000ff;">新增網站</span>“ → “<span style="color: #0000ff;">新增自助託管的網站</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-VwyhkJK4KJQ/V5hYpkLqqeI/AAAAAAAAAeY/wEqAcJ-53Xg6ne-7LieZIFyukn9qMClVACCo/s720/x23-1.gif"></p>
+<p>在登入介面輸入帳號密碼(wordpress的登入帳密)，以及wordpress自架的網址(下左圖)；登入後，就會出現管理頁面了唷(下右圖)！</p>
+<p><img src="https://lh3.googleusercontent.com/-alWxKhBO9hI/V5hYp1PHL3I/AAAAAAAAAeU/R9QR1mxT1sUpSw0odbqPbdfuLLAYxMWsQCCo/s720/x23-2.png"></p>
+<p>app版的《<span style="color: #800080;">Wordpress</span>》也能編輯/新增/刪除文章(下左圖)，原則上，功能不比網頁版少。</p>
+<p><img src="https://lh3.googleusercontent.com/-44xMmmSsjXo/V5hYp-LAsGI/AAAAAAAAAeQ/UJ0jjja4OCo7UHAgL21l6ujbxNTg7QFiQCCo/s720/x23-3.png"></p>
+<p>最後，筆者提供幾個好用的外掛：</p>
+<p><strong><span style="color: #008000;">Akismet</span></strong>: 偵測垃圾留言並刪除。</p>
+<p><span style="color: #008000;"><strong>AutoFTP</strong></span>: 在更新外掛、主題都需要輸入IP位址和FTP帳密，這個外掛只需輸入一次，未來就不用再輸入。</p>
+<p><span style="color: #008000;"><strong>Better Delete Revision</strong></span>: 由於更新文章內容時都會把前面的版本保留，此外掛能將不要的舊版本文章刪除。</p>
+<p><span style="color: #008000;"><strong>Favicon XT-Manager</strong></span>: 為部落格增加專屬LOGO。(也就是網址列上方，該分頁名稱旁的小圖示)</p>
+<p><span style="color: #008000;"><strong>MP3-jPlayer</strong></span>: 為部落格建立一個音樂播放器(會放在網誌側邊)。</p>
+<p><span style="color: #008000;"><strong>UpdraftPlus - Backup/Restore</strong></span>: 將部落格排程備份各大雲端空間或NAS中。</p>
+<p><a id="G-2" name="G-2"></a><br><img src="https://lh3.googleusercontent.com/-BT0Xu034hSM/V5hYtwDTAgI/AAAAAAAAAfs/hEwlaPrwXVoZArexviUVIqoeoBu2FSo8wCCo/s1280/G-2.png"></p>
+<p>先到Discuz!的<a href="http://www.comsenz.com/downloads/install/discuzx" target="_blank">下載頁面</a>把”繁體UTF-8”的安裝檔下載。</p>
+<p><img src="https://lh3.googleusercontent.com/-VcGqLd9MAKo/V5hYqXRHCeI/AAAAAAAAAeg/GXCyByZ29-URNlTrJjyfbEbA4sttzNlRACCo/s1024/x24.png"></p>
+<p>到web資料夾建立一個資料夾，把安裝檔上傳至此並解壓縮。</p>
+<p><img src="https://lh3.googleusercontent.com/-IH_UcWUtRcA/V5hYqcMNkxI/AAAAAAAAAek/LkRjxLiHw9QLnDnwEEU4QaYvj2CADx31ACCo/s1024/x25.png"></p>
+<p>解壓縮完會有三個資料夾，不過要用的只有upload資料夾，所以把upload裡面的檔案全部剪下，丟到前面的路徑。</p>
+<p><img src="https://lh3.googleusercontent.com/-uw8vugPXoBY/V5hYqsy43PI/AAAAAAAAAeo/UtDE4o3GQ0U4Pjkobog6dTm2WsozYaFvACCo/s1024/x26.png"></p>
+<p>這時會有用不到的upload空資料夾、readme資料夾、utility資料夾和安裝檔，將它們通通刪除。</p>
+<p><img src="https://lh3.googleusercontent.com/-d_ybdb2cLbw/V5hYq2tjs-I/AAAAAAAAAes/fdT4LEQs_gM18xl4W1S1l-3fascMW0ZvgCCo/s1024/x27.png"></p>
+<p>由於剛剛架設WordPress是使用預設開啟的主機(也就是輸入網址直連的主機)，其餘的web伺服器都要設定網址名稱(此網址需註冊過DDNS，詳見 <a href="http://ed521.ddns.net/Synology-Tip-B/#B-3" target="_blank">B-3 DDNS設定</a>)和主目錄(檔案安裝目錄)，因此開啟『<span style="color: #800080;">Web Station</span>』→「<span style="color: #0000ff;">虛擬主機</span>」→”<span style="color: #0000ff;">新增</span>“來新增一個web主機。</p>
+<p><img src="https://lh3.googleusercontent.com/-q1RPsNTp-38/V5hYq-nBlwI/AAAAAAAAAew/x8bMKPCA9b4BcdH77NArynsRnJTj0Az7QCCo/s1024/x28.png"></p>
+<p>接著進入『<span style="color: #800080;">phpMyAdmin</span>』→「<span style="color: #0000ff;">資料庫</span>」頁面，建立一個名為”Discuz”的資料庫(名稱自訂)，編碼選擇”utf8_unicode_ci”，按下”建立”後就能關閉此分頁。</p>
+<p><img src="https://lh3.googleusercontent.com/-g3xWNc7R-10/V5hcJqqXS9I/AAAAAAAAAgM/kMWWDy0HtpwhHYfPdXVfT1YYlP1s38_qACCo/s1024/x29.png"></p>
+<p>輸入網址(例如剛設定的DDNS為dis916.synology.me)，就可以看到Discuz的安裝畫面了！</p>
+<p><img src="https://lh3.googleusercontent.com/-NiOc9jJ6H-I/V5hYrFlnxxI/AAAAAAAAAe4/YgKd-WjG2KsE_pRtbfHBxd_z5NWeiFg4wCCo/s1024/x30.png"></p>
+<p><span style="color: #ff6600;"><strong>【以下為當前讀寫狀態為”X”的情形，若為”V”請忽略】</strong></span><br>按下”我同意”後，如果出現讀寫狀態為”不可寫”，就代表http使用者群組對於web資料夾只有唯讀或是禁止存取的權限。</p>
+<p><img src="https://lh3.googleusercontent.com/-iPwgD8JZes8/V5hYrUy2YDI/AAAAAAAAAe8/QzXoHOxc4gEogTm-thPA7CDhWXYcApzOgCCo/s1024/x31.png"></p>
+<p>進入『<span style="color: #800080;">控制台</span>』→「<span style="color: #0000ff;">使用者群組</span>」，選擇”http”群組按下”<span style="color: #0000ff;">編輯</span>“，進入「<span style="color: #0000ff;">權限</span>」頁面並把web資料夾設為”<span style="color: #0000ff;">可讀寫</span>“狀態。</p>
+<p><img src="https://lh3.googleusercontent.com/-GHUgzoWKOzE/V5hYrYb5pAI/AAAAAAAAAfA/e7pTLZpzHkoDwEFTEVCRMdiiJHPgfnPuACCo/s1024/x32.png"></p>
+<p>重新整理頁面後，當前狀態均為綠色勾勾，才可進行以下步驟唷！</p>
+<p><img src="https://lh3.googleusercontent.com/-yMPpaeAix9g/V5hYrk1v-YI/AAAAAAAAAfE/kcXCZME_zHgwfcvCEjp9Zifs2kQb5ddnwCCo/s1024/x33.png"></p>
+<p>設置運行環境，選擇第一個”<span style="color: #0000ff;">全新安裝</span>“，點選下一步。</p>
+<p><img src="https://lh3.googleusercontent.com/-ns2r1LP79CE/V5hYrmScYHI/AAAAAAAAAfI/VjAsItGh-ow-W4LEpq5-mWgUY8-Fip2DACCo/s1024/x34.png"></p>
+<p>輸入藍色框框內的相關資訊，包含剛建立的資料庫名稱、phpMyAdmin登入帳密，以及管理員帳密和E-mail。</p>
+<p><img src="https://lh3.googleusercontent.com/-s5W1FDUSt-Q/V5hYrxTT5SI/AAAAAAAAAfM/jBpho2SXlpwv3jouy2GnLayDU8KtAhWRwCCo/s1024/x35.png"></p>
+<p>約需幾分鐘的時間安裝資料庫。</p>
+<p><img src="https://lh3.googleusercontent.com/--UzXWuKOpns/V5hYsNzS1EI/AAAAAAAAAfQ/yJdvv3ycOF4GEHAuOpx-3k2syhm6fi11gCCo/s1024/x36.png"></p>
+<p>若成功安裝，會出現以下畫面；按一下右下角”<span style="color: #0000ff;">您的論壇已完成安裝，點此訪問</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-715YlSC0PCE/V5hYsAuAqvI/AAAAAAAAAfU/2AqR-O0iCeESERrkC6QURIUqiILYYQqVQCCo/s1024/x37.png"></p>
+<p>剛架好論壇就長這樣，有沒有很熟悉呀？因為許多網路上自架的論壇都是使用Discuz，再修改一下而來的。</p>
+<p><img src="https://lh3.googleusercontent.com/-FV9J0zyAimI/V5hYsJsU-jI/AAAAAAAAAfY/O_IzUxupRUoKfFP3soKnr8jKlaJAy1JwgCCo/s1024/x38.png"></p>
+<p>如果論壇要與別人不同，控制台內有許多介面、用戶積分等設定可更改。</p>
+<p><img src="https://lh3.googleusercontent.com/-j_jgs6SZn_U/V5hYsbZ9-mI/AAAAAAAAAfc/vQ1f7wu8B18pyeAviI-oxdarEw1__o3LwCCo/s1024/x39.png"></p>
+<p><a id="G-3" name="G-3"></a><br><img src="https://lh3.googleusercontent.com/-rEjbMx3tQEs/V5hYt-xY1NI/AAAAAAAAAgE/aEmgth6XPyYyI2u6sN7xN9QecaKnAxu4QCCo/s1280/G-3.png"></p>
+<p>除了上述兩種現成的架站方式，應該也有人會用Dreamweaver等網頁製作軟體，做出來的網頁一樣能放到網路上唷！首先只要再web資料夾內建立一個資料夾，並且把所有網頁會用到的檔案上傳。要注意的是，這些檔案中，一定要有一個叫index的網頁檔。</p>
+<p><img src="https://lh3.googleusercontent.com/-VTEQJTZyf5w/V5hYsnBAYBI/AAAAAAAAAfk/UGKhBodgSs8-xvpCs-uUArqdm0pRkwjhACCo/s1024/x40.png"></p>
+<p>開啟『<span style="color: #800080;">Web Station</span>』→「<span style="color: #0000ff;">虛擬主機</span>」→”<span style="color: #0000ff;">新增</span>“來新增一個web主機，輸入藍色框框內的網址(該網址需註冊過DDNS，詳見 <a href="http://ed521.ddns.net/Synology-Tip-B/#B-3" target="_blank">B-3 DDNS設定</a>)和主目錄(檔案路徑)。</p>
+<p><img src="https://lh3.googleusercontent.com/-ysXginAY08M/V5hYsgRK_EI/AAAAAAAAAfg/Y1yNy5aUvEAA12_7EOsGOc59C3dj8gB4QCCo/s1024/x41.png"></p>
+<p>打開剛輸入的網站就可以看到剛架好的網頁了唷！(此為筆者高中時製作的班級電子書)</p>
+<p><img src="https://lh3.googleusercontent.com/--GyGLXN97qk/V5hYsxht1AI/AAAAAAAAAfo/NU8A87R8vjg27EpDiZqWf9nDIu94amrcgCCo/s1024/x42.png"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/synology/" rel="tag"># Synology NAS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/27/Synology-Tip-F/" rel="next" title="Synology Tip F. 備份與同步篇">
+                <i class="fa fa-chevron-left"></i> Synology Tip F. 備份與同步篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/27/Synology-Tip-H/" rel="prev" title="Synology Tip H. 架VPN/郵件伺服器篇">
+                Synology Tip H. 架VPN/郵件伺服器篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="EDEN" />
+            
+              <p class="site-author-name" itemprop="name">EDEN</p>
+              <p class="site-description motion-element" itemprop="description">歡迎來到 ED Blog</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分類</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">標籤</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+		  
+		
+			<div class="links-of-blogroll motion-element links-of-blogroll-block">
+			<div class="links-of-blogroll-title">
+			<!-- modify icon to fire by szw -->
+			<i class="fa fa-history fa-" aria-hidden="true"></i>
+			近期文章
+				</div>
+				<ul class="links-of-blogroll-list">
+				
+				
+				<li>
+            <a href="/2018/08/01/AfoBot/" title="簡單動動口，即可享受影音娛樂！QNAP Afobot 阿福寶 帶給您全新體驗的智能居家助理！" target="_self">簡單動動口，即可享受影音娛樂！QNAP Afobot 阿福寶 帶給您全新體驗的智能居家助理！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/07/29/LIVA-Q/" title="口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！" target="_self">口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/05/22/EQL/" title="智慧生活、便利無窮！EQL智能小管家 開啟您居家生活的智能大門！" target="_self">智慧生活、便利無窮！EQL智能小管家 開啟您居家生活的智能大門！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/03/04/PC-cillin-2018/" title="防毒寶典八式！PC-cillin 2018 雲端版 修煉防毒、即刻開始！" target="_self">防毒寶典八式！PC-cillin 2018 雲端版 修煉防毒、即刻開始！</a>
+			</li>
+			
+				<li>
+            <a href="/2017/07/10/Asustor-AS6404T-basic/" title="家庭影音的絕佳選擇！ASUSTOR AS6404T NAS 搭配 ADM 3.0，全新介面強勢登場！（基本應用篇）" target="_self">家庭影音的絕佳選擇！ASUSTOR AS6404T NAS 搭配 ADM 3.0，全新介面強勢登場！（基本應用篇）</a>
+			</li>
+			
+			</ul>
+			</div>
+		
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://ed521-disqus-com.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://ed521.ddns.net/2016/07/27/Synology-Tip-G/';
+        this.page.identifier = '2016/07/27/Synology-Tip-G/';
+        this.page.title = 'Synology Tip G. 架站篇';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ed521-disqus-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("GWiCMTV5FLEllSQFcUkDE7Xh-gzGzoHsz", "LRR0nwwgaz0D0e3jsglLs02O");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+  
+  
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+</html>

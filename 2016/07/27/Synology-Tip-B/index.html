@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-TW">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+<meta name="google-site-verification" content="ChDrfBcKsWqfBQORQHrgM9Gm52vn9PeXdjEJqCvfhKE" />
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('請輸入文章密碼') !== '') {
+                alert('密碼錯誤！');
+                if (history.length === 1) {
+                    location.replace("http://ed521.ddns.net"); // 這裡替換成你的首頁
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.4.0',
+    sidebar: {"position":"left","width":280,"display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ B-1 DSM安裝&amp;amp;介面介紹B-2 通訊埠轉送設定B-3 DDNS設定B-4 QuickConnect設定&amp;amp;介紹B-5 安全性/通知設定B-6 檔案服務/服務">
+<meta name="keywords" content="Synology NAS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Synology Tip B. 系統安裝&#x2F;設定篇">
+<meta property="og:url" content="http://ed521.ddns.net/2016/07/27/Synology-Tip-B/index.html">
+<meta property="og:site_name" content="ED Blog">
+<meta property="og:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ B-1 DSM安裝&amp;amp;介面介紹B-2 通訊埠轉送設定B-3 DDNS設定B-4 QuickConnect設定&amp;amp;介紹B-5 安全性/通知設定B-6 檔案服務/服務">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-osjKideLDvo/V5g7TmkkIwI/AAAAAAAAAUw/SBFFmLZfy6AjBnkS4OYSKRwARIIsz8FjQCCo/s1280/B-1.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-9qpcOC0dCVc/V5g7NRCyk8I/AAAAAAAAASA/_dqppw36AXUpoA24PqJTp6ouHd6YsfhDQCCo/s1024/s001.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-aekyAilOqok/V5g7Nh99khI/AAAAAAAAASI/7stVQoogsjAgsuAj6tFm0VbzYKiTXo9lwCCo/s1024/s002.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-VZRmtLHzTCc/V5g7NoWxwGI/AAAAAAAAASE/HcJlNQGZrE8ga_GMOX1RjYiECR_5rwAnwCCo/s1024/s003.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-I51_tzJDkBQ/V5g7N2DBxmI/AAAAAAAAASM/GoSrvO2fPH4dJbcNx0aHZia2jrycWhZigCCo/s1024/s004.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Y_RCRa8pZQc/V5g7N9i-4VI/AAAAAAAAASQ/0UtBXposy9k8kCNz7Qnj6uhBXQdBrOdmQCCo/s1024/s005.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Wo3Bukk-rf4/V5g7Nw7V9vI/AAAAAAAAASU/Fwp7n5HcltQXygw6GW5b_LR7wdh7pwt1QCCo/s1024/s006.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-JEPPJA4CH3k/V5g7ODQMPSI/AAAAAAAAASY/qk_ZIxtruY4eCrvPkeXS_wt7vlJHD-pmgCCo/s1024/s007.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-xVRGqrs3kZg/V5g7OYr9u6I/AAAAAAAAASc/4Exw7eqmgQQ2rP2TdPV6655PfYpu4TXtQCCo/s1024/s008.gif">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-ANiqzJLvn-M/V5g7OpKGNLI/AAAAAAAAASk/H_133q7enZg8rCp00AJ05mfBlSH17WFmQCCo/s1024/s009.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-cvF96W_5G7E/V5g7OTb2nhI/AAAAAAAAASg/7PFYA1aM-fUAVfcNyk5W-FDYexh3twkBQCCo/s1024/s009-1.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-quzpsG-6rPw/V5g7O9gzVlI/AAAAAAAAASs/EE72bYzgoPIodiYzuOfAeBlzXaCiGZrGACCo/s1024/s010.gif">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-asbRzPln7bs/V5g7Ol9_GfI/AAAAAAAAASo/2oVDhoJOBsEZbmTWdMiBiGCnFU_PXPiowCCo/s1024/s010-1.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-AwELXmg388M/V5g7OwjM6oI/AAAAAAAAASw/DlCniTXkkRscse2c2xdHjqFSvpcTJ10mgCCo/s1024/s011.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-xH5Gd5ACLZ0/V5g7T9LbaxI/AAAAAAAAAU0/KncHlrKPVCoMjW5Bu_5akdcmqJAqCAAowCCo/s1280/B-2.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-43aVuW_i2d8/V5g7PInQEFI/AAAAAAAAAS0/64gRLTZEUHo-RZUElEFNtDyyf3qxPE0HACCo/s1024/s012.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-lkf7-2wHtOw/V5g7PSaIITI/AAAAAAAAAS4/7UnIkiXrJIU67sNI2c5QfFyV1uVsJ5DxwCCo/s1024/s013.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-f2J8RxpbeYg/V5g7PdyI1aI/AAAAAAAAAS8/yLgoX32wxxUvNUjqJkpBswdfsQFUuckiwCCo/s1225/s014.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Qz-0_1S37Rc/V5g7PbxuryI/AAAAAAAAATA/WAMYbKIZ4tUSHp87aNPWeNTmIK9AT9dMACCo/s1024/s015.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-MnskhwEAVSI/V5g7PhRDYlI/AAAAAAAAATE/42DrDfaxPY0q0LeCJLtn4ZpzWcacS62dACCo/s1024/s016.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-uo5YQuG9b5U/V5g7P0WhjtI/AAAAAAAAATI/13UHkDQIliceWzZqRoXy-dcq4zBawfW6gCCo/s1024/s017.gif">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-iMjxNV5xNhM/V5g7P52GNMI/AAAAAAAAATM/LWNSJ23g2xo30x5UWQHp05TUD9TynTKowCCo/s1024/s018.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-nErfdsXdaw8/V5g7QrLtnmI/AAAAAAAAATc/ZJ-LPZEcqZsadropxed0RF63wSz6_oudACCo/s1024/s019.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-VHpjBVbWRK8/V5g7QLWbupI/AAAAAAAAATQ/JzBwKQKscbok3BxFHf3Fq3DZvjAVePaegCCo/s1024/s019-1.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-hR-tc-YiCgw/V5g7QZJ0fQI/AAAAAAAAATY/j9F4uVgB3bwrXdRPT5PkUKKZfiF-VUM6wCCo/s1024/s019-2.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-G695fVaRNoM/V5g7QV_uHHI/AAAAAAAAATU/TLqqR_tAB6krn_pRxhM53r-5BbvBTmIsQCCo/s1024/s019-3.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-41SYK_L6_n8/V5g7Tx3pzYI/AAAAAAAAAU4/phR6jK2wCbcFz0H2L_fPO2lugwIDMLJ1wCCo/s1280/B-3.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-06XONqeBwG8/V5g7QgQR1II/AAAAAAAAATg/gfkO97eJSkIZFbBzOmo7yRGGA7mcB36pgCCo/s1024/s020.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-5SPfoi2q8Vk/V5g7Qxj4DyI/AAAAAAAAATk/gdckCX1ZGoolSvmuikl-F4QsDwhzWzwjQCCo/s1024/s021.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-Ycpb4anxTCo/V5g7QySWkVI/AAAAAAAAATo/AcnmM11pPNwiKuVW6tkhgQlufqZ0q7XKACCo/s1024/s022.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-3kdsV5_hCpE/V5g7RGoSFbI/AAAAAAAAATs/l7EtIKP2AGAjd4Kj3da2pwq0Oosknmp5QCCo/s1024/s023.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-PUEKtRZu_yI/V5g7RGBCYDI/AAAAAAAAATw/Fts0DO4lJlU5WgEOmaj0qvCfRwcxv0Y6QCCo/s1024/s024.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-vyVCUR1BPAk/V5g7RdtiGGI/AAAAAAAAAT0/huX3-xzHI9gFnFmPM5pTxGRGtaMKfWLLACCo/s1024/s025.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-dW7ZAWMfEzI/V5g7RvZmFUI/AAAAAAAAAT4/7rsUyVY6NNsBC8NGi8qqiSw3h55SiUB0gCCo/s1024/s026.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-IBXp1Za5T6I/V5g7T54xfLI/AAAAAAAAAU8/WN7-1yp3DKoAORgtN_gkwpQZY7_7M7HeACCo/s1280/B-4.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-9vXbC6qNzhg/V5g7RuvxQOI/AAAAAAAAAT8/3wqN58pLpXcRUXlsHg16lAOfuCxhA_PygCCo/s1024/s027.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-jGFT85zKTZE/V5g7R-LguuI/AAAAAAAAAUA/H31Fsp4qJloJttiX6yYNOMAsWMvdy7CAwCCo/s1024/s028.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-FUTD51QTVk4/V5g7R9SL6EI/AAAAAAAAAUE/q4eaVlTvszkN36yR_TgiV4v9vJCFnc2hwCCo/s724/s029.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-V2rwrnMbCq8/V5g7SOwy0jI/AAAAAAAAAUI/LOkk9wBfsUUZ-QfSNpl85MuQEbVcpqJcACCo/s1024/s030.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-wlQdi-dRSnY/V5g7SHO1fxI/AAAAAAAAAUM/D42rGKb7kko33Sf8TUtoYrVte_-h-3ESgCCo/s1152/s031.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-q_f-Wh8HbYc/V5g7UBrpzBI/AAAAAAAAAVA/F2lBY8lThigkOBviXoMpjZ5YOOrzaGxTgCCo/s1280/B-5.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-AWl4GncT7_Y/V5g7Sm8JK8I/AAAAAAAAAUQ/bk1ukvQfvJMIrpIEopxqQOfqaS9SK38ZQCCo/s1024/s032.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-HWF34ljFBqE/V5g7SoJvLaI/AAAAAAAAAUY/-DDAxmzaxDM8mV-IHKHwNbFW2kxc86ZzwCCo/s1024/s033.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-JT3eMKBsDy0/V5g7So-_fhI/AAAAAAAAAUU/_J1bmssfdV4KmfieaY1ab4CIverKZDwfQCCo/s1024/s034.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-3tbYSqdSZIA/V5g7TAJPlTI/AAAAAAAAAUk/pkcinQgAV1MF6PG3TWQmVag-ElL_fTfegCCo/s1024/s035.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-MbEHdutvRLg/V5g7S-R-7DI/AAAAAAAAAUc/OOqKinwxCqEITLoGHxo6xsBdrSR14N6tACCo/s1024/s036.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-5YnkPh5YHpQ/V5g7TG80iTI/AAAAAAAAAUg/ng9bs6V2eN4D7xgUZBUYEHhe39seCsqOwCCo/s1024/s037.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-938e_DhRDJs/V5g7UEmCCUI/AAAAAAAAAVE/a_BiK3UxENgOGP4mZHL4e5tbZrpi3Y2WwCCo/s1280/B-6.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-i_9sYtaEAVc/V5g7TbAPMlI/AAAAAAAAAUo/TUgcQher7WAf9eiUDd7hHnXCa9R2x1NyACCo/s1024/s038.png">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-DeK8pSmNM_Q/V5g7TYpT09I/AAAAAAAAAUs/w8hg4aOFfiQQJk1hbRHlYKs91t68Os24wCCo/s1024/s039.png">
+<meta property="og:updated_time" content="2018-05-25T09:34:20.024Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Synology Tip B. 系統安裝&#x2F;設定篇">
+<meta name="twitter:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ B-1 DSM安裝&amp;amp;介面介紹B-2 通訊埠轉送設定B-3 DDNS設定B-4 QuickConnect設定&amp;amp;介紹B-5 安全性/通知設定B-6 檔案服務/服務">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/-osjKideLDvo/V5g7TmkkIwI/AAAAAAAAAUw/SBFFmLZfy6AjBnkS4OYSKRwARIIsz8FjQCCo/s1280/B-1.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ED Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://ed521.ddns.net/2016/07/27/Synology-Tip-B/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Synology Tip B. 系統安裝/設定篇 | ED Blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-61473305-3');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ED Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">歡迎來到 ED Blog</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首頁</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />關於</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />標籤<span class="badge">11</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分類<span class="badge">6</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />歸檔<span class="badge">36</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-dsm-登入">
+    <a href="https:/notp.ddns.net:5001" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />DSM 登入</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ed521.ddns.net/2016/07/27/Synology-Tip-B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EDEN">
+      <meta itemprop="description" content="歡迎來到 ED Blog">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ED Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Synology Tip B. 系統安裝/設定篇
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2016-07-27 13:26:00" itemprop="dateCreated datePublished" datetime="2016-07-27T13:26:00+08:00">2016-07-27</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/NAS/" itemprop="url" rel="index"><span itemprop="name">NAS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/27/Synology-Tip-B/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/07/27/Synology-Tip-B/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/27/Synology-Tip-B/" class="leancloud_visitors" data-flag-title="Synology Tip B. 系統安裝/設定篇">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>※本文章為<a href="http://ed521.ddns.net/Synology-DS916plus/" target="_blank">NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！</a>之分支※</p>
+<p><a href="#B-1">B-1 DSM安裝&amp;介面介紹</a><br><a href="#B-2">B-2 通訊埠轉送設定</a><br><a href="#B-3">B-3 DDNS設定</a><br><a href="#B-4">B-4 QuickConnect設定&amp;介紹</a><br><a href="#B-5">B-5 安全性/通知設定</a><br><a href="#B-6">B-6 檔案服務/服務</a></p>
+<a id="more"></a>
+<p><a id="B-1" name="B-1"></a><br><img src="https://lh3.googleusercontent.com/-osjKideLDvo/V5g7TmkkIwI/AAAAAAAAAUw/SBFFmLZfy6AjBnkS4OYSKRwARIIsz8FjQCCo/s1280/B-1.png"></p>
+<p>根據快速安裝指南，在瀏覽器網址列輸入<a href="http://find.synology.com或http://diskstation:5000，即可找到待設定的NAS。" target="_blank" rel="noopener">http://find.synology.com或http://diskstation:5000，即可找到待設定的NAS。</a>(<span style="color: #800000;">請確保電腦與NAS在同一區域網路下</span>)</p>
+<p><img src="https://lh3.googleusercontent.com/-9qpcOC0dCVc/V5g7NRCyk8I/AAAAAAAAASA/_dqppw36AXUpoA24PqJTp6ouHd6YsfhDQCCo/s1024/s001.png"></p>
+<p>按下”<span style="color: #0000ff;">設定</span>“開始設定DS916+。</p>
+<p><img src="https://lh3.googleusercontent.com/-aekyAilOqok/V5g7Nh99khI/AAAAAAAAASI/7stVQoogsjAgsuAj6tFm0VbzYKiTXo9lwCCo/s1024/s002.png"></p>
+<p>接著是安裝DSM，由於安裝會將硬碟的資料全數刪除，會要求再次確認。</p>
+<p><img src="https://lh3.googleusercontent.com/-VZRmtLHzTCc/V5g7NoWxwGI/AAAAAAAAASE/HcJlNQGZrE8ga_GMOX1RjYiECR_5rwAnwCCo/s1024/s003.png"></p>
+<p>安裝DSM加上NAS重新開機大約花費十分鐘左右。</p>
+<p><img src="https://lh3.googleusercontent.com/-I51_tzJDkBQ/V5g7N2DBxmI/AAAAAAAAASM/GoSrvO2fPH4dJbcNx0aHZia2jrycWhZigCCo/s1024/s004.png"></p>
+<p>安裝完成後，需輸入系統名稱(也就是未來此NAS的名稱)，管理員帳號及密碼。(由於在後面要介紹的安全性設定中，有個叫<span style="color: #800000;">嘗試登入次數的封鎖功能</span>，可以將輸入過多錯誤密碼的IP封鎖。因此<span style="color: #800000;">密碼只要有英文+數字，且長度為8位以上，強度其實就算很強了</span>)</p>
+<p><img src="https://lh3.googleusercontent.com/-Y_RCRa8pZQc/V5g7N9i-4VI/AAAAAAAAASQ/0UtBXposy9k8kCNz7Qnj6uhBXQdBrOdmQCCo/s1024/s005.png"></p>
+<p>最後是DSM更新設定，為了確保NAS的安全性與加強效能，建議選擇”<span style="color: #0000ff;">自動安裝最新DSM版本</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-Wo3Bukk-rf4/V5g7Nw7V9vI/AAAAAAAAASU/Fwp7n5HcltQXygw6GW5b_LR7wdh7pwt1QCCo/s1024/s006.png"></p>
+<p>以上設定完成後，就可以進入DSM了！</p>
+<p><img src="https://lh3.googleusercontent.com/-JEPPJA4CH3k/V5g7ODQMPSI/AAAAAAAAASY/qk_ZIxtruY4eCrvPkeXS_wt7vlJHD-pmgCCo/s1024/s007.png"></p>
+<p>DSM畫面左上角為”<span style="color: #0000ff;">主選單</span>“，所有的應用程式皆在此；『<span style="color: #800080;">套件中心</span>』則是可以安裝各種套件。</p>
+<p><img src="https://lh3.googleusercontent.com/-xVRGqrs3kZg/V5g7OYr9u6I/AAAAAAAAASc/4Exw7eqmgQQ2rP2TdPV6655PfYpu4TXtQCCo/s1024/s008.gif"></p>
+<p>每位使用者第一次登入時都會有”DSM說明”的畫面(可以取消顯示)，其實Synology要告訴你的就是有任何疑問可以先到『<span style="color: #800080;">DSM說明</span>』找找，裡頭一定有相關教學介紹的！而管理員還會多了一個監控視窗，能顯示一些系統相關資訊。</p>
+<p><img src="https://lh3.googleusercontent.com/-ANiqzJLvn-M/V5g7OpKGNLI/AAAAAAAAASk/H_133q7enZg8rCp00AJ05mfBlSH17WFmQCCo/s1024/s009.png"></p>
+<p>左上角為主選單，所有應用程式會顯示於此，使用者可以依照個人喜好將程式拉至桌面。</p>
+<p><img src="https://lh3.googleusercontent.com/-cvF96W_5G7E/V5g7OTb2nhI/AAAAAAAAASg/7PFYA1aM-fUAVfcNyk5W-FDYexh3twkBQCCo/s1024/s009-1.png"></p>
+<p>進入『<span style="color: #800080;">控制台</span>』，有分基本模式和進階模式兩種，可以用右上角的按鈕做切換。</p>
+<p><img src="https://lh3.googleusercontent.com/-quzpsG-6rPw/V5g7O9gzVlI/AAAAAAAAASs/EE72bYzgoPIodiYzuOfAeBlzXaCiGZrGACCo/s1024/s010.gif"></p>
+<p>不管是基本還是進階模式，任何一個功能點進去後，左側的功能表都是一樣的。「<span style="color: #0000ff;">資訊中心</span>」裡可以看到NAS的各種狀態，像是「<span style="color: #0000ff;">一般</span>」頁面就可以看到NAS的規格與型號等等。</p>
+<p><img src="https://lh3.googleusercontent.com/-asbRzPln7bs/V5g7Ol9_GfI/AAAAAAAAASo/2oVDhoJOBsEZbmTWdMiBiGCnFU_PXPiowCCo/s1024/s010-1.png"></p>
+<p>看到『<span style="color: #800080;">控制台</span>』旁有個”紅色1”標示，就是在「<span style="color: #0000ff;">更新&amp;還原</span>」→「<span style="color: #0000ff;">系統更新</span>」中，有新版本可以進行更新(注意更新後就無法降回原版本)。</p>
+<p><img src="https://lh3.googleusercontent.com/-AwELXmg388M/V5g7OwjM6oI/AAAAAAAAASw/DlCniTXkkRscse2c2xdHjqFSvpcTJ10mgCCo/s1024/s011.png"></p>
+<p><a id="B-2" name="B-2"></a><br><img src="https://lh3.googleusercontent.com/-xH5Gd5ACLZ0/V5g7T9LbaxI/AAAAAAAAAU0/KncHlrKPVCoMjW5Bu_5akdcmqJAqCAAowCCo/s1280/B-2.png"></p>
+<p>DS916+是經由路由器連接到數據機，進而連線到外部網路；因此<span style="color: #800000;">外網與NAS溝通時就需要經由特定的通訊埠(也就是所謂的port)，否則無法傳遞資料</span>。以下的的設定就是要開啟特定的port，讓NAS能進行外部存取。</p>
+<p><img src="https://lh3.googleusercontent.com/-43aVuW_i2d8/V5g7PInQEFI/AAAAAAAAAS0/64gRLTZEUHo-RZUElEFNtDyyf3qxPE0HACCo/s1024/s012.png"></p>
+<p>進入「<span style="color: #0000ff;">外部存取</span>」→「<span style="color: #0000ff;">路由器設置</span>」，按下”<span style="color: #0000ff;">設定路由器</span>“。首先要確保藍色框框中的系統設定都要打綠色勾勾，否則無法進行下一步。(一般來說都能進行下一步，否則就是在「<span style="color: #0000ff;">網路</span>」→「<span style="color: #0000ff;">網路介面</span>」中，區網IPV4的設定要調整為”<span style="color: #0000ff;">自動取得網路設定</span>“)</p>
+<p><img src="https://lh3.googleusercontent.com/-lkf7-2wHtOw/V5g7PSaIITI/AAAAAAAAAS4/7UnIkiXrJIU67sNI2c5QfFyV1uVsJ5DxwCCo/s1024/s013.png"></p>
+<p>只要是大廠牌的路由器都能直接進行快速設定，接著NAS會測試路由器是否能使用至多100個通訊埠轉送，若是成功就能使用NAS的port轉送功能；若未通過測試，或是路由器品牌太罕見者，<span style="color: #800000;">使用者就必須到路由器設定頁面自行設定port</span>。</p>
+<p><img src="https://lh3.googleusercontent.com/-f2J8RxpbeYg/V5g7PdyI1aI/AAAAAAAAAS8/yLgoX32wxxUvNUjqJkpBswdfsQFUuckiwCCo/s1225/s014.png"></p>
+<p>設定完路由器後，接著要建立通訊埠轉送規則，按一下”<span style="color: #0000ff;">新增</span>“，點選”<span style="color: #0000ff;">下一步</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-Qz-0_1S37Rc/V5g7PbxuryI/AAAAAAAAATA/WAMYbKIZ4tUSHp87aNPWeNTmIK9AT9dMACCo/s1024/s015.png"></p>
+<p>選擇要開啟port的應用程式，可以先全選，待會再將不要的取消打勾。</p>
+<p><img src="https://lh3.googleusercontent.com/-MnskhwEAVSI/V5g7PhRDYlI/AAAAAAAAATE/42DrDfaxPY0q0LeCJLtn4ZpzWcacS62dACCo/s1024/s016.png"></p>
+<p>如果不知道會用到哪項功能，可以全打勾；不過像筆者不會使用到Mac檔案伺服器，就可以取消勾選；按下”<span style="color: #0000ff;">儲存</span>“後，會出現一個對話框，提醒此舉動會覆寫路由器現有的通訊埠轉送規則。(注意若未來新增套件，還需要回來此新增該套件的port)</p>
+<p><img src="https://lh3.googleusercontent.com/-uo5YQuG9b5U/V5g7P0WhjtI/AAAAAAAAATI/13UHkDQIliceWzZqRoXy-dcq4zBawfW6gCCo/s1024/s017.gif"></p>
+<p><span style="color: #800000;">如果沒在路由器頁面設定過port的使用者，不會出現此畫面</span>；不過會出現此畫面的意思是：目前在路由器上的5000、5001…等port被占用，因此NAS額外新增了一個對應的port。(下一節會說明此這是什麼意思，這裡按下”<span style="color: #0000ff;">套用</span>“即可)</p>
+<p><img src="https://lh3.googleusercontent.com/-iMjxNV5xNhM/V5g7P52GNMI/AAAAAAAAATM/LWNSJ23g2xo30x5UWQHp05TUD9TynTKowCCo/s1024/s018.png"></p>
+<p>port設定完後，”連線測試結果”皆為”OK”，代表設定完成。(與預設不同的port會以藍字顯示)</p>
+<p><img src="https://lh3.googleusercontent.com/-nErfdsXdaw8/V5g7QrLtnmI/AAAAAAAAATc/ZJ-LPZEcqZsadropxed0RF63wSz6_oudACCo/s1024/s019.png"></p>
+<p><span style="color: #ff6600;"><strong>【手動新增特定port】</strong></span></p>
+<p>若之後只有單一port需要開啟，其實手動建立會比上面的方式來的快；點選”<span style="color: #0000ff;">新增</span>“ → “<span style="color: #0000ff;">自訂連接埠</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-VHpjBVbWRK8/V5g7QLWbupI/AAAAAAAAATQ/JzBwKQKscbok3BxFHf3Fq3DZvjAVePaegCCo/s1024/s019-1.png"></p>
+<p>接著輸入要新增的port即可。(按下套用後，記得再按下”<span style="color: #0000ff;">儲存</span>“)</p>
+<p><img src="https://lh3.googleusercontent.com/-hR-tc-YiCgw/V5g7QZJ0fQI/AAAAAAAAATY/j9F4uVgB3bwrXdRPT5PkUKKZfiF-VUM6wCCo/s1024/s019-2.png"></p>
+<p><span style="color: #ff6600;"><strong>【手動新增特定port：By 路由器】</strong></span></p>
+<p>PS.<span style="color: #800000;">如果NAS不支援此路由器，使用者就必須到路由器的設定頁面自行設定port轉傳</span>，詳細應用程式會使用到的port請參考<a href="https://www.synology.com/zh-tw/knowledgebase/faq/299" target="_blank">此頁面</a>。</p>
+<p>要新增特定port也可以利用路由器的設定頁面來設定(以D-Link路由器為例)，打開”<span style="color: #0000ff;">進階</span>“ → “<span style="color: #0000ff;">虛擬伺服器</span>“來建立特定port，IP位址為此NAS的區網連線IP(如這台DS916+的IP就是192.168.0.121)。</p>
+<p><img src="https://lh3.googleusercontent.com/-G695fVaRNoM/V5g7QV_uHHI/AAAAAAAAATU/TLqqR_tAB6krn_pRxhM53r-5BbvBTmIsQCCo/s1024/s019-3.png"></p>
+<p><a id="B-3" name="B-3"></a><br><img src="https://lh3.googleusercontent.com/-41SYK_L6_n8/V5g7Tx3pzYI/AAAAAAAAAU4/phR6jK2wCbcFz0H2L_fPO2lugwIDMLJ1wCCo/s1280/B-3.png"></p>
+<p>下一步是設定DDNS，此舉主要是為了讓<span style="color: #800000;">數字IP轉換為一個好記的英文網址</span>(例如<span style="color: #800000;">奇摩官網的數字IP為206.190.36.45，但是多數人只會記住yahoo.com</span>)。另一方面則是為了讓家中網路是動態IP的用戶可以定時同步其IP至DDNS中。</p>
+<p>進入「<span style="color: #0000ff;">外部存取</span>」→「<span style="color: #0000ff;">DDNS</span>」，按下”<span style="color: #0000ff;">新增</span>“，Synology官方提供了許多網域名稱供註冊，若主機名稱輸入sy916，搭配上synology.me網域，則所有使用者未來輸入sy916.synology.me，就能連接至此台NAS。</p>
+<p><img src="https://lh3.googleusercontent.com/-06XONqeBwG8/V5g7QgQR1II/AAAAAAAAATg/gfkO97eJSkIZFbBzOmo7yRGGA7mcB36pgCCo/s1024/s020.png"></p>
+<p>但是官方提供的網域雖多，但名稱都較長不太好記；因此筆者提供一個免費網域的註冊方法，請先到NO-IP (網址：<a href="http://www.noip.com" target="_blank">http://www.noip.com</a>) 註冊一個帳戶，然後到使用者管理介面的「<span style="color: #0000ff;">Dynamic DNS</span>」→「<span style="color: #0000ff;">Hostnames</span>」，點”<span style="color: #0000ff;">Add Hostname</span>“，新增一個Hostname。(免費帳戶可新增三個)</p>
+<p><img src="https://lh3.googleusercontent.com/-5SPfoi2q8Vk/V5g7Qxj4DyI/AAAAAAAAATk/gdckCX1ZGoolSvmuikl-F4QsDwhzWzwjQCCo/s1024/s021.png"></p>
+<p>輸入hostname，網域可自由選擇(不過筆者覺得最好記的還是ddns.net或是ddns.me)，IPv4位址會自動輸入，按下”<span style="color: #0000ff;">Add Hostname</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-Ycpb4anxTCo/V5g7QySWkVI/AAAAAAAAATo/AcnmM11pPNwiKuVW6tkhgQlufqZ0q7XKACCo/s1024/s022.png"></p>
+<p>看到Status為”綠色打勾狀態”就代表設定成功了唷！不過唯一的缺點就是每個月須要回來確認一次網域(系統會發信提醒)，否則該網域就會被刪除了。</p>
+<p><img src="https://lh3.googleusercontent.com/-3kdsV5_hCpE/V5g7RGoSFbI/AAAAAAAAATs/l7EtIKP2AGAjd4Kj3da2pwq0Oosknmp5QCCo/s1024/s023.png"></p>
+<p>最後只要到服務供應商選擇”NO-IP.com”，輸入剛才註冊的主機名稱和使用者帳密(NO-IP的註冊帳密)，按下”<span style="color: #0000ff;">測試連線</span>“；如果狀態顯示正常，即大功告成！</p>
+<p><img src="https://lh3.googleusercontent.com/-PUEKtRZu_yI/V5g7RGBCYDI/AAAAAAAAATw/Fts0DO4lJlU5WgEOmaj0qvCfRwcxv0Y6QCCo/s1024/s024.png"></p>
+<p>未來不管是在分享檔案連結，或是開啟DSM上，都會優先使用此主機名稱當作網址，因此強烈建議每個NAS管理員在初次設定NAS時都要線設定一組DDNS。</p>
+<p><img src="https://lh3.googleusercontent.com/-vyVCUR1BPAk/V5g7RdtiGGI/AAAAAAAAAT0/huX3-xzHI9gFnFmPM5pTxGRGtaMKfWLLACCo/s1024/s025.png"></p>
+<p>剛才是適合固定/動態IP的使用者，如果是”固定IP”的用戶，前面的DDNS不用設定，只需將註冊好的DDNS輸入在”<span style="color: #0000ff;">主機名稱或固定IP</span>“欄位(「<span style="color: #0000ff;">外部存取</span>」→「<span style="color: #0000ff;">進階設定</span>」頁面)，<span style="color: #800000;">NAS會優先使用這組網址當作外部連結</span>。</p>
+<p><img src="https://lh3.googleusercontent.com/-dW7ZAWMfEzI/V5g7RvZmFUI/AAAAAAAAAT4/7rsUyVY6NNsBC8NGi8qqiSw3h55SiUB0gCCo/s1024/s026.png"></p>
+<p><a id="B-4" name="B-4"></a><br><img src="https://lh3.googleusercontent.com/-IBXp1Za5T6I/V5g7T54xfLI/AAAAAAAAAU8/WN7-1yp3DKoAORgtN_gkwpQZY7_7M7HeACCo/s1280/B-4.png"></p>
+<p>使用QuickConnect便可以輕鬆透過網際網路存取NAS，無需另外設定連接埠轉送規則或進行其他複雜的網路設定。它的好處是：</p>
+<p><strong>1. 自動判斷使用者所在網域為區網還是外網，內網就連192.168.0.XX，外網則連前面設定好的DDNS。</strong></p>
+<p><strong>2. 沒設定DDNS、常換DDNS、甚至是DDNS很長很難背的，從第一點可知，QuickConnect可以對應連接，非常方便。</strong></p>
+<p>使用者只要輸入自己取的ID(網頁連覽器輸入<a href="http://QuickConnect.to/sy916，行動裝置則輸入sy916)，就能登入NAS。" target="_blank" rel="noopener">http://QuickConnect.to/sy916，行動裝置則輸入sy916)，就能登入NAS。</a></p>
+<p><img src="https://lh3.googleusercontent.com/-9vXbC6qNzhg/V5g7RuvxQOI/AAAAAAAAAT8/3wqN58pLpXcRUXlsHg16lAOfuCxhA_PygCCo/s1024/s027.png"></p>
+<p>在輸入<a href="http://QuickConnect.to/sy916後，區網使用者會使用區網IP，外網使用者會使用DDNS。" target="_blank" rel="noopener">http://QuickConnect.to/sy916後，區網使用者會使用區網IP，外網使用者會使用DDNS。</a></p>
+<p><img src="https://lh3.googleusercontent.com/-jGFT85zKTZE/V5g7R-LguuI/AAAAAAAAAUA/H31Fsp4qJloJttiX6yYNOMAsWMvdy7CAwCCo/s1024/s028.png"></p>
+<p><span style="color: #ff6600;"><strong>【以下情況為「外部存取」→「路由器配置」的”本機連接埠”和”路由器連接埠”不同時(如下圖)做的解釋，若相同請忽略】</strong></span></p>
+<p><img src="https://lh3.googleusercontent.com/-FUTD51QTVk4/V5g7R9SL6EI/AAAAAAAAAUE/q4eaVlTvszkN36yR_TgiV4v9vJCFnc2hwCCo/s724/s029.png"></p>
+<p>在此，一定會有人問，<span style="color: #800000;">上圖在QuickConnect連線時，為何區網的port是5000(192.168.0.122:5000)，而外網的port卻是64275(sy916.ddns.net:64275)呢？</span><br>這就是前面”通訊埠規則”要解釋的地方，由於DSM預設的port為5000，對於這個port，區網用戶不用繞到外網傳遞資料，因此可以使用預設的5000；但是前面在設定通訊埠規則時，<span style="color: #800000;"><strong>路由器內的port:5000已經被占用了，NAS只好新增一個port:64275來對應這個預設值port:5000</strong></span>，因此外網輸入sy916.ddns.net:5000是無法連回家中NAS的。</p>
+<p>因此，要解決這個問題有兩個辦法，第一個(建議使用)就是到路由器設定頁面，並<span style="color: #800000;">將占用的port全部移除</span>，再到「<span style="color: #0000ff;">外部存取</span>」→「<span style="color: #0000ff;">路由器配置</span>」裡設定的port刪除再重新新增(詳見B-2節)。</p>
+<p>第二個方也差不多，就是進入路由器設定頁面”<span style="color: #0000ff;">進階</span>“ → “<span style="color: #0000ff;">虛擬伺服器</span>“設定指定的通訊埠()。IP位址為此NAS的區網連線IP(如這台DS916+的IP就是192.168.0.121)，如下圖所示。(詳細應用程式會使用到的port請參考：<a href="https://www.synology.com/zh-tw/knowledgebase/faq/299" target="_blank">此頁面</a>)</p>
+<p><img src="https://lh3.googleusercontent.com/-V2rwrnMbCq8/V5g7SOwy0jI/AAAAAAAAAUI/LOkk9wBfsUUZ-QfSNpl85MuQEbVcpqJcACCo/s1024/s030.png"></p>
+<p>不過QuickConnect也是有缺點的，由於它的連線方式為<strong>NAS–&gt;Synology–&gt;User(外網)</strong>，連線還要經過官方，顯然在存取資料速度上會比直連來的慢。筆者就實測過了，若使用QuickConnect進行檔案分享就非常慢，甚至有網頁打不開的問題。所以建議在使用<span style="color: #800000;">DSM和檔案分享就用DDNS直連<span style="color: #000000;">(把打勾取消，如下圖)</span></span>，其他再利用QuickConnect連接。</p>
+<p><img src="https://lh3.googleusercontent.com/-wlQdi-dRSnY/V5g7SHO1fxI/AAAAAAAAAUM/D42rGKb7kko33Sf8TUtoYrVte_-h-3ESgCCo/s1152/s031.png"></p>
+<p><a id="B-5" name="B-5"></a><br><img src="https://lh3.googleusercontent.com/-q_f-Wh8HbYc/V5g7UBrpzBI/AAAAAAAAAVA/F2lBY8lThigkOBviXoMpjZ5YOOrzaGxTgCCo/s1280/B-5.png"></p>
+<p>安全性設定是一台NAS最重要的部分，首先進入「<span style="color: #0000ff;">安全性</span>」→「<span style="color: #0000ff;">安全性</span>」頁面，設定不太需要更動，不過”<span style="color: #0000ff;">等候逾時</span>“可以設定更長的時間(如30分鐘以上)，以防止頻繁的登入登出。</p>
+<p><img src="https://lh3.googleusercontent.com/-AWl4GncT7_Y/V5g7Sm8JK8I/AAAAAAAAAUQ/bk1ukvQfvJMIrpIEopxqQOfqaS9SK38ZQCCo/s1024/s032.png"></p>
+<p>「<span style="color: #0000ff;">防火牆</span>」頁面中，建議開啟防火牆，以防止未經授權的登入並控制服務存取。</p>
+<p><img src="https://lh3.googleusercontent.com/-HWF34ljFBqE/V5g7SoJvLaI/AAAAAAAAAUY/-DDAxmzaxDM8mV-IHKHwNbFW2kxc86ZzwCCo/s1024/s033.png"></p>
+<p>「<span style="color: #0000ff;">保護</span>」頁面裡，請啟動”<span style="color: #0000ff;">DoS防護</span>“，防止網際網路間的惡意攻擊。</p>
+<p><img src="https://lh3.googleusercontent.com/-JT3eMKBsDy0/V5g7So-_fhI/AAAAAAAAAUU/_J1bmssfdV4KmfieaY1ab4CIverKZDwfQCCo/s1024/s034.png"></p>
+<p>「<span style="color: #0000ff;">自動封鎖</span>」功能為預設開啟，預設是5分鐘10個嘗試登入次數就會封鎖該IP(包含FTP、SSH、DSM等服務)，如果還是有疑慮，可以把登入次數再減少、時間再縮短。</p>
+<p><img src="https://lh3.googleusercontent.com/-3tbYSqdSZIA/V5g7TAJPlTI/AAAAAAAAAUk/pkcinQgAV1MF6PG3TWQmVag-ElL_fTfegCCo/s1024/s035.png"></p>
+<p>在「<span style="color: #0000ff;">通知設定</span>」的部分，有提供電子郵件、簡訊、推播服務，其中電子郵件和推播服務是免費的，只需將電子郵件通知啟動，輸入收件人Email和標題前置文字，並登入相關郵件授權(如Gmail、Yahoo!等)，NAS就會在發生事情時(如：什麼IP被封鎖、有系統更新等)寄出通知。</p>
+<p><img src="https://lh3.googleusercontent.com/-MbEHdutvRLg/V5g7S-R-7DI/AAAAAAAAAUc/OOqKinwxCqEITLoGHxo6xsBdrSR14N6tACCo/s1024/s036.png"></p>
+<p>下圖為測試信件。</p>
+<p><img src="https://lh3.googleusercontent.com/-5YnkPh5YHpQ/V5g7TG80iTI/AAAAAAAAAUg/ng9bs6V2eN4D7xgUZBUYEHhe39seCsqOwCCo/s1024/s037.png"></p>
+<p><a id="B-6" name="B-6"></a><br><img src="https://lh3.googleusercontent.com/-938e_DhRDJs/V5g7UEmCCUI/AAAAAAAAAVE/a_BiK3UxENgOGP4mZHL4e5tbZrpi3Y2WwCCo/s1280/B-6.png"></p>
+<p>FTP是NAS不可或缺的一項服務之一，進入「<span style="color: #0000ff;">檔案服務</span>」→「<span style="color: #0000ff;">FTP</span>」，並勾選”<span style="color: #0000ff;">啟動FTP服務</span>“。</p>
+<p><img src="https://lh3.googleusercontent.com/-i_9sYtaEAVc/V5g7TbAPMlI/AAAAAAAAAUo/TUgcQher7WAf9eiUDd7hHnXCa9R2x1NyACCo/s1024/s038.png"></p>
+<p>想知道NAS有開啟哪些服務的話，進到「<span style="color: #0000ff;">資訊中心</span>」→「<span style="color: #0000ff;">系統服務</span>」，就可以查看並啟用/停用。</p>
+<p><img src="https://lh3.googleusercontent.com/-DeK8pSmNM_Q/V5g7TYpT09I/AAAAAAAAAUs/w8hg4aOFfiQQJk1hbRHlYKs91t68Os24wCCo/s1024/s039.png"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/synology/" rel="tag"># Synology NAS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/27/Synology-Tip-A/" rel="next" title="Synology Tip A. DS916+開箱/硬碟安裝篇">
+                <i class="fa fa-chevron-left"></i> Synology Tip A. DS916+開箱/硬碟安裝篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/27/Synology-Tip-C/" rel="prev" title="Synology Tip C. 儲存空間/使用者設定篇">
+                Synology Tip C. 儲存空間/使用者設定篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="EDEN" />
+            
+              <p class="site-author-name" itemprop="name">EDEN</p>
+              <p class="site-description motion-element" itemprop="description">歡迎來到 ED Blog</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分類</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">標籤</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+		  
+		
+			<div class="links-of-blogroll motion-element links-of-blogroll-block">
+			<div class="links-of-blogroll-title">
+			<!-- modify icon to fire by szw -->
+			<i class="fa fa-history fa-" aria-hidden="true"></i>
+			近期文章
+				</div>
+				<ul class="links-of-blogroll-list">
+				
+				
+				<li>
+            <a href="/2018/08/01/AfoBot/" title="簡單動動口，即可享受影音娛樂！QNAP Afobot 阿福寶 帶給您全新體驗的智能居家助理！" target="_self">簡單動動口，即可享受影音娛樂！QNAP Afobot 阿福寶 帶給您全新體驗的智能居家助理！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/07/29/LIVA-Q/" title="口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！" target="_self">口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/05/22/EQL/" title="智慧生活、便利無窮！EQL智能小管家 開啟您居家生活的智能大門！" target="_self">智慧生活、便利無窮！EQL智能小管家 開啟您居家生活的智能大門！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/03/04/PC-cillin-2018/" title="防毒寶典八式！PC-cillin 2018 雲端版 修煉防毒、即刻開始！" target="_self">防毒寶典八式！PC-cillin 2018 雲端版 修煉防毒、即刻開始！</a>
+			</li>
+			
+				<li>
+            <a href="/2017/07/10/Asustor-AS6404T-basic/" title="家庭影音的絕佳選擇！ASUSTOR AS6404T NAS 搭配 ADM 3.0，全新介面強勢登場！（基本應用篇）" target="_self">家庭影音的絕佳選擇！ASUSTOR AS6404T NAS 搭配 ADM 3.0，全新介面強勢登場！（基本應用篇）</a>
+			</li>
+			
+			</ul>
+			</div>
+		
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://ed521-disqus-com.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://ed521.ddns.net/2016/07/27/Synology-Tip-B/';
+        this.page.identifier = '2016/07/27/Synology-Tip-B/';
+        this.page.title = 'Synology Tip B. 系統安裝/設定篇';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ed521-disqus-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("GWiCMTV5FLEllSQFcUkDE7Xh-gzGzoHsz", "LRR0nwwgaz0D0e3jsglLs02O");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+  
+  
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+</html>

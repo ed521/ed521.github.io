@@ -1,0 +1,14 @@
+Sitemap: http://ed521.ddns.net/sitemap.xml
+Sitemap: http://ed521.ddns.net/baidusitemap.xml
+
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /about/
+Allow: /tags/
+
+Disallow: /images/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
