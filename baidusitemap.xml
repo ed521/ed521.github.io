@@ -4,6 +4,209 @@
 
     
   <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-H/</loc>
+    <lastmod>2018-08-11T08:48:51.747Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip H. 架VPN/郵件伺服器篇</title>
+        <pubTime>2016-07-27T05:37:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-G/</loc>
+    <lastmod>2018-08-11T08:48:46.828Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip G. 架站篇</title>
+        <pubTime>2016-07-27T05:35:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-F/</loc>
+    <lastmod>2018-08-11T08:48:42.613Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip F. 備份與同步篇</title>
+        <pubTime>2016-07-27T05:34:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-E/</loc>
+    <lastmod>2018-08-11T08:48:32.647Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip E. 多媒體娛樂篇</title>
+        <pubTime>2016-07-27T05:29:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-D/</loc>
+    <lastmod>2018-08-11T08:48:25.930Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip D. 存取/協同/生產力篇</title>
+        <pubTime>2016-07-27T05:28:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-I/</loc>
+    <lastmod>2018-08-11T08:46:14.856Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip I. 監控篇</title>
+        <pubTime>2016-07-27T05:38:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-C/</loc>
+    <lastmod>2018-08-11T08:45:44.195Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip C. 儲存空間/使用者設定篇</title>
+        <pubTime>2016-07-27T05:27:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-B/</loc>
+    <lastmod>2018-08-11T08:45:34.643Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip B. 系統安裝/設定篇</title>
+        <pubTime>2016-07-27T05:26:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-A/</loc>
+    <lastmod>2018-08-11T08:45:25.713Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip A. DS916+開箱/硬碟安裝篇</title>
+        <pubTime>2016-07-27T05:23:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ed521.ddns.net/2016/07/28/Synology-DS916plus/</loc>
+    <lastmod>2018-08-11T08:43:54.315Z</lastmod>
+    <data>
+        <display>
+        <title>NAS教戰手冊，讓Synology DS916+ "易"發不可收拾！</title>
+        <pubTime>2016-07-28T05:12:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="開箱文" url="http://ed521.ddns.net/categories/unboxing/"/>
+          
+             
+              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ed521.ddns.net/2018/07/29/LIVA-Q/</loc>
     <lastmod>2018-08-11T07:31:29.081Z</lastmod>
     <data>
@@ -318,209 +521,6 @@
         <pubTime>2016-11-14T04:54:00.000Z</pubTime>
         
         <tag>Asustor NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="開箱文" url="http://ed521.ddns.net/categories/unboxing/"/>
-          
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-D/</loc>
-    <lastmod>2018-05-25T09:37:52.647Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip D. 存取/協同/生產力篇</title>
-        <pubTime>2016-07-27T05:28:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-H/</loc>
-    <lastmod>2018-05-25T09:37:06.965Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip H. 架VPN/郵件伺服器篇</title>
-        <pubTime>2016-07-27T05:37:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-G/</loc>
-    <lastmod>2018-05-25T09:36:13.990Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip G. 架站篇</title>
-        <pubTime>2016-07-27T05:35:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-F/</loc>
-    <lastmod>2018-05-25T09:35:47.965Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip F. 備份與同步篇</title>
-        <pubTime>2016-07-27T05:34:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-E/</loc>
-    <lastmod>2018-05-25T09:35:32.292Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip E. 多媒體娛樂篇</title>
-        <pubTime>2016-07-27T05:29:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-B/</loc>
-    <lastmod>2018-05-25T09:34:20.024Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip B. 系統安裝/設定篇</title>
-        <pubTime>2016-07-27T05:26:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-I/</loc>
-    <lastmod>2018-05-25T09:34:17.208Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip I. 監控篇</title>
-        <pubTime>2016-07-27T05:38:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-C/</loc>
-    <lastmod>2018-05-25T09:34:01.494Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip C. 儲存空間/使用者設定篇</title>
-        <pubTime>2016-07-27T05:27:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/27/Synology-Tip-A/</loc>
-    <lastmod>2018-05-25T09:33:55.695Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip A. DS916+開箱/硬碟安裝篇</title>
-        <pubTime>2016-07-27T05:23:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ddns.net/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ddns.net/2016/07/28/Synology-DS916plus/</loc>
-    <lastmod>2018-05-25T09:32:53.709Z</lastmod>
-    <data>
-        <display>
-        <title>NAS教戰手冊，讓Synology DS916+ "易"發不可收拾！</title>
-        <pubTime>2016-07-28T05:12:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
          
          
            

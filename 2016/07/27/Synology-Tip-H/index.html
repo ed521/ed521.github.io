@@ -175,7 +175,7 @@
 <meta property="og:image" content="https://lh3.googleusercontent.com/-6hKO09q9JkE/V5htfMDrEQI/AAAAAAAAAmw/WGil_CBwx1cLwaNZtEdu1jq-xM3dDecowCCo/s720/i35.png">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-zlPG5J0BJ3Y/V5htfFILotI/AAAAAAAAAmw/48pWbhpNKy8mGx7oAUrxrjPXdWsJRY5DwCCo/s720/i36.png">
 <meta property="og:image" content="https://lh3.googleusercontent.com/-WOaW4lqLuts/V5hwH2tpfFI/AAAAAAAAAm4/kVvw3zNEetw7Cf3W3Wh2uptc74oNp17jgCCo/s912/i37.png">
-<meta property="og:updated_time" content="2018-05-25T09:37:06.965Z">
+<meta property="og:updated_time" content="2018-08-11T08:48:51.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Synology Tip H. 架VPN&#x2F;郵件伺服器篇">
 <meta name="twitter:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ H-1 VPN架設H-2 VPN連線與實測H-3 架設郵件伺服器H-4 郵件測試&amp;amp;《Synology MailPlus》">
@@ -525,7 +525,7 @@
       
 
       
-        <p>※本文章為<a href="http://ed521.ddns.net/Synology-DS916plus/" target="_blank">NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！</a>之分支※</p>
+        <p>※本文章為<a href="http://ed521.ddns.net/2016/07/28/Synology-DS916plus/" target="_blank">NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！</a>之分支※</p>
 <p><a href="#H-1">H-1 VPN架設</a><br><a href="#H-2">H-2 VPN連線與實測</a><br><a href="#H-3">H-3 架設郵件伺服器</a><br><a href="#H-4">H-4 郵件測試&amp;《Synology MailPlus》</a></p>
 <a id="more"></a>
 <p><a id="H-1" name="H-1"></a><br><img src="https://lh3.googleusercontent.com/-HszDrNkTu98/V5htgDRkymI/AAAAAAAAAmw/PZtnKjV9MHcU0iKdo4GRMDGKig7xcSqKwCCo/s1280/H-1.png"></p>
@@ -533,7 +533,7 @@
 <p><img src="https://lh3.googleusercontent.com/-vEX1HsdGi4I/V5htahTgFrI/AAAAAAAAAkQ/wzw4mwKpEL4QKzA1wF9Zb_33Uu0db53PACCo/s1024/i01.png"></p>
 <p>打開『<span style="color: #800080;">VPN Server</span>』，以下三種連線方式擇一開啟就好，筆者選擇”<span style="color: #0000ff;">PPTP</span>“；其實只要將”<span style="color: #0000ff;">啟動PPTP VPN 伺服器</span>“打開就好了，其他設定不用更動。</p>
 <p><img src="https://lh3.googleusercontent.com/-mqETF7npXkg/V5htatglWAI/AAAAAAAAAkM/nrFDIHyNCcU_3Phi39MwYUTzzuBLn48YACCo/s1024/i02.png"></p>
-<p>接著會<span style="color: #800000;">要求打開port:1723(沒開啟連線會失敗)</span>，請到控制台新增通訊埠或是進入路由器設定頁面的”通訊埠轉發”設定。(詳見 <a href="http://ed521.ddns.net/Synology-Tip-B/#B-2" target="_blank">B-2 通訊埠轉送設定</a>)</p>
+<p>接著會<span style="color: #800000;">要求打開port:1723(沒開啟連線會失敗)</span>，請到控制台新增通訊埠或是進入路由器設定頁面的”通訊埠轉發”設定。(詳見 <a href="http://ed521.ddns.net/2016/07/27/Synology-Tip-B/#B-2" target="_blank">B-2 通訊埠轉送設定</a>)</p>
 <p><img src="https://lh3.googleusercontent.com/-7cya8NjhO4o/V5htavyQOOI/AAAAAAAAAkI/pU3H6EnEWf4Hs1E5r-xo8NG57QZ1pSMGQCCo/s1024/i03.png"></p>
 <p>在「<span style="color: #0000ff;">一般設定</span>」裡，可勾選是否要授予權限給新使用者，以及”<span style="color: #0000ff;">自動封鎖</span>“功能(幾分鐘內連線失敗幾次即封鎖該IP)。</p>
 <p><img src="https://lh3.googleusercontent.com/-yw7F1ST2koQ/V5hta7OfoAI/AAAAAAAAAkU/_WAR-odBpWAqFcI482i3Ee2Bass2nYJQQCCo/s1024/i04.png"></p>
@@ -566,7 +566,7 @@
 <p><img src="https://lh3.googleusercontent.com/-2NjpauE9ENg/V5htcH8C44I/AAAAAAAAAlA/6MHzYkSMXYInnnx0Dwpyvt2fthaK30noACCo/s1135/i14.png"></p>
 <p>首先打開『<span style="color: #800080;">MailPlus Server</span>』，會自動跳出設定精靈，請選擇”<span style="color: #0000ff;">建立新的郵件系統</span>“。</p>
 <p><img src="https://lh3.googleusercontent.com/-XRiJyziyjR8/V5htcTH6osI/AAAAAAAAAlE/4fB0ZWyqtoU4aTx8aJ6UGBma2Dor8mLYACCo/s1024/i15.png"></p>
-<p>基本STMP設定，輸入主機名稱。(例如：sy916.ddns.net，詳見 <a href="http://ed521.ddns.net/Synology-Tip-B/#B-3" target="_blank">B-3 DDNS設定</a>)</p>
+<p>基本STMP設定，輸入主機名稱。(例如：sy916.ddns.net，詳見 <a href="http://ed521.ddns.net/2016/07/27/Synology-Tip-B/#B-3" target="_blank">B-3 DDNS設定</a>)</p>
 <p><img src="https://lh3.googleusercontent.com/-YgzY8XDhyuI/V5htcmRXoII/AAAAAAAAAlI/Q5CdSqLP90IsUjcvSB4uWPef5OvZbduOgCCo/s1024/i16.png"></p>
 <p>架設郵件伺服器只能手動設定網路組態，因此要到『<span style="color: #800080;">控制台</span>』來設定。</p>
 <p><img src="https://lh3.googleusercontent.com/-N1_QsvMZ6mw/V5htcrRL7rI/AAAAAAAAAlM/Y0OG0k-w6JwaHtc0quUAKyLCY5Wan77JwCCo/s1024/i17.png"></p>
@@ -584,7 +584,7 @@
 <p><img src="https://lh3.googleusercontent.com/-LhHDR_YvuPI/V5htdYIlUoI/AAAAAAAAAlk/RpPAaIJSiFwzvfC-s_xNLcohk2gDG5-9ACCo/s912/i23.png"></p>
 <p>最後是帳號設定，由於『<span style="color: #800080;">MailPlus Server</span>』是一個半付費軟體，<span style="color: #800000;">免費版僅提供5個使用者授權，多餘的就須付費</span>。不過如果是筆者開頭提到的功能(別名功能)，其實5位使用者，再加上外部信箱其實就很夠用了。</p>
 <p><img src="https://lh3.googleusercontent.com/-ZfnMO3HRuF8/V5htdvzFU_I/AAAAAAAAAlw/7p-M9gzVkzUEDFNl7mcuGg0GBxFYhHR0wCCo/s1024/i24.png"></p>
-<p>在開始使用之前，務必到《<span style="color: #800080;">控制台</span>》→「<span style="color: #0000ff;">外部存取</span>」→「<span style="color: #0000ff;">路由器配置</span>」頁面，新增『<span style="color: #800080;">MailPlus Server</span>』需要用到的所有port。(詳見<a href="http://ed521.ddns.net/Synology-Tip-B/#B-2" target="_blank">B-2 通訊埠轉送設定</a>)</p>
+<p>在開始使用之前，務必到《<span style="color: #800080;">控制台</span>》→「<span style="color: #0000ff;">外部存取</span>」→「<span style="color: #0000ff;">路由器配置</span>」頁面，新增『<span style="color: #800080;">MailPlus Server</span>』需要用到的所有port。(詳見<a href="http://ed521.ddns.net/2016/07/27/Synology-Tip-B/#B-2" target="_blank">B-2 通訊埠轉送設定</a>)</p>
 <p><img src="https://lh3.googleusercontent.com/-cqBtVZJV_7E/V5htdgvHTTI/AAAAAAAAAlo/x610r9oxnc4bJlPTAn2RKx22FHnNawyLQCCo/s1024/i25.png"></p>
 <p><a id="H-4" name="H-4"></a><br><img src="https://lh3.googleusercontent.com/-n0pU_lFQ-FM/V5htgRqn4aI/AAAAAAAAAmw/k5U3RTbf5YE6bxrtoX8RiYtCYnDjuNjEQCCo/s1280/H-4.png"></p>
 <p>筆者先利用Gmail寄一封信到<a href="mailto:contact@sy916.ddns.net" target="_blank" rel="noopener">contact@sy916.ddns.net</a>。</p>
