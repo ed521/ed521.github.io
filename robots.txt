@@ -7,8 +7,3 @@ Allow: /archives/
 Allow: /categories/
 Allow: /about/
 Allow: /tags/
-
-Disallow: /images/
-Disallow: /js/
-Disallow: /css/
-Disallow: /fonts/

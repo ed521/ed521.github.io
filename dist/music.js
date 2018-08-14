@@ -123,6 +123,34 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/fde01oreqjgoawa/%E8%BF%BD%E5%85%89%E8%80%85.mp3?dl=1',
         cover: '/music/追光者.jpg',
 		lrc: '/music/追光者.lrc'
+      },
+	  {
+        name: '剛好遇見你',
+        artist: '李玉剛',
+        url: 'https://www.dropbox.com/s/fhjfuv0wvbve98c/%E5%89%9B%E5%A5%BD%E9%81%87%E8%A6%8B%E4%BD%A0.mp3?dl=1',
+        cover: '/music/剛好遇見你.jpg',
+		lrc: '/music/剛好遇見你.lrc'
+      },
+	  {
+        name: 'Faded',
+        artist: 'Alan Walker',
+        url: 'https://www.dropbox.com/s/53cnljcol4xr739/Faded.mp3?dl=1',
+        cover: '/music/Faded.jpg',
+		lrc: '/music/Faded.lrc'
+      },
+	  {
+        name: 'TT',
+        artist: 'TWICE',
+        url: 'https://www.dropbox.com/s/i698errl6muwnau/TT.mp3?dl=1',
+        cover: '/music/TT.jpg',
+		lrc: '/music/TT.lrc'
+      },
+	  {
+        name: '나팔바지(NAPAL BAJI)',
+        artist: 'PSY',
+        url: 'https://www.dropbox.com/s/jkl8dmfdhhihs3h/NAPAL%20BAJI.mp3?dl=1',
+        cover: '/music/NAPAL BAJI.jpg',
+		lrc: '/music/NAPAL BAJI.lrc'
       }
     ]
 });
