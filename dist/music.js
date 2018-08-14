@@ -95,6 +95,34 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/5r2dj9s8bjchid0/I%20Really%20Like%20You.mp3?dl=1',
         cover: '/music/I Really Like You.jpg',
 		lrc: '/music/I Really Like You.lrc'
+      },
+	  {
+        name: '終わりの世界から',
+        artist: '麻枝 准×やなぎなぎ',
+        url: 'https://www.dropbox.com/s/asuc3jusqr4an0p/%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%AE%E4%B8%96%E7%95%8C%E3%81%8B%E3%82%89.mp3?dl=1',
+        cover: '/music/終わりの世界から.jpg',
+		lrc: '/music/終わりの世界から.lrc'
+      },
+	  {
+        name: '好想你 2.0',
+        artist: '黃明志 (feat.四葉草)',
+        url: 'https://www.dropbox.com/s/yhxu82qy1x78kn3/%E5%A5%BD%E6%83%B3%E4%BD%A02.0.mp3?dl=1',
+        cover: '/music/漂向北方.jpg',
+		lrc: '/music/好想你2.0.lrc'
+      },
+	  {
+        name: '體面',
+        artist: '于文文',
+        url: 'https://www.dropbox.com/s/9opjsua68jsuwyt/%E9%AB%94%E9%9D%A2.mp3?dl=1',
+        cover: '/music/體面.jpg',
+		lrc: '/music/體面.lrc'
+      },
+	  {
+        name: '追光者',
+        artist: '汪蘇瀧',
+        url: 'https://www.dropbox.com/s/fde01oreqjgoawa/%E8%BF%BD%E5%85%89%E8%80%85.mp3?dl=1',
+        cover: '/music/追光者.jpg',
+		lrc: '/music/追光者.lrc'
       }
     ]
 });
