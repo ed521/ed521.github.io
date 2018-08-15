@@ -2,7 +2,7 @@ const ap = new APlayer({
     container: document.getElementById('aplayer'),
     fixed: true,
     autoplay: false,
-    theme: '#004af7',
+    theme: '#20c3ff',
     loop: 'all',
     order: 'random',
     preload: 'auto',
@@ -34,7 +34,7 @@ const ap = new APlayer({
 		lrc: '/music/Catch the Moment.lrc'
       },
 	  {
-        name: 'Baby Dont Know Why',
+        name: "Baby Don't Know Why",
         artist: 'Ms.OOJA (Nightcore)',
         url: 'https://www.dropbox.com/s/z56ylrcmirenxwt/Baby%20Dont%20Know%20Why.mp3?dl=1',
         cover: '/music/Baby Dont Know Why.jpg',
@@ -151,6 +151,41 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/jkl8dmfdhhihs3h/NAPAL%20BAJI.mp3?dl=1',
         cover: '/music/NAPAL BAJI.jpg',
 		lrc: '/music/NAPAL BAJI.lrc'
+      },
+	  {
+        name: 'Break Beat Bark!',
+        artist: '神田沙也加',
+        url: 'https://www.dropbox.com/s/d7wt9hb9wjidzg3/Break%20Beat%20Bark.mp3?dl=1',
+        cover: '/music/Break Beat Bark.jpg',
+		lrc: '/music/Break Beat Bark.lrc'
+      },
+	  {
+        name: 'Wild Rose',
+        artist: "May'n (Nightcore)",
+        url: 'https://www.dropbox.com/s/4gsa1cy1bkqvcvj/Wild%20Rose.mp3?dl=1',
+        cover: '/music/Wild Rose.jpg',
+		lrc: '/music/Wild Rose.lrc'
+      },
+	  {
+        name: '布拉格廣場',
+        artist: '蔡依林',
+        url: 'https://www.dropbox.com/s/qcdvsx6cn3x1qtj/%E5%B8%83%E6%8B%89%E6%A0%BC%E5%BB%A3%E5%A0%B4.mp3?dl=1',
+        cover: '/music/布拉格廣場.jpg',
+		lrc: '/music/布拉格廣場.lrc'
+      },
+	  {
+        name: '看我72變',
+        artist: '蔡依林',
+        url: 'https://www.dropbox.com/s/ch19dhobezqi63v/%E7%9C%8B%E6%88%9172%E8%AE%8A.mp3?dl=1',
+        cover: '/music/布拉格廣場.jpg',
+		lrc: '/music/看我72變.lrc'
+      },
+	  {
+        name: '說愛你',
+        artist: '蔡依林',
+        url: 'https://www.dropbox.com/s/mor0keowtvlw05h/%E8%AA%AA%E6%84%9B%E4%BD%A0.mp3?dl=1',
+        cover: '/music/布拉格廣場.jpg',
+		lrc: '/music/說愛你.lrc'
       }
     ]
 });
