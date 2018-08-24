@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>https://ed521.github.io/2018/08/Synology-Docker-ytdl/</loc>
+    <lastmod>2018-08-24T09:44:55.155Z</lastmod>
+    <data>
+        <display>
+        <title>Synology NAS Docker 應用 (上)：使用 youtube-dl 下載各大影音網站的影片</title>
+        <pubTime>2018-08-23T09:35:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ed521.github.io/2018/08/Synology-Docker-Minecraft/</loc>
+    <lastmod>2018-08-24T09:44:54.340Z</lastmod>
+    <data>
+        <display>
+        <title>Synology NAS Docker 應用 (下)：架設 Minecraft 伺服器</title>
+        <pubTime>2018-08-23T09:43:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://ed521.github.io/2016/07/Synology-Tip-D/</loc>
     <lastmod>2018-08-24T08:51:41.953Z</lastmod>
     <data>
