@@ -4,88 +4,8 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-H/</loc>
-    <lastmod>2018-08-11T08:48:51.747Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip H. 架VPN/郵件伺服器篇</title>
-        <pubTime>2016-07-27T05:37:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-G/</loc>
-    <lastmod>2018-08-11T08:48:46.828Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip G. 架站篇</title>
-        <pubTime>2016-07-27T05:35:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-F/</loc>
-    <lastmod>2018-08-11T08:48:42.613Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip F. 備份與同步篇</title>
-        <pubTime>2016-07-27T05:34:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-E/</loc>
-    <lastmod>2018-08-11T08:48:32.647Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip E. 多媒體娛樂篇</title>
-        <pubTime>2016-07-27T05:29:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-D/</loc>
-    <lastmod>2018-08-11T08:48:25.930Z</lastmod>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-D/</loc>
+    <lastmod>2018-08-24T08:51:41.953Z</lastmod>
     <data>
         <display>
         <title>Synology Tip D. 存取/協同/生產力篇</title>
@@ -96,7 +16,7 @@
          
            
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -104,28 +24,8 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-I/</loc>
-    <lastmod>2018-08-11T08:46:14.856Z</lastmod>
-    <data>
-        <display>
-        <title>Synology Tip I. 監控篇</title>
-        <pubTime>2016-07-27T05:38:00.000Z</pubTime>
-        
-        <tag>Synology NAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-C/</loc>
-    <lastmod>2018-08-11T08:45:44.195Z</lastmod>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-C/</loc>
+    <lastmod>2018-08-24T08:51:13.746Z</lastmod>
     <data>
         <display>
         <title>Synology Tip C. 儲存空間/使用者設定篇</title>
@@ -136,7 +36,7 @@
          
            
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -144,8 +44,8 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-B/</loc>
-    <lastmod>2018-08-11T08:45:34.643Z</lastmod>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-B/</loc>
+    <lastmod>2018-08-24T08:51:06.018Z</lastmod>
     <data>
         <display>
         <title>Synology Tip B. 系統安裝/設定篇</title>
@@ -156,7 +56,7 @@
          
            
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -164,8 +64,8 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/07/27/Synology-Tip-A/</loc>
-    <lastmod>2018-08-11T08:45:25.713Z</lastmod>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-A/</loc>
+    <lastmod>2018-08-24T08:50:58.232Z</lastmod>
     <data>
         <display>
         <title>Synology Tip A. DS916+開箱/硬碟安裝篇</title>
@@ -176,7 +76,7 @@
          
            
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -184,8 +84,108 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/07/28/Synology-DS916plus/</loc>
-    <lastmod>2018-08-11T08:43:54.315Z</lastmod>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-I/</loc>
+    <lastmod>2018-08-24T08:50:29.153Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip I. 監控篇</title>
+        <pubTime>2016-07-27T05:38:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-H/</loc>
+    <lastmod>2018-08-24T08:50:04.057Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip H. 架VPN/郵件伺服器篇</title>
+        <pubTime>2016-07-27T05:37:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-G/</loc>
+    <lastmod>2018-08-24T08:49:39.690Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip G. 架站篇</title>
+        <pubTime>2016-07-27T05:35:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-F/</loc>
+    <lastmod>2018-08-24T08:49:08.167Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip F. 備份與同步篇</title>
+        <pubTime>2016-07-27T05:34:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ed521.github.io/2016/07/Synology-Tip-E/</loc>
+    <lastmod>2018-08-24T08:48:41.227Z</lastmod>
+    <data>
+        <display>
+        <title>Synology Tip E. 多媒體娛樂篇</title>
+        <pubTime>2016-07-27T05:29:00.000Z</pubTime>
+        
+        <tag>Synology NAS</tag>
+         
+         
+           
+             
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ed521.github.io/2016/07/Synology-DS916plus/</loc>
+    <lastmod>2018-08-24T08:47:34.465Z</lastmod>
     <data>
         <display>
         <title>NAS教戰手冊，讓Synology DS916+ "易"發不可收拾！</title>
@@ -196,10 +196,10 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -207,7 +207,27 @@
 
     
   <url>
-    <loc>http://ed521.ga/2018/07/29/LIVA-Q/</loc>
+    <loc>https://ed521.github.io/2017/03/Apex-Stand-with-M720-mouse/</loc>
+    <lastmod>2018-08-24T08:45:43.041Z</lastmod>
+    <data>
+        <display>
+        <title>Apex Stand筆電架 搭配 羅技M720無線滑鼠，讓工作效率翻倍！</title>
+        <pubTime>2017-03-01T04:48:00.000Z</pubTime>
+        
+        <tag>3C周邊</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活記事" url="https://ed521.github.io/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ed521.github.io/2018/07/LIVA-Q/</loc>
     <lastmod>2018-08-11T07:31:29.081Z</lastmod>
     <data>
         <display>
@@ -219,7 +239,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -227,7 +247,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2018/05/22/EQL/</loc>
+    <loc>https://ed521.github.io/2018/05/EQL/</loc>
     <lastmod>2018-08-10T04:50:53.821Z</lastmod>
     <data>
         <display>
@@ -239,7 +259,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -250,7 +270,7 @@
     
     
   <url>
-    <loc>http://ed521.ga/2018/08/01/AfoBot/</loc>
+    <loc>https://ed521.github.io/2018/08/AfoBot/</loc>
     <lastmod>2018-08-01T16:38:36.563Z</lastmod>
     <data>
         <display>
@@ -262,7 +282,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -270,7 +290,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2015/10/11/HackNTU-2015/</loc>
+    <loc>https://ed521.github.io/2015/10/HackNTU-2015/</loc>
     <lastmod>2018-08-01T11:21:04.797Z</lastmod>
     <data>
         <display>
@@ -282,7 +302,7 @@
          
            
              
-              <breadCrumb title="黑客松" url="http://ed521.ga/categories/hackathon/"/>
+              <breadCrumb title="黑客松" url="https://ed521.github.io/categories/hackathon/"/>
           
         </display>
     </data>
@@ -290,7 +310,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2017/06/16/Soundmatters-Moment/</loc>
+    <loc>https://ed521.github.io/2017/06/Soundmatters-Moment/</loc>
     <lastmod>2018-06-05T05:43:36.073Z</lastmod>
     <data>
         <display>
@@ -302,7 +322,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -310,7 +330,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/10/20/Swatch-SISTEM-51-IRONY/</loc>
+    <loc>https://ed521.github.io/2016/10/Swatch-SISTEM-51-IRONY/</loc>
     <lastmod>2018-06-05T05:43:31.853Z</lastmod>
     <data>
         <display>
@@ -322,7 +342,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -330,7 +350,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2017/03/28/PC-cillin-2017/</loc>
+    <loc>https://ed521.github.io/2017/03/PC-cillin-2017/</loc>
     <lastmod>2018-06-05T05:42:59.600Z</lastmod>
     <data>
         <display>
@@ -342,7 +362,7 @@
          
            
              
-              <breadCrumb title="軟體" url="http://ed521.ga/categories/software/"/>
+              <breadCrumb title="軟體" url="https://ed521.github.io/categories/software/"/>
           
         </display>
     </data>
@@ -350,7 +370,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2018/03/04/PC-cillin-2018/</loc>
+    <loc>https://ed521.github.io/2018/03/PC-cillin-2018/</loc>
     <lastmod>2018-06-05T05:42:57.231Z</lastmod>
     <data>
         <display>
@@ -362,7 +382,7 @@
          
            
              
-              <breadCrumb title="軟體" url="http://ed521.ga/categories/software/"/>
+              <breadCrumb title="軟體" url="https://ed521.github.io/categories/software/"/>
           
         </display>
     </data>
@@ -370,7 +390,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2017/06/18/Bowers-Wilkins-P7-Wireless/</loc>
+    <loc>https://ed521.github.io/2017/06/Bowers-Wilkins-P7-Wireless/</loc>
     <lastmod>2018-06-05T05:42:51.463Z</lastmod>
     <data>
         <display>
@@ -382,7 +402,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -390,27 +410,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2017/03/01/Apex-Stand-with-M720-mouse/</loc>
-    <lastmod>2018-06-05T05:42:15.927Z</lastmod>
-    <data>
-        <display>
-        <title>Apex Stand筆電架 搭配 羅技M720無線滑鼠，讓工作效率翻倍！</title>
-        <pubTime>2017-03-01T04:48:00.000Z</pubTime>
-        
-        <tag>3C周邊</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活記事" url="http://ed521.ga/categories/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ed521.ga/2017/01/26/Apex-Stand/</loc>
+    <loc>https://ed521.github.io/2017/01/Apex-Stand/</loc>
     <lastmod>2018-06-05T05:42:12.335Z</lastmod>
     <data>
         <display>
@@ -422,7 +422,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -430,7 +430,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2017/07/10/Asustor-AS6404T-basic/</loc>
+    <loc>https://ed521.github.io/2017/07/Asustor-AS6404T-basic/</loc>
     <lastmod>2018-06-05T05:42:09.760Z</lastmod>
     <data>
         <display>
@@ -442,10 +442,10 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -453,7 +453,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/11/06/Asustor-AS3202T-mission-two/</loc>
+    <loc>https://ed521.github.io/2016/11/Asustor-AS3202T-mission-two/</loc>
     <lastmod>2018-06-05T05:42:01.727Z</lastmod>
     <data>
         <display>
@@ -465,7 +465,7 @@
          
            
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -473,7 +473,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/11/12/Asustor-AS3202T-mission-three/</loc>
+    <loc>https://ed521.github.io/2016/11/Asustor-AS3202T-mission-three/</loc>
     <lastmod>2018-06-05T05:41:58.384Z</lastmod>
     <data>
         <display>
@@ -485,7 +485,7 @@
          
            
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -493,7 +493,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/10/30/Asustor-AS3202T-mission-one/</loc>
+    <loc>https://ed521.github.io/2016/10/Asustor-AS3202T-mission-one/</loc>
     <lastmod>2018-06-05T05:41:52.288Z</lastmod>
     <data>
         <display>
@@ -505,7 +505,7 @@
          
            
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -513,7 +513,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/11/14/Asustor-AS3202T/</loc>
+    <loc>https://ed521.github.io/2016/11/Asustor-AS3202T/</loc>
     <lastmod>2018-06-05T05:41:46.224Z</lastmod>
     <data>
         <display>
@@ -525,10 +525,10 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -537,7 +537,7 @@
     
     
   <url>
-    <loc>http://ed521.ga/2016/03/30/D-Link-DCS-2630L-Wireless-IPCam/</loc>
+    <loc>https://ed521.github.io/2016/03/D-Link-DCS-2630L-Wireless-IPCam/</loc>
     <lastmod>2018-05-20T07:40:35.389Z</lastmod>
     <data>
         <display>
@@ -549,7 +549,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -558,7 +558,7 @@
     
     
   <url>
-    <loc>http://ed521.ga/2015/12/30/Synology-DS415plus/</loc>
+    <loc>https://ed521.github.io/2015/12/Synology-DS415plus/</loc>
     <lastmod>2018-05-18T09:55:55.502Z</lastmod>
     <data>
         <display>
@@ -570,10 +570,10 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -581,7 +581,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2015/12/11/PowerNAS-PN-401/</loc>
+    <loc>https://ed521.github.io/2015/12/PowerNAS-PN-401/</loc>
     <lastmod>2018-05-18T09:55:38.920Z</lastmod>
     <data>
         <display>
@@ -593,10 +593,10 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -604,7 +604,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2015/09/29/MSI-Nightblade-MI/</loc>
+    <loc>https://ed521.github.io/2015/09/MSI-Nightblade-MI/</loc>
     <lastmod>2018-05-18T09:55:24.497Z</lastmod>
     <data>
         <display>
@@ -616,7 +616,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -624,7 +624,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2015/12/27/Microsoft-Surface-Pro-4/</loc>
+    <loc>https://ed521.github.io/2015/12/Microsoft-Surface-Pro-4/</loc>
     <lastmod>2018-05-18T09:55:19.639Z</lastmod>
     <data>
         <display>
@@ -636,7 +636,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -644,7 +644,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2015/10/04/HGST-HDD/</loc>
+    <loc>https://ed521.github.io/2015/10/HGST-HDD/</loc>
     <lastmod>2018-05-18T09:55:14.826Z</lastmod>
     <data>
         <display>
@@ -656,7 +656,7 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -664,7 +664,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/06/11/Cloud-security/</loc>
+    <loc>https://ed521.github.io/2016/06/Cloud-security/</loc>
     <lastmod>2018-05-18T09:55:04.142Z</lastmod>
     <data>
         <display>
@@ -674,7 +674,7 @@
          
            
              
-              <breadCrumb title="未分類" url="http://ed521.ga/categories/uncategorized/"/>
+              <breadCrumb title="未分類" url="https://ed521.github.io/categories/uncategorized/"/>
           
         </display>
     </data>
@@ -682,7 +682,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2015/02/25/Asustor-AS5002T/</loc>
+    <loc>https://ed521.github.io/2015/02/Asustor-AS5002T/</loc>
     <lastmod>2018-05-18T09:54:38.582Z</lastmod>
     <data>
         <display>
@@ -694,10 +694,10 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -705,7 +705,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/08/08/Apollo-Cloud/</loc>
+    <loc>https://ed521.github.io/2016/08/Apollo-Cloud/</loc>
     <lastmod>2018-05-18T09:54:09.958Z</lastmod>
     <data>
         <display>
@@ -717,10 +717,10 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>
@@ -728,7 +728,7 @@
 
     
   <url>
-    <loc>http://ed521.ga/2016/06/13/Apollo/</loc>
+    <loc>https://ed521.github.io/2016/06/Apollo/</loc>
     <lastmod>2018-05-18T09:54:03.430Z</lastmod>
     <data>
         <display>
@@ -740,10 +740,10 @@
          
            
              
-              <breadCrumb title="開箱文" url="http://ed521.ga/categories/unboxing/"/>
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
              
-              <breadCrumb title="NAS" url="http://ed521.ga/categories/NAS/"/>
+              <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
           
         </display>
     </data>

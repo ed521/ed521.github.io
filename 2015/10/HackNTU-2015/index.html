@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-TW">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<meta name="google-site-verification" content="3XSsjGVN4Y-4OkgiM6inN9F6vE8l0QsitBNfN3NiiK8" />
+<script>
+    (function () {
+        if ('') {
+            if (prompt('請輸入文章密碼') !== '') {
+                alert('密碼錯誤！');
+                if (history.length === 1) {
+                    location.replace("http://ed521.ddns.net"); // 這裡替換成你的首頁
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.4.0',
+    sidebar: {"position":"left","width":280,"display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="前言和動機在這幾年來，資訊科技產業蓬勃發展，尤其以攜帶式電子裝置例如智慧型手機、 平板等蔚為風潮，不僅看起來時尚，它和app更慢慢地滲透進我們生活之中，幫我們打造更便利豐富的生活。之後更延伸出”物聯網”的概念，我們這次以Intel Edison搭配多種Sensor，透過程式碼來驅動一部分未來的”智慧家庭”。">
+<meta name="keywords" content="臺大黑客松">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2015台大黑客松成果作品—智慧家庭">
+<meta property="og:url" content="https://ed521.github.io/2015/10/HackNTU-2015/index.html">
+<meta property="og:site_name" content="ED Blog">
+<meta property="og:description" content="前言和動機在這幾年來，資訊科技產業蓬勃發展，尤其以攜帶式電子裝置例如智慧型手機、 平板等蔚為風潮，不僅看起來時尚，它和app更慢慢地滲透進我們生活之中，幫我們打造更便利豐富的生活。之後更延伸出”物聯網”的概念，我們這次以Intel Edison搭配多種Sensor，透過程式碼來驅動一部分未來的”智慧家庭”。">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://cdn0-t17-techbang.pixfs.net/system/attached_images/2018/05/236802/original/1d8248e19200f4766a9d2dde625172c8.jpg">
+<meta property="og:image" content="http://cdn.instructables.com/FYX/OGLY/IDM05CSM/FYXOGLYIDM05CSM.MEDIUM.jpg">
+<meta property="og:image" content="http://4.bp.blogspot.com/-TK5QmjGRFa0/VOmQmyTYsuI/AAAAAAAAOW0/CFeUCjRsuK8/s1600/arduino_uno_large.png">
+<meta property="og:image" content="http://www.ladyada.net/images/parts/breadboard-half.jpg">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/f1/RGB_LED.jpg">
+<meta property="og:image" content="http://cdn.instructables.com/F6Z/8QZX/IDM05CYS/F6Z8QZXIDM05CYS.MEDIUM.jpg">
+<meta property="og:image" content="http://cdn.instructables.com/FPJ/VO65/IDM05CU5/FPJVO65IDM05CU5.MEDIUM.jpg">
+<meta property="og:image" content="http://cdn.instructables.com/FL1/MHZG/IDM05CVY/FL1MHZGIDM05CVY.SMALL.jpg">
+<meta property="og:image" content="http://cdn.instructables.com/FJJ/5J74/IDM05CQU/FJJ5J74IDM05CQU.MEDIUM.jpg">
+<meta property="og:image" content="http://cdn.instructables.com/F1G/U2A9/IDM05CYP/F1GU2A9IDM05CYP.SMALL.jpg">
+<meta property="og:image" content="http://cdn.instructables.com/F39/JRMP/IDM05GIR/F39JRMPIDM05GIR.MEDIUM.jpg">
+<meta property="og:image" content="http://cdn.instructables.com/FO9/H4CE/IDM05CXR/FO9H4CEIDM05CXR.SMALL.jpg">
+<meta property="og:updated_time" content="2018-08-01T11:21:04.797Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2015台大黑客松成果作品—智慧家庭">
+<meta name="twitter:description" content="前言和動機在這幾年來，資訊科技產業蓬勃發展，尤其以攜帶式電子裝置例如智慧型手機、 平板等蔚為風潮，不僅看起來時尚，它和app更慢慢地滲透進我們生活之中，幫我們打造更便利豐富的生活。之後更延伸出”物聯網”的概念，我們這次以Intel Edison搭配多種Sensor，透過程式碼來驅動一部分未來的”智慧家庭”。">
+<meta name="twitter:image" content="https://cdn0-t17-techbang.pixfs.net/system/attached_images/2018/05/236802/original/1d8248e19200f4766a9d2dde625172c8.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ED Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="https://ed521.github.io/2015/10/HackNTU-2015/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>2015台大黑客松成果作品—智慧家庭 | ED Blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-61473305-3');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ED Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">歡迎來到 ED Blog</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首頁</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />關於</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />標籤<span class="badge">11</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分類<span class="badge">6</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />歸檔<span class="badge">36</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-dsm-登入">
+    <a href="https:/notp.ddns.net:5001" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-globe"></i> <br />DSM 登入</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2015/10/HackNTU-2015/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EDEN">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ED Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">2015台大黑客松成果作品—智慧家庭
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2015-10-11 15:50:00" itemprop="dateCreated datePublished" datetime="2015-10-11T15:50:00+08:00">2015-10-11</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hackathon/" itemprop="url" rel="index"><span itemprop="name">黑客松</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/10/HackNTU-2015/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/10/HackNTU-2015/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2015/10/HackNTU-2015/" class="leancloud_visitors" data-flag-title="2015台大黑客松成果作品—智慧家庭">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數：</span>
+                
+                <span title="字數">1.1k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img class="alignnone wp-image-792 size-full" src="https://cdn0-t17-techbang.pixfs.net/system/attached_images/2018/05/236802/original/1d8248e19200f4766a9d2dde625172c8.jpg" alt="智慧家庭LOGO" width="620" height="349"></p>
+<ul><br>     <li><span style="color: #0000ff;"><strong>前言和動機</strong></span></li><br></ul><br>在這幾年來，資訊科技產業蓬勃發展，尤其以攜帶式電子裝置例如智慧型手機、 平板等蔚為風潮，不僅看起來時尚，它和app更慢慢地滲透進我們生活之中，幫我們打造更便利豐富的生活。之後更延伸出”物聯網”的概念，我們這次以Intel Edison搭配多種Sensor，透過程式碼來驅動一部分未來的”智慧家庭”。<br><br><a id="more"></a><br><br><ul><br>     <li id="step1" class="step-title"><strong><span style="color: #0000ff;">智慧家庭：作品介紹</span></strong></li><br></ul><br><div class="step-body"><br><br>這次的智慧家庭，我們以三大主題串連，分別為”安全”、”生活”、”照護”。現代人大多為雙薪家庭，意味著在工作日時家裡多半空無一人，而現在人心不古，闖空門亦非聞所未聞，”安全”絕對是相當重要的一環，所以我們設計了這個「動作感測保安系統」，在家庭成員皆出門時，便會進入待機狀態，一但捕捉到家裡有可疑人物的動作，便會發出警示訊息，可以有效避免被闖空門。<br><br>再來是”生活”，我們發想了一款「光敏窗簾」。日光，可以說是家裡採光的一大因素，如果能讓窗簾自動根據光源的強弱來決定開拉，就可以讓我們的居家生活過得更便利呢！<br><br>另外隨著高齡化社會的到來，銀髮族的”照護”變得日益重要，不怕一萬，只怕萬一，如果家中的長輩忽然出了什麼狀況的話，我們設計了「緊急救助按鈕」，一經按壓，即會觸發警鈴，且在顯示板發出需要求救訊號，讓狀況能夠在第一時間被告知並獲得更多人的幫忙。<br><ul><br>     <li id="step2" class="step-title"><strong><span style="color: #0000ff;">智慧家庭：器材介紹</span></strong></li><br></ul><br><img class="alignnone" src="http://cdn.instructables.com/FYX/OGLY/IDM05CSM/FYXOGLYIDM05CSM.MEDIUM.jpg" alt="" width="266" height="150"> <strong>Intel Edison Board x1</strong><br><br></div><br><img class="alignnone" src="http://4.bp.blogspot.com/-TK5QmjGRFa0/VOmQmyTYsuI/AAAAAAAAOW0/CFeUCjRsuK8/s1600/arduino_uno_large.png" alt="" width="264" height="184"> <strong>Arduino Uno x1</strong><br><div class="step-body"><br><br><img class="alignnone" src="http://www.ladyada.net/images/parts/breadboard-half.jpg" alt="" width="266" height="194"> <strong>bread board x2</strong><br><br><img class="alignnone" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/RGB_LED.jpg" alt="" width="266" height="178"> <strong>RGB LED x1</strong><br><br><img class="alignnone" src="http://cdn.instructables.com/F6Z/8QZX/IDM05CYS/F6Z8QZXIDM05CYS.MEDIUM.jpg" alt="" width="266" height="150"> <strong>Buzzer x1</strong><br><br><img class="alignnone" src="http://cdn.instructables.com/FPJ/VO65/IDM05CU5/FPJVO65IDM05CU5.MEDIUM.jpg" alt="" width="266" height="150"> <strong>photoresistor x1</strong><br><br><img class="alignnone" src="http://cdn.instructables.com/FL1/MHZG/IDM05CVY/FL1MHZGIDM05CVY.SMALL.jpg" alt="" width="267" height="150"> <strong>B3F Switch x1</strong><br><br><img class="alignnone" src="http://cdn.instructables.com/FJJ/5J74/IDM05CQU/FJJ5J74IDM05CQU.MEDIUM.jpg" alt="" width="266" height="150"> <strong>SG90 Servo x2</strong><br><br><img class="alignnone" src="http://cdn.instructables.com/F1G/U2A9/IDM05CYP/F1GU2A9IDM05CYP.SMALL.jpg" alt="" width="267" height="150"> <strong>LCD 1602 x1</strong><br><br><img class="alignnone" src="http://cdn.instructables.com/F39/JRMP/IDM05GIR/F39JRMPIDM05GIR.MEDIUM.jpg" alt="" width="267" height="150"> <strong>PIR HC-SR501 x1</strong><br><br><img class="alignnone" src="http://cdn.instructables.com/FO9/H4CE/IDM05CXR/FO9H4CEIDM05CXR.SMALL.jpg" alt="" width="267" height="150"> <strong>4x4 matrix keyboard x1</strong><br><ul><br>     <li id="step3" class="step-title"><strong><span style="color: #0000ff;">智慧家庭：操作教學</span></strong></li><br></ul><br>「光敏窗簾」顧名思義就是靠photoresistor(光敏電阻)來感應，並使用SG90 Servo(伺服馬達)來當窗簾開關的動力，光達到一定的強度窗簾就立刻打開。<br><br>「動作感測保安系統」則是透過像在出門時以按密碼(使用4x4 matrix keyboard)的方式將「屋內已空」的訊息傳至系統中，並且於輸完密碼時以閃紅燈兩下提示保安系統已開啟；回到家時則是以閃綠燈兩下提示解除。若陌生人擅自闖入屋內，HC-SR501(PIR)便會感應到任何動作便會讓蜂鳴器鈴聲大作，且LCD面板也會顯示警示訊息，並透過雲端的方式將訊息傳至家庭成員手中，做下一步的判斷。<br><br>最後是設置在廁所的「緊急救助按鈕」，以觸壓的方式將緊急訊號送出，和「動作感測保安系統」一樣，亦會使蜂鳴器大響並將警示訊息顯示於LCD面板，同時透過雲端也可將訊息傳給家中成員，以利處理。<br><ul><br>     <li><strong><span style="color: #0000ff;">成果影片</span></strong></li><br></ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8F5z9LPPhLY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p></p></div><p></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HackNTU/" rel="tag"># 臺大黑客松</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/HGST-HDD/" rel="next" title="超大容量、高穩定度 HGST Deskstar 6TB NAS專用碟 強勢登場">
+                <i class="fa fa-chevron-left"></i> 超大容量、高穩定度 HGST Deskstar 6TB NAS專用碟 強勢登場
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/PowerNAS-PN-401/" rel="prev" title="史上最易傳說！PowerNAS PN-401顛覆你對簡單的定義">
+                史上最易傳說！PowerNAS PN-401顛覆你對簡單的定義 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="EDEN" />
+            
+              <p class="site-author-name" itemprop="name">EDEN</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分類</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">標籤</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+		  
+		
+			<div class="links-of-blogroll motion-element links-of-blogroll-block">
+			<div class="links-of-blogroll-title">
+			<!-- modify icon to fire by szw -->
+			<i class="fa fa-history fa-" aria-hidden="true"></i>
+			近期文章
+				</div>
+				<ul class="links-of-blogroll-list">
+				
+				
+				<li>
+            <a href="/2018/08/AfoBot/" title="簡單動動口，即可享受影音娛樂！QNAP Afobot 阿福寶 帶給您全新體驗的智能居家助理！" target="_self">簡單動動口，即可享受影音娛樂！QNAP Afobot 阿福寶 帶給您全新體驗的智能居家助理！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/07/LIVA-Q/" title="口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！" target="_self">口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/05/EQL/" title="智慧生活、便利無窮！EQL智能小管家 開啟您居家生活的智能大門！" target="_self">智慧生活、便利無窮！EQL智能小管家 開啟您居家生活的智能大門！</a>
+			</li>
+			
+				<li>
+            <a href="/2018/03/PC-cillin-2018/" title="防毒寶典八式！PC-cillin 2018 雲端版 修煉防毒、即刻開始！" target="_self">防毒寶典八式！PC-cillin 2018 雲端版 修煉防毒、即刻開始！</a>
+			</li>
+			
+				<li>
+            <a href="/2017/07/Asustor-AS6404T-basic/" title="家庭影音的絕佳選擇！ASUSTOR AS6404T NAS 搭配 ADM 3.0，全新介面強勢登場！（基本應用篇）" target="_self">家庭影音的絕佳選擇！ASUSTOR AS6404T NAS 搭配 ADM 3.0，全新介面強勢登場！（基本應用篇）</a>
+			</li>
+			
+			</ul>
+			</div>
+		
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://ed521-disqus-com.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://ed521.github.io/2015/10/HackNTU-2015/';
+        this.page.identifier = '2015/10/HackNTU-2015/';
+        this.page.title = '2015台大黑客松成果作品—智慧家庭';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ed521-disqus-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("GWiCMTV5FLEllSQFcUkDE7Xh-gzGzoHsz", "LRR0nwwgaz0D0e3jsglLs02O");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+  
+  
+  
+</body>
+</html>
