@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://ed521.github.io/2018/08/Synology-Docker-Minecraft/</loc>
-    <lastmod>2018-08-24T11:54:38.370Z</lastmod>
+    <lastmod>2018-08-24T12:04:37.097Z</lastmod>
     <data>
         <display>
         <title>Synology NAS Docker 應用 (下)：架設 Minecraft 伺服器</title>
@@ -25,7 +25,7 @@
     
   <url>
     <loc>https://ed521.github.io/2018/08/Synology-Docker-ytdl/</loc>
-    <lastmod>2018-08-24T11:47:12.266Z</lastmod>
+    <lastmod>2018-08-24T12:04:26.002Z</lastmod>
     <data>
         <display>
         <title>Synology NAS Docker 應用 (上)：使用 youtube-dl 下載各大影音網站的影片</title>
@@ -37,6 +37,26 @@
            
              
               <breadCrumb title="NAS" url="https://ed521.github.io/categories/NAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ed521.github.io/2018/07/LIVA-Q/</loc>
+    <lastmod>2018-08-24T12:03:16.992Z</lastmod>
+    <data>
+        <display>
+        <title>口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！</title>
+        <pubTime>2018-07-29T12:09:00.000Z</pubTime>
+        
+        <tag>平板桌機</tag>
+         
+         
+           
+             
+              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>
@@ -261,26 +281,6 @@
            
              
               <breadCrumb title="生活記事" url="https://ed521.github.io/categories/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://ed521.github.io/2018/07/LIVA-Q/</loc>
-    <lastmod>2018-08-11T07:31:29.081Z</lastmod>
-    <data>
-        <display>
-        <title>口袋大小，非凡體驗！ECS LIVA Q 超迷你電腦，工作娛樂樣樣精通！</title>
-        <pubTime>2018-07-29T12:09:00.000Z</pubTime>
-        
-        <tag>平板桌機</tag>
-         
-         
-           
-             
-              <breadCrumb title="開箱文" url="https://ed521.github.io/categories/unboxing/"/>
           
         </display>
     </data>

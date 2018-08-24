@@ -173,7 +173,7 @@
 <meta property="og:image" content="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242252/original/a8d4da073fa7b2b8745f3ff970cc8599.png">
 <meta property="og:image" content="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242253/original/5e109e41a7b65877cd2ee181b061b1dd.png">
 <meta property="og:image" content="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242254/original/8fc0cf590d3317786ac7e6554310489a.png">
-<meta property="og:updated_time" content="2018-08-24T11:47:12.266Z">
+<meta property="og:updated_time" content="2018-08-24T12:04:26.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Synology NAS Docker 應用 (上)：使用 youtube-dl 下載各大影音網站的影片">
 <meta name="twitter:image" content="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242501/original/439fe1168b8e8bc0add742b7909540b7.png">
@@ -571,10 +571,9 @@
 <hr>
 
 <p><a id="b" name="b"></a><br><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242269/original/5c9f482e26120ba303bf4d0d115f0815.gif" alt="Docker 套件應用一：使用 youtube-dl 下載各大影音網站的影片"><br><a id="b-1" name="b-1"></a></p>
-<p><table border="0"></table></p>
-<p><tbody></tbody></p>
-<p><tr align="center" valign="middle"></tr></p>
-<p><td bgcolor="#daedfe"><strong>　架設動機與使用情境　</strong></td><br><br><br><br>說明完《Docker》套件的介面之後，筆者要先來介紹一個簡單的 Docker 應用：<strong>使用 youtube-dl 來下載各大影音網站的影片</strong>。</p>
+<table border="0"><br><tbody><br><tr align="center" valign="middle"><br><td bgcolor="#DAEDFE"><strong>　架設動機與使用情境　</strong></td><br></tr><br></tbody><br></table>
+
+<p>說明完《Docker》套件的介面之後，筆者要先來介紹一個簡單的 Docker 應用：<strong>使用 youtube-dl 來下載各大影音網站的影片</strong>。</p>
 <p>根據官方說法，目前 youtube-dl 支援<a href="https://rg3.github.io/youtube-dl/supPortedsites.html" target="_blank" rel="noopener">上千種影音網站的影片下載</a>，用戶<span style="color: #800000;">只要把該影片網址複製後貼到 youtube-dl，它就會自動下載最高畫質的影片。</span></p>
 <p><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242232/original/fe304772fdf1af52a14e959e957553f0.png"></p>
 <p>但是有人可能會說：網路上可以下載 YouTube 影片的網站一堆呀？因此這邊筆者也找了幾個下載 YT 影片的網站，來看看普通網站到底有何限制所在。</p>
@@ -603,10 +602,9 @@
 <hr>
 
 <p><a id="b-2" name="b-2"></a></p>
-<p><table border="0"></table></p>
-<p><tbody></tbody></p>
-<p><tr align="center" valign="middle"></tr></p>
-<p><td bgcolor="#daedfe"><strong>　youtube-dl 設置教學　</strong></td><br><br><br><br><strong><span style="color: #0000ff;">〔Step 1：打開《Docker》套件 → “倉庫伺服器”頁面搜尋”youtube-dl”，找到 kmb32123/youtube-dl-server 並下載〕</span></strong></p>
+<table border="0"><br><tbody><br><tr align="center" valign="middle"><br><td bgcolor="#daedfe"><strong>　youtube-dl 設置教學　</strong></td><br></tr><br></tbody><br></table>
+
+<p><strong><span style="color: #0000ff;">〔Step 1：打開《Docker》套件 → “倉庫伺服器”頁面搜尋”youtube-dl”，找到 kmb32123/youtube-dl-server 並下載〕</span></strong></p>
 <p>搜尋 youtube-dl 後會出現許多不同人製作的映像檔，我們下載的是擁有網頁 gui 介面的 kmb32123/youtube-dl-server。</p>
 <p><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242239/original/5d2e949b90b468cd6fbf574be03892ed.png"></p>
 <p><strong><span style="color: #0000ff;">〔Step 2：打開<a style="color: #0000ff;" href="https://hub.docker.com/r/kmb32123/youtube-dl-server/" target="_blank" rel="noopener">映像檔的官方頁面</a>，來查看有什麼變數需要額外設定。〕</span></strong></p>
@@ -634,10 +632,9 @@
 <hr>
 
 <p><a id="b-3" name="b-3"></a></p>
-<p><table border="0"></table></p>
-<p><tbody></tbody></p>
-<p><tr align="center" valign="middle"></tr></p>
-<p><td bgcolor="#daedfe"><strong>　應用展示　</strong></td><br><br><br><br>由於我們剛剛有新增網站捷徑至桌面，按一下就能打開 youtube-dl 網頁；或是在網址列輸入 http://[NAS位址]:8080/youtube-dl 也一樣能進入。</p>
+<table border="0"><br><tbody><br><tr align="center" valign="middle"><br><td bgcolor="#daedfe"><strong>　應用展示　</strong></td><br></tr><br></tbody><br></table>
+
+<p>由於我們剛剛有新增網站捷徑至桌面，按一下就能打開 youtube-dl 網頁；或是在網址列輸入 http://[NAS位址]:8080/youtube-dl 也一樣能進入。</p>
 <p><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242248/original/2f6a11d6eee1eaad56826473e4c92647.gif"></p>
 <p>接著實測超簡易的下載方式，只要複製影音連結，貼至 youtube-dl 網頁並按下”Submit”後，看到白底的網頁寫了”Success: true”就完成了。</p>
 <p><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242249/original/5dfbadd9e7cfc6969d14fdb9ce8b7b03.gif"></p>

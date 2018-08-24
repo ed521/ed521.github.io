@@ -160,7 +160,7 @@
 <meta property="og:image" content="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242530/original/41758ef78995665bb3a07ccf454e7759.png">
 <meta property="og:image" content="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242643/original/6095f520c7a8af14a3ad74560fd95935.png">
 <meta property="og:image" content="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242527/original/ff53a354a193e21495e4aa30c8efd887.png">
-<meta property="og:updated_time" content="2018-08-24T11:54:38.370Z">
+<meta property="og:updated_time" content="2018-08-24T12:04:37.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Synology NAS Docker 應用 (下)：架設 Minecraft 伺服器">
 <meta name="twitter:image" content="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/243064/original/b62d2b32817a9e6a43913849189f8965.gif">
@@ -520,10 +520,9 @@
 <hr>
 
 <p><a id="c" name="c"></a><br><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242528/original/1c84268549bdbefda632addbabf76a78.gif" alt="Docker 套件應用二：架設 Minecraft 伺服器"><br><a id="c-1" name="c-1"></a></p>
-<p><table border="0"></table></p>
-<p><tbody></tbody></p>
-<p><tr align="center" valign="middle"></tr></p>
-<p><td style="background-color: #daedfe;"><strong>　架設動機與使用情境　</strong></td><br><br><br><br>前一篇文章：<a href="https://ed521.github.io/2018/08/Synology-Docker-ytdl/" target="_blank" rel="noopener">使用 youtube-dl 下載各大影音網站的影片</a> 是一個比較簡單的 Docker 應用；接著就要介紹一款非常受歡迎的<strong>沙盒遊戲 - Minecraft</strong>，也就是我們要利用 <span style="color: #800000;">Synology NAS 的 Docker 套件來架設 Minecraft 伺服器</span>。Minecraft 的遊戲特色包括了<span style="color: #800000;">探索世界、採集資源、合成物品及生存冒險等等，只要架設伺服器，就能和朋友一同遊玩。</span></p>
+<table border="0"><br><tbody><br><tr align="center" valign="middle"><br><td style="background-color: #daedfe;"><strong>　架設動機與使用情境　</strong></td><br></tr><br></tbody><br></table>
+
+<p>前一篇文章：<a href="https://ed521.github.io/2018/08/Synology-Docker-ytdl/" target="_blank" rel="noopener">使用 youtube-dl 下載各大影音網站的影片</a> 是一個比較簡單的 Docker 應用；接著就要介紹一款非常受歡迎的<strong>沙盒遊戲 - Minecraft</strong>，也就是我們要利用 <span style="color: #800000;">Synology NAS 的 Docker 套件來架設 Minecraft 伺服器</span>。Minecraft 的遊戲特色包括了<span style="color: #800000;">探索世界、採集資源、合成物品及生存冒險等等，只要架設伺服器，就能和朋友一同遊玩。</span></p>
 <p><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242502/original/1d16f5498ec221413cb90654698f89b4.jpg"></p>
 <p>雖說桌上型電腦也能架設 Minecraft 伺服器，不過這裡列舉了幾點用 Docker 架設 Minecraft 的優點所在：</p>
 <p><span style="color: #0000ff;"><strong>〔使用 Docker 架設 Minecraft Server 原因之一：使用桌機架設十分耗電〕</strong></span></p>
@@ -548,10 +547,9 @@
 <hr>
 
 <p><a id="c-2" name="c-2"></a></p>
-<p><table border="0"></table></p>
-<p><tbody></tbody></p>
-<p><tr align="center" valign="middle"></tr></p>
-<p><td bgcolor="#daedfe"><strong>　Minecraft 伺服器設置教學　</strong></td><br><br><br><br><span style="color: #0000ff;"><strong>〔Step 1：打開《Docker》套件 → “倉庫伺服器”頁面搜尋”minecraft”，找到 itzg/minecraft-server 並下載〕</strong></span></p>
+<table border="0"><br><tbody><br><tr align="center" valign="middle"><br><td bgcolor="#daedfe"><strong>　Minecraft 伺服器設置教學　</strong></td><br></tr><br></tbody><br></table>
+
+<p><span style="color: #0000ff;"><strong>〔Step 1：打開《Docker》套件 → “倉庫伺服器”頁面搜尋”minecraft”，找到 itzg/minecraft-server 並下載〕</strong></span></p>
 <p>搜尋 minecraft 後會出現許多不同人製作的映像檔，我們下載擁有最多星星數的 itzg/minecraft-server。</p>
 <p><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242506/original/fe25d1e27485ee31fb5afa3449b99387.png"></p>
 <p><span style="color: #0000ff;"><strong>〔Step 2：打開<a style="color: #0000ff;" href="https://registry.hub.docker.com/u/itzg/minecraft-server/" target="_blank" rel="noopener">映像檔的官方頁面</a>，來查看有什麼變數需要額外設定。〕</strong></span></p>
@@ -589,10 +587,9 @@
 <hr>
 
 <p><a id="c-3" name="c-3"></a></p>
-<p><table border="0"></table></p>
-<p><tbody></tbody></p>
-<p><tr align="center" valign="middle"></tr></p>
-<p><td bgcolor="#daedfe"><strong>　應用展示　</strong></td><br><br><br><br>佈署完的同時，打開DSM主畫面 itzg-minecraft-server 的 Docker 圖示，進入終端機頁面會看到”Done!”開服完成的訊息（終端機畫面倒數第三列），這時候只要打開 Minecraft 並輸入 IP，就能開始遊玩。</p>
+<table border="0"><br><tbody><br><tr align="center" valign="middle"><br><td bgcolor="#daedfe"><strong>　應用展示　</strong></td><br></tr><br></tbody><br></table>
+
+<p>佈署完的同時，打開DSM主畫面 itzg-minecraft-server 的 Docker 圖示，進入終端機頁面會看到”Done!”開服完成的訊息（終端機畫面倒數第三列），這時候只要打開 Minecraft 並輸入 IP，就能開始遊玩。</p>
 <p><span style="color: #800000;">PS. 過太久才進去終端機頁面的話會沒有東西，顯示的訊息會移動到日誌頁面。</span></p>
 <p><img src="https://cdn2-t17-techbang.pixfs.net/system/attached_images/2018/08/242520/original/3810f0505160ed88ad686db81148befe.png"></p>
 <p>而在打開伺服器的瞬間，CPU 使用率大約會來到 70 %，之後才會慢慢掉到 5 % 以下。</p>
