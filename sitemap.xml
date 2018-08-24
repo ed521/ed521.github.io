@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ed521.github.io/2018/08/Synology-Docker-ytdl/</loc>
+    <loc>https://ed521.github.io/404.html</loc>
     
-    <lastmod>2018-08-24T09:44:55.155Z</lastmod>
+    <lastmod>2018-08-24T09:51:07.868Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://ed521.github.io/2018/08/Synology-Docker-Minecraft/</loc>
     
-    <lastmod>2018-08-24T09:44:54.340Z</lastmod>
+    <lastmod>2018-08-24T09:49:51.125Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2018/08/Synology-Docker-ytdl/</loc>
+    
+    <lastmod>2018-08-24T09:48:59.931Z</lastmod>
     
   </url>
   
@@ -215,13 +222,6 @@
     <loc>https://ed521.github.io/2016/11/Asustor-AS3202T/</loc>
     
     <lastmod>2018-06-05T05:41:46.224Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/404.html</loc>
-    
-    <lastmod>2018-05-20T07:51:27.791Z</lastmod>
     
   </url>
   
