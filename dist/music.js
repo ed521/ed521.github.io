@@ -35,7 +35,7 @@ const ap = new APlayer({
       },
 	  {
         name: "Baby Don't Know Why",
-        artist: 'Ms.OOJA (Nightcore)',
+        artist: 'Ms.OOJA (NC)',
         url: 'https://www.dropbox.com/s/z56ylrcmirenxwt/Baby%20Dont%20Know%20Why.mp3?dl=1',
         cover: '/music/Baby Dont Know Why.jpg',
 		lrc: '/music/Baby Dont Know Why.lrc'
@@ -91,7 +91,7 @@ const ap = new APlayer({
       },
 	  {
         name: 'I Really Like You',
-        artist: 'Carly Rae Jepsen (Nightcore)',
+        artist: 'Carly Rae Jepsen (NC)',
         url: 'https://www.dropbox.com/s/5r2dj9s8bjchid0/I%20Really%20Like%20You.mp3?dl=1',
         cover: '/music/I Really Like You.jpg',
 		lrc: '/music/I Really Like You.lrc'
@@ -161,7 +161,7 @@ const ap = new APlayer({
       },
 	  {
         name: 'Wild Rose',
-        artist: "May'n (Nightcore)",
+        artist: "May'n (NC)",
         url: 'https://www.dropbox.com/s/4gsa1cy1bkqvcvj/Wild%20Rose.mp3?dl=1',
         cover: '/music/Wild Rose.jpg',
 		lrc: '/music/Wild Rose.lrc'
@@ -186,6 +186,27 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/mor0keowtvlw05h/%E8%AA%AA%E6%84%9B%E4%BD%A0.mp3?dl=1',
         cover: '/music/布拉格廣場.jpg',
 		lrc: '/music/說愛你.lrc'
+      },
+	  {
+        name: 'My Days',
+        artist: '鈴木このみ',
+        url: 'https://www.dropbox.com/s/zd4aha1i1twknte/My%20Days.mp3?dl=1',
+        cover: '/music/My Days.jpg',
+		lrc: '/music/My Days.lrc'
+      },
+	  {
+        name: '派對動物',
+        artist: '五月天',
+        url: 'https://www.dropbox.com/s/x8eqcdkyvrwfq8j/%E6%B4%BE%E5%B0%8D%E5%8B%95%E7%89%A9.mp3?dl=1',
+        cover: '/music/派對動物.jpg',
+		lrc: '/music/派對動物.lrc'
+      },
+	  {
+        name: 'Me and My Broken Heart',
+        artist: 'Rixton (NC)',
+        url: 'https://www.dropbox.com/s/pe6vatuo1hvf3nf/Me%20and%20My%20Broken%20Heart.mp3?dl=1',
+        cover: '/music/Me and My Broken Heart.jpg',
+		lrc: '/music/Me and My Broken Heart.lrc'
       }
     ]
 });
