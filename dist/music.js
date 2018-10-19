@@ -207,6 +207,13 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/pe6vatuo1hvf3nf/Me%20and%20My%20Broken%20Heart.mp3?dl=1',
         cover: '/music/Me and My Broken Heart.jpg',
 		lrc: '/music/Me and My Broken Heart.lrc'
+      },
+	  {
+        name: '幸福了 然後呢',
+        artist: 'A-Lin',
+        url: 'https://www.dropbox.com/s/a60bqrd2lsc5hdl/%E5%B9%B8%E7%A6%8F%E4%BA%86%20%E7%84%B6%E5%BE%8C%E5%91%A2.mp3?dl=1',
+        cover: '/music/幸福了 然後呢.jpg',
+		lrc: '/music/幸福了 然後呢.lrc'
       }
     ]
 });
