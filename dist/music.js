@@ -214,6 +214,13 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/a60bqrd2lsc5hdl/%E5%B9%B8%E7%A6%8F%E4%BA%86%20%E7%84%B6%E5%BE%8C%E5%91%A2.mp3?dl=1',
         cover: '/music/幸福了 然後呢.jpg',
 		lrc: '/music/幸福了 然後呢.lrc'
+      },
+	  {
+        name: '帥到分手',
+        artist: '周湯豪',
+        url: 'https://www.dropbox.com/s/txoni3959p4jjcs/%E5%B8%A5%E5%88%B0%E5%88%86%E6%89%8B.mp3?dl=1',
+        cover: '/music/帥到分手.jpg',
+		lrc: '/music/帥到分手.lrc'
       }
     ]
 });
