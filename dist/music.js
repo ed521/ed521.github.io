@@ -221,6 +221,34 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/txoni3959p4jjcs/%E5%B8%A5%E5%88%B0%E5%88%86%E6%89%8B.mp3?dl=1',
         cover: '/music/帥到分手.jpg',
 		lrc: '/music/帥到分手.lrc'
+      },
+	  {
+        name: 'Lemon',
+        artist: '米津玄師',
+        url: 'https://www.dropbox.com/s/aqsn3p8sr2mfyyb/Lemon.mp3?dl=1',
+        cover: '/music/Lemon.jpg',
+		lrc: '/music/Lemon.lrc'
+      },
+	  {
+        name: '學貓叫',
+        artist: '小潘潘&小峰峰',
+        url: 'https://www.dropbox.com/s/5ojc13ewmt9yi4k/%E5%AD%B8%E8%B2%93%E5%8F%AB.mp3?dl=1',
+        cover: '/music/學貓叫.jpg',
+		lrc: '/music/學貓叫.lrc'
+      },
+	  {
+        name: '雨愛',
+        artist: '楊丞琳',
+        url: 'https://www.dropbox.com/s/tzb8s79uw6mu3s6/%E9%9B%A8%E6%84%9B.mp3?dl=1',
+        cover: '/music/雨愛.jpg',
+		lrc: '/music/雨愛.lrc'
+      },
+	  {
+        name: '聲聲慢',
+        artist: '鄧福如',
+        url: 'https://www.dropbox.com/s/6f0udvy9f928luu/%E8%81%B2%E8%81%B2%E6%85%A2.mp3?dl=1',
+        cover: '/music/聲聲慢.jpg',
+		lrc: '/music/聲聲慢.lrc'
       }
     ]
 });
