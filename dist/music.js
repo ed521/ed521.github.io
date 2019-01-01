@@ -174,13 +174,6 @@ const ap = new APlayer({
 		lrc: '/music/布拉格廣場.lrc'
       },
 	  {
-        name: '看我72變',
-        artist: '蔡依林',
-        url: 'https://www.dropbox.com/s/ch19dhobezqi63v/%E7%9C%8B%E6%88%9172%E8%AE%8A.mp3?dl=1',
-        cover: '/music/布拉格廣場.jpg',
-		lrc: '/music/看我72變.lrc'
-      },
-	  {
         name: '說愛你',
         artist: '蔡依林',
         url: 'https://www.dropbox.com/s/mor0keowtvlw05h/%E8%AA%AA%E6%84%9B%E4%BD%A0.mp3?dl=1',
@@ -249,6 +242,34 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/6f0udvy9f928luu/%E8%81%B2%E8%81%B2%E6%85%A2.mp3?dl=1',
         cover: '/music/聲聲慢.jpg',
 		lrc: '/music/聲聲慢.lrc'
+      },
+	  {
+        name: '稻香',
+        artist: '周杰倫',
+        url: 'https://www.dropbox.com/s/p9bojd85z43b51s/%E7%A8%BB%E9%A6%99.mp3?dl=1',
+        cover: '/music/稻香.jpg',
+		lrc: '/music/稻香.lrc'
+      },
+	  {
+        name: '123我愛你',
+        artist: '新樂塵符-賀子玲',
+        url: 'https://www.dropbox.com/s/joea19ydwo5bnqr/123%E6%88%91%E6%84%9B%E4%BD%A0.mp3?dl=1',
+        cover: '/music/123我愛你.jpg',
+		lrc: '/music/123我愛你.lrc'
+      },
+	  {
+        name: '私奔到月球',
+        artist: '五月天 (feat.陳綺貞)',
+        url: 'https://www.dropbox.com/s/j6laj8h1ipqd9ss/%E7%A7%81%E5%A5%94%E5%88%B0%E6%9C%88%E7%90%83.mp3?dl=1',
+        cover: '/music/私奔到月球.jpg',
+		lrc: '/music/私奔到月球.lrc'
+      },
+	  {
+        name: '演員',
+        artist: '薛之謙',
+        url: 'https://www.dropbox.com/s/h2x595mzd6lkm5a/%E6%BC%94%E5%93%A1.mp3?dl=1',
+        cover: '/music/演員.jpg',
+		lrc: '/music/演員.lrc'
       }
     ]
 });
