@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ed521.github.io/2018/12/DIKE-DS603/</loc>
+    
+    <lastmod>2019-01-01T12:22:10.478Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2017/06/Soundmatters-Moment/</loc>
+    
+    <lastmod>2019-01-01T12:21:24.525Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/about/index.html</loc>
+    
+    <lastmod>2018-12-22T07:31:43.432Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ed521.github.io/2016/07/Synology-Tip-E/</loc>
     
     <lastmod>2018-10-13T18:04:05.636Z</lastmod>
@@ -89,13 +110,6 @@
     <loc>https://ed521.github.io/2018/08/Synology-Docker-Minecraft/</loc>
     
     <lastmod>2018-10-13T17:50:35.013Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/2017/06/Soundmatters-Moment/</loc>
-    
-    <lastmod>2018-10-13T17:47:58.032Z</lastmod>
     
   </url>
   
@@ -285,13 +299,6 @@
     <loc>https://ed521.github.io/tags/index.html</loc>
     
     <lastmod>2018-08-09T12:41:35.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/about/index.html</loc>
-    
-    <lastmod>2018-08-09T12:06:22.669Z</lastmod>
     
   </url>
   
