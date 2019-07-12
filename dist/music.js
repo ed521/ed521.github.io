@@ -270,6 +270,69 @@ const ap = new APlayer({
         url: 'https://www.dropbox.com/s/h2x595mzd6lkm5a/%E6%BC%94%E5%93%A1.mp3?dl=1',
         cover: '/music/演員.jpg',
 		lrc: '/music/演員.lrc'
+      },
+	  {
+        name: '我是誰 我是誰 我是誰',
+        artist: 'MP魔幻力量',
+        url: 'https://drive.google.com/uc?export=download&id=1OT62l6jGCjSGncjmbYqizhW-iIvkKSZE',
+        cover: '/music/我是誰我是誰我是誰.jpg',
+		lrc: '/music/我是誰我是誰我是誰.lrc'
+      },
+	  {
+        name: '偷偷的',
+        artist: 'MP魔幻力量',
+        url: 'https://drive.google.com/uc?export=download&id=1BvY-vEt0xFgUujSlw9I4nX0yiJquElMK',
+        cover: '/music/偷偷的.jpg',
+		lrc: '/music/偷偷的.lrc'
+      },
+	  {
+        name: '感覺犯',
+        artist: 'MP魔幻力量',
+        url: 'https://drive.google.com/uc?export=download&id=10twiA5YE10OXRzZq5HRufZINkRFWgdTA',
+        cover: '/music/感覺犯.jpg',
+		lrc: '/music/感覺犯.lrc'
+      },
+	  {
+        name: '沒有如果',
+        artist: '梁靜茹',
+        url: 'https://drive.google.com/uc?export=download&id=1zK2VxyBPcCtXGvRI_mGlsOtcLEHGVdaU',
+        cover: '/music/沒有如果.jpg',
+		lrc: '/music/沒有如果.lrc'
+      },
+	  {
+        name: 'Hacking to the Gate',
+        artist: '伊藤香奈子',
+        url: 'https://drive.google.com/uc?export=download&id=10SoFpZxTQaELkm3vq59rOcRRreuEW__j',
+        cover: '/music/Hacking to the Gate.jpg',
+		lrc: '/music/Hacking to the Gate.lrc'
+      },
+	  {
+        name: 'Last Christmas',
+        artist: 'Glee Cast',
+        url: 'https://drive.google.com/uc?export=download&id=10hpRQ7K3clrVFog3zhpl73mQTqtI9oYO',
+        cover: '/music/Last Christmas.jpg',
+		lrc: '/music/Last Christmas.lrc'
+      },
+	  {
+        name: 'Alone',
+        artist: 'Alan Walker',
+        url: 'https://drive.google.com/uc?export=download&id=1MHkjL4nIATRJ9z4fPYHU3Fk2Q0L_m3z0',
+        cover: '/music/Alone.jpg',
+		lrc: '/music/Alone.lrc'
+      },
+	  {
+        name: 'Faded (即刻電音版)',
+        artist: 'RocketGirls 101 (火箭少女)',
+        url: 'https://drive.google.com/uc?export=download&id=10JalP2e5yQ2Fs80CsmfMQ__x0BDgJ0Pv',
+        cover: '/music/Faded (即刻電音版).jpg',
+		lrc: '/music/Faded (即刻電音版).lrc'
+      },
+	  {
+        name: 'Closer (Aash Mehta Flip)',
+        artist: 'The Chainsmokers (ft. Halsey)',
+        url: 'https://drive.google.com/uc?export=download&id=1ibl8rOSUtyOx6CXyvOz1NJ8KrzVhW_l-',
+        cover: '/music/Closer (Aash Mehta Flip).jpg',
+		lrc: '/music/Closer (Aash Mehta Flip).lrc'
       }
     ]
 });
