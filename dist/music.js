@@ -333,6 +333,20 @@ const ap = new APlayer({
         url: 'https://drive.google.com/uc?export=download&id=1ibl8rOSUtyOx6CXyvOz1NJ8KrzVhW_l-',
         cover: '/music/Closer (Aash Mehta Flip).jpg',
 		lrc: '/music/Closer (Aash Mehta Flip).lrc'
+      },
+	  {
+        name: '歐若拉',
+        artist: '張韶涵',
+        url: 'https://drive.google.com/uc?export=download&id=1S4gUFR75vtxJn5grRKgrHrDLX-7T8by-',
+        cover: '/music/歐若拉.jpg',
+		lrc: '/music/歐若拉.lrc'
+      },
+	  {
+        name: '好心分手',
+        artist: '盧巧音&王力宏',
+        url: 'https://drive.google.com/uc?export=download&id=194_6GlEovMm4BURmKLg852og9O74oyvj',
+        cover: '/music/好心分手.jpg',
+		lrc: '/music/好心分手.lrc'
       }
     ]
 });
