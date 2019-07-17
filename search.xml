@@ -10,16 +10,16 @@
       
       <categories>
           
-          <category> 教學 </category>
+          <category> 教學文 </category>
+          
+          <category> Hexo部落格 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Hexo </tag>
-            
-            <tag> 部落格 </tag>
+            <tag> Hexo部落格 </tag>
             
         </tags>
       
@@ -34,6 +34,8 @@
       <categories>
           
           <category> 開箱文 </category>
+          
+          <category> 路由器 </category>
           
       </categories>
       
@@ -54,7 +56,9 @@
       
       <categories>
           
-          <category> 軟體 </category>
+          <category> 教學文 </category>
+          
+          <category> 防毒軟體 </category>
           
       </categories>
       
@@ -77,6 +81,8 @@
           
           <category> 開箱文 </category>
           
+          <category> 耳機音響 </category>
+          
       </categories>
       
       
@@ -98,6 +104,8 @@
           
           <category> 開箱文 </category>
           
+          <category> 路由器 </category>
+          
       </categories>
       
       
@@ -117,7 +125,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -138,7 +148,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -161,6 +173,8 @@
           
           <category> 開箱文 </category>
           
+          <category> 智慧家庭 </category>
+          
       </categories>
       
       
@@ -182,12 +196,14 @@
           
           <category> 開箱文 </category>
           
+          <category> 電腦平板 </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> 平板桌機 </tag>
+            <tag> 電腦平板 </tag>
             
         </tags>
       
@@ -202,6 +218,8 @@
       <categories>
           
           <category> 開箱文 </category>
+          
+          <category> 智慧家庭 </category>
           
       </categories>
       
@@ -222,7 +240,9 @@
       
       <categories>
           
-          <category> 軟體 </category>
+          <category> 教學文 </category>
+          
+          <category> 防毒軟體 </category>
           
       </categories>
       
@@ -245,7 +265,11 @@
           
           <category> 開箱文 </category>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Asustor NAS </category>
+          
+          <category> Asustor NAS </category>
           
       </categories>
       
@@ -268,6 +292,8 @@
           
           <category> 開箱文 </category>
           
+          <category> 耳機音響 </category>
+          
       </categories>
       
       
@@ -289,6 +315,8 @@
           
           <category> 開箱文 </category>
           
+          <category> 耳機音響 </category>
+          
       </categories>
       
       
@@ -308,7 +336,9 @@
       
       <categories>
           
-          <category> 軟體 </category>
+          <category> 教學文 </category>
+          
+          <category> 防毒軟體 </category>
           
       </categories>
       
@@ -352,6 +382,8 @@
           
           <category> 開箱文 </category>
           
+          <category> 3C周邊 </category>
+          
       </categories>
       
       
@@ -373,7 +405,11 @@
           
           <category> 開箱文 </category>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Asustor NAS </category>
+          
+          <category> Asustor NAS </category>
           
       </categories>
       
@@ -394,7 +430,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Asustor NAS </category>
           
       </categories>
       
@@ -415,7 +453,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Asustor NAS </category>
           
       </categories>
       
@@ -436,7 +476,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Asustor NAS </category>
           
       </categories>
       
@@ -459,6 +501,8 @@
           
           <category> 開箱文 </category>
           
+          <category> 手表 </category>
+          
       </categories>
       
       
@@ -480,7 +524,7 @@
           
           <category> 開箱文 </category>
           
-          <category> NAS </category>
+          <category> 其它NAS </category>
           
       </categories>
       
@@ -503,7 +547,11 @@
           
           <category> 開箱文 </category>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -524,7 +572,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -545,7 +595,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -566,7 +618,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -587,7 +641,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -608,7 +664,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -629,7 +687,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -650,7 +710,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -671,7 +733,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -692,7 +756,9 @@
       
       <categories>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -715,7 +781,7 @@
           
           <category> 開箱文 </category>
           
-          <category> NAS </category>
+          <category> 其它NAS </category>
           
       </categories>
       
@@ -753,6 +819,8 @@
           
           <category> 開箱文 </category>
           
+          <category> 網路攝影機 </category>
+          
       </categories>
       
       
@@ -774,7 +842,11 @@
           
           <category> 開箱文 </category>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Synology NAS </category>
+          
+          <category> Synology NAS </category>
           
       </categories>
       
@@ -797,12 +869,14 @@
           
           <category> 開箱文 </category>
           
+          <category> 電腦平板 </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> 平板桌機 </tag>
+            <tag> 電腦平板 </tag>
             
         </tags>
       
@@ -818,7 +892,7 @@
           
           <category> 開箱文 </category>
           
-          <category> NAS </category>
+          <category> 其它NAS </category>
           
       </categories>
       
@@ -846,7 +920,7 @@
       
         <tags>
             
-            <tag> 臺大黑客松 </tag>
+            <tag> 黑客松 </tag>
             
         </tags>
       
@@ -861,6 +935,8 @@
       <categories>
           
           <category> 開箱文 </category>
+          
+          <category> 硬碟 </category>
           
       </categories>
       
@@ -883,12 +959,14 @@
           
           <category> 開箱文 </category>
           
+          <category> 電腦平板 </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> 平板桌機 </tag>
+            <tag> 電腦平板 </tag>
             
         </tags>
       
@@ -904,7 +982,11 @@
           
           <category> 開箱文 </category>
           
-          <category> NAS </category>
+          <category> 教學文 </category>
+          
+          <category> Asustor NAS </category>
+          
+          <category> Asustor NAS </category>
           
       </categories>
       
