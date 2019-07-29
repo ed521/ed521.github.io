@@ -21,7 +21,7 @@ const ap = new APlayer({
       },
       {
         name: 'Butter-Fly',
-        artist: 'コバソロ & 七穂',
+        artist: '和田光司 (By コバソロ & 七穂)',
         url: 'https://drive.google.com/uc?export=download&id=1MsP1LkJj8K5k_Dq7kwYGJDbRbXSN4mfP',
         cover: '/music/Butter-Fly.jpg',
 		lrc: '/music/Butter-Fly.lrc'
@@ -347,6 +347,20 @@ const ap = new APlayer({
         url: 'https://drive.google.com/uc?export=download&id=194_6GlEovMm4BURmKLg852og9O74oyvj',
         cover: '/music/好心分手.jpg',
 		lrc: '/music/好心分手.lrc'
+      },
+	  {
+        name: '小さな恋のうた',
+        artist: 'MONGOL800 (By コバソロ & 杏沙子)',
+        url: 'https://drive.google.com/uc?export=download&id=1QAQ6XgHgBq48PGwiodumfqhFCowBazxt',
+        cover: '/music/小さな恋のうた.jpg',
+		lrc: '/music/小さな恋のうた.lrc'
+      },
+	  {
+        name: 'あとひとつ',
+        artist: 'FUNKY MONKEY BABYS (By コバソロ & こぴ)',
+        url: 'https://drive.google.com/uc?export=download&id=1uJafY4DsI1YDewaiq1I4iJM9Vbwu3Ku7',
+        cover: '/music/あとひとつ.jpg',
+		lrc: '/music/あとひとつ.lrc'
       }
     ]
 });
