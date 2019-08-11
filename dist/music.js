@@ -361,6 +361,111 @@ const ap = new APlayer({
         url: 'https://drive.google.com/uc?export=download&id=1uJafY4DsI1YDewaiq1I4iJM9Vbwu3Ku7',
         cover: '/music/あとひとつ.jpg',
 		lrc: '/music/あとひとつ.lrc'
+      },
+	  {
+        name: 'I Believe',
+        artist: '范逸臣',
+        url: 'https://drive.google.com/uc?export=download&id=1BOybTea8qdLS_YVPPVFw059XwoILa7k6',
+        cover: '/music/I_Believe.jpg',
+		lrc: '/music/I_Believe.lrc'
+      },
+	  {
+        name: 'Love More',
+        artist: '畢書盡',
+        url: 'https://drive.google.com/uc?export=download&id=1X7eiXJbW2N0lCnCtRN30_6kmExg2uPzm',
+        cover: '/music/Love_More.jpg',
+		lrc: '/music/Love_More.lrc'
+      },
+	  {
+        name: '分手後不要做朋友',
+        artist: '梁文音',
+        url: 'https://drive.google.com/uc?export=download&id=1iDLxIu6KHp-dEq33aiW0XybDR-Y12vTR',
+        cover: '/music/分手後不要做朋友.jpg',
+		lrc: '/music/分手後不要做朋友.lrc'
+      },
+	  {
+        name: '天后',
+        artist: '陳勢安',
+        url: 'https://drive.google.com/uc?export=download&id=1NaQkD_CHZkPH3NoelCBUNRq3Gv23I3XY',
+        cover: '/music/天后.jpg',
+		lrc: '/music/天后.lrc'
+      },
+	  {
+        name: '好朋友只是朋友',
+        artist: '郁可唯',
+        url: 'https://drive.google.com/uc?export=download&id=1WMMzNuMl-tkcLLhJIPtEk2NtGTVJScBR',
+        cover: '/music/好朋友只是朋友.jpg',
+		lrc: '/music/好朋友只是朋友.lrc'
+      },
+	  {
+        name: '我懷念的',
+        artist: '蕭敬騰',
+        url: 'https://drive.google.com/uc?export=download&id=1e1qlKIO7FHa1PWwjf5Bqh3gG_Ip85C-y',
+        cover: '/music/我懷念的.jpg',
+		lrc: '/music/我懷念的.lrc'
+      },
+	  {
+        name: '家家酒',
+        artist: '家家',
+        url: 'https://drive.google.com/uc?export=download&id=1SWKgSLk-hjSj57Z_uT5UDacwCpjosEhR',
+        cover: '/music/家家酒.jpg',
+		lrc: '/music/家家酒.lrc'
+      },
+	  {
+        name: '涼涼',
+        artist: '楊宗緯 & 張碧晨',
+        url: 'https://drive.google.com/uc?export=download&id=1AWzVIxwlAA1ShCcTo98ASir2_aPMOxro',
+        cover: '/music/涼涼.jpg',
+		lrc: '/music/涼涼.lrc'
+      },
+	  {
+        name: '猜不透',
+        artist: '丁噹',
+        url: 'https://drive.google.com/uc?export=download&id=1vyH69RRJL7oru9Sb1JB6Ux4UmOSVlKK2',
+        cover: '/music/猜不透.jpg',
+		lrc: '/music/猜不透.lrc'
+      },
+	  {
+        name: '等一個人',
+        artist: '林芯儀',
+        url: 'https://drive.google.com/uc?export=download&id=1CpgZR6tFtJYDGCXF9rr4b1eXXA368_uB',
+        cover: '/music/等一個人.jpg',
+		lrc: '/music/等一個人.lrc'
+      },
+	  {
+        name: '勢在必行',
+        artist: '陳勢安 & 畢書盡',
+        url: 'https://drive.google.com/uc?export=download&id=1wV6pvDUCZgmaQlHx0OrFGkwuuOqg426t',
+        cover: '/music/勢在必行.jpg',
+		lrc: '/music/勢在必行.lrc'
+      },
+	  {
+        name: '愛你',
+        artist: '陳芳語',
+        url: 'https://drive.google.com/uc?export=download&id=1oUMbw0x-9B6r7TW-OqUW7wOZAPEFWmE2',
+        cover: '/music/愛你.jpg',
+		lrc: '/music/愛你.lrc'
+      },
+	  {
+        name: '夢一場',
+        artist: '蕭敬騰',
+        url: 'https://drive.google.com/uc?export=download&id=1FQSTHFZnfSNfohCALi_6w6PbRv6CxSoE',
+        cover: '/music/我懷念的.jpg',
+		lrc: '/music/夢一場.lrc'
+      },
+	  {
+        name: '親愛的那不是愛情',
+        artist: '張韶涵',
+        url: 'https://drive.google.com/uc?export=download&id=1jkkL7yvyrs6Rde18yOKay8ielQxWuD-h',
+        cover: '/music/親愛的那不是愛情.jpg',
+		lrc: '/music/親愛的那不是愛情.lrc'
+      },
+	  {
+        name: '讓我為你唱情歌',
+        artist: '蕭敬騰',
+        url: 'https://drive.google.com/uc?export=download&id=1_ejsdWgZrEON25wLXHpLtgYhzPe-5Dtu',
+        cover: '/music/讓我為你唱情歌.jpg',
+		lrc: '/music/讓我為你唱情歌.lrc'
       }
     ]
 });

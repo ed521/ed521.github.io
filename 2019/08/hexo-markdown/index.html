@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-TW">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<meta name="google-site-verification" content="3XSsjGVN4Y-4OkgiM6inN9F6vE8l0QsitBNfN3NiiK8" />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7537110101366593",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/android-icon-32x32.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/android-icon-16x16.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+  <meta property="fb:admins" content="100002612786025" />
+  <meta property="fb:app_id" content="699915593734346" />
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.0',
+    sidebar: {"position":"left","width":300,"display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全 Markdown 的目標是實現「易讀易寫」，並強調它的「可讀性」，因此 Markdown 的語法全由標點符號所組成，並經過嚴謹慎選，是為了讓它們看起來就像">
+<meta name="keywords" content="教學, GitHub, GitHub Pages, Hexo, 部落格, 懶人包, 架站, 架設部落格, 應用, 個人, 搭建, Hexo admin, 寫文章, markdown, markdown語法, 語法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[教學] 撰寫 Hexo 文章 - Markdown 語法大全">
+<meta property="og:url" content="https://ed521.github.io/2019/08/hexo-markdown/index.html">
+<meta property="og:site_name" content="瑪利歐的部落格">
+<meta property="og:description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全 Markdown 的目標是實現「易讀易寫」，並強調它的「可讀性」，因此 Markdown 的語法全由標點符號所組成，並經過嚴謹慎選，是為了讓它們看起來就像">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262146/original/6275d5fc2d1f6efe2f881a998e7eb95d.png">
+<meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262148/original/69388a8d9f3a55b396d780af9ce9308c.png">
+<meta property="og:image" content="https://s1.yimg.com/rz/d/yahoo_frontpage_zh-Hant-TW_s_f_p_bestfit_frontpage_2x.png">
+<meta property="og:image" content="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+<meta property="og:image" content="https://ed521.github.io/2019/08/hexo-markdown/123.png">
+<meta property="og:updated_time" content="2019-08-09T10:37:07.947Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[教學] 撰寫 Hexo 文章 - Markdown 語法大全">
+<meta name="twitter:description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全 Markdown 的目標是實現「易讀易寫」，並強調它的「可讀性」，因此 Markdown 的語法全由標點符號所組成，並經過嚴謹慎選，是為了讓它們看起來就像">
+<meta name="twitter:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262146/original/6275d5fc2d1f6efe2f881a998e7eb95d.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="瑪利歐的部落格" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="https://ed521.github.io/2019/08/hexo-markdown/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>[教學] 撰寫 Hexo 文章 - Markdown 語法大全 | 瑪利歐的部落格</title>
+  
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '699915593734346',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_TW/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-61473305-3');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">瑪利歐的部落格</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首頁</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />關於</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />標籤<span class="badge">14</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分類<span class="badge">21</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />歸檔<span class="badge">45</span></a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜尋</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜尋..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2019/08/hexo-markdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EDEN">
+      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑪利歐的部落格">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">[教學] 撰寫 Hexo 文章 - Markdown 語法大全
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-09 01:15:42" itemprop="dateCreated datePublished" datetime="2019-08-09T01:15:42+08:00">2019-08-09</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/teaching/hexoblog/" itemprop="url" rel="index"><span itemprop="name">Hexo部落格</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/hexo-markdown/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">評論數：</span> <span class="post-comments-count fb-comments-count" data-href="https://ed521.github.io/2019/08/hexo-markdown/" itemprop="commentCount">0</span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/08/hexo-markdown/" class="leancloud_visitors" data-flag-title="[教學] 撰寫 Hexo 文章 - Markdown 語法大全">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">文章字數：</span>
+                
+                <span title="文章字數">4.1k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Hexo 部落格教學文系列：<br><a href="https://ed521.github.io/2019/07/hexo-install/">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格</a><br><a href="https://ed521.github.io/2019/08/hexo-admin/">[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具</a><br><a href="https://ed521.github.io/2019/08/hexo-markdown/">[教學] 撰寫 Hexo 文章 - Markdown 語法大全</a></p>
+<p>Markdown 的目標是實現「易讀易寫」，並強調它的「可讀性」，因此 Markdown 的語法全由標點符號所組成，並經過嚴謹慎選，是為了讓它們看起來就像所要表達的意思；以下是 Markdown 大部分的語法。</p>
+<h1 id="常用語法-文字樣式"><a href="#常用語法-文字樣式" class="headerlink" title="常用語法 - 文字樣式"></a><font color="#0000FF">常用語法 - 文字樣式</font></h1><h2 id="文字字體"><a href="#文字字體" class="headerlink" title="文字字體"></a><font color="#FF6600">文字字體</font></h2><table>
+<thead>
+<tr>
+<th>類別</th>
+<th>語法</th>
+<th>顯示結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>粗體</td>
+<td><code>**我是粗體**</code></td>
+<td><strong>我是粗體</strong></td>
+</tr>
+<tr>
+<td>斜體</td>
+<td><code>*我是斜體*</code></td>
+<td><em>我是斜體</em></td>
+</tr>
+<tr>
+<td>粗斜體</td>
+<td><code>***我是粗斜體***</code></td>
+<td><strong><em>我是粗斜體</em></strong></td>
+</tr>
+<tr>
+<td>刪除線</td>
+<td><code>~~我是刪除線~~</code></td>
+<td><del>我是刪除線</del></td>
+</tr>
+<tr>
+<td>底線</td>
+<td><code>&lt;u&gt;我是底線&lt;u&gt;</code></td>
+<td><u>我是底線<u></u></u></td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h2 id="文字顏色"><a href="#文字顏色" class="headerlink" title="文字顏色"></a><font color="#FF6600">文字顏色</font></h2><p>Markdown 並沒有更改文字顏色的語法，因此只能我們靠自己加入 HTML 語法來修改文字顏色，只要在欲更改文字顏色的地方加入 <code>&lt;font color=#008000&gt;我是深綠色&lt;/font&gt;</code> ：<font color="#008000">我是深綠色</font>。</p>
+<p>在此附上一些常用的顏色，使用者也可以到 <a href="https://www.ifreesite.com/color/web-color-code.htm" target="_blank" rel="noopener">常用顏色表</a> 這個網站來找尋自己喜歡的顏色。</p>
+<table>
+<thead>
+<tr>
+<th>語法</th>
+<th>顯示結果</th>
+<th>語法</th>
+<th>顯示結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;font color=#800000&gt;酒紅色&lt;/font&gt;</code></td>
+<td><font color="#800000">酒紅色</font></td>
+<td><code>&lt;font color=#FF0000&gt;紅色&lt;/font&gt;</code></td>
+<td><font color="#FF0000">紅色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#FF6600&gt;橘色&lt;/font&gt;</code></td>
+<td><font color="#FF6600">橘色</font></td>
+<td><code>&lt;font color=#FFD700&gt;金色&lt;/font&gt;</code></td>
+<td><font color="#FFD700">金色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#FFFF00&gt;黃色&lt;/font&gt;</code></td>
+<td><font color="#FFFF00">黃色</font></td>
+<td><code>&lt;font color=#00FF00&gt;綠色&lt;/font&gt;</code></td>
+<td><font color="#00FF00">綠色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#008000&gt;墨綠色&lt;/font&gt;</code></td>
+<td><font color="#008000">墨綠色</font></td>
+<td><code>&lt;font color=#00FFFF&gt;青色&lt;/font&gt;</code></td>
+<td><font color="#00FFFF">青色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#0000FF&gt;深藍色&lt;/font&gt;</code></td>
+<td><font color="#0000FF">深藍色</font></td>
+<td><code>&lt;font color=#FF00FF&gt;粉紅色&lt;/font&gt;</code></td>
+<td><font color="#FF00FF">粉紅色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#800080&gt;紫色&lt;/font&gt;</code></td>
+<td><font color="#800080">紫色</font></td>
+<td><code>&lt;font color=#808080&gt;灰色&lt;/font&gt;</code></td>
+<td><font color="#808080">灰色</font></td>
+</tr>
+</tbody>
+</table>
+<h2 id="標題"><a href="#標題" class="headerlink" title="標題"></a><font color="#FF6600">標題</font></h2><p>使用 <code>#</code> 來表示等級一的標題，總共有六個等級，<font color="#800000">且 # 字符號和文字間<strong>要空一格</strong></font>。語法依此類推：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 等級一標題</span><br><span class="line">## 等級二標題</span><br><span class="line">### 等級三標題</span><br><span class="line">#### 等級四標題</span><br><span class="line">##### 等級五標題</span><br><span class="line">###### 等級六標題</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下圖：</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262146/original/6275d5fc2d1f6efe2f881a998e7eb95d.png" alt=""></p>
+<h2 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a><font color="#FF6600">程式碼</font></h2><ul>
+<li><strong><font color="#008000">文字間程式碼</font></strong></li>
+</ul>
+<p><strong><font color="#800000">插入在文字間</font></strong>的程式碼請使用以下語法，也就是用鍵盤 Tab 鍵上方的反引號來包住：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C語言的輸入請使用 `scanf()` 函式。</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<p>C語言的輸入請使用 <code>scanf()</code> 函式。</p>
+<ul>
+<li><strong><font color="#008000">段落程式碼</font></strong></li>
+</ul>
+<p>若要以整行或整段來顯示程式碼，請使用也就是用鍵盤 Tab 上方的三個反引號來包住，且可以<font color="#800000"><strong>在第一列最後方指定程式語言類型(也能不指定)，這樣會在特殊函式或語法上標示特殊顏色</strong></font>。</p>
+<p>例如使用 C 語言：</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262148/original/69388a8d9f3a55b396d780af9ce9308c.png" alt=""></p>
+<p>其結果顯示如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HelloWorld 程式</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"HelloWorld\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="常用語法-其它"><a href="#常用語法-其它" class="headerlink" title="常用語法 - 其它"></a><font color="#0000FF">常用語法 - 其它</font></h1><h2 id="分隔線"><a href="#分隔線" class="headerlink" title="分隔線"></a><font color="#FF6600">分隔線</font></h2><p>一整列中輸入三個以上的 <code>***</code> 或三個以上的 <code>---</code>，且<font color="#800000">整列<strong>不能有其它文字</strong></font>，結果顯示如下：</p>
+<hr>
+<h2 id="項目符號-編號"><a href="#項目符號-編號" class="headerlink" title="項目符號/編號"></a><font color="#FF6600">項目符號/編號</font></h2><p><strong><font color="#008000">項目符號</font></strong>可以用 <code>*</code>、<code>+</code> 或 <code>-</code>，放在整列的開頭當作項目符號，<font color="#800000">且符號和文字間<strong>要空一格</strong></font>，語法範例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ aaa</span><br><span class="line">+ bbb</span><br><span class="line">+ ccc</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<ul>
+<li>aaa</li>
+<li>bbb</li>
+<li>ccc</li>
+</ul>
+<p>而<strong><font color="#008000">編號</font></strong>就是使用數字在加上 <code>.</code>，<font color="#800000">且 <code>.</code> 和文字間<strong>要空一格</strong></font>，語法範例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. aaa</span><br><span class="line">2. bbb</span><br><span class="line">3. ccc</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<ol>
+<li>aaa</li>
+<li>bbb</li>
+<li>ccc</li>
+</ol>
+<p>若使用<strong><font color="#008000">「階層式」的項目符號/編號</font></strong>，只要記得空的格數要整齊即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+ 益者三友</span><br><span class="line">  + 友直</span><br><span class="line">  + 友諒</span><br><span class="line">  + 友多聞</span><br><span class="line">     + 益矣</span><br><span class="line">+ 損者三友</span><br><span class="line">  + 友便辟</span><br><span class="line">  + 友善柔</span><br><span class="line">  + 友便佞</span><br><span class="line">     + 損矣</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<ul>
+<li>益者三友<ul>
+<li>友直</li>
+<li>友諒</li>
+<li>友多聞<ul>
+<li>益矣</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>損者三友<ul>
+<li>友便辟</li>
+<li>友善柔</li>
+<li>友便佞<ul>
+<li>損矣</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="代辦事項"><a href="#代辦事項" class="headerlink" title="代辦事項"></a><font color="#FF6600">代辦事項</font></h2><p>代辦事項的語法如下，若要在框框中打勾，則需在 [ ] 中輸入 <code>x</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 空心菜</span><br><span class="line">- [x] 玉米</span><br><span class="line">- [x] 醬油</span><br><span class="line">- [ ] 豬肉</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 空心菜</li>
+<li style="list-style: none"><input type="checkbox" checked> 玉米</li>
+<li style="list-style: none"><input type="checkbox" checked> 醬油</li>
+<li style="list-style: none"><input type="checkbox"> 豬肉</li>
+</ul>
+<h2 id="引用區塊"><a href="#引用區塊" class="headerlink" title="引用區塊"></a><font color="#FF6600">引用區塊</font></h2><p>使用 <code>&gt;</code> 放在整列的開頭當作引用區塊，<font color="#800000">且 <code>&gt;</code> 和文字間<strong>要空一格</strong></font>，語法範例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 人遠比自己想象的要堅強</span><br><span class="line">&gt; 特別是當你回頭看看的時候</span><br><span class="line">&gt; 你會發現自己走了一段自己都沒想到的路</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<blockquote>
+<p>人遠比自己想象的要堅強<br>特別是當你回頭看看的時候<br>你會發現自己走了一段自己都沒想到的路</p>
+</blockquote>
+<p>而”引用”也支援「階層式」顯示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 人生就像一杯茶</span><br><span class="line">&gt; &gt; 不會苦一輩子</span><br><span class="line">&gt; &gt; &gt; 但總會苦一陣子</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<blockquote>
+<p>人生就像一杯茶</p>
+<blockquote>
+<p>不會苦一輩子</p>
+<blockquote>
+<p>但總會苦一陣子</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="文字超連結"><a href="#文字超連結" class="headerlink" title="文字超連結"></a><font color="#FF6600">文字超連結</font></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[奇摩首頁](https://tw.yahoo.com/)</span><br><span class="line">[Google首頁](https://www.google.com/)</span><br><span class="line">[Facebook](https://www.facebook.com/)</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<p><a href="https://tw.yahoo.com/" target="_blank" rel="noopener">奇摩首頁</a><br><a href="https://www.google.com/" target="_blank" rel="noopener">Google首頁</a><br><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></p>
+<h2 id="圖片"><a href="#圖片" class="headerlink" title="圖片"></a><font color="#FF6600">圖片</font></h2><p>圖片的語法和文字超連結很像，只是在語法開頭再加上 <code>!</code>，<font color="#800000">中括弧內指的是圖片的”替代文字”</font>(當圖片連結失效後會顯示的文字，如下面的 FB Logo)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![奇摩首頁Logo](https://s1.yimg.com/rz/d/yahoo_frontpage_zh-Hant-TW_s_f_p_bestfit_frontpage_2x.png)</span><br><span class="line">![Google首頁Logo](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)</span><br><span class="line">![FB Logo](123.png)</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<p><img src="https://s1.yimg.com/rz/d/yahoo_frontpage_zh-Hant-TW_s_f_p_bestfit_frontpage_2x.png" alt="奇摩首頁Logo"><br><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google首頁Logo"><br><img src="123.png" alt="FB Logo"></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a><font color="#FF6600">表格</font></h2><p>表格的基本語法如下，第一列是表格的標題列，然後第二列固定要是以 <code>---</code> 做區隔，加欄位都是使用 <code>|</code> 來添加。注意<font color="#800000">表格的每欄寬度會<strong>自動分配</strong>，所以可以忽略一切的空格</font>(也就是<font color="#800000">每列的 <code>|</code> <strong>沒有對齊也沒關係</strong>，且加多少空格也不會影響每欄的寬度</font>)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Column 1 | Column 2 | Column 3 |</span><br><span class="line">| -------- | -------- | -------- |</span><br><span class="line">| Text1 | Text2 | Text3 |</span><br><span class="line">| Text4    | Text5    | Text6    |</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text1</td>
+<td>Text2</td>
+<td>Text3</td>
+</tr>
+<tr>
+<td>Text4</td>
+<td>Text5</td>
+<td>Text6</td>
+</tr>
+</tbody>
+</table>
+<p>而每欄可以決定要<font color="#800000">如何對齊</font>，對齊方式取決於第二列的 <code>---</code>，再加上 <code>:</code> 符號：</p>
+<ul>
+<li><code>:---</code> 靠左對齊。</li>
+<li><code>---:</code> 靠右對齊。</li>
+<li><code>:---:</code> 置中對齊。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 預設對齊 | 靠左對齊 | 靠右對齊 | 置中對齊 |</span><br><span class="line">| ----- | :----- | -----: | :-----: |</span><br><span class="line">| Text1 | Text2 | Text3 | Text4 |</span><br><span class="line">| Text5 | Text6 | Text7 | Text8 |</span><br><span class="line">| Text9 | Text10 | Text11 | Text12 |</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下：</p>
+<table>
+<thead>
+<tr>
+<th>預設對齊</th>
+<th style="text-align:left">靠左對齊</th>
+<th style="text-align:right">靠右對齊</th>
+<th style="text-align:center">置中對齊</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text1</td>
+<td style="text-align:left">Text2</td>
+<td style="text-align:right">Text3</td>
+<td style="text-align:center">Text4</td>
+</tr>
+<tr>
+<td>Text5</td>
+<td style="text-align:left">Text6</td>
+<td style="text-align:right">Text7</td>
+<td style="text-align:center">Text8</td>
+</tr>
+<tr>
+<td>Text9</td>
+<td style="text-align:left">Text10</td>
+<td style="text-align:right">Text11</td>
+<td style="text-align:center">Text12</td>
+</tr>
+</tbody>
+</table>
+<h1 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a><font color="#0000FF">注意事項</font></h1><ul>
+<li><p>某些語法的外觀樣式如：引用、分隔線、項目符號等，會因為<font color="#800000">使用者套用的 Hexo 主題而有不同。</font></p>
+</li>
+<li><p>圖片可以放在 Hexo 資料夾一併上傳到 GitHub，例如圖片 123.jpg 放到 <strong>myblog/source/images</strong> 路徑下，然後圖片語法連結的地方輸入 <strong>/images/123.jpg</strong> ，就會顯示該圖片。<br>不過<font color="#FF0000">這種方法<strong>筆者不建議</strong></font>(也就是<font color="#800000">不建議把 GitHub 當作圖床用</font>)，因為當文章一多，會有機會達到 GitHub Pages 的使用限制；因此可以<font color="#800000">搜尋各大免費圖床來使用，如 <a href="https://imgur.com/" target="_blank" rel="noopener">Imgur</a>, <a href="https://upload.cc/" target="_blank" rel="noopener">Upload.cc</a> 等</font>。</p>
+</li>
+<li><p><strong><font color="#800000">HTML 語法盡量包在 Markdown 語法裡面</font></strong>，否則可能會造成一些顯示上的錯誤，舉例如下：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">語法撰寫範例一：將「今天天氣真好。」顯示粗體並更改為紅色</span><br><span class="line">**&lt;font color=#FF0000&gt;今天天氣真好。&lt;/font&gt;**</span><br><span class="line"></span><br><span class="line">語法撰寫範例二：將「Title」設定成等級一標題並更改為藍色</span><br><span class="line"># &lt;font color=#0000FF&gt;Title&lt;/font&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>呈上，因為 HTML 語法和 Markdown 語法交錯使用，在 hexo-admin 文章後台的編輯區和預覽區可能會有顯示問題，<font color="#800000">請先 publish 後，以<strong> localhost 的文章頁面顯示為準</strong>。</font></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexoblog/" rel="tag"># Hexo部落格</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+          
+          <div class="social-like">
+            
+
+            
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            
+          </div>
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/hexo-admin/" rel="next" title="[教學] 我的第一篇 Hexo 文章：使用 hexo-admin 後台管理工具">
+                <i class="fa fa-chevron-left"></i> [教學] 我的第一篇 Hexo 文章：使用 hexo-admin 後台管理工具
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div class="fb-comments"
+           data-href="https://ed521.github.io/2019/08/hexo-markdown/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="EDEN" />
+            
+              <p class="site-author-name" itemprop="name">EDEN</p>
+              <p class="site-description motion-element" itemprop="description">文章多以開箱文、教學文為主~~</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-name">分類</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">標籤</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+		  
+		
+			<div class="links-of-blogroll motion-element links-of-blogroll-block">
+			<div class="links-of-blogroll-title">
+			<!-- modify icon to fire by szw -->
+			<i class="fa fa-history fa-" aria-hidden="true"></i>
+			最新文章
+				</div>
+				<ul class="links-of-blogroll-list">
+				
+				
+				<li>
+            <a href="/2019/08/hexo-markdown/" title="[教學] 撰寫 Hexo 文章 - Markdown 語法大全" target="_self">[教學] 撰寫 Hexo 文章 - Markdown 語法大全</a>
+			</li>
+			
+				<li>
+            <a href="/2019/08/hexo-admin/" title="[教學] 我的第一篇 Hexo 文章：使用 hexo-admin 後台管理工具" target="_self">[教學] 我的第一篇 Hexo 文章：使用 hexo-admin 後台管理工具</a>
+			</li>
+			
+				<li>
+            <a href="/2019/07/hexo-install/" title="[教學] 使用 GitHub Pages + Hexo 來架設個人部落格" target="_self">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格</a>
+			</li>
+			
+				<li>
+            <a href="/2019/04/D-Link-DIR-2660-DRA-2060/" title="[開箱] D-Link DIR-2660 Mesh 路由器 搭配 DRA-2060 無線延伸器，從此家中 Wi-Fi 訊號零死角 !" target="_self">[開箱] D-Link DIR-2660 Mesh 路由器 搭配 DRA-2060 無線延伸器，從此家中 Wi-Fi 訊號零死角 !</a>
+			</li>
+			
+				<li>
+            <a href="/2019/01/PC-cillin-2019/" title="[教學] PC-cillin 2019 雲端版：輕快又省資源的防毒軟體、多種防護及管理讓人放心！" target="_self">[教學] PC-cillin 2019 雲端版：輕快又省資源的防毒軟體、多種防護及管理讓人放心！</a>
+			</li>
+			
+			</ul>
+			</div>
+		
+
+          
+            
+          
+          <div id="days"></div>
+</script>
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("08/24/2018 00:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已運作 "+daysold+" 天 "+hrsold+" 時 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用語法-文字樣式"><span class="nav-number">1.</span> <span class="nav-text">常用語法 - 文字樣式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文字字體"><span class="nav-number">1.1.</span> <span class="nav-text">文字字體</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字顏色"><span class="nav-number">1.2.</span> <span class="nav-text">文字顏色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#標題"><span class="nav-number">1.3.</span> <span class="nav-text">標題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程式碼"><span class="nav-number">1.4.</span> <span class="nav-text">程式碼</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用語法-其它"><span class="nav-number">2.</span> <span class="nav-text">常用語法 - 其它</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分隔線"><span class="nav-number">2.1.</span> <span class="nav-text">分隔線</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#項目符號-編號"><span class="nav-number">2.2.</span> <span class="nav-text">項目符號/編號</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代辦事項"><span class="nav-number">2.3.</span> <span class="nav-text">代辦事項</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用區塊"><span class="nav-number">2.4.</span> <span class="nav-text">引用區塊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字超連結"><span class="nav-number">2.5.</span> <span class="nav-text">文字超連結</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#圖片"><span class="nav-number">2.6.</span> <span class="nav-text">圖片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">2.7.</span> <span class="nav-text">表格</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注意事項"><span class="nav-number">3.</span> <span class="nav-text">注意事項</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+		<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+		<div class="widget-wrap">
+			<i class="fa fa-tags fa-"></i>
+			標籤雲
+			<div id="myCanvasContainer" class="widget tagcloud">
+				<canvas width="250" height="250" id="resCanvas" style="width=100%">
+					<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3C/">3C周邊</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asustor/">Asustor NAS</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexoblog/">Hexo部落格</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/synology/">Synology NAS</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NAS/">其它NAS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/watch/">手表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smarthome/">智慧家庭</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disk/">硬碟</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ipcam/">網路攝影機</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/audio/">耳機音響</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/router/">路由器</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/antivirus/">防毒軟體</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pc-tablet/">電腦平板</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackathon/">黑客松</a><span class="tag-list-count">1</span></li></ul>
+				</canvas>
+			</div>
+		</div>
+	  
+	  
+	  
+		
+	  
+	  
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("YoLycdOLhFPQmvl9mi5Qnsge-gzGzoHsz", "YwbCQICgq3ec30JjffgxRlR6");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+  
+  
+  
+</body>
+</html>
