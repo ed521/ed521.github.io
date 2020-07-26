@@ -156,7 +156,7 @@ const ap = new APlayer({
 		lrc: '/music/lyrics/Faded.lrc',
 		theme: '#a5b199'
       },
-	  {
+	  /*{
         name: 'TT',
         artist: 'TWICE',
         url: 'https://drive.google.com/uc?export=download&id=1k4vT8n6EXH1kejESQQbreV6E37vpIQQf',
@@ -171,7 +171,7 @@ const ap = new APlayer({
         cover: '/music/cover/NAPAL BAJI.jpg',
 		lrc: '/music/lyrics/NAPAL BAJI.lrc',
 		theme: '#077834'
-      },
+      },*/
 	  {
         name: 'Break Beat Bark!',
         artist: '神田沙也加',
@@ -398,19 +398,19 @@ const ap = new APlayer({
       },
 	  {
         name: '小さな恋のうた',
-        artist: 'MONGOL800 (By コバソロ & 杏沙子)',
+        artist: 'コバソロ & 杏沙子',
         url: 'https://drive.google.com/uc?export=download&id=1QAQ6XgHgBq48PGwiodumfqhFCowBazxt',
         cover: '/music/cover/小さな恋のうた.jpg',
 		lrc: '/music/lyrics/小さな恋のうた.lrc',
-		theme: '#b8e0e2'
+		theme: '#117cdc'
       },
 	  {
         name: 'あとひとつ',
-        artist: 'FUNKY MONKEY BABYS (By コバソロ & こぴ)',
+        artist: 'コバソロ & こぴ',
         url: 'https://drive.google.com/uc?export=download&id=1uJafY4DsI1YDewaiq1I4iJM9Vbwu3Ku7',
         cover: '/music/cover/あとひとつ.jpg',
 		lrc: '/music/lyrics/あとひとつ.lrc',
-		theme: '#d19570'
+		theme: '#55524b'
       },
 	  {
         name: 'I Believe',
@@ -780,6 +780,54 @@ const ap = new APlayer({
         cover: '/music/cover/Sweet_but_Psycho.jpg',
 		lrc: '/music/lyrics/Sweet_but_Psycho.lrc',
 		theme: '#a0263a'
+      },
+	  {
+        name: '920',
+        artist: 'A-Lin (ft. 小宇)',
+        url: 'https://drive.google.com/uc?export=download&id=1iF33nGojxPBkkbzSaCI1AO3U8pW4xl_L',
+        cover: '/music/cover/幸福了 然後呢.jpg',
+		lrc: '/music/lyrics/920.lrc',
+		theme: '#e2bf22'
+      },
+	  {
+        name: '囂張',
+        artist: 'en',
+        url: 'https://drive.google.com/uc?export=download&id=14IKIyUPI2shEHa3w0rRptd24c3kC7yap',
+        cover: '/music/cover/囂張.jpg',
+		lrc: '/music/lyrics/囂張.lrc',
+		theme: '#1f2b45'
+      },
+	  {
+        name: '與我無關',
+        artist: '阿冗',
+        url: 'https://drive.google.com/uc?export=download&id=1c33VukECO141MLH2asBrWfpWg5U7fxXV',
+        cover: '/music/cover/與我無關.jpg',
+		lrc: '/music/lyrics/與我無關.lrc',
+		theme: '#42458a'
+      },
+	  {
+        name: '少年',
+        artist: '夢然',
+        url: 'https://drive.google.com/uc?export=download&id=1jdoR_5wP-VfPydiwmonAZx-TM_p7BGJR',
+        cover: '/music/cover/少年.jpg',
+		lrc: '/music/lyrics/少年.lrc',
+		theme: '#0d1b3e'
+      },
+	  {
+        name: '芒種',
+        artist: '音闕詩聽+趙方婧',
+        url: 'https://drive.google.com/uc?export=download&id=1ifTkGa_AAuI3Rkto2gbdoTZk9WTG_LJX',
+        cover: '/music/cover/芒種.jpg',
+		lrc: '/music/lyrics/芒種.lrc',
+		theme: '#1f1c0d'
+      },
+	  {
+        name: '多想在平庸的生活擁抱你',
+        artist: '隔壁老樊',
+        url: 'https://drive.google.com/uc?export=download&id=1cw4KNN3TNZ0FhqOc9BJKe0-D_ahd4F6_',
+        cover: '/music/cover/多想在平庸的生活擁抱你.jpg',
+		lrc: '/music/lyrics/多想在平庸的生活擁抱你.lrc',
+		theme: '#010713'
       }
     ]
 });
