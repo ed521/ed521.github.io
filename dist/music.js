@@ -828,6 +828,30 @@ const ap = new APlayer({
         cover: '/music/cover/多想在平庸的生活擁抱你.jpg',
 		lrc: '/music/lyrics/多想在平庸的生活擁抱你.lrc',
 		theme: '#010713'
+      },
+	  {
+        name: '失眠飛行',
+        artist: '接個吻，開一槍+沈以誠+薛明媛',
+        url: 'https://drive.google.com/uc?export=download&id=17wz72MA6cAeUNolescadigLhgOSvY-PS',
+        cover: '/music/cover/失眠飛行.jpg',
+		lrc: '/music/lyrics/失眠飛行.lrc',
+		theme: '#f1d4d6'
+      },
+	  {
+        name: '只是太愛你',
+        artist: '丁芙妮',
+        url: 'https://drive.google.com/uc?export=download&id=1_S0-2OKwJAnSR17RWO3Uu2te8L8f1Q-X',
+        cover: '/music/cover/只是太愛你.jpg',
+		lrc: '/music/lyrics/只是太愛你.lrc',
+		theme: '#2fbdec'
+      },
+	  {
+        name: 'Rain',
+        artist: '秦基博 (Motohiro Hata)',
+        url: 'https://drive.google.com/uc?export=download&id=1C8DBCYQsMPmWsO60UcZrAduEpAOvQBZ6',
+        cover: '/music/cover/Rain.jpg',
+		lrc: '/music/lyrics/Rain.lrc',
+		theme: '#10530c'
       }
     ]
 });
