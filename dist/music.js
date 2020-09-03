@@ -703,7 +703,7 @@ const ap = new APlayer({
       },
 	  {
         name: '生きていたんだよな',
-        artist: 'Aimyon',
+        artist: 'あいみょん',
         url: 'https://drive.google.com/uc?export=download&id=1IggcHU8UHKOfVvKlxgXv8zqZ_ywc2JVx',
         cover: '/music/cover/生きていたんだよな.jpg',
 		lrc: '/music/lyrics/生きていたんだよな.lrc',
@@ -852,6 +852,14 @@ const ap = new APlayer({
         cover: '/music/cover/Rain.jpg',
 		lrc: '/music/lyrics/Rain.lrc',
 		theme: '#10530c'
+      },
+	  {
+        name: '空の青さを知る人よ',
+        artist: 'あいみょん',
+        url: 'https://drive.google.com/uc?export=download&id=1OEJ7M3mCmHorNihCskaEKsIVH-ofDky_',
+        cover: '/music/cover/空の青さを知る人よ.jpg',
+		lrc: '/music/lyrics/空の青さを知る人よ.lrc',
+		theme: '#768123'
       }
     ]
 });
