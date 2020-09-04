@@ -859,7 +859,7 @@ const ap = new APlayer({
         url: 'https://drive.google.com/uc?export=download&id=1OEJ7M3mCmHorNihCskaEKsIVH-ofDky_',
         cover: '/music/cover/空の青さを知る人よ.jpg',
 		lrc: '/music/lyrics/空の青さを知る人よ.lrc',
-		theme: '#768123'
+		theme: '#10530c'
       }
     ]
 });
