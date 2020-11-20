@@ -860,6 +860,22 @@ const ap = new APlayer({
         cover: '/music/cover/空の青さを知る人よ.jpg',
 		lrc: '/music/lyrics/空の青さを知る人よ.lrc',
 		theme: '#10530c'
+      },
+	  {
+        name: '李白',
+        artist: '李榮浩',
+        url: 'https://drive.google.com/uc?export=download&id=1OLvGSoZn2cTDHfFV2WN7sYUHa7qcKgO_',
+        cover: '/music/cover/李白.jpg',
+		lrc: '/music/lyrics/李白.lrc',
+		theme: '#41423c'
+      },
+	  {
+        name: '麻雀',
+        artist: '李榮浩',
+        url: 'https://drive.google.com/uc?export=download&id=1MCmCaZsFOz7RoCf_aYO9DGQ2dyS6P68j',
+        cover: '/music/cover/麻雀.jpg',
+		lrc: '/music/lyrics/麻雀.lrc',
+		theme: '#0b121c'
       }
     ]
 });
