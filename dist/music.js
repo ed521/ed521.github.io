@@ -876,6 +876,22 @@ const ap = new APlayer({
         cover: '/music/cover/麻雀.jpg',
 		lrc: '/music/lyrics/麻雀.lrc',
 		theme: '#0b121c'
+      },
+	  {
+        name: '飛鳥和蟬',
+        artist: '任然',
+        url: 'https://drive.google.com/uc?export=download&id=1_qyJOQWdrJL5Wb2g4riHREFXMw9X2RwW',
+        cover: '/music/cover/飛鳥和蟬.jpg',
+		lrc: '/music/lyrics/飛鳥和蟬.lrc',
+		theme: '#16424f'
+      },
+	  {
+        name: '青春住了誰',
+        artist: '楊丞琳',
+        url: 'https://drive.google.com/uc?export=download&id=14w4_HsgGz7tnMWJUpo0d8u0RBrbyX7Ab',
+        cover: '/music/cover/青春住了誰.jpg',
+		lrc: '/music/lyrics/青春住了誰.lrc',
+		theme: '#73777b'
       }
     ]
 });
