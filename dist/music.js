@@ -806,6 +806,14 @@ const ap = new APlayer({
 		theme: '#42458a'
       },
 	  {
+        name: '你的答案',
+        artist: '阿冗',
+        url: 'https://drive.google.com/uc?export=download&id=1-wxgpUk1Ed3MeTGCZbX1rDFozu9gMqrI',
+        cover: '/music/cover/你的答案.jpg',
+		lrc: '/music/lyrics/你的答案.lrc',
+		theme: '#9b7e60'
+      },
+	  {
         name: '少年',
         artist: '夢然',
         url: 'https://drive.google.com/uc?export=download&id=1jdoR_5wP-VfPydiwmonAZx-TM_p7BGJR',
