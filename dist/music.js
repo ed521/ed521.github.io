@@ -870,6 +870,14 @@ const ap = new APlayer({
 		theme: '#10530c'
       },
 	  {
+        name: 'remember',
+        artist: 'Uru',
+        url: 'https://drive.google.com/uc?export=download&id=1f_Cbi9BNO7ztXSozBHvbdZK2s6EX-wX1',
+        cover: '/music/cover/remember.jpg',
+		lrc: '/music/lyrics/remember.lrc',
+		theme: '#a19cba'
+      },
+	  {
         name: '李白',
         artist: '李榮浩',
         url: 'https://drive.google.com/uc?export=download&id=1OLvGSoZn2cTDHfFV2WN7sYUHa7qcKgO_',

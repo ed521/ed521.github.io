@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ed521.github.io/2020/11/hexo-aplayer/</loc>
+    
+    <lastmod>2020-11-24T11:37:00.800Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2020/05/hexo-next-upgrade/</loc>
+    
+    <lastmod>2020-11-24T05:52:35.130Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2019/08/hexo-admin/</loc>
+    
+    <lastmod>2020-11-24T05:21:06.056Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2020/05/hexo-folder-theme/</loc>
+    
+    <lastmod>2020-11-24T05:21:05.265Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2019/07/hexo-install/</loc>
+    
+    <lastmod>2020-11-24T05:21:00.745Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2019/08/hexo-markdown/</loc>
+    
+    <lastmod>2020-11-24T05:20:59.201Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ed521.github.io/2020/11/dream-glass-4k/</loc>
     
     <lastmod>2020-11-19T05:32:57.516Z</lastmod>
@@ -26,41 +68,6 @@
     <loc>https://ed521.github.io/2020/08/asus-router-change-language/</loc>
     
     <lastmod>2020-08-22T16:49:40.100Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/2020/05/hexo-next-upgrade/</loc>
-    
-    <lastmod>2020-05-26T06:32:02.219Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/2020/05/hexo-folder-theme/</loc>
-    
-    <lastmod>2020-05-26T06:04:23.546Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/2019/08/hexo-markdown/</loc>
-    
-    <lastmod>2020-05-19T16:55:39.545Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/2019/07/hexo-install/</loc>
-    
-    <lastmod>2020-05-19T16:22:37.631Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/2019/08/hexo-admin/</loc>
-    
-    <lastmod>2020-05-19T16:22:29.670Z</lastmod>
     
   </url>
   
