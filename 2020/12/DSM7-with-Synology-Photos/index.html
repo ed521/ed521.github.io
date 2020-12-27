@@ -23,76 +23,76 @@
     var CONFIG = {"hostname":"ed521.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#0000ff","save":"manual"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ A-1 DS916+開箱A-2 硬碟安裝">
+  <meta name="description" content="距離上次筆者使用 DSM 6.0 Beta 已經過五年了，這次的 DSM 7.0 Beta 除了擁有嶄新的 UI 介面，更強調監控管理上的直覺及便利性；除此之外，以往不曉得要把照片整理在 Photo Station 還是 Moments，如今兩個套件結合為 Synology Photos，不管是照片瀏覽、自動備份還是要投影到電視、共享照片給其他人等，均方便許多。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[教學] Synology NAS Tip A. DS916+開箱&#x2F;硬碟安裝篇">
-<meta property="og:url" content="https://ed521.github.io/2016/07/Synology-Tip-A/index.html">
+<meta property="og:title" content="[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！">
+<meta property="og:url" content="https://ed521.github.io/2020/12/DSM7-with-Synology-Photos/index.html">
 <meta property="og:site_name" content="瑪利歐的部落格">
-<meta property="og:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ A-1 DS916+開箱A-2 硬碟安裝">
+<meta property="og:description" content="距離上次筆者使用 DSM 6.0 Beta 已經過五年了，這次的 DSM 7.0 Beta 除了擁有嶄新的 UI 介面，更強調監控管理上的直覺及便利性；除此之外，以往不曉得要把照片整理在 Photo Station 還是 Moments，如今兩個套件結合為 Synology Photos，不管是照片瀏覽、自動備份還是要投影到電視、共享照片給其他人等，均方便許多。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270171/original/84c1a5b2e16802109a7483d3eba7dbe8.png">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270172/original/5d3b492729ace6342c80cc8e517ce452.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270173/original/4b8547df57be31c68c5ee8817a48a30c.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270174/original/4ec33c10e5f74d9dfe3908b1805f625a.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270175/original/41d219f81454177829c34cf1d6c27d27.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270176/original/b39bf4c11c5e45f2d91c4472cbaafb22.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270177/original/388da615279be9889362926d51889cb1.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270178/original/1a9af3ead2b33195823038b44369864a.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270179/original/1cba6f409427f7d3eadd9d60228509ab.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270180/original/7db081fd5841c9e49ac24172484f7a3d.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270181/original/f2a39f99ef1301415db396321b1dfeb6.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270182/original/bc6733da3e991f09215303f9807b3bd6.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270183/original/885eb342fe9f51b48ea712eba761f419.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270184/original/f515c3eb1dfd6d225fdc266d5ab17b53.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270185/original/ea5b5db461c3734624ec0e7f16e1d62f.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270186/original/bedd16a78d300453fd484e126d3768a4.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270187/original/f17565f50541aa37df8af91ee9519f54.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270188/original/eab2c9d9ffd4c76c9597b3bb491952a1.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270189/original/092862080e6bf0ca65f8ebd2315afdb0.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270190/original/b209f7ef2a6963ada50ec6baa03633d8.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270209/original/76fc3ba14aa61e8b5f1f77318e5eb2e0.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270192/original/3945951a0978cba5f9f1fbeae395c9f1.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270193/original/e465c96060bae004453f2b70c0c282df.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270194/original/ef1537f8e8f8693c1c6b76bf4da39c90.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270195/original/0c7dc3eaf78ddede2e0375406d384d50.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270196/original/a4b3efa25d17ef817b6418c9f73597da.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270197/original/198d85bf800201a3ea1680eb3cebbd97.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270198/original/f7146c25c26db08ac54ff94547c575e6.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270207/original/a24b17b1f36ce95c7140fb849b85d706.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270199/original/842362873bcdfbcd2664fc139c9a1aa4.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270200/original/eb09d447a3c6c8f3ae42c9f967d01148.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270201/original/b5f95e763a6a292e49830d206b230b89.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270208/original/169971481a63a6ecfd6a888c533d0428.png">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270202/original/1ee55077f263e85cec48b33e176cf15f.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270203/original/dc869ed045a84d09c9bcd26cc4bb1fe4.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270204/original/a10f9ce37c5a42dad13b972f5ee63d11.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270205/original/71eb8d12795e6b78da792104e2a087c9.jpg">
-<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270206/original/db907b29cecbfc5bcd30e28fa7092879.jpg">
-<meta property="article:published_time" content="2016-07-27T05:23:00.000Z">
-<meta property="article:modified_time" content="2019-12-22T14:16:43.195Z">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285700/original/4c2530ef9cf90fcc33801c3af6892fe2.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285658/original/b15f52fd389d722eaa3f36b070056934.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285659/original/22dfe7857f42ebe9ec38855e5cb436dc.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285660/original/9f62b5adb42446ed6d66203c453840e0.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285696/original/bc493039c021eb3fad1240e7187f679a.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285697/original/3966de1fedf3a4b37305d6efb2d6ffad.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285661/original/04fa4ebddc01db5c463ffb7d123a4711.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285662/original/e6f87073b0ac5affccbfd02ba74554f0.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285663/original/4bec0f980d8422d39e810b5c36b1af3f.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285664/original/6776e28ba3a64840faeac77238f4ccf4.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285701/original/4ff3071a6bbd22c6faefd19d362e8c9f.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285666/original/7f017f3e1beb9227c3a51c7e82a6e560.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285667/original/323f963a7e63645c8aa827d45fb7e393.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285668/original/5e4ef74a76d5bbb38649649b54ab5864.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285669/original/2d07daee858bc3d9f7c4d50fcd7bafc9.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285670/original/92ba49ca86a78198f9861b3df10e6b30.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285671/original/e356e07052f43dcc8d32ed50d32f7ce2.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285698/original/35c281902bb6ce9908bd3c20e676fe10.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285672/original/6e41abe3a97d648747a54fd746ac8d66.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285673/original/c9a9b5767d12200ecb93fb9d11b64662.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285674/original/7b8977c3440761150205444ce6272b5c.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285675/original/fbc1334083ef5710781b3fbf9b89c3ad.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285676/original/fa594f444adb27924b8231895c3d5731.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285677/original/a8237b9320f0b6c3ae0259ee0cc5923e.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285678/original/5b8fbcf91c8b93302a5619478ee6065e.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285679/original/5d7859c1bed48c4e2319f5d3805253c2.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285680/original/7c4ac851f8da342056c6d4ca5cade61e.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285681/original/e35c99ef42a210129a1159720a8fdd11.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285682/original/9f7aa523e134f0eaee1a6f5284123ad2.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285683/original/13ae178bea6c5a42fa1c4a635a55cc6c.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285684/original/670a5cfdc100fcbcbb795c3e5b0ffc01.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285685/original/65e1749bf10726766d0dd05bc5ff11b6.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285686/original/cea9c033db3b510bb3b5302b17a05c01.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285687/original/99df96ebcc5eda3f13a8bbf374426a51.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285688/original/90fafa34f08a4b88966215bb76c4d971.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285689/original/9df6d537f7ddf1469555a4c59a39325e.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285690/original/24154b3ebf98c703d20a121a27d3e4e9.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285691/original/97564949e94b13f5cccf74522024c4a6.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285692/original/ba7af1bd2bc6e689a927ae22d2d9b40a.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285693/original/bc25cc1219ebf275e10d9d01bcdd3323.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285694/original/d9f8627efe909950d7e912f4cce09be0.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285699/show/e59c2d42af07a0ecb6774559bd61e846.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285695/original/b6718357246c01478c8f5253ae1e7a95.png">
+<meta property="article:published_time" content="2020-12-27T19:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-27T19:02:04.386Z">
 <meta property="article:author" content="EDEN">
 <meta property="article:tag" content="心得">
 <meta property="article:tag" content=" 開箱">
 <meta property="article:tag" content=" 評測">
 <meta property="article:tag" content=" 教學">
 <meta property="article:tag" content=" Synology">
-<meta property="article:tag" content=" 群暉">
 <meta property="article:tag" content=" NAS">
 <meta property="article:tag" content=" 應用">
 <meta property="article:tag" content=" 雲端">
 <meta property="article:tag" content=" 儲存裝置">
 <meta property="article:tag" content=" 個人儲存">
 <meta property="article:tag" content=" 私有雲">
-<meta property="article:tag" content=" 公有雲">
-<meta property="article:tag" content=" DSM">
-<meta property="article:tag" content=" DS916+">
-<meta property="article:tag" content=" 設定">
-<meta property="article:tag" content=" 安裝">
-<meta property="article:tag" content=" 硬碟">
+<meta property="article:tag" content=" 照片備份">
+<meta property="article:tag" content=" 相簿">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270171/original/84c1a5b2e16802109a7483d3eba7dbe8.png">
+<meta name="twitter:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285700/original/4c2530ef9cf90fcc33801c3af6892fe2.png">
 
-<link rel="canonical" href="https://ed521.github.io/2016/07/Synology-Tip-A/">
+<link rel="canonical" href="https://ed521.github.io/2020/12/DSM7-with-Synology-Photos/">
 
 
 <script id="page-configurations">
@@ -105,7 +105,7 @@
   };
 </script>
 <script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <title>[教學] Synology NAS Tip A. DS916+開箱/硬碟安裝篇 | 瑪利歐的部落格</title>
+  <title>[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！ | 瑪利歐的部落格</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
     <script data-pjax>
@@ -262,7 +262,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2016/07/Synology-Tip-A/">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2020/12/DSM7-with-Synology-Photos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -275,7 +275,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [教學] Synology NAS Tip A. DS916+開箱/硬碟安裝篇
+          [教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！
         </h1>
 
         <div class="post-meta">
@@ -285,7 +285,7 @@
               </span>
               <span class="post-meta-item-text">發表於</span>
 
-              <time title="創建時間：2016-07-27 13:23:00" itemprop="dateCreated datePublished" datetime="2016-07-27T13:23:00+08:00">2016-07-27</time>
+              <time title="創建時間：2020-12-28 03:00:00" itemprop="dateCreated datePublished" datetime="2020-12-28T03:00:00+08:00">2020-12-28</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -293,16 +293,16 @@
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a>
+                  <a href="/categories/unboxing/" itemprop="url" rel="index"><span itemprop="name">開箱文</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/teaching/synology/" itemprop="url" rel="index"><span itemprop="name">Synology NAS</span></a>
+                  <a href="/categories/unboxing/qnap/" itemprop="url" rel="index"><span itemprop="name">QNAP NAS</span></a>
                 </span>
             </span>
 
           
-            <span id="/2016/07/Synology-Tip-A/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] Synology NAS Tip A. DS916+開箱/硬碟安裝篇" title="閱讀次數">
+            <span id="/2020/12/DSM7-with-Synology-Photos/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！" title="閱讀次數">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -314,7 +314,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>2.1k</span>
+              <span>4.1k</span>
             </span>
 
         </div>
@@ -326,119 +326,148 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>※本文章為<a href="https://ed521.github.io/2016/07/Synology-DS916plus/" target="_blank">NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！</a>之分支※</p>
-<p><a href="#A-1">A-1 DS916+開箱</a><br><a href="#A-2">A-2 硬碟安裝</a></p>
+        <img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285700/original/4c2530ef9cf90fcc33801c3af6892fe2.png" />
+
+<p>距離上次筆者<a href="https://www.mobile01.com/topicdetail.php?f=494&amp;t=4669434" target="_blank" rel="noopener">使用 DSM 6.0 Beta</a> 已經過五年了，這次的 <strong><span style="color: #800000;">DSM 7.0 Beta 除了擁有嶄新的 UI 介面，更強調監控管理上的直覺及便利性</span></strong>；除此之外，以往不曉得要把照片整理在 Photo Station 還是 Moments，如今兩個套件結合為 <strong><span style="color: #800000;">Synology Photos，不管是照片瀏覽、自動備份還是要投影到電視、共享照片給其他人等，均方便許多。</span></strong></p>
 <a id="more"></a>
 
-<p><a id="A-1" name="A-1"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270171/original/84c1a5b2e16802109a7483d3eba7dbe8.png" /></p>
-<p>本次要開箱的產品型號為<span style="color: #800000;">Synology DS916+</span>，由於箱子是使用普通土黃色的厚紙板紙箱，給人一種簡約、環保的感覺。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270172/original/5d3b492729ace6342c80cc8e517ce452.jpg" />
+<p>▼ Synology 推出全新 DSM 7.0，目前開放 <a href="https://www.synology.com/zh-tw/beta/DSM70Beta" target="_blank" rel="noopener">DSM 7.0 Beta</a> 供使用者體驗。<br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285658/original/b15f52fd389d722eaa3f36b070056934.png" /></p>
+<p>因此本篇將介紹 Synology Photos 的完整使用體驗；但在開始之前，我們為何要用 Synology Photos 作為手機照片的備份平台呢？</p>
+<p>目前普遍大眾會使用兩種方式將照片儲存到雲端：<strong>LINE 相簿</strong>和 <strong>Google 相簿</strong>，不過<strong><span style="color: #800000;">將照片存放在 LINE 相簿的缺點是照片會被嚴重壓縮為原本照片的 10~20% 大小</span></strong>，而 Google 相簿原本有原始畫質和高畫質兩種備份方案，高畫質（照片最大 1600 萬像素）目前還不會計入儲存空間，簡稱免費無限量儲存照片，但是<span style="color: #800000;"><strong>到 2021/06/01 後「高畫質」也會計入 Google 儲存空間</strong></span>，如圖所示。</p>
+<p>▼ 2021/06/01 後「高畫質」也將計入 Google 儲存空間。<br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285659/original/22dfe7857f42ebe9ec38855e5cb436dc.png" /></p>
+<p>因此未來<strong><span style="color: #800000;">「原始畫質」和「高畫質」就差在儲存空間被占滿的快慢而已</span></strong>，對於 Google 免費方案只有 15 GB 的使用者，容量到達上限只是時間長短的問題。那假設使用 Google 的付費方案，目前 2TB + 上限六人的家庭共用空間方案，一年是 NT 3300，<strong>三年就要近萬元</strong>，費用不便宜。</p>
+<p>▼ Google One 收費方案一覽<br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285660/original/9f62b5adb42446ed6d66203c453840e0.png" /></p>
+<p>這也是為何筆者認為，<span style="color: #800000;"><strong>現在是架設私有雲來存放手機照片和影片的好時機，Synology NAS 不僅能存放照片影片，亦能存放各式文件、共享檔案，進階應用則為架站/架伺服器、Docker虛擬化應用等，應用十分豐富。</strong></span></p>
+<hr />
 
-<p>箱子正上方以黑底白字寫出DS916+的型號，旁邊還註明了本產品為”Plus Series”，且為2GB Ram版。<br>PS. “DS”代表DiskStation；”9”表示最多可擴充到9顆硬碟；”16”為2016年推出的產品(下半年)；”+”則是較高階機種的意思。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270173/original/4b8547df57be31c68c5ee8817a48a30c.jpg" />
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285696/original/bc493039c021eb3fad1240e7187f679a.png" />
 
-<p>貼紙提到了DS916+的四大特色：<span style="color: #800000;">四核心<span style="color: #000000;">(並具有AES-NI 硬體加密引擎，可加快加密與解密的速度)</span></span>、<span style="color: #800000;">4K影片轉碼</span>、<span style="color: #800000;">雙網路孔</span>(擁有通道聚合技術，可使傳輸具有負載平衡)、<span style="color: #800000;">DSM</span>(DiskStation Manager)。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270174/original/4ec33c10e5f74d9dfe3908b1805f625a.jpg" />
+<p>★ <a href="#a">DSM 7.0 Beta 更新與介紹</a> ★</p>
+<p>★ <a href="#b">Synology Photos</a> ★<br>└ <a href="#b-1">透過 Synology Photos App 上傳照片</a><br>└ <a href="#b-2">Synology Photos 網頁版</a></p>
+<p>★ <a href="#c">總結與心得</a> ★</p>
+<hr />
 
-<p>紙箱側面左下角印出群暉科技的廠牌Synology，以及其官方網址：<a href="http://www.synology.com/" target="_blank">http://www.synology.com/</a>。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270175/original/41d219f81454177829c34cf1d6c27d27.jpg" />
+<p><a id="a" name="a"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285697/original/3966de1fedf3a4b37305d6efb2d6ffad.png" /></p>
+<p><span style="color: #0000ff;"><strong>※ 測試環境：Synology DS916+ (8GB Ram)</strong></span></p>
+<p>若要更新至 DSM 7.0 Beta，首先到<a href="https://prerelease.synology.com/zh-tw/download/dsm70_beta" target="_blank" rel="noopener">下載中心</a>尋找自己的 NAS 機種並下載該機種的 .pat 檔；但在更新之前，務必確認一些重要的升級訊息，例如：<strong>DSM 7.0 僅可從 DSM 6.2 進行升級、升級後部分 USB 裝置將不再支援等。</strong>（<a href="https://www.synology.com/zh-tw/beta/2020_DSM_7_0/release_note" target="_blank" rel="noopener">DSM 7.0 Beta 發行資訊</a>）</p>
+<p>PS. 若目前身邊沒有 Synology NAS 或是不方便升級 DSM 的使用者也可以參考<a href="https://demo.synology.com/zh-tw/dsm#dsm70beta" target="_blank" rel="noopener">線上體驗</a>。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285661/original/04fa4ebddc01db5c463ffb7d123a4711.png" />
 
-<p>另一面的貼紙則是詳細的標示了DS916+的產品外觀及其功能，還有硬體基本規格和產品內容物。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270176/original/b39bf4c11c5e45f2d91c4472cbaafb22.jpg" />
+<p>接著到 DSM 中的 控制台 &gt; 更新 &amp; 還原 &gt; 手動更新 DSM，上傳剛下載的 .pat 檔。要注意的是，<span style="color: #ff0000;"><strong>升級後即無法降級</strong></span>，且<strong><span style="color: #ff0000;">對於 Beta 軟體所導致的任何損害，如資料意外遺失，需自行承擔後果。</span></strong></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285662/original/e6f87073b0ac5affccbfd02ba74554f0.png" />
 
-<p>Synology NAS擁有以下幾個特點：資料共享、隨時隨地的存取資料、雲端同步、豐富的多媒體、行動裝置管理、監控、備份，以及資料安全性！</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270177/original/388da615279be9889362926d51889cb1.jpg" />
+<p>更新過程約莫 20~40 分鐘，視 NAS 中的套件數量而定；更新完成後，會直接跳到 DSM 的登入畫面。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285663/original/4bec0f980d8422d39e810b5c36b1af3f.png" />
 
-<p>打開箱子上蓋，首先看到的是電源線以及產品配件盒，NAS主體則是放在下面。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270178/original/1a9af3ead2b33195823038b44369864a.jpg" />
+<p>如圖為 DSM 7.0 的全新登入介面，在輸入帳號和輸入密碼之間會有一個畫面切換，這是因為要<span style="color: #800000;"><strong>支援不同登入方式的原因。</strong></span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285664/original/6776e28ba3a64840faeac77238f4ccf4.png" />
 
-<p>利用紙板折成的上蓋來保護NAS，產品主體則是用薄薄的泡綿紙包覆。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270179/original/1cba6f409427f7d3eadd9d60228509ab.jpg" />
+<p>DSM 7.0 對於許多 App 圖示和使用者介面都作了全新的設計。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285701/original/4ff3071a6bbd22c6faefd19d362e8c9f.png" />
 
-<p>不過為了不讓NAS在運送過程中容易搖晃，機器下方還是有墊一層厚厚的泡棉。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270180/original/7db081fd5841c9e49ac24172484f7a3d.jpg" />
+<p>DSM 7.0 也提供了一些全新桌布供使用者更換。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285666/original/7f017f3e1beb9227c3a51c7e82a6e560.png" />
 
-<p>下圖為配件盒的內容物，裡頭有變壓器、網路線兩條、螺絲一袋，以及快速安裝指南一張。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270181/original/f2a39f99ef1301415db396321b1dfeb6.jpg" />
+<p>除了本次要介紹的 Synology Photos，還有一些服務是 DSM 7.0 才支援的，如：Active Insight、備份設定和 Secure SignIn 服務。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285667/original/323f963a7e63645c8aa827d45fb7e393.png" />
 
-<p>電源線與一般桌機用的相同，約長50cm。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270182/original/bc6733da3e991f09215303f9807b3bd6.jpg" />
+<p><span style="color: #ff6600;"><strong>【Active Insight】</strong></span></p>
+<p><span style="color: #800000;"><strong>Active Insight 是一套全年無休的監控服務，可以透過瀏覽器或 App 來掌握 NAS 的運作狀態，並且在系統異常時寄送通知</strong></span>，因此 Active Insight 能確保在發生問題的第一時間通知使用者。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285668/original/5e4ef74a76d5bbb38649649b54ab5864.png" />
 
-<p>電源線需接到變壓器上，此變壓器的製造商是翌勝電子，型號為EA11011D-120，輸出是12V—8.33A。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270183/original/885eb342fe9f51b48ea712eba761f419.jpg" />
+<p><span style="color: #ff6600;"><strong>【備份設定】</strong></span></p>
+<p>備份設定將會自動定期備份 DSM 系統設定至 Synology 帳戶。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285669/original/2d07daee858bc3d9f7c4d50fcd7bafc9.png" />
 
-<p>螺絲共有18顆，還多提供了兩顆的備料。不過此NAS的硬碟托盤設計，3.5吋硬碟是”免螺絲”就可以固定在托盤上，2.5吋硬碟才需要拴螺絲。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270184/original/f515c3eb1dfd6d225fdc266d5ab17b53.jpg" />
+<p><strong><span style="color: #ff6600;">【Secure SignIn 服務】</span></strong></p>
+<p>在 DSM 畫面右上角人頭圖示 &gt; 個人設定 &gt; 帳號 &gt; 登入方式的「無密碼登入」，可以設定要使用 <strong>Synology Secure SignIn App</strong> 登入，還是使用<strong>硬體安全金鑰（Windows Hello 或 Touch ID 等生物辨識）</strong>來登入。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285670/original/92ba49ca86a78198f9861b3df10e6b30.png" />
 
-<p>網路線為Cat.5e的線材規格，長度約1.5公尺。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270185/original/ea5b5db461c3734624ec0e7f16e1d62f.jpg" />
+<p>開啟服務後，<span style="color: #800000;"><strong>未來登入 DSM 即無須輸入密碼，而是透過行動裝置來登<span style="color: #800000;">入</span>，一方面也能提升帳號安全性。</strong></span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285671/original/e356e07052f43dcc8d32ed50d32f7ce2.png" />
 
-<p>快速安裝指南中的硬碟安裝教學非常詳細，讓第一次接觸的人能快速上手。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270186/original/bedd16a78d300453fd484e126d3768a4.jpg" />
+<hr />
 
-<p>接著看到DS916+產品主體，正面的外蓋由於是亮面塑膠材質，看起來就像是一面鏡子！機器側面第一個是狀態燈，下面四個則是第1~4硬碟盒的狀態燈，若有硬碟插入就會亮綠燈；在燈號的下面還有一個USB 3.0連接埠，以及一個電源鍵。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270187/original/f17565f50541aa37df8af91ee9519f54.jpg" />
+<p><a id="b" name="b"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285698/original/35c281902bb6ce9908bd3c20e676fe10.png" /></p>
+<p>DSM 7.0 以前的使用者只能選擇 Photo Station 和 Moments 來進行照片管理，<span style="color: #800000;"><strong>「Photo Station」類似部落格式的相簿瀏覽，相簿會依照資料夾分類，且對於每個相簿具有詳細的使用者權限設定</strong></span>；<span style="color: #800000;"><strong>「Moments」類似 Google 相簿的功能，照片會按照時間軸排序，並且自動將相片按人物、地點等不同內容進行分類。</strong></span>（<a href="https://www.synology.com/zh-tw/dsm/photo_vs_moments" target="_blank" rel="noopener">Photo Station 與 Moments 之間的差異</a>）</p>
+<p>▼ <strong>Photo Station</strong>：依照資料夾建立相簿，各相簿可進行不同權限設定。<br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285672/original/6e41abe3a97d648747a54fd746ac8d66.png" /></p>
+<p>▼ <strong>Moments</strong>：依照時間軸瀏覽相片，透過影像辨識能自動將相片按人物、地點、主題等不同內容進行分類。<br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285673/original/c9a9b5767d12200ecb93fb9d11b64662.png" /></p>
+<p>既然<span style="color: #800000;"><strong>「Synology Photos」為 Photo Station 與 Moments 的整合</strong></span>，前者的相片放在共用空間，後者的照片放在個人空間，因此整合後的 Synology Photos <strong><span style="color: #800000;">不管在上傳照片還是瀏覽照片時，就會依照這個規定（個人空間/共用空間）去讓使用者切換瀏覽 or 上傳</span><span style="color: #800000;">，以增加個人隱私</span></strong>，如圖所示。</p>
+<p>▼ <strong>Synology Photos 介面</strong>，可隨意切換個人空間和共用空間來瀏覽相片。<br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285674/original/7b8977c3440761150205444ce6272b5c.png" /></p>
+<p><a id="b-1" name="b-1"></a><br><span style="color: #008000;"><strong>《透過 Synology Photos App 上傳照片》</strong></span></p>
+<p>※ <strong>Synology Photos</strong> for <a href="https://apps.apple.com/app/id1484764501" target="_blank" rel="noopener">iOS</a> | <a href="https://play.google.com/store/apps/details?id=com.synology.projectkailash" target="_blank" rel="noopener">Android</a></p>
+<p>第一次開啟 Synology Photos App 時，會要求設定照片備份；<strong>備份規則</strong>可以選擇要上傳從現在起的新照片，還是裝置內的所有照片，這裡筆者選擇”備份所有照片”。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285675/original/fbc1334083ef5710781b3fbf9b89c3ad.png" />
 
-<p>左側和D右側兩邊都印著大大的Synology商標，且<span style="color: #800000;">此商標有做洞洞線條的通風散熱設計</span>。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270188/original/eab2c9d9ffd4c76c9597b3bb491952a1.jpg" />
+<p><strong>備份路徑</strong>有備份位置和備份來源兩種設定；「備份位置」能選擇要將照片影片上傳到 NAS 的個人還是共用空間，而「備份來源」則是要備份行動裝置中哪些資料夾的照片影片，預設選擇是”僅備份 DCIM 資料夾”，但是像<strong>安卓裝置中 LINE 下載的照片不會放在 DCIM 資料夾，而是 Pictures 資料夾</strong>，<span style="color: #800000;"><strong>因此筆者建議選擇”自訂”，手動確認要備份的資料夾。</strong></span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285676/original/fa594f444adb27924b8231895c3d5731.png" />
 
-<p>NAS的背面就是兩個大風扇，以利<span style="color: #800000;">直接散熱</span>。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270189/original/092862080e6bf0ca65f8ebd2315afdb0.jpg" />
+<p>設定完成後，就可以點選”啟動相片備份”開始上傳照片和影片。進入 App 的畫面下方有相片、相簿、分享和更多可以切換頁面。</p>
+<p>首先先到”更多”頁面，如下圖，能看到目前還有 2869 個項目等待備份，且在手機通知欄會提醒正在進行備份任務。接著按一下”備份中…”，這裡可以重新設定備份路徑，以及<strong>上傳設定</strong>，例如是否只在連線到 Wi-Fi 時上傳、是否只在充電時上傳等。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285677/original/a8237b9320f0b6c3ae0259ee0cc5923e.png" />
 
-<p>風扇外蓋可以拆卸下來，如此一來，就能利用棉花棒或小刷子來清潔風扇。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270190/original/b209f7ef2a6963ada50ec6baa03633d8.jpg" />
+<p>下圖為相片和相簿頁面，詳細內容會留到下面的 Synology Photos 網頁版作介紹。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285678/original/5b8fbcf91c8b93302a5619478ee6065e.png" />
 
-<p>DS916+的連接埠較為簡單：一共有網路孔x2、eSATA埠x1、USB3.0連接埠x2、肯辛頓鎖孔x1和電源接口x1。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270209/original/76fc3ba14aa61e8b5f1f77318e5eb2e0.jpg" />
+<p><a id="b-2" name="b-2"></a><br><span style="color: #008000;"><strong>《Synology Photos 網頁版》</strong></span></p>
+<p>Synology Photos 的網頁版和 App 相同，一樣有”相片”、”相簿”和”分享”頁面，功能介紹如下：</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285679/original/5d7859c1bed48c4e2319f5d3805253c2.png" />
 
-<p>NAS正面外蓋左下角印出了本產品型號為DS916+。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270192/original/3945951a0978cba5f9f1fbeae395c9f1.jpg" />
+<p>▼ <strong>「相片」頁面（時間軸檢視）</strong>，包括上傳、投影片播放、篩選等功能。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285680/original/7c4ac851f8da342056c6d4ca5cade61e.png" />
 
-<p>此鏡面塑膠外殼只要輕輕向外一扳就拆下了，內部就是四個抽取式的硬碟托盤，且左下角也有印出DS916+型號。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270193/original/e465c96060bae004453f2b70c0c282df.jpg" />
+<p>▼ <strong>「相片」頁面（資料夾檢視）</strong></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285681/original/e35c99ef42a210129a1159720a8fdd11.png" />
 
-<p>要取出硬碟抽取盒非常簡單，先壓著上方有寫著”PUSH”的地方，接著就可以將抽取盒拉出來了。(注意<span style="color: #800000;">托盤上方有寫”UP”的地方要朝上</span>)</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270194/original/ef1537f8e8f8693c1c6b76bf4da39c90.jpg" />
+<p>點開照片，可以看到拍攝時間、照片地理位置等資訊；點選”更多”，會顯示該照片的詳細資訊。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285682/original/9f7aa523e134f0eaee1a6f5284123ad2.png" />
 
-<p>在”PUSH”旁邊有以白色小圓點顯示硬碟的插入順序。(<span style="color: #000000;">一個小圓點就代表第一顆硬碟的插入位置</span>)</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270195/original/0c7dc3eaf78ddede2e0375406d384d50.jpg" />
+<p>▼ <strong>「相簿」頁面</strong>，分為自動建立（上排）和手動建立（下排）兩種。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285683/original/13ae178bea6c5a42fa1c4a635a55cc6c.png" />
 
-<p>整台NAS的內部主要只有容納硬碟的空間，並且直對兩個風扇排風，讓硬碟擁有較好的散熱效果！</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270196/original/a4b3efa25d17ef817b6418c9f73597da.jpg" />
+<p>手動建立的相簿又分為手動選擇和條件兩種，「手動選擇」就是勾選完照片後，再輸入相簿名稱即建立完成。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285684/original/670a5cfdc100fcbcbb795c3e5b0ffc01.png" />
 
-<p>硬碟托盤為非金屬材質，因此非常輕；把手的地方印有Synology的商標。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270197/original/198d85bf800201a3ea1680eb3cebbd97.jpg" />
+<p><strong><span style="color: #800000;">「建立條件相簿」則是透過每張照片提供的資訊，搭配不同條件篩選出符合條件的照片，所集合成的相簿。</span></strong>舉例來說，我在 2020/11/13~15 到金門玩，想要把拍攝的照片弄成一個「金門遊」相簿，但是<strong>如果只透過日期篩選，可能還會包含一些多餘的圖片，例如從 LINE 或 Facebook 下載的照片</strong>，那麼就可以再增加地理位置為”金門縣”的條件，去掉不必要的照片。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285685/original/65e1749bf10726766d0dd05bc5ff11b6.png" />
 
-<p>托盤尾端有個”PULL”字樣，朝箭頭處拉開就能把邊條取下。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270198/original/f7146c25c26db08ac54ff94547c575e6.jpg" />
+<p><span style="color: #800000;"><strong>在「人物」的相簿中<span style="color: #800000;">，</span>Synology Photos 會運用 AI 影像辨識技術自動將相同的人臉放在同一個類別中</strong></span>；如果同一個人出現了兩次，也可以透過右上角的”合併人物”功能來合併相同人物。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285686/original/cea9c033db3b510bb3b5302b17a05c01.png" />
 
-<p>硬碟托盤支援2.5吋和3.5吋的硬碟；<span style="color: #800000;">3.5吋的硬碟只需用邊條來固定(無須拴螺絲)</span>，底部四個螺絲孔則是給2.5吋硬碟拴螺絲用的。<br>硬碟托盤支援2.5吋和3.5吋的硬碟；<span style="color: #800000;">3.5吋的硬碟只需用邊條來固定(無須拴螺絲)</span>，底部四個螺絲孔則是給2.5吋硬碟拴螺絲用的。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270207/original/a24b17b1f36ce95c7140fb849b85d706.jpg" />
+<p>透過「人物」分類的好處是，只要<span style="color: #800000;"><strong>點選某一個人就能看到這個人的所有照片。</strong></span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285687/original/99df96ebcc5eda3f13a8bbf374426a51.png" />
 
-<p>插入硬碟螺絲孔的旁邊有橡膠，以及下方的止滑墊，提供<span style="color: #800000;">硬碟防震</span>和<span style="color: #800000;">減少晃動</span>的機會。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270199/original/842362873bcdfbcd2664fc139c9a1aa4.jpg" />
+<p>另外更進階的用法，我可以<strong>篩選這兩個人同時出現的照片</strong>做成一個相簿，同時可以從左下角得知有 40 張照片符合條件；且筆者也實測過，<strong><span style="color: #800000;">透過條件新增的相簿，未來只要有符合條件的照片上傳，一樣會新增到該相簿內</span></strong>，十分聰明。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285688/original/90fafa34f08a4b88966215bb76c4d971.png" />
 
-<p>本次搭配NAS使用的硬碟就是這顆<span style="color: #008000;"><strong>TOSHIBA 6TB 企業級硬碟(型號：MG04ACA600E)</strong></span>。此硬碟提供高達<span style="color: #800000;">6TB的大容量</span>以及<span style="color: #800000;">7,200 rpm</span>的效能，標準的3.5吋26.1 mm外型規格搭載先進格式磁區技術，造就最佳的容量與資料可靠性。512e 型號支援 Toshiba 持續性寫入快取技術，能妥善因應突發斷電的情況，有效提升效能表現。4Kn 型號可在 4K 應用程式和作業環境下提供最佳效能和相容性。(<a href="http://toshiba.semicon-storage.com/tw/product/storage-products/enterprise-hdd/mg04acaxxxx.html" target="_blank">產品網頁</a>)</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270200/original/eb09d447a3c6c8f3ae42c9f967d01148.jpg" />
+<p>在「地點」分類中，Synology Photos 會透過照片資訊，將相同地區的照片整理在一起。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285689/original/9df6d537f7ddf1469555a4c59a39325e.png" />
 
-<p>TOSHIBA 6TB 企業級硬碟使用的是 SATA3 介面，傳輸速率高達6.0 Gbit/s。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270201/original/b5f95e763a6a292e49830d206b230b89.jpg" />
+<p>除了給自己觀賞的相簿，對於手動新增的相簿可以設定是否要分享，分享的方式有以下三種方式，並且能設定<strong>相簿過期日</strong>：</p>
+<p><strong>1. 公開</strong><br><strong>2. 不公開（密碼存取）</strong><br><strong>3. 僅開放給受邀者（DSM 使用者）存取</strong></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285690/original/24154b3ebf98c703d20a121a27d3e4e9.png" />
 
-<p><a id="A-2" name="A-2"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270208/original/169971481a63a6ecfd6a888c533d0428.png" /></p>
-<p>在將硬碟放入托盤之前，須先把邊條拆下，硬碟有貼貼紙的那一面朝上，再插回邊條。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270202/original/1ee55077f263e85cec48b33e176cf15f.jpg" />
+<p>如果需要密碼存取，則開啟相簿連結後會要求輸入密碼。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285691/original/97564949e94b13f5cccf74522024c4a6.png" />
 
-<p>裝好硬碟後的托盤如圖所示：</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270203/original/dc869ed045a84d09c9bcd26cc4bb1fe4.jpg" />
+<p>若密碼正確就能看到分享的相簿。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285692/original/ba7af1bd2bc6e689a927ae22d2d9b40a.png" />
 
-<p>由於只有一顆硬碟，因此把有硬碟的那個托盤放入最左邊的硬碟槽。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270204/original/a10f9ce37c5a42dad13b972f5ee63d11.jpg" />
+<p>「分享」頁面的”與他人分享”會記錄自己分享給別人的相簿，方便管理；若是透過加入受邀者來分享相簿給別人，那麼該相簿就會出現在對方的”與我分享”頁面。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285693/original/bc25cc1219ebf275e10d9d01bcdd3323.png" />
 
-<p>安裝好硬碟後基本上前置作業就完成了。在啟動NAS電源之前，只要再接上三條線即可：<span style="color: #800000;">電源線</span>和<span style="color: #800000;">兩條網路線</span>(網路線只接一條也行)；由於NAS需利用區域網路來進行設定，電腦和NAS要接上同一台路由器(否則也可利用筆電連無線網路至該路由器)。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270205/original/71eb8d12795e6b78da792104e2a087c9.jpg" />
+<p>最後，如果要用電腦上傳照片和影片，<strong><span style="color: #800000;">除了使用 Synology Photos 網頁版的「+」功能，也可以直接透過 DSM 的 File Station 來上傳會更方便</span><span style="color: #800000;">。</span></strong>個人空間和共用空間的上傳路徑如下：</p>
+<p><strong>個人空間：/使用者家目錄/Photos/</strong><br><strong>共用空間：/photo</strong></p>
+<p>以個人空間為例，若使用 App 備份行動裝置上的照片，則會在 <strong>/使用者家目錄/Photos/</strong> 路徑下再建立 <strong>MobileBackup(透過 App 備份)</strong> 和 <strong>TAS-AL00(手機名稱) </strong>的資料夾，方便管理不同裝置間的備份。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285694/original/d9f8627efe909950d7e912f4cce09be0.png" />
 
-<p>接著進行開機，首先電源鍵會閃藍燈，待長亮藍燈後，第一個狀態指示燈會亮橘燈，即可開始系統設定！</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270206/original/db907b29cecbfc5bcd30e28fa7092879.jpg" />
+<hr />
+
+<p><a id="c" name="c"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285699/show/e59c2d42af07a0ecb6774559bd61e846.png" /></p>
+<p><strong>自從 <a href="https://technews.tw/2020/11/12/google-photos-will-end-its-free-unlimited-storage-on-june-1st-2021/" target="_blank" rel="noopener">Google 相簿即將停止高畫質影像免費無上限儲存</a>後，相信很多人要開始考慮下一個備份自己珍貴的照片影片的雲端平台了。如果不想繳交月費，<span style="color: #0000ff;">透過 DSM 7.0 全新推出的 Synology Photos 提供了妥善的備份方案，且不用為了要上傳原始畫質還是高畫質照片而煩惱，不論照片影片都是”原始檔”直接上傳到 NAS 中。</span></strong></p>
+<p><strong>除此之外，<span style="color: #0000ff;">若要瀏覽或是找尋特定照片均非常便利，只要透過條件篩選就能快速找到想看的照片</span>；而分享相簿也很方便，只要透過專屬連結就能分享給別人，同時能設定存取者<span style="color: #0000ff;">只能線上瀏覽</span>，還是可以將照片<span style="color: #0000ff;">下載下來</span>，並支援<span style="color: #0000ff;">相簿密碼</span>和<span style="color: #0000ff;">相簿到期日</span>，這些都是 Google 相簿不支援的功能。</strong></p>
+<p><strong>最後是 Synology Photos 的功能總整理：</strong></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/12/285695/original/b6718357246c01478c8f5253ae1e7a95.png" />
     </div>
 
     
@@ -455,13 +484,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2016/07/Synology-Tip-B/" rel="prev" title="[教學] Synology NAS Tip B. 系統安裝/設定篇">
-      <i class="fa fa-chevron-left"></i> [教學] Synology NAS Tip B. 系統安裝/設定篇
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2016/06/Apollo/" rel="next" title="[開箱] 小空間大實現，Apollo 個人雲端儲存裝置，矚目上市">
-      [開箱] 小空間大實現，Apollo 個人雲端儲存裝置，矚目上市 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/11/hexo-aplayer/" rel="next" title="[教學] APlayer：為 Hexo 部落格加入個人音樂播放器">
+      [教學] APlayer：為 Hexo 部落格加入個人音樂播放器 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -1148,7 +1174,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'comments',
       owner       : 'ed521',
       admin       : ['ed521'],
-      id          : '0f1e1b543ea19374a95b1613cb67b889',
+      id          : 'af82f4c2476f901904b38f4891bb0617',
         language: 'zh-TW',
       distractionFreeMode: true
     });
