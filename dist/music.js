@@ -76,6 +76,22 @@ const ap = new APlayer({
 		lrc: '/music/lyrics/再見.lrc',
 		theme: '#4f1b22'
       },
+	  {
+        name: '句號',
+        artist: '鄧紫棋',
+        url: 'https://drive.google.com/uc?export=download&id=1SHkdqfqc6SG54iC-dNBKjHrbskTWG--a',
+        cover: '/music/cover/句號.jpg',
+		lrc: '/music/lyrics/句號.lrc',
+		theme: '#82454e'
+      },
+	  {
+        name: '來自天堂的魔鬼',
+        artist: '鄧紫棋',
+        url: 'https://drive.google.com/uc?export=download&id=1EusaUMZHUa15-6t1c76bKT9z8JFLQXpU',
+        cover: '/music/cover/再見.jpg',
+		lrc: '/music/lyrics/來自天堂的魔鬼.lrc',
+		theme: '#4f1b22'
+      },
 	  {		
         name: '漂向北方',
         artist: '黃明志 (ft.王力宏)',
@@ -389,6 +405,14 @@ const ap = new APlayer({
 		theme: '#73877e'
       },
 	  {
+        name: '親愛的那不是愛情',
+        artist: '張韶涵',
+        url: 'https://drive.google.com/uc?export=download&id=1jkkL7yvyrs6Rde18yOKay8ielQxWuD-h',
+        cover: '/music/cover/親愛的那不是愛情.jpg',
+		lrc: '/music/lyrics/親愛的那不是愛情.lrc',
+		theme: '#948c7f'
+      },
+	  {
         name: '好心分手',
         artist: '盧巧音&王力宏',
         url: 'https://drive.google.com/uc?export=download&id=194_6GlEovMm4BURmKLg852og9O74oyvj',
@@ -453,14 +477,6 @@ const ap = new APlayer({
 		theme: '#996c57'
       },
 	  {
-        name: '我懷念的',
-        artist: '蕭敬騰',
-        url: 'https://drive.google.com/uc?export=download&id=1e1qlKIO7FHa1PWwjf5Bqh3gG_Ip85C-y',
-        cover: '/music/cover/我懷念的.jpg',
-		lrc: '/music/lyrics/我懷念的.lrc',
-		theme: '#050304'
-      },
-	  {
         name: '家家酒',
         artist: '家家',
         url: 'https://drive.google.com/uc?export=download&id=1SWKgSLk-hjSj57Z_uT5UDacwCpjosEhR',
@@ -509,20 +525,20 @@ const ap = new APlayer({
 		theme: '#302220'
       },
 	  {
+        name: '我懷念的',
+        artist: '蕭敬騰',
+        url: 'https://drive.google.com/uc?export=download&id=1e1qlKIO7FHa1PWwjf5Bqh3gG_Ip85C-y',
+        cover: '/music/cover/我懷念的.jpg',
+		lrc: '/music/lyrics/我懷念的.lrc',
+		theme: '#050304'
+      },
+	  {
         name: '夢一場',
         artist: '蕭敬騰',
         url: 'https://drive.google.com/uc?export=download&id=1FQSTHFZnfSNfohCALi_6w6PbRv6CxSoE',
         cover: '/music/cover/我懷念的.jpg',
 		lrc: '/music/lyrics/夢一場.lrc',
 		theme: '#050304'
-      },
-	  {
-        name: '親愛的那不是愛情',
-        artist: '張韶涵',
-        url: 'https://drive.google.com/uc?export=download&id=1jkkL7yvyrs6Rde18yOKay8ielQxWuD-h',
-        cover: '/music/cover/親愛的那不是愛情.jpg',
-		lrc: '/music/lyrics/親愛的那不是愛情.lrc',
-		theme: '#948c7f'
       },
 	  {
         name: '讓我為你唱情歌',
@@ -555,14 +571,6 @@ const ap = new APlayer({
         cover: '/music/cover/thatPOWER.jpg',
 		lrc: '/music/lyrics/thatPOWER.lrc',
 		theme: '#030303'
-      },
-	  {
-        name: '不將就',
-        artist: '李榮浩',
-        url: 'https://drive.google.com/uc?export=download&id=1vlDviUdvQSWugFhe8xapJfBqxrXaUBmk',
-        cover: '/music/cover/不將就.jpg',
-		lrc: '/music/lyrics/不將就.lrc',
-		theme: '#2e4b5d'
       },
 	  {
         name: '浪子回頭',
@@ -614,6 +622,15 @@ const ap = new APlayer({
 		
       },
 	  {
+        name: '愛唄',
+        artist: '高橋李依',
+        url: 'https://drive.google.com/uc?export=download&id=1pDg6f6wdl4p6RPbvC7rJdq-oxfB3AGii',
+        cover: '/music/cover/小さな恋のうた_高橋李依.jpg',
+		lrc: '/music/lyrics/愛唄.lrc',
+		theme: '#ed885b'
+		
+      },
+	  {
         name: 'PopLove',
         artist: 'Robin Skouteris',
         url: 'https://drive.google.com/uc?export=download&id=1VSRh3sIWVApHQHm1-1VXsq-3NygoWMkj',
@@ -662,36 +679,12 @@ const ap = new APlayer({
 		theme: '#3e3e3e'
       },
 	  {
-        name: '句號',
-        artist: '鄧紫棋',
-        url: 'https://drive.google.com/uc?export=download&id=1SHkdqfqc6SG54iC-dNBKjHrbskTWG--a',
-        cover: '/music/cover/句號.jpg',
-		lrc: '/music/lyrics/句號.lrc',
-		theme: '#82454e'
-      },
-	  {
-        name: '來自天堂的魔鬼',
-        artist: '鄧紫棋',
-        url: 'https://drive.google.com/uc?export=download&id=1EusaUMZHUa15-6t1c76bKT9z8JFLQXpU',
-        cover: '/music/cover/再見.jpg',
-		lrc: '/music/lyrics/來自天堂的魔鬼.lrc',
-		theme: '#4f1b22'
-      },
-	  {
         name: '太陽',
         artist: '邱振哲',
         url: 'https://drive.google.com/uc?export=download&id=14o_iFbc0_b99TSy3_30o-Wkp-Jes11kJ',
         cover: '/music/cover/太陽.jpg',
 		lrc: '/music/lyrics/太陽.lrc',
 		theme: '#fef339'
-      },
-	  {
-        name: '年少有為',
-        artist: '李榮浩',
-        url: 'https://drive.google.com/uc?export=download&id=1DHbVVisK3_EociCnKglfT2bjtMD4O2Fj',
-        cover: '/music/cover/年少有為.jpg',
-		lrc: '/music/lyrics/年少有為.lrc',
-		theme: '#137b8e'
       },
 	  {
         name: '奏 (和聲版)',
@@ -708,6 +701,14 @@ const ap = new APlayer({
         cover: '/music/cover/生きていたんだよな.jpg',
 		lrc: '/music/lyrics/生きていたんだよな.lrc',
 		theme: '#df192b'
+      },
+	  {
+        name: '空の青さを知る人よ',
+        artist: 'あいみょん',
+        url: 'https://drive.google.com/uc?export=download&id=1OEJ7M3mCmHorNihCskaEKsIVH-ofDky_',
+        cover: '/music/cover/空の青さを知る人よ.jpg',
+		lrc: '/music/lyrics/空の青さを知る人よ.lrc',
+		theme: '#10530c'
       },
 	  {
         name: '心做し',
@@ -862,20 +863,20 @@ const ap = new APlayer({
 		theme: '#10530c'
       },
 	  {
-        name: '空の青さを知る人よ',
-        artist: 'あいみょん',
-        url: 'https://drive.google.com/uc?export=download&id=1OEJ7M3mCmHorNihCskaEKsIVH-ofDky_',
-        cover: '/music/cover/空の青さを知る人よ.jpg',
-		lrc: '/music/lyrics/空の青さを知る人よ.lrc',
-		theme: '#10530c'
-      },
-	  {
         name: 'remember',
         artist: 'Uru',
         url: 'https://drive.google.com/uc?export=download&id=1f_Cbi9BNO7ztXSozBHvbdZK2s6EX-wX1',
         cover: '/music/cover/remember.jpg',
 		lrc: '/music/lyrics/remember.lrc',
 		theme: '#a19cba'
+      },
+	  {
+        name: '年少有為',
+        artist: '李榮浩',
+        url: 'https://drive.google.com/uc?export=download&id=1DHbVVisK3_EociCnKglfT2bjtMD4O2Fj',
+        cover: '/music/cover/年少有為.jpg',
+		lrc: '/music/lyrics/年少有為.lrc',
+		theme: '#137b8e'
       },
 	  {
         name: '李白',
@@ -892,6 +893,14 @@ const ap = new APlayer({
         cover: '/music/cover/麻雀.jpg',
 		lrc: '/music/lyrics/麻雀.lrc',
 		theme: '#0b121c'
+      },
+	  {
+        name: '不將就',
+        artist: '李榮浩',
+        url: 'https://drive.google.com/uc?export=download&id=1vlDviUdvQSWugFhe8xapJfBqxrXaUBmk',
+        cover: '/music/cover/不將就.jpg',
+		lrc: '/music/lyrics/不將就.lrc',
+		theme: '#2e4b5d'
       },
 	  {
         name: '飛鳥和蟬',
