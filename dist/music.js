@@ -356,14 +356,14 @@ const ap = new APlayer({
 		lrc: '/music/lyrics/沒有如果.lrc',
 		theme: '#b9b19f'
       },
-	  {
+	  /*{
         name: 'Hacking to the Gate',
         artist: '伊藤香奈子',
         url: 'https://drive.google.com/uc?export=download&id=10SoFpZxTQaELkm3vq59rOcRRreuEW__j',
         cover: '/music/cover/Hacking to the Gate.jpg',
 		lrc: '/music/lyrics/Hacking to the Gate.lrc',
 		theme: '#b09456'
-      },
+      },*/
 	  {
         name: 'Last Christmas',
         artist: 'Glee Cast',
