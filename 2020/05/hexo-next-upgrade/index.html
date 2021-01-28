@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277180/original/50240436ea9d7237900c29b335dcc992.png">
 <meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277181/original/87536e970d757b91fab3ace649db62bf.gif">
 <meta property="article:published_time" content="2020-05-19T15:31:54.000Z">
-<meta property="article:modified_time" content="2020-11-24T05:52:35.130Z">
+<meta property="article:modified_time" content="2021-01-28T11:52:00.734Z">
 <meta property="article:author" content="EDEN">
 <meta property="article:tag" content="教學">
 <meta property="article:tag" content=" GitHub">
@@ -80,8 +80,9 @@
     lang   : 'zh-TW'
   };
 </script>
+<link rel="manifest" href="/manifest.json">
 <script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+<link rel="manifest" href="/manifest.json" />
   <title>[教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄 | 瑪利歐的部落格</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
@@ -323,7 +324,7 @@
 <img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277172/original/673e8841bce414a927519e3cd877db83.png" />
 
 <h2 id="Next-主題升級"><a href="#Next-主題升級" class="headerlink" title="Next 主題升級"></a><font color=#FF6600>Next 主題升級</font></h2><p>接著要下載最新的 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">Next 主題</a>，請輸入以下指令：（執行 cmd 在 Hexo 資料夾根目錄下）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
 <p>記得在根目錄的 _config.yml 要修改套用的主題為 next。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
@@ -1154,6 +1155,14 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     gitalk.render('gitalk-container');
   }, window.Gitalk);
 });
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
 </script>
 
     </div>

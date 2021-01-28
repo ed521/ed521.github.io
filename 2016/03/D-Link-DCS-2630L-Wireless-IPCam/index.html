@@ -155,8 +155,9 @@
     lang   : 'zh-TW'
   };
 </script>
+<link rel="manifest" href="/manifest.json">
 <script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+<link rel="manifest" href="/manifest.json" />
   <title>[開箱] 沒有最廣，只有更廣！D-Link DCS-2630L 180° 超廣角AC無線攝影機，擁抱視界的極限 | 瑪利歐的部落格</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
@@ -1360,6 +1361,14 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     gitalk.render('gitalk-container');
   }, window.Gitalk);
 });
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
 </script>
 
     </div>

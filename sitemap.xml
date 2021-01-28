@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ed521.github.io/manifest.json</loc>
+    
+    <lastmod>2021-01-28T17:25:49.408Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2020/05/hexo-next-upgrade/</loc>
+    
+    <lastmod>2021-01-28T11:52:00.734Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/2019/08/hexo-markdown/</loc>
+    
+    <lastmod>2021-01-28T11:35:29.045Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ed521.github.io/2015/02/Asustor-AS5002T/</loc>
     
     <lastmod>2021-01-27T09:22:10.233Z</lastmod>
@@ -37,13 +58,6 @@
   </url>
   
   <url>
-    <loc>https://ed521.github.io/2020/05/hexo-next-upgrade/</loc>
-    
-    <lastmod>2020-11-24T05:52:35.130Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ed521.github.io/2019/08/hexo-admin/</loc>
     
     <lastmod>2020-11-24T05:21:06.056Z</lastmod>
@@ -61,13 +75,6 @@
     <loc>https://ed521.github.io/2019/07/hexo-install/</loc>
     
     <lastmod>2020-11-24T05:21:00.745Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/2019/08/hexo-markdown/</loc>
-    
-    <lastmod>2020-11-24T05:20:59.201Z</lastmod>
     
   </url>
   
@@ -460,13 +467,6 @@
     <loc>https://ed521.github.io/tags/index.html</loc>
     
     <lastmod>2018-08-09T12:41:35.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/manifest.json</loc>
-    
-    <lastmod>2018-05-20T07:03:39.365Z</lastmod>
     
   </url>
   

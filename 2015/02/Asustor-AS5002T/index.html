@@ -321,8 +321,9 @@
     lang   : 'zh-TW'
   };
 </script>
+<link rel="manifest" href="/manifest.json">
 <script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+<link rel="manifest" href="/manifest.json" />
   <title>[開箱] 家庭娛樂的新寵兒、雲端備份的好選擇！ASUSTOR AS5002T 震撼登場 | 瑪利歐的部落格</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
@@ -1985,6 +1986,14 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     gitalk.render('gitalk-container');
   }, window.Gitalk);
 });
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
 </script>
 
     </div>
