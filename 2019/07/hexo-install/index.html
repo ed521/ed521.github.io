@@ -42,13 +42,14 @@
 <meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260733/original/a4bf28579048e804d781b1d25dda37c8.png">
 <meta property="og:image" content="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260742/original/5f656992529e8245a79e6725385cc9f7.png">
 <meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260734/original/ffc47200c885d05688795451e8e58e27.png">
+<meta property="og:image" content="https://cdn0-t17.techbang.com/system/attached_images/2021/03/288364/original/76c9f7f84e89991faf4cf7d464c7ed42.png">
 <meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260740/original/f5221b90b385f283395b092c5878b204.png">
 <meta property="og:image" content="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260741/original/072bfe3ce60b25a6e7cb3f2e8959bdf8.png">
 <meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260743/original/566a2d9f07baed839dacc729414be21a.png">
 <meta property="og:image" content="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260722/original/6893f5d772893585be564efd54f09583.png">
 <meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/07/261695/original/06f228fbb59459252395b1d842f05edf.png">
 <meta property="article:published_time" content="2019-07-12T06:26:00.000Z">
-<meta property="article:modified_time" content="2020-11-24T05:21:00.745Z">
+<meta property="article:modified_time" content="2021-03-22T12:31:20.940Z">
 <meta property="article:author" content="EDEN">
 <meta property="article:tag" content="教學">
 <meta property="article:tag" content=" GitHub">
@@ -288,7 +289,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>3.6k</span>
+              <span>3.8k</span>
             </span>
 
         </div>
@@ -361,8 +362,8 @@
 <p>這樣就完成安裝了唷！</p>
 <h3 id="gt-設定部落格相關資訊"><a href="#gt-設定部落格相關資訊" class="headerlink" title="-&gt; 設定部落格相關資訊"></a><font color=#008000>-&gt; 設定部落格相關資訊</font></h3><p>進入剛設定好的 Hexo 資料夾之後(本範例資料夾名稱為 myblog )，先找到 _config.yml 這個檔案，然後對它點右鍵 -&gt; Edit with Notepad++ (或是用自己習慣的文字編輯器打開)。</p>
 <p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260732/original/9fc2d1e17fac835aa3151d70bbd2d997.png" alt=""></p>
-<p>打開 _config.yml 後，修改第 6~12 行資訊，輸入完記得按下 Ctrl+S 存檔：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: 我的部落格  &#x2F;&#x2F;輸入部落格標題</span><br><span class="line">subtitle: 一個抒發本人心情的地方  &#x2F;&#x2F;輸入副標題</span><br><span class="line">description:  &#x2F;&#x2F;輸入網站描述 </span><br><span class="line">keywords:  &#x2F;&#x2F;輸入網站關鍵字(以逗號隔開)，方便 SEO </span><br><span class="line">author: 王小明  &#x2F;&#x2F;輸入姓名或暱稱</span><br><span class="line">language: zh-TW  &#x2F;&#x2F;輸入您所使用的語言</span><br><span class="line">timezone:  &#x2F;&#x2F;留空以使用系統時間</span><br></pre></td></tr></table></figure>
+<p>打開 _config.yml 後，修改第 6~12 行資訊，輸入完記得按下 Ctrl+S 存檔(<strong>#</strong> 為註解)：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">我的部落格</span>  <span class="comment">#輸入部落格標題</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">一個抒發本人心情的地方</span>  <span class="comment">#輸入副標題</span></span><br><span class="line"><span class="attr">description:</span>  <span class="comment">#輸入網站描述 </span></span><br><span class="line"><span class="attr">keywords:</span>  <span class="comment">#輸入網站關鍵字(以逗號隔開)，方便 SEO </span></span><br><span class="line"><span class="attr">author:</span> <span class="string">王小明</span>  <span class="comment">#輸入姓名或暱稱</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-TW</span>  <span class="comment">#輸入您所使用的語言</span></span><br><span class="line"><span class="attr">timezone:</span>  <span class="comment">#留空以使用系統時間</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260733/original/a4bf28579048e804d781b1d25dda37c8.png" alt=""></p>
 <p>接著第 16 行的地方，url 請換成自己網站的連結 <a href="https://username.github.io/" target="_blank" rel="noopener">https://username.github.io/</a> ，username是自己的 GitHub 帳號。</p>
@@ -371,14 +372,19 @@
 <p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260742/original/5f656992529e8245a79e6725385cc9f7.png" alt=""></p>
 <p>這樣就初步完成部落格的個人化設定了！</p>
 <h3 id="gt-設定部署至-GitHub-的資訊"><a href="#gt-設定部署至-GitHub-的資訊" class="headerlink" title="-&gt; 設定部署至 GitHub 的資訊"></a><font color=#008000>-&gt; 設定部署至 GitHub 的資訊</font></h3><p>接著一樣在 _config.yml，要找到部署至 github 的設定：deploy (在文件的底部)，請輸入以下設定，<strong><font color=#800000>repo 的 username 改成自己的 GitHub 帳號</font></strong>，所以 repo 的連結架構長這樣： <a href="https://github.com/自己帳號/專案名稱.git" target="_blank" rel="noopener">https://github.com/自己帳號/專案名稱.git</a> ，輸入完一樣記得按下 Ctrl+S 存檔。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/username/username.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span> <span class="comment">#目前最新的預設 branch 是 main，若原本的 branch 為 master，則輸入 master</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260734/original/ffc47200c885d05688795451e8e58e27.png" alt=""></p>
+<p>PS. <strong><font color=#800000>目前最新的預設 branch 是 main</font></strong>，若原本的 branch 為 master，則輸入 master。如下圖，查看方式請到 GitHub 剛建好的專案下，確認 defult branch 為 <strong>main</strong>。</p>
+<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2021/03/288364/original/76c9f7f84e89991faf4cf7d464c7ed42.png" alt=""></p>
 <p>註：至於 _config.yml 在 deploy 的地方，為何預設只有 type 一個項目呢？<strong>這是因為 Hexo 可以部署到很多地方，GitHub 只是其中一個選項，而每個網站的設定值皆不同。</strong>使用者也可以一次部署到多個網站，有興趣者可以參照這個文件教學：<a href="https://hexo.io/zh-tw/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment | Hexo</a>。</p>
 <h3 id="gt-部署至-GitHub"><a href="#gt-部署至-GitHub" class="headerlink" title="-&gt; 部署至 GitHub"></a><font color=#008000>-&gt; 部署至 GitHub</font></h3><p>回到終端機，<strong>首先確認終端機的路徑在 myblog 資料夾根目錄下</strong>，並依序輸入以下三個指令：(輸入 hexo d 後會要求登入 GitHub 帳號，如圖所示)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl  //清除之前建立的靜態檔案，也可以輸入 hexo clean</span><br><span class="line">hexo g  //建立靜態檔案，也可以輸入 hexo generate</span><br><span class="line">hexo d  //部署至 Github Pages，也可以輸入 hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260740/original/f5221b90b385f283395b092c5878b204.png" alt=""></p>
+<p>PS. <strong>若第一次使用 Git</strong>，則在執行 <code>hexo d</code> 時會報錯(出現 Auther identity unknown. Please tell me who you are. 錯誤訊息)，這時候就要輸入以下兩行資訊(雙引號內自行修改，輸入指令時雙引號要保留)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure>
+
 <p>這三個缺一不可的指令，就是幫我們把網站自動生成並發佈到 <a href="https://username.github.io" target="_blank" rel="noopener">https://username.github.io</a> 上的指令，完成後就可以打開瀏覽器看看自己網站發布成功的樣子摟！</p>
 <p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260741/original/072bfe3ce60b25a6e7cb3f2e8959bdf8.png" alt=""></p>
 <p>小結：本次介紹如何安裝 Hexo 環境，包含個人資訊和部署設定，而 Hexo 還能自訂主題、套件等等，玩法非常的多！</p>
