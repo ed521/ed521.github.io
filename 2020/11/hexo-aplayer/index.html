@@ -2,28 +2,28 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#43a0f7"><meta name="generator" content="Hexo 6.2.0">
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#0084ff">
+<meta name="generator" content="Hexo 6.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/android-icon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/android-icon-16x16.png">
-  <link rel="mask-icon" href="/images/android-icon-192x192.svg" color="#43a0f7">
+  <link rel="mask-icon" href="/images/android-icon-192x192.svg" color="#0084ff">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ed521.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#0000ff","save":"manual"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"ed521.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄[教學] APla">
+  <meta name="description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄[教學] APla">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[教學] APlayer：為 Hexo 部落格加入個人音樂播放器">
 <meta property="og:url" content="https://ed521.github.io/2020/11/hexo-aplayer/index.html">
@@ -45,50 +45,82 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284503/original/59bd22600ebd7fb944021dd9afefa780.png">
 
-
 <link rel="canonical" href="https://ed521.github.io/2020/11/hexo-aplayer/">
 
 
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://ed521.github.io/2020/11/hexo-aplayer/","path":"2020/11/hexo-aplayer/","title":"[教學] APlayer：為 Hexo 部落格加入個人音樂播放器"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[教學] APlayer：為 Hexo 部落格加入個人音樂播放器 | 瑪利歐的部落格</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-61473305-3","only_pageview":false}</script>
-  <script src="/js/third-party/analytics/google-analytics.js"></script>
-
-
-
-
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
 <script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
+  <title>[教學] APlayer：為 Hexo 部落格加入個人音樂播放器 | 瑪利歐的部落格</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-61473305-3');
+      }
+    </script>
+
+
+
+
+
+
   <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切換導航欄" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">瑪利歐的部落格</p>
-      <i class="logo-line"></i>
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">瑪利歐的部落格</h1>
+      <span class="logo-line-after"><i></i></span>
     </a>
   </div>
 
@@ -101,8 +133,34 @@
 
 
 
+
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">17</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">23</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">64</span></a></li>
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">17</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">64</span></a>
+
+  </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -113,22 +171,23 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
+    <div class="popup search-popup">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜尋..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close" role="button">
+  <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
 
@@ -136,18 +195,261 @@
   </div>
 
 </div>
-        
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2020/11/hexo-aplayer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="EDEN">
+      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑪利歐的部落格">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [教學] APlayer：為 Hexo 部落格加入個人音樂播放器
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-11-24 13:17:20" itemprop="dateCreated datePublished" datetime="2020-11-24T13:17:20+08:00">2020-11-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/teaching/hexoblog/" itemprop="url" rel="index"><span itemprop="name">Hexo部落格</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/11/hexo-aplayer/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] APlayer：為 Hexo 部落格加入個人音樂播放器" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>3.6k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Hexo 部落格教學文系列：<br><a href="https://ed521.github.io/2019/07/hexo-install/">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格</a><br><a href="https://ed521.github.io/2019/08/hexo-admin/">[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具</a><br><a href="https://ed521.github.io/2019/08/hexo-markdown/">[教學] 撰寫 Hexo 文章 - Markdown 語法大全</a><br><a href="https://ed521.github.io/2020/05/hexo-folder-theme/">[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹</a><br><a href="https://ed521.github.io/2020/05/hexo-next-upgrade/">[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄</a><br><a href="https://ed521.github.io/2020/11/hexo-aplayer/">[教學] APlayer：為 Hexo 部落格加入個人音樂播放器</a></p>
+<p>筆者架設 Hexo 部落格有兩大原因，一是可以整理自己撰寫過的文章；而另外一個原因是，透過 <a target="_blank" rel="noopener" href="https://aplayer.js.org/">APlayer 套件</a>，我可以將自己常聽的音樂放到部落格，打開瀏覽器的時候就能收聽，且<font color=#800000>因為是瀏覽器直接播放，在電腦或手機平板都支援。</font>Aplayer 具有音樂播放器的基本功能如：上&#x2F;下一曲、音量調整（行動裝置無）、隨機&#x2F;循環&#x2F;單曲播放，同時支援專輯圖片和動態歌詞的顯示，功能十分強大：</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284503/original/59bd22600ebd7fb944021dd9afefa780.png" />
+
+<span id="more"></span>
+
+<p>在介紹如何加入 APlayer 到部落格之前，先說明如果要加入一首歌到播放器，必要或非必要的要素：</p>
+<ul>
+<li>基本資訊（<strong>必要</strong>）：歌名、歌手</li>
+<li>音樂檔案（<strong>必要</strong>）</li>
+<li>音樂的專輯封面（非必要）</li>
+<li>動態 LRC 歌詞（非必要）</li>
+</ul>
+<p>再來，筆者將以 Next 主題為示範，教學如何將 Aplayer 新增到 Hexo 部落格中。</p>
+<h1 id="Aplayer-音樂播放器安裝"><a href="#Aplayer-音樂播放器安裝" class="headerlink" title="Aplayer 音樂播放器安裝"></a><font color=#0000FF>Aplayer 音樂播放器安裝</font></h1><p>首先到 <a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer">Aplayer 的 GitHub</a> 網站，點選綠色的”Clone or download”，然後點選 Download ZIP。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277175/original/0a5e203b742d232dae25da48fe382d19.png" />
+
+<p>打開壓縮檔後，我們只要裡面的 dist 資料夾（裡面有四個檔案），把它放到 <code>/根目錄/themes/next/source/dist/</code> 路徑下。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277176/original/0a336ed6779f7537b59845aa7a1715ed.png" />
+
+<p>接著我們要在 dist 資料夾中，手動新增名為 <code>music.js</code> 的空白檔案。比較簡單的方式為，先把同路徑下的 <code>APlayer.min.js</code> 檔案再複製一個出來，接著更名為 <code>music.js</code>，然後用 notepad++ 打開把 <code>music.js</code> 裡面的東西全部刪除即可。</p>
+<p>新增完 music.js 後，還要到  <code>/根目錄/themes/next/layout/_layout.swig</code> 檔案，加入以下內容：（新增於倒數第二列<code>&lt;/body&gt;</code>前即可）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/dist/APlayer.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;aplayer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/dist/APlayer.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/dist/music.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277177/original/7265f33bc176c1dc82a05711f302ad71.png" />
+
+<p>以上步驟完成後，APlayer 就算安裝完畢了。</p>
+<h1 id="新增音樂教學"><a href="#新增音樂教學" class="headerlink" title="新增音樂教學"></a><font color=#0000FF>新增音樂教學</font></h1><h2 id="music-js-新增"><a href="#music-js-新增" class="headerlink" title="music.js 新增"></a><font color=#FF6600>music.js 新增</font></h2><p>在 <code>/根目錄/themes/next/source/dist/</code> 路徑下的 <code>music.js</code> 檔案，新增以下內容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> <span class="title class_">APlayer</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;aplayer&#x27;</span>),</span><br><span class="line">    <span class="attr">fixed</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">autoplay</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">theme</span>: <span class="string">&#x27;#b7daff&#x27;</span>,</span><br><span class="line">    <span class="attr">loop</span>: <span class="string">&#x27;all&#x27;</span>,</span><br><span class="line">    <span class="attr">order</span>: <span class="string">&#x27;list&#x27;</span>,</span><br><span class="line">    <span class="attr">preload</span>: <span class="string">&#x27;auto&#x27;</span>,</span><br><span class="line">    <span class="attr">volume</span>: <span class="number">0.7</span>,</span><br><span class="line">    <span class="attr">mutex</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">listFolded</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">listMaxHeight</span>: <span class="string">&#x27;200px&#x27;</span>,</span><br><span class="line">    <span class="attr">lrcType</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="attr">audio</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&quot;兩隻老虎&quot;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;https://XXX.mp3&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/兩隻老虎.jpg&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/兩隻老虎.lrc&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;哥哥爸爸真偉大&#x27;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;https://XXX.mp3&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/哥哥爸爸真偉大.jpg&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/哥哥爸爸真偉大.lrc&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>以上有許多參數設定，可以至 <a target="_blank" rel="noopener" href="https://aplayer.js.org/#/zh-Hans/">APlayer 中文文檔</a> 查看，也可以參考下面說明：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fixed: false  //是否開啟吸底模式，也就是將音樂播放器吸附於畫面底部</span><br><span class="line">autoplay: false  //音樂是否自動播放</span><br><span class="line">theme: &#x27;#b7daff&#x27;  //主題色，也就是音樂進度條、無專輯封面時、控制音量等區塊的的顏色</span><br><span class="line">loop: &#x27;all&#x27;  //預設的音樂循環播放（全部循環、單曲循環、無循環），可選值：&#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">order: &#x27;list&#x27;  //預設的音樂播放順序（順序播放、隨機播放），可選值：&#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">preload: &#x27;auto&#x27;  //音樂預先載入，可選值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">volume: 0.7  //預設音量</span><br><span class="line">mutex: true  //互斥，阻止多個播放器同時播放，也就是若第二個播放器開始播放後，另一個會自動暫停</span><br><span class="line">listFolded: false  //音樂列表是否預設為摺疊（隱藏）狀態</span><br><span class="line">listMaxHeight: &#x27;200px&#x27; //音樂列表最大高度</span><br><span class="line">lrcType: 3  //動態歌詞類型，&#x27;3&#x27; 為載入 LRC 檔案</span><br></pre></td></tr></table></figure>
+
+<p>接著，<code>audio</code>是以陣列儲存，每個 <code>&#123;</code> <code>&#125;</code> 之間都是一首歌的資訊；其中，<code>name</code> 為歌曲名稱、<code>artist</code> 為歌曲演出者、<code>url</code> 為歌曲網址、<code>cover</code> 為專輯封面之檔案位址(選填)、<code>lrc</code> 為動態歌詞之檔案位址(選填)。若要再新增一首歌，則在 <code>&#125;</code> 後加入 <code>,</code> 然後再新增以下資訊即可。</p>
+<p><strong><font color=#FF0000>注意：若格式新增錯誤，有可能會有報錯，無法產生部落格檔案的問題發生。</font>如果不幸產生錯誤，除了復原操作外，記得檢查上一首歌曲資訊底部的 <code>&#125;</code> 和下一首歌曲資訊前面的 <code>&#123;</code> 之間是否有 <code>,</code> 逗號分開，且最後一個 <code>&#125;</code> 後不能有 <code>,</code> 逗號。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">audio</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&quot;兩隻老虎&quot;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;https://XXX.mp3&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/兩隻老虎.jpg&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/兩隻老虎.lrc&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;哥哥爸爸真偉大&#x27;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;https://XXX.mp3&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/哥哥爸爸真偉大.jpg&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/哥哥爸爸真偉大.lrc&#x27;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+
+<h2 id="產生音樂檔案-url"><a href="#產生音樂檔案-url" class="headerlink" title="產生音樂檔案 url"></a><font color=#FF6600>產生音樂檔案 url</font></h2><p><font color=#FF0000><strong>※ 音樂檔案請自行準備，這邊僅教學如何產生出音樂 url。</strong></font></p>
+<p>既然 Hexo 部落格是用免費的 Github 架設了，那音樂的儲存平台當然也不用花半毛錢！**<font color=#800000>筆者這邊使用的是 Google Drive 來當音樂儲存平台，建議另外辦一個新的 Google 帳號來使用比較保險，15 GB 的空間應該是非常足夠來存放音樂。</font>**</p>
+<p>PS. 筆者之前也使用過 Dropbox 來建立音樂 url，但是很容易就超過分享（下載）限制了；而 Github 當然也是一個選擇，不過也有之前提到的流量問題，因此也不適合，最終還是採用 Google 雲端硬碟。</p>
+<p>首先把音樂檔案（.mp3 或 .flac 都支援）丟到 Google 雲端，然後對該檔案點右鍵 -&gt; 共享，預設會是「<strong>限制 只有已取得存取權的使用者可以透過這個連結開啟</strong>」的權限，這時候我們要點選”<strong>變更任何之這個連結的使用者權限</strong>“按鈕來更改存取權限，如下圖：</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284499/original/cef907726cb5098ac9494c7c4df7b0af.png" />
+
+<p>這時候權限會變更為「<strong>任何知道這個連結的網際網路使用者都能查看</strong>」，接者按一下”複製連結”，然後按下完成。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284500/original/274c25dc086e7b158175140c9e784eea.png" />
+
+<p>複製下來的連結為下，我們只要<font color=#800000><strong>粗體紅字</strong></font>的檔案 ID 就好，也就是<strong>兩個斜線之間的一長串亂碼</strong>：</p>
+<p><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/">https://drive.google.com/file/d/</a><font color=#800000><strong>1dZv5mmkg5E1CQEBDHWahrTi-Pqp9rRyT</strong></font>&#x2F;view?usp&#x3D;sharing</p>
+<p>接著將亂碼取代下方網址的 <code>[ID]</code> 處，這個舉動是<font color=#800000><strong>為了要將從雲端硬碟複製的 URL，變成能直接下載的檔案連結</strong></font>：</p>
+<p><a target="_blank" rel="noopener" href="https://drive.google.com/uc?export=download&amp;id=%5BID%5D">https://drive.google.com/uc?export=download&amp;id=[ID]</a><br>變成 ▼<br><a target="_blank" rel="noopener" href="https://drive.google.com/uc?export=download&amp;id=1dZv5mmkg5E1CQEBDHWahrTi-Pqp9rRyT">https://drive.google.com/uc?export=download&amp;id=1dZv5mmkg5E1CQEBDHWahrTi-Pqp9rRyT</a></p>
+<p>最後在 <code>music.js</code> 貼上該音樂的 url 處就算完成了，如果不要額外加入專輯圖片和動態歌詞，照理來說音樂就要能正常於 APlayer 顯示及播放。</p>
+<h2 id="選擇性-產生專輯封面"><a href="#選擇性-產生專輯封面" class="headerlink" title="[選擇性] 產生專輯封面"></a><font color=#FF6600>[選擇性] 產生專輯封面</font></h2><p>專輯封面主要可以到兩個地方去抓：</p>
+<ul>
+<li>KKBOX：直接 Google 搜尋 “歌名 + KKBOX”，通常就能找到該首歌的 KKBOX 頁面，然後對專輯圖片點右鍵存檔即可。</li>
+</ul>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284501/original/abb54e92021f9fbb9ead95e429b3b1bd.png" />
+
+<ul>
+<li>AlbumArtDownloader：一套會從各大網站找尋專輯圖片的軟體。</li>
+</ul>
+<p>下載下來的圖片，筆者習慣命名為 [歌曲名稱.jpg]，然後將它丟在 <code>/根目錄/source/music/cover/</code> 資料夾中。資料夾怎麼分類可以自訂，但要確保在 <code>/根目錄/source/</code> 下即可。最後一樣在 <code>music.js</code> 的 <code>cover</code> 欄位填入 <code>/根目錄/source/</code> 路徑下的資料夾路徑，例如：<code>/music/cover/兩隻老虎.jpg</code>。</p>
+<h2 id="選擇性-產生-LRC-動態歌詞"><a href="#選擇性-產生-LRC-動態歌詞" class="headerlink" title="[選擇性] 產生 LRC 動態歌詞"></a><font color=#FF6600>[選擇性] 產生 LRC 動態歌詞</font></h2><p>動態歌詞是整個新增每首歌流程中，最麻煩的地方，因為常會遇到網路上找的 LRC 動態歌詞，歌詞有延遲個半秒一秒，這時候就要手動去調整歌詞時間軸。動態歌詞用以下兩種方法去抓：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mojim.com/">魔鏡歌詞網</a></li>
+<li>Google 搜尋 “歌名 + 動態歌詞” 或是 “歌名 + LRC”</li>
+</ul>
+<p>如果還是找不到動態歌詞，最後的方法就是先準備好歌詞，然後到 <a target="_blank" rel="noopener" href="http://www.lrcgenerator.com/">LRC:generator</a> 這個網站手動製作出來，方式是貼上歌詞和讀取電腦中的音樂檔案，然後音樂輪到下一行歌詞時按一下 “Next Line” 用這個方法去記錄時間軸。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284502/original/0d714b6119c2886841f2f29fb86093fb.png" />
+
+<p>如果是從<a target="_blank" rel="noopener" href="https://mojim.com/">魔鏡歌詞網</a>找來的動態歌詞，把它複製下來貼到 notepad++，更改檔名為 .lrc 檔案，筆者習慣命名為 [歌曲名稱.lrc]，然後將它丟在 <code>/根目錄/source/music/lyrics/</code> 資料夾中。資料夾怎麼分類可以自訂，但要確保在 <code>/根目錄/source/</code> 下即可。最後一樣在 <code>music.js</code> 的 <code>lrc</code> 欄位填入 <code>/根目錄/source/</code> 路徑下的資料夾路徑，例如：<code>/music/cover/兩隻老虎.lrc</code>。</p>
+<p>最後筆者會檢查動態歌詞時間軸的精準度，這時候要先用 <code>hexo s</code> 架起<strong>本地端部落格</strong>，透過 APlayer 直接播放音樂，同時檢查動態歌詞有無問題，如果有問題就直接用 notepad++ 修改該音樂 LRC 檔案的時間軸，修改完後按下 Ctrl+S 儲存，瀏覽器按下 F5 重新整理就能看到更新後的 APlayer 播放器了，如此不斷循環直至檢查完成。</p>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a><font color=#0000FF>總結</font></h1><p>最終整理一下本文重點，首先是新增一首歌需要的東西：</p>
+<ul>
+<li>基本資訊如歌名、歌手（<strong>必要</strong>）</li>
+<li>音樂檔（<strong>必要</strong>），檔案上傳到 Google 雲端硬碟</li>
+<li>音樂的專輯封面（非必要），圖片檔放到 <code>/source/music/cover</code> 資料夾</li>
+<li>動態 LRC 歌詞（非必要），LRC 檔放到 <code>/source/music/lyrics</code> 資料夾</li>
+</ul>
+<p><strong><font color=#800000>新增歌曲詳細流程（筆者習慣的方式，順序可換）：</font></strong></p>
+<ol>
+<li>準備音樂檔案（mp3、flac 等）、歌曲名稱和歌手名稱。</li>
+<li>打開 <code>/themes/next/source/dist/music.js</code>，新增一個歌曲欄位，先把 url 以外的欄位先填好。欄位範例：</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;哥哥爸爸真偉大&#x27;</span>,</span><br><span class="line">    <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/哥哥爸爸真偉大.jpg&#x27;</span>,</span><br><span class="line">    <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/哥哥爸爸真偉大.lrc&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>上傳音樂檔案至 Google 雲端，對該檔案點選右鍵 -&gt; 共用，變更權限為「知道連結的使用者」，複製連結後按下完成。</li>
+<li>複製該連結的 ID 段，貼到 <strong><a target="_blank" rel="noopener" href="https://drive.google.com/uc?export=download&amp;id=%5BID%5D">https://drive.google.com/uc?export=download&amp;id=[ID]</a></strong> 的 [ID] 處後，再將整段網址貼到 url 欄位。</li>
+</ol>
+<p><strong>以下為加入專輯封面和動態歌詞（非必要）之動作：</strong></p>
+<ol start="5">
+<li>找尋該首歌的專輯圖片，更改為 [歌名.jpg]，放到 <code>/source/music/cover</code> 資料夾。</li>
+<li>找尋該首歌的動態歌詞，建立檔案為 [歌名.lrc]，放到 <code>/source/music/lyrics</code> 資料夾。<br>6-1. 如果找不到該首歌的動態歌詞，到 <a target="_blank" rel="noopener" href="http://www.lrcgenerator.com/">LRC:generator</a> 手動製作出來。</li>
+<li>用 <code>hexo s</code> 架起本地端部落格。</li>
+<li>播放該音樂，確認動態歌詞沒問題；如果有問題（歌詞延遲），用 notepad++ 進行修改歌曲 LRC 檔後儲存，瀏覽器 F5 重新整理後重複執行第 8 點步驟。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexoblog/" rel="tag"># Hexo部落格</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/DSM7-with-Synology-Photos/" rel="prev" title="[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！">
+      <i class="fa fa-chevron-left"></i> [教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/dream-glass-4k/" rel="next" title="[心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析">
+      [心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
+    <div class="sidebar-inner">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
+      <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
           文章目錄
         </li>
@@ -156,35 +458,37 @@
         </li>
       </ul>
 
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Aplayer-%E9%9F%B3%E6%A8%82%E6%92%AD%E6%94%BE%E5%99%A8%E5%AE%89%E8%A3%9D"><span class="nav-number">1.</span> <span class="nav-text">Aplayer 音樂播放器安裝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E9%9F%B3%E6%A8%82%E6%95%99%E5%AD%B8"><span class="nav-number">2.</span> <span class="nav-text">新增音樂教學</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#music-js-%E6%96%B0%E5%A2%9E"><span class="nav-number">2.1.</span> <span class="nav-text">music.js 新增</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E9%9F%B3%E6%A8%82%E6%AA%94%E6%A1%88-url"><span class="nav-number">2.2.</span> <span class="nav-text">產生音樂檔案 url</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E6%80%A7-%E7%94%A2%E7%94%9F%E5%B0%88%E8%BC%AF%E5%B0%81%E9%9D%A2"><span class="nav-number">2.3.</span> <span class="nav-text">[選擇性] 產生專輯封面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E6%80%A7-%E7%94%A2%E7%94%9F-LRC-%E5%8B%95%E6%85%8B%E6%AD%8C%E8%A9%9E"><span class="nav-number">2.4.</span> <span class="nav-text">[選擇性] 產生 LRC 動態歌詞</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">3.</span> <span class="nav-text">總結</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Aplayer-%E9%9F%B3%E6%A8%82%E6%92%AD%E6%94%BE%E5%99%A8%E5%AE%89%E8%A3%9D"><span class="nav-number">1.</span> <span class="nav-text">Aplayer 音樂播放器安裝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E9%9F%B3%E6%A8%82%E6%95%99%E5%AD%B8"><span class="nav-number">2.</span> <span class="nav-text">新增音樂教學</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#music-js-%E6%96%B0%E5%A2%9E"><span class="nav-number">2.1.</span> <span class="nav-text">music.js 新增</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E9%9F%B3%E6%A8%82%E6%AA%94%E6%A1%88-url"><span class="nav-number">2.2.</span> <span class="nav-text">產生音樂檔案 url</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E6%80%A7-%E7%94%A2%E7%94%9F%E5%B0%88%E8%BC%AF%E5%B0%81%E9%9D%A2"><span class="nav-number">2.3.</span> <span class="nav-text">[選擇性] 產生專輯封面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E6%80%A7-%E7%94%A2%E7%94%9F-LRC-%E5%8B%95%E6%85%8B%E6%AD%8C%E8%A9%9E"><span class="nav-number">2.4.</span> <span class="nav-text">[選擇性] 產生 LRC 動態歌詞</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">3.</span> <span class="nav-text">總結</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
 
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="EDEN"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">EDEN</p>
   <div class="site-description" itemprop="description">文章多以開箱文、教學文為主~~</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        <a href="/archives/">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-          <a href="/categories/">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-          <a href="/tags/">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
@@ -537,246 +841,24 @@
     }, 50)
 })();
 </script>
-        </div>
       </div>
+
     </div>
   </aside>
-  <div class="sidebar-dimmer"></div>
+  <div id="sidebar-dimmer"></div>
 
 
-    </header>
+      </div>
+    </main>
 
-    
-  <div class="back-to-top" role="button" aria-label="回到頂端">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2020/11/hexo-aplayer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="EDEN">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑪利歐的部落格">
-      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[教學] APlayer：為 Hexo 部落格加入個人音樂播放器 | 瑪利歐的部落格">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          [教學] APlayer：為 Hexo 部落格加入個人音樂播放器
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2020-11-24 13:17:20" itemprop="dateCreated datePublished" datetime="2020-11-24T13:17:20+08:00">2020-11-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/teaching/hexoblog/" itemprop="url" rel="index"><span itemprop="name">Hexo部落格</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/2020/11/hexo-aplayer/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] APlayer：為 Hexo 部落格加入個人音樂播放器" title="閱讀次數">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">閱讀次數：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-    <span class="post-meta-item" title="文章字數">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">文章字數：</span>
-      <span>3.6k</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>Hexo 部落格教學文系列：<br><a href="https://ed521.github.io/2019/07/hexo-install/">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格</a><br><a href="https://ed521.github.io/2019/08/hexo-admin/">[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具</a><br><a href="https://ed521.github.io/2019/08/hexo-markdown/">[教學] 撰寫 Hexo 文章 - Markdown 語法大全</a><br><a href="https://ed521.github.io/2020/05/hexo-folder-theme/">[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹</a><br><a href="https://ed521.github.io/2020/05/hexo-next-upgrade/">[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄</a><br><a href="https://ed521.github.io/2020/11/hexo-aplayer/">[教學] APlayer：為 Hexo 部落格加入個人音樂播放器</a></p>
-<p>筆者架設 Hexo 部落格有兩大原因，一是可以整理自己撰寫過的文章；而另外一個原因是，透過 <a target="_blank" rel="noopener" href="https://aplayer.js.org/">APlayer 套件</a>，我可以將自己常聽的音樂放到部落格，打開瀏覽器的時候就能收聽，且<font color=#800000>因為是瀏覽器直接播放，在電腦或手機平板都支援。</font>Aplayer 具有音樂播放器的基本功能如：上&#x2F;下一曲、音量調整（行動裝置無）、隨機&#x2F;循環&#x2F;單曲播放，同時支援專輯圖片和動態歌詞的顯示，功能十分強大：</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284503/original/59bd22600ebd7fb944021dd9afefa780.png" />
-
-<span id="more"></span>
-
-<p>在介紹如何加入 APlayer 到部落格之前，先說明如果要加入一首歌到播放器，必要或非必要的要素：</p>
-<ul>
-<li>基本資訊（<strong>必要</strong>）：歌名、歌手</li>
-<li>音樂檔案（<strong>必要</strong>）</li>
-<li>音樂的專輯封面（非必要）</li>
-<li>動態 LRC 歌詞（非必要）</li>
-</ul>
-<p>再來，筆者將以 Next 主題為示範，教學如何將 Aplayer 新增到 Hexo 部落格中。</p>
-<h1 id="Aplayer-音樂播放器安裝"><a href="#Aplayer-音樂播放器安裝" class="headerlink" title="Aplayer 音樂播放器安裝"></a><font color=#0000FF>Aplayer 音樂播放器安裝</font></h1><p>首先到 <a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer">Aplayer 的 GitHub</a> 網站，點選綠色的”Clone or download”，然後點選 Download ZIP。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277175/original/0a5e203b742d232dae25da48fe382d19.png" />
-
-<p>打開壓縮檔後，我們只要裡面的 dist 資料夾（裡面有四個檔案），把它放到 <code>/根目錄/themes/next/source/dist/</code> 路徑下。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277176/original/0a336ed6779f7537b59845aa7a1715ed.png" />
-
-<p>接著我們要在 dist 資料夾中，手動新增名為 <code>music.js</code> 的空白檔案。比較簡單的方式為，先把同路徑下的 <code>APlayer.min.js</code> 檔案再複製一個出來，接著更名為 <code>music.js</code>，然後用 notepad++ 打開把 <code>music.js</code> 裡面的東西全部刪除即可。</p>
-<p>新增完 music.js 後，還要到  <code>/根目錄/themes/next/layout/_layout.swig</code> 檔案，加入以下內容：（新增於倒數第二列<code>&lt;/body&gt;</code>前即可）</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/dist/APlayer.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;aplayer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/dist/APlayer.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/dist/music.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/277177/original/7265f33bc176c1dc82a05711f302ad71.png" />
-
-<p>以上步驟完成後，APlayer 就算安裝完畢了。</p>
-<h1 id="新增音樂教學"><a href="#新增音樂教學" class="headerlink" title="新增音樂教學"></a><font color=#0000FF>新增音樂教學</font></h1><h2 id="music-js-新增"><a href="#music-js-新增" class="headerlink" title="music.js 新增"></a><font color=#FF6600>music.js 新增</font></h2><p>在 <code>/根目錄/themes/next/source/dist/</code> 路徑下的 <code>music.js</code> 檔案，新增以下內容：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> <span class="title class_">APlayer</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;aplayer&#x27;</span>),</span><br><span class="line">    <span class="attr">fixed</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">autoplay</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">theme</span>: <span class="string">&#x27;#b7daff&#x27;</span>,</span><br><span class="line">    <span class="attr">loop</span>: <span class="string">&#x27;all&#x27;</span>,</span><br><span class="line">    <span class="attr">order</span>: <span class="string">&#x27;list&#x27;</span>,</span><br><span class="line">    <span class="attr">preload</span>: <span class="string">&#x27;auto&#x27;</span>,</span><br><span class="line">    <span class="attr">volume</span>: <span class="number">0.7</span>,</span><br><span class="line">    <span class="attr">mutex</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">listFolded</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">listMaxHeight</span>: <span class="string">&#x27;200px&#x27;</span>,</span><br><span class="line">    <span class="attr">lrcType</span>: <span class="number">3</span>,</span><br><span class="line">    <span class="attr">audio</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&quot;兩隻老虎&quot;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;https://XXX.mp3&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/兩隻老虎.jpg&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/兩隻老虎.lrc&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;哥哥爸爸真偉大&#x27;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;https://XXX.mp3&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/哥哥爸爸真偉大.jpg&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/哥哥爸爸真偉大.lrc&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>以上有許多參數設定，可以至 <a target="_blank" rel="noopener" href="https://aplayer.js.org/#/zh-Hans/">APlayer 中文文檔</a> 查看，也可以參考下面說明：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fixed: false  //是否開啟吸底模式，也就是將音樂播放器吸附於畫面底部</span><br><span class="line">autoplay: false  //音樂是否自動播放</span><br><span class="line">theme: &#x27;#b7daff&#x27;  //主題色，也就是音樂進度條、無專輯封面時、控制音量等區塊的的顏色</span><br><span class="line">loop: &#x27;all&#x27;  //預設的音樂循環播放（全部循環、單曲循環、無循環），可選值：&#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span><br><span class="line">order: &#x27;list&#x27;  //預設的音樂播放順序（順序播放、隨機播放），可選值：&#x27;list&#x27;, &#x27;random&#x27;</span><br><span class="line">preload: &#x27;auto&#x27;  //音樂預先載入，可選值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span><br><span class="line">volume: 0.7  //預設音量</span><br><span class="line">mutex: true  //互斥，阻止多個播放器同時播放，也就是若第二個播放器開始播放後，另一個會自動暫停</span><br><span class="line">listFolded: false  //音樂列表是否預設為摺疊（隱藏）狀態</span><br><span class="line">listMaxHeight: &#x27;200px&#x27; //音樂列表最大高度</span><br><span class="line">lrcType: 3  //動態歌詞類型，&#x27;3&#x27; 為載入 LRC 檔案</span><br></pre></td></tr></table></figure>
-
-<p>接著，<code>audio</code>是以陣列儲存，每個 <code>&#123;</code> <code>&#125;</code> 之間都是一首歌的資訊；其中，<code>name</code> 為歌曲名稱、<code>artist</code> 為歌曲演出者、<code>url</code> 為歌曲網址、<code>cover</code> 為專輯封面之檔案位址(選填)、<code>lrc</code> 為動態歌詞之檔案位址(選填)。若要再新增一首歌，則在 <code>&#125;</code> 後加入 <code>,</code> 然後再新增以下資訊即可。</p>
-<p><strong><font color=#FF0000>注意：若格式新增錯誤，有可能會有報錯，無法產生部落格檔案的問題發生。</font>如果不幸產生錯誤，除了復原操作外，記得檢查上一首歌曲資訊底部的 <code>&#125;</code> 和下一首歌曲資訊前面的 <code>&#123;</code> 之間是否有 <code>,</code> 逗號分開，且最後一個 <code>&#125;</code> 後不能有 <code>,</code> 逗號。</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">audio</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&quot;兩隻老虎&quot;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;https://XXX.mp3&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/兩隻老虎.jpg&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/兩隻老虎.lrc&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;哥哥爸爸真偉大&#x27;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;https://XXX.mp3&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/哥哥爸爸真偉大.jpg&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/哥哥爸爸真偉大.lrc&#x27;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">artist</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">cover</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">lrc</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
-
-<h2 id="產生音樂檔案-url"><a href="#產生音樂檔案-url" class="headerlink" title="產生音樂檔案 url"></a><font color=#FF6600>產生音樂檔案 url</font></h2><p><font color=#FF0000><strong>※ 音樂檔案請自行準備，這邊僅教學如何產生出音樂 url。</strong></font></p>
-<p>既然 Hexo 部落格是用免費的 Github 架設了，那音樂的儲存平台當然也不用花半毛錢！**<font color=#800000>筆者這邊使用的是 Google Drive 來當音樂儲存平台，建議另外辦一個新的 Google 帳號來使用比較保險，15 GB 的空間應該是非常足夠來存放音樂。</font>**</p>
-<p>PS. 筆者之前也使用過 Dropbox 來建立音樂 url，但是很容易就超過分享（下載）限制了；而 Github 當然也是一個選擇，不過也有之前提到的流量問題，因此也不適合，最終還是採用 Google 雲端硬碟。</p>
-<p>首先把音樂檔案（.mp3 或 .flac 都支援）丟到 Google 雲端，然後對該檔案點右鍵 -&gt; 共享，預設會是「<strong>限制 只有已取得存取權的使用者可以透過這個連結開啟</strong>」的權限，這時候我們要點選”<strong>變更任何之這個連結的使用者權限</strong>“按鈕來更改存取權限，如下圖：</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284499/original/cef907726cb5098ac9494c7c4df7b0af.png" />
-
-<p>這時候權限會變更為「<strong>任何知道這個連結的網際網路使用者都能查看</strong>」，接者按一下”複製連結”，然後按下完成。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284500/original/274c25dc086e7b158175140c9e784eea.png" />
-
-<p>複製下來的連結為下，我們只要<font color=#800000><strong>粗體紅字</strong></font>的檔案 ID 就好，也就是<strong>兩個斜線之間的一長串亂碼</strong>：</p>
-<p><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/">https://drive.google.com/file/d/</a><font color=#800000><strong>1dZv5mmkg5E1CQEBDHWahrTi-Pqp9rRyT</strong></font>&#x2F;view?usp&#x3D;sharing</p>
-<p>接著將亂碼取代下方網址的 <code>[ID]</code> 處，這個舉動是<font color=#800000><strong>為了要將從雲端硬碟複製的 URL，變成能直接下載的檔案連結</strong></font>：</p>
-<p><a target="_blank" rel="noopener" href="https://drive.google.com/uc?export=download&amp;id=%5BID%5D">https://drive.google.com/uc?export=download&amp;id=[ID]</a><br>變成 ▼<br><a target="_blank" rel="noopener" href="https://drive.google.com/uc?export=download&amp;id=1dZv5mmkg5E1CQEBDHWahrTi-Pqp9rRyT">https://drive.google.com/uc?export=download&amp;id=1dZv5mmkg5E1CQEBDHWahrTi-Pqp9rRyT</a></p>
-<p>最後在 <code>music.js</code> 貼上該音樂的 url 處就算完成了，如果不要額外加入專輯圖片和動態歌詞，照理來說音樂就要能正常於 APlayer 顯示及播放。</p>
-<h2 id="選擇性-產生專輯封面"><a href="#選擇性-產生專輯封面" class="headerlink" title="[選擇性] 產生專輯封面"></a><font color=#FF6600>[選擇性] 產生專輯封面</font></h2><p>專輯封面主要可以到兩個地方去抓：</p>
-<ul>
-<li>KKBOX：直接 Google 搜尋 “歌名 + KKBOX”，通常就能找到該首歌的 KKBOX 頁面，然後對專輯圖片點右鍵存檔即可。</li>
-</ul>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284501/original/abb54e92021f9fbb9ead95e429b3b1bd.png" />
-
-<ul>
-<li>AlbumArtDownloader：一套會從各大網站找尋專輯圖片的軟體。</li>
-</ul>
-<p>下載下來的圖片，筆者習慣命名為 [歌曲名稱.jpg]，然後將它丟在 <code>/根目錄/source/music/cover/</code> 資料夾中。資料夾怎麼分類可以自訂，但要確保在 <code>/根目錄/source/</code> 下即可。最後一樣在 <code>music.js</code> 的 <code>cover</code> 欄位填入 <code>/根目錄/source/</code> 路徑下的資料夾路徑，例如：<code>/music/cover/兩隻老虎.jpg</code>。</p>
-<h2 id="選擇性-產生-LRC-動態歌詞"><a href="#選擇性-產生-LRC-動態歌詞" class="headerlink" title="[選擇性] 產生 LRC 動態歌詞"></a><font color=#FF6600>[選擇性] 產生 LRC 動態歌詞</font></h2><p>動態歌詞是整個新增每首歌流程中，最麻煩的地方，因為常會遇到網路上找的 LRC 動態歌詞，歌詞有延遲個半秒一秒，這時候就要手動去調整歌詞時間軸。動態歌詞用以下兩種方法去抓：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://mojim.com/">魔鏡歌詞網</a></li>
-<li>Google 搜尋 “歌名 + 動態歌詞” 或是 “歌名 + LRC”</li>
-</ul>
-<p>如果還是找不到動態歌詞，最後的方法就是先準備好歌詞，然後到 <a target="_blank" rel="noopener" href="http://www.lrcgenerator.com/">LRC:generator</a> 這個網站手動製作出來，方式是貼上歌詞和讀取電腦中的音樂檔案，然後音樂輪到下一行歌詞時按一下 “Next Line” 用這個方法去記錄時間軸。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/11/284502/original/0d714b6119c2886841f2f29fb86093fb.png" />
-
-<p>如果是從<a target="_blank" rel="noopener" href="https://mojim.com/">魔鏡歌詞網</a>找來的動態歌詞，把它複製下來貼到 notepad++，更改檔名為 .lrc 檔案，筆者習慣命名為 [歌曲名稱.lrc]，然後將它丟在 <code>/根目錄/source/music/lyrics/</code> 資料夾中。資料夾怎麼分類可以自訂，但要確保在 <code>/根目錄/source/</code> 下即可。最後一樣在 <code>music.js</code> 的 <code>lrc</code> 欄位填入 <code>/根目錄/source/</code> 路徑下的資料夾路徑，例如：<code>/music/cover/兩隻老虎.lrc</code>。</p>
-<p>最後筆者會檢查動態歌詞時間軸的精準度，這時候要先用 <code>hexo s</code> 架起<strong>本地端部落格</strong>，透過 APlayer 直接播放音樂，同時檢查動態歌詞有無問題，如果有問題就直接用 notepad++ 修改該音樂 LRC 檔案的時間軸，修改完後按下 Ctrl+S 儲存，瀏覽器按下 F5 重新整理就能看到更新後的 APlayer 播放器了，如此不斷循環直至檢查完成。</p>
-<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a><font color=#0000FF>總結</font></h1><p>最終整理一下本文重點，首先是新增一首歌需要的東西：</p>
-<ul>
-<li>基本資訊如歌名、歌手（<strong>必要</strong>）</li>
-<li>音樂檔（<strong>必要</strong>），檔案上傳到 Google 雲端硬碟</li>
-<li>音樂的專輯封面（非必要），圖片檔放到 <code>/source/music/cover</code> 資料夾</li>
-<li>動態 LRC 歌詞（非必要），LRC 檔放到 <code>/source/music/lyrics</code> 資料夾</li>
-</ul>
-<p><strong><font color=#800000>新增歌曲詳細流程（筆者習慣的方式，順序可換）：</font></strong></p>
-<ol>
-<li>準備音樂檔案（mp3、flac 等）、歌曲名稱和歌手名稱。</li>
-<li>打開 <code>/themes/next/source/dist/music.js</code>，新增一個歌曲欄位，先把 url 以外的欄位先填好。欄位範例：</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;哥哥爸爸真偉大&#x27;</span>,</span><br><span class="line">    <span class="attr">artist</span>: <span class="string">&#x27;兒歌&#x27;</span>,</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="attr">cover</span>: <span class="string">&#x27;/music/cover/哥哥爸爸真偉大.jpg&#x27;</span>,</span><br><span class="line">    <span class="attr">lrc</span>: <span class="string">&#x27;/music/lyrics/哥哥爸爸真偉大.lrc&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>上傳音樂檔案至 Google 雲端，對該檔案點選右鍵 -&gt; 共用，變更權限為「知道連結的使用者」，複製連結後按下完成。</li>
-<li>複製該連結的 ID 段，貼到 <strong><a target="_blank" rel="noopener" href="https://drive.google.com/uc?export=download&amp;id=%5BID%5D">https://drive.google.com/uc?export=download&amp;id=[ID]</a></strong> 的 [ID] 處後，再將整段網址貼到 url 欄位。</li>
-</ol>
-<p><strong>以下為加入專輯封面和動態歌詞（非必要）之動作：</strong></p>
-<ol start="5">
-<li>找尋該首歌的專輯圖片，更改為 [歌名.jpg]，放到 <code>/source/music/cover</code> 資料夾。</li>
-<li>找尋該首歌的動態歌詞，建立檔案為 [歌名.lrc]，放到 <code>/source/music/lyrics</code> 資料夾。<br>6-1. 如果找不到該首歌的動態歌詞，到 <a target="_blank" rel="noopener" href="http://www.lrcgenerator.com/">LRC:generator</a> 手動製作出來。</li>
-<li>用 <code>hexo s</code> 架起本地端部落格。</li>
-<li>播放該音樂，確認動態歌詞沒問題；如果有問題（歌詞延遲），用 notepad++ 進行修改歌曲 LRC 檔後儲存，瀏覽器 F5 重新整理後重複執行第 8 點步驟。</li>
-</ol>
-
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/hexoblog/" rel="tag"># Hexo部落格</a>
-          </div>
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2020/12/DSM7-with-Synology-Photos/" rel="prev" title="[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！">
-                  <i class="fa fa-chevron-left"></i> [教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2020/11/dream-glass-4k/" rel="next" title="[心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析">
-                  [心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-    <div class="comments gitalk-container"></div>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
 <div class="copyright">
+  
   &copy; 
   <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
@@ -785,43 +867,241 @@
   <span class="author" itemprop="copyrightHolder">EDEN</span>
 </div>
 
+        
+
+
+
+
+
+
+<script data-pjax>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"YoLycdOLhFPQmvl9mi5Qnsge-gzGzoHsz","app_key":"YwbCQICgq3ec30JjffgxRlR6","server_url":null,"security":false};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ede825d02e67d9c5edc3',
+      clientSecret: '78710c0d61a5890dc4769c8abca4021a80568848',
+      repo        : 'comments',
+      owner       : 'ed521',
+      admin       : ['ed521'],
+      id          : '7fab7f28b7c666b9126ec466b59b7b9e',
+        language: 'zh-TW',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
     </div>
-  </footer>
-
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
 
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="/js/third-party/search/local-search.js"></script>
-
-
-
-  <script src="/js/third-party/fancybox.js"></script>
-
-  <script src="/js/third-party/pace.js"></script>
-
-  
-
-
-  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"YoLycdOLhFPQmvl9mi5Qnsge-gzGzoHsz","app_key":"YwbCQICgq3ec30JjffgxRlR6","server_url":null,"security":false}</script>
-  <script src="/js/third-party/statistics/lean-analytics.js"></script>
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
-
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ed521","repo":"comments","client_id":"ede825d02e67d9c5edc3","client_secret":"78710c0d61a5890dc4769c8abca4021a80568848","admin_user":"ed521","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"7fab7f28b7c666b9126ec466b59b7b9e"}</script>
-<script src="/js/third-party/comments/gitalk.js"></script>
-
-  
-  <link rel="stylesheet" href="/dist/APlayer.min.css">
-  <div id="aplayer"></div>
-  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
-  <script type="text/javascript" src="/dist/music.js"></script>  
-  
 </body>
 </html>

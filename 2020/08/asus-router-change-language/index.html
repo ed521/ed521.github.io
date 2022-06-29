@@ -2,28 +2,28 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#43a0f7"><meta name="generator" content="Hexo 6.2.0">
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#0084ff">
+<meta name="generator" content="Hexo 6.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/android-icon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/android-icon-16x16.png">
-  <link rel="mask-icon" href="/images/android-icon-192x192.svg" color="#43a0f7">
+  <link rel="mask-icon" href="/images/android-icon-192x192.svg" color="#0084ff">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ed521.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#0000ff","save":"manual"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"ed521.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="筆者有一台日版的華碩路由器 RT-AC68U，因為當初在 Amazon 上購買日版的 AC68U 比台灣賣的便宜了不少錢，只不過收到的時候，可能因為是日本的規定還是什麼，韌體已經寫死無法更換成別的語言，網路上查了一下好像刷韌體或系統也是一樣…下圖為日文的 ASUS Router 系統介面，可以看到畫面右上角並沒有更換語言的下拉式選單：   因此本篇將**教學如何換成繁體中文或是其它語言，方法並不難">
+  <meta name="description" content="筆者有一台日版的華碩路由器 RT-AC68U，因為當初在 Amazon 上購買日版的 AC68U 比台灣賣的便宜了不少錢，只不過收到的時候，可能因為是日本的規定還是什麼，韌體已經寫死無法更換成別的語言，網路上查了一下好像刷韌體或系統也是一樣…下圖為日文的 ASUS Router 系統介面，可以看到畫面右上角並沒有更換語言的下拉式選單：   因此本篇將**教學如何換成繁體中文或是其它語言，方法並不難">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文">
 <meta property="og:url" content="https://ed521.github.io/2020/08/asus-router-change-language/index.html">
@@ -47,50 +47,82 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280288/original/1a95d545cdac5e944f00886fdf8329e6.png">
 
-
 <link rel="canonical" href="https://ed521.github.io/2020/08/asus-router-change-language/">
 
 
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://ed521.github.io/2020/08/asus-router-change-language/","path":"2020/08/asus-router-change-language/","title":"[教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文 | 瑪利歐的部落格</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-61473305-3","only_pageview":false}</script>
-  <script src="/js/third-party/analytics/google-analytics.js"></script>
-
-
-
-
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
 <script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
+  <title>[教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文 | 瑪利歐的部落格</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-61473305-3');
+      }
+    </script>
+
+
+
+
+
+
   <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切換導航欄" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">瑪利歐的部落格</p>
-      <i class="logo-line"></i>
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">瑪利歐的部落格</h1>
+      <span class="logo-line-after"><i></i></span>
     </a>
   </div>
 
@@ -103,8 +135,34 @@
 
 
 
+
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">17</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">23</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">64</span></a></li>
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">17</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">64</span></a>
+
+  </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -115,22 +173,23 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
+    <div class="popup search-popup">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜尋..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close" role="button">
+  <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
 
@@ -138,18 +197,221 @@
   </div>
 
 </div>
-        
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2020/08/asus-router-change-language/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="EDEN">
+      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑪利歐的部落格">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-08-22 14:34:57" itemprop="dateCreated datePublished" datetime="2020-08-22T14:34:57+08:00">2020-08-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/08/asus-router-change-language/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>1.3k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>筆者有一台日版的華碩路由器 RT-AC68U，因為當初在 Amazon 上購買日版的 AC68U 比台灣賣的便宜了不少錢，只不過收到的時候，可能因為是日本的規定還是什麼，<strong>韌體已經寫死無法更換成別的語言</strong>，網路上查了一下好像刷韌體或系統也是一樣…下圖為日文的 ASUS Router 系統介面，可以看到畫面右上角並沒有更換語言的下拉式選單：</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280288/original/1a95d545cdac5e944f00886fdf8329e6.png" />
+
+<p>因此本篇將**<font color=#800000>教學如何換成繁體中文或是其它語言</font><strong>，方法並不難，</strong>缺點是<font color=#FF0000>路由器每次「重新開機」都要再重新設定一次</font>（不過路由器除非手動更新系統，好像也不常重開機）**。筆者有試過寫開機自動執行的腳本，不過沒有成功；歡迎有試成功的人在下面留言告知唷！</p>
+<span id="more"></span>
+
+<h1 id="Step-1-確認-SSH-服務已開啟"><a href="#Step-1-確認-SSH-服務已開啟" class="headerlink" title="Step.1 確認 SSH 服務已開啟"></a><font color=#0000FF>Step.1 確認 SSH 服務已開啟</font></h1><p>首先到左側選單的「管理」(系統管理)，進去後的第二個頁籤「システム」(系統設定)的「サービス」(服務)，請照著下圖設定：</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280289/original/d411f981465be0e15bae4d789ea3b5ef.png" />
+
+<ul>
+<li><strong>「SSH を有効にする」(啟動 SSH)：<font color=#800000>LAN only (僅限區網)</font></strong></li>
+<li><strong>「SSH ポート」(SSH 連接埠)：<font color=#800000>22</font></strong><br><font color=#FF0000>▲ 或是要自行設定為其它 port 也可以，22 為 SSH 服務的預設 port</font></li>
+<li><strong>「パスワードログインを許可」(允許使用密碼登入)：<font color=#800000>はい(是)</font></strong></li>
+</ul>
+<p>PS. 以上設定只須設定一次即可，未來不必再重新設定。</p>
+<h1 id="Step-2-使用-PUTTY-修改系統語言"><a href="#Step-2-使用-PUTTY-修改系統語言" class="headerlink" title="Step.2 使用 PUTTY 修改系統語言"></a><font color=#0000FF>Step.2 使用 PUTTY 修改系統語言</font></h1><p>Putty 可以協助我們透過 SSH，進入 ASUS 路由器的系統下指令。（<a target="_blank" rel="noopener" href="https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe">PUTTY 下載連結</a>）</p>
+<p>首先在 LAN 頁面可以確認路由器的 IP，<strong>ASUS 出廠預設 IP 是 192.168.1.1</strong>，筆者之前有自行修改成 192.168.2.1。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280290/original/b7eec0a0187fdfe4badddd2b326c57aa.png" />
+
+<p>下載完 Putty.exe 後，打開後在 Host Name 的地方輸入路由器的 IP (確認電腦和路由器要在同一個區網下)，SSH 預設的 port 為 22，或是輸入剛才自行修改的 port，然後按下 Open：</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280291/original/b7646c117364035419c0a88d38bcd142.png" />
+
+<p>第一次登入可能會跳出憑證確認的視窗，按下確認即可；然後輸入路由器帳號和密碼，成功登入會如下圖，出現 <strong>admin@RT-AC68U…#</strong> 的指令輸入列。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280292/original/4d7806a7282823ed21bf0f111c7bfb5b.png" />
+
+<h2 id="確認系統語言"><a href="#確認系統語言" class="headerlink" title="確認系統語言"></a><font color=#FF6600>確認系統語言</font></h2><p>雖然已經確認過目前的系統語言就是日文，不過這邊再確認一次，在 Terminal 中輸入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvram get preferred_lang</span><br></pre></td></tr></table></figure>
+
+<p>回應如下圖，確認是 **<font color=#800000>JP</font> (日文)**。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280293/original/e45cec7cb3575930a39f8b1a2d555198.png" />
+
+<h2 id="查看可更改的系統語言"><a href="#查看可更改的系統語言" class="headerlink" title="查看可更改的系統語言"></a><font color=#FF6600>查看可更改的系統語言</font></h2><p>接著查看系統裡面目前有的系統語言，請在 Terminal 中輸入：</p>
+<p>▼ 語法解釋：先更換當前路徑至 &#x2F;www 資料夾，然後再顯示資料夾內所有檔案</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /www/</span><br><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280294/original/91c048ff31234654c61ea4b55b4c5a53.png" />
+
+<p>接著會跑出一堆檔案，往下滑**<font color=#800000>只要看到 .dict 副檔名的全都是目前支援的系統語言，包含原本的 JP.dict 和我們預計要更換的繁體中文 TW.dict。</font>**</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280295/original/3b096604b67c480481804d7458886f17.png" />
+
+<h2 id="使用掛載的方式更改系統語言"><a href="#使用掛載的方式更改系統語言" class="headerlink" title="使用掛載的方式更改系統語言"></a><font color=#FF6600>使用掛載的方式更改系統語言</font></h2><p>最後在 Teminal 輸入下面兩行指令就成功了唷！</p>
+<p>▼ 語法解釋：</p>
+<ol>
+<li>將 JP.dict 檔案（若剛查詢的系統語言為 EN，則改為 EN.dict）掛載成 TW.dict 檔案</li>
+<li>重新啟動網頁服務</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount -o <span class="built_in">bind</span> /www/TW.dict /www/JP.dict</span><br><span class="line">service restart_httpd</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280296/original/f03b8122ffdd6b1f3aba3cd23248cf2a.png" />
+
+<p>看到 Done. 就代表成功了唷！</p>
+<p>此時回到 ASUS 路由器網頁，已經切換成繁體中文了！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280297/original/fc4ddd779d7d98ca128bce65e87ca261.png" />
+
+<h1 id="快速設定教學"><a href="#快速設定教學" class="headerlink" title="快速設定教學"></a><font color=#0000FF>快速設定教學</font></h1><p><strong><font color=#FF0000>每次路由器重新開機都要重新執行</font></strong></p>
+<p><strong>1. 確認 SSH 服務已開啟，若之前設定過就不用再設定。</strong><br><strong>2. 打開 Putty，輸入路由器 IP 後，輸入帳號密碼登入。</strong><br><strong>3. 輸入以下兩行指令：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount -o <span class="built_in">bind</span> /www/TW.dict /www/JP.dict</span><br><span class="line">service restart_httpd</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 完成！</strong></p>
+<p>參考連結：<a target="_blank" rel="noopener" href="https://www.snbforums.com/threads/trying-to-change-language-from-japanese-to-english-on-asus-rt-ac86u.48807/">Trying to change language from Japanese to English on ASUS RT-AC86U</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/router/" rel="tag"># 路由器</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/buyee/" rel="prev" title="[心得] Buyee：日本拍賣/代購之電商服務網站唯一首選！">
+      <i class="fa fa-chevron-left"></i> [心得] Buyee：日本拍賣/代購之電商服務網站唯一首選！
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/hexo-next-upgrade/" rel="next" title="[教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄">
+      [教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
+    <div class="sidebar-inner">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
+      <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
           文章目錄
         </li>
@@ -158,35 +420,37 @@
         </li>
       </ul>
 
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Step-1-%E7%A2%BA%E8%AA%8D-SSH-%E6%9C%8D%E5%8B%99%E5%B7%B2%E9%96%8B%E5%95%9F"><span class="nav-number">1.</span> <span class="nav-text">Step.1 確認 SSH 服務已開啟</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Step-2-%E4%BD%BF%E7%94%A8-PUTTY-%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%B5%B1%E8%AA%9E%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">Step.2 使用 PUTTY 修改系統語言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%BA%E8%AA%8D%E7%B3%BB%E7%B5%B1%E8%AA%9E%E8%A8%80"><span class="nav-number">2.1.</span> <span class="nav-text">確認系統語言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8F%AF%E6%9B%B4%E6%94%B9%E7%9A%84%E7%B3%BB%E7%B5%B1%E8%AA%9E%E8%A8%80"><span class="nav-number">2.2.</span> <span class="nav-text">查看可更改的系統語言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%8E%9B%E8%BC%89%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%94%B9%E7%B3%BB%E7%B5%B1%E8%AA%9E%E8%A8%80"><span class="nav-number">2.3.</span> <span class="nav-text">使用掛載的方式更改系統語言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E8%A8%AD%E5%AE%9A%E6%95%99%E5%AD%B8"><span class="nav-number">3.</span> <span class="nav-text">快速設定教學</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Step-1-%E7%A2%BA%E8%AA%8D-SSH-%E6%9C%8D%E5%8B%99%E5%B7%B2%E9%96%8B%E5%95%9F"><span class="nav-number">1.</span> <span class="nav-text">Step.1 確認 SSH 服務已開啟</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Step-2-%E4%BD%BF%E7%94%A8-PUTTY-%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%B5%B1%E8%AA%9E%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">Step.2 使用 PUTTY 修改系統語言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%BA%E8%AA%8D%E7%B3%BB%E7%B5%B1%E8%AA%9E%E8%A8%80"><span class="nav-number">2.1.</span> <span class="nav-text">確認系統語言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8F%AF%E6%9B%B4%E6%94%B9%E7%9A%84%E7%B3%BB%E7%B5%B1%E8%AA%9E%E8%A8%80"><span class="nav-number">2.2.</span> <span class="nav-text">查看可更改的系統語言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%8E%9B%E8%BC%89%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%94%B9%E7%B3%BB%E7%B5%B1%E8%AA%9E%E8%A8%80"><span class="nav-number">2.3.</span> <span class="nav-text">使用掛載的方式更改系統語言</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E8%A8%AD%E5%AE%9A%E6%95%99%E5%AD%B8"><span class="nav-number">3.</span> <span class="nav-text">快速設定教學</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
 
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="EDEN"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">EDEN</p>
   <div class="site-description" itemprop="description">文章多以開箱文、教學文為主~~</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        <a href="/archives/">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-          <a href="/categories/">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-          <a href="/tags/">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
@@ -539,206 +803,24 @@
     }, 50)
 })();
 </script>
-        </div>
       </div>
+
     </div>
   </aside>
-  <div class="sidebar-dimmer"></div>
+  <div id="sidebar-dimmer"></div>
 
 
-    </header>
+      </div>
+    </main>
 
-    
-  <div class="back-to-top" role="button" aria-label="回到頂端">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2020/08/asus-router-change-language/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="EDEN">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑪利歐的部落格">
-      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文 | 瑪利歐的部落格">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          [教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2020-08-22 14:34:57" itemprop="dateCreated datePublished" datetime="2020-08-22T14:34:57+08:00">2020-08-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/2020/08/asus-router-change-language/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] 日版  ASUS RT-AC68U 路由器更換系統語言為中文" title="閱讀次數">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">閱讀次數：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-    <span class="post-meta-item" title="文章字數">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">文章字數：</span>
-      <span>1.3k</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>筆者有一台日版的華碩路由器 RT-AC68U，因為當初在 Amazon 上購買日版的 AC68U 比台灣賣的便宜了不少錢，只不過收到的時候，可能因為是日本的規定還是什麼，<strong>韌體已經寫死無法更換成別的語言</strong>，網路上查了一下好像刷韌體或系統也是一樣…下圖為日文的 ASUS Router 系統介面，可以看到畫面右上角並沒有更換語言的下拉式選單：</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280288/original/1a95d545cdac5e944f00886fdf8329e6.png" />
-
-<p>因此本篇將**<font color=#800000>教學如何換成繁體中文或是其它語言</font><strong>，方法並不難，</strong>缺點是<font color=#FF0000>路由器每次「重新開機」都要再重新設定一次</font>（不過路由器除非手動更新系統，好像也不常重開機）**。筆者有試過寫開機自動執行的腳本，不過沒有成功；歡迎有試成功的人在下面留言告知唷！</p>
-<span id="more"></span>
-
-<h1 id="Step-1-確認-SSH-服務已開啟"><a href="#Step-1-確認-SSH-服務已開啟" class="headerlink" title="Step.1 確認 SSH 服務已開啟"></a><font color=#0000FF>Step.1 確認 SSH 服務已開啟</font></h1><p>首先到左側選單的「管理」(系統管理)，進去後的第二個頁籤「システム」(系統設定)的「サービス」(服務)，請照著下圖設定：</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280289/original/d411f981465be0e15bae4d789ea3b5ef.png" />
-
-<ul>
-<li><strong>「SSH を有効にする」(啟動 SSH)：<font color=#800000>LAN only (僅限區網)</font></strong></li>
-<li><strong>「SSH ポート」(SSH 連接埠)：<font color=#800000>22</font></strong><br><font color=#FF0000>▲ 或是要自行設定為其它 port 也可以，22 為 SSH 服務的預設 port</font></li>
-<li><strong>「パスワードログインを許可」(允許使用密碼登入)：<font color=#800000>はい(是)</font></strong></li>
-</ul>
-<p>PS. 以上設定只須設定一次即可，未來不必再重新設定。</p>
-<h1 id="Step-2-使用-PUTTY-修改系統語言"><a href="#Step-2-使用-PUTTY-修改系統語言" class="headerlink" title="Step.2 使用 PUTTY 修改系統語言"></a><font color=#0000FF>Step.2 使用 PUTTY 修改系統語言</font></h1><p>Putty 可以協助我們透過 SSH，進入 ASUS 路由器的系統下指令。（<a target="_blank" rel="noopener" href="https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe">PUTTY 下載連結</a>）</p>
-<p>首先在 LAN 頁面可以確認路由器的 IP，<strong>ASUS 出廠預設 IP 是 192.168.1.1</strong>，筆者之前有自行修改成 192.168.2.1。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280290/original/b7eec0a0187fdfe4badddd2b326c57aa.png" />
-
-<p>下載完 Putty.exe 後，打開後在 Host Name 的地方輸入路由器的 IP (確認電腦和路由器要在同一個區網下)，SSH 預設的 port 為 22，或是輸入剛才自行修改的 port，然後按下 Open：</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280291/original/b7646c117364035419c0a88d38bcd142.png" />
-
-<p>第一次登入可能會跳出憑證確認的視窗，按下確認即可；然後輸入路由器帳號和密碼，成功登入會如下圖，出現 <strong>admin@RT-AC68U…#</strong> 的指令輸入列。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280292/original/4d7806a7282823ed21bf0f111c7bfb5b.png" />
-
-<h2 id="確認系統語言"><a href="#確認系統語言" class="headerlink" title="確認系統語言"></a><font color=#FF6600>確認系統語言</font></h2><p>雖然已經確認過目前的系統語言就是日文，不過這邊再確認一次，在 Terminal 中輸入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvram get preferred_lang</span><br></pre></td></tr></table></figure>
-
-<p>回應如下圖，確認是 **<font color=#800000>JP</font> (日文)**。</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280293/original/e45cec7cb3575930a39f8b1a2d555198.png" />
-
-<h2 id="查看可更改的系統語言"><a href="#查看可更改的系統語言" class="headerlink" title="查看可更改的系統語言"></a><font color=#FF6600>查看可更改的系統語言</font></h2><p>接著查看系統裡面目前有的系統語言，請在 Terminal 中輸入：</p>
-<p>▼ 語法解釋：先更換當前路徑至 &#x2F;www 資料夾，然後再顯示資料夾內所有檔案</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /www/</span><br><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
-
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280294/original/91c048ff31234654c61ea4b55b4c5a53.png" />
-
-<p>接著會跑出一堆檔案，往下滑**<font color=#800000>只要看到 .dict 副檔名的全都是目前支援的系統語言，包含原本的 JP.dict 和我們預計要更換的繁體中文 TW.dict。</font>**</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280295/original/3b096604b67c480481804d7458886f17.png" />
-
-<h2 id="使用掛載的方式更改系統語言"><a href="#使用掛載的方式更改系統語言" class="headerlink" title="使用掛載的方式更改系統語言"></a><font color=#FF6600>使用掛載的方式更改系統語言</font></h2><p>最後在 Teminal 輸入下面兩行指令就成功了唷！</p>
-<p>▼ 語法解釋：</p>
-<ol>
-<li>將 JP.dict 檔案（若剛查詢的系統語言為 EN，則改為 EN.dict）掛載成 TW.dict 檔案</li>
-<li>重新啟動網頁服務</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount -o <span class="built_in">bind</span> /www/TW.dict /www/JP.dict</span><br><span class="line">service restart_httpd</span><br></pre></td></tr></table></figure>
-
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280296/original/f03b8122ffdd6b1f3aba3cd23248cf2a.png" />
-
-<p>看到 Done. 就代表成功了唷！</p>
-<p>此時回到 ASUS 路由器網頁，已經切換成繁體中文了！</p>
-<img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280297/original/fc4ddd779d7d98ca128bce65e87ca261.png" />
-
-<h1 id="快速設定教學"><a href="#快速設定教學" class="headerlink" title="快速設定教學"></a><font color=#0000FF>快速設定教學</font></h1><p><strong><font color=#FF0000>每次路由器重新開機都要重新執行</font></strong></p>
-<p><strong>1. 確認 SSH 服務已開啟，若之前設定過就不用再設定。</strong><br><strong>2. 打開 Putty，輸入路由器 IP 後，輸入帳號密碼登入。</strong><br><strong>3. 輸入以下兩行指令：</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount -o <span class="built_in">bind</span> /www/TW.dict /www/JP.dict</span><br><span class="line">service restart_httpd</span><br></pre></td></tr></table></figure>
-
-<p><strong>4. 完成！</strong></p>
-<p>參考連結：<a target="_blank" rel="noopener" href="https://www.snbforums.com/threads/trying-to-change-language-from-japanese-to-english-on-asus-rt-ac86u.48807/">Trying to change language from Japanese to English on ASUS RT-AC86U</a></p>
-
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/router/" rel="tag"># 路由器</a>
-          </div>
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2020/11/buyee/" rel="prev" title="[心得] Buyee：日本拍賣/代購之電商服務網站唯一首選！">
-                  <i class="fa fa-chevron-left"></i> [心得] Buyee：日本拍賣/代購之電商服務網站唯一首選！
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2020/05/hexo-next-upgrade/" rel="next" title="[教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄">
-                  [教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-    <div class="comments gitalk-container"></div>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
 <div class="copyright">
+  
   &copy; 
   <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
@@ -747,43 +829,241 @@
   <span class="author" itemprop="copyrightHolder">EDEN</span>
 </div>
 
+        
+
+
+
+
+
+
+<script data-pjax>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"YoLycdOLhFPQmvl9mi5Qnsge-gzGzoHsz","app_key":"YwbCQICgq3ec30JjffgxRlR6","server_url":null,"security":false};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ede825d02e67d9c5edc3',
+      clientSecret: '78710c0d61a5890dc4769c8abca4021a80568848',
+      repo        : 'comments',
+      owner       : 'ed521',
+      admin       : ['ed521'],
+      id          : '8e86e2f1cfd325093c6878c1425fe2b3',
+        language: 'zh-TW',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
     </div>
-  </footer>
-
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
 
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="/js/third-party/search/local-search.js"></script>
-
-
-
-  <script src="/js/third-party/fancybox.js"></script>
-
-  <script src="/js/third-party/pace.js"></script>
-
-  
-
-
-  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"YoLycdOLhFPQmvl9mi5Qnsge-gzGzoHsz","app_key":"YwbCQICgq3ec30JjffgxRlR6","server_url":null,"security":false}</script>
-  <script src="/js/third-party/statistics/lean-analytics.js"></script>
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
-
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ed521","repo":"comments","client_id":"ede825d02e67d9c5edc3","client_secret":"78710c0d61a5890dc4769c8abca4021a80568848","admin_user":"ed521","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"8e86e2f1cfd325093c6878c1425fe2b3"}</script>
-<script src="/js/third-party/comments/gitalk.js"></script>
-
-  
-  <link rel="stylesheet" href="/dist/APlayer.min.css">
-  <div id="aplayer"></div>
-  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
-  <script type="text/javascript" src="/dist/music.js"></script>  
-  
 </body>
 </html>
