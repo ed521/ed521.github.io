@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#43a0f7"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/android-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/android-icon-16x16.png">
+  <link rel="mask-icon" href="/images/android-icon-192x192.svg" color="#43a0f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ed521.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄[教學] APla">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[教學] 撰寫 Hexo 文章 - Markdown 語法大全">
+<meta property="og:url" content="https://ed521.github.io/2019/08/hexo-markdown/index.html">
+<meta property="og:site_name" content="瑪利歐的部落格">
+<meta property="og:description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄[教學] APla">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262146/original/6275d5fc2d1f6efe2f881a998e7eb95d.png">
+<meta property="og:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262148/original/69388a8d9f3a55b396d780af9ce9308c.png">
+<meta property="og:image" content="https://s1.yimg.com/rz/d/yahoo_frontpage_zh-Hant-TW_s_f_p_bestfit_frontpage_2x.png">
+<meta property="og:image" content="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+<meta property="og:image" content="https://ed521.github.io/123.png">
+<meta property="article:published_time" content="2019-08-08T17:15:42.000Z">
+<meta property="article:modified_time" content="2019-08-08T17:15:42.000Z">
+<meta property="article:author" content="EDEN">
+<meta property="article:tag" content="Hexo部落格">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262146/original/6275d5fc2d1f6efe2f881a998e7eb95d.png">
+
+
+<link rel="canonical" href="https://ed521.github.io/2019/08/hexo-markdown/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://ed521.github.io/2019/08/hexo-markdown/","path":"2019/08/hexo-markdown/","title":"[教學] 撰寫 Hexo 文章 - Markdown 語法大全"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[教學] 撰寫 Hexo 文章 - Markdown 語法大全 | 瑪利歐的部落格</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-61473305-3","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+<script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">瑪利歐的部落格</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">17</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">23</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">64</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%AA%9E%E6%B3%95-%E6%96%87%E5%AD%97%E6%A8%A3%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">常用語法 - 文字樣式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E5%AD%97%E9%AB%94"><span class="nav-number">1.1.</span> <span class="nav-text">文字字體</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E9%A1%8F%E8%89%B2"><span class="nav-number">1.2.</span> <span class="nav-text">文字顏色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%99%E9%A1%8C"><span class="nav-number">1.3.</span> <span class="nav-text">標題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">1.4.</span> <span class="nav-text">程式碼</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%AA%9E%E6%B3%95-%E5%85%B6%E5%AE%83"><span class="nav-number">2.</span> <span class="nav-text">常用語法 - 其它</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%9A%94%E7%B7%9A"><span class="nav-number">2.1.</span> <span class="nav-text">分隔線</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A0%85%E7%9B%AE%E7%AC%A6%E8%99%9F-x2F-%E7%B7%A8%E8%99%9F"><span class="nav-number">2.2.</span> <span class="nav-text">項目符號&#x2F;編號</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E8%BE%A6%E4%BA%8B%E9%A0%85"><span class="nav-number">2.3.</span> <span class="nav-text">代辦事項</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E5%8D%80%E5%A1%8A"><span class="nav-number">2.4.</span> <span class="nav-text">引用區塊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E8%B6%85%E9%80%A3%E7%B5%90"><span class="nav-number">2.5.</span> <span class="nav-text">文字超連結</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%96%E7%89%87"><span class="nav-number">2.6.</span> <span class="nav-text">圖片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-number">2.7.</span> <span class="nav-text">表格</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85"><span class="nav-number">3.</span> <span class="nav-text">注意事項</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="EDEN"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">EDEN</p>
+  <div class="site-description" itemprop="description">文章多以開箱文、教學文為主~~</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+
+<div class="links-of-blogroll motion-element links-of-blogroll-block">
+<br>
+<div class="links-of-blogroll-title">
+    <!-- 設定你要的fa fa icon-->
+    <i class="fa fa-history fa-" aria-hidden="true"></i>
+    最新文章
+</div>
+<ul class="links-of-blogroll-list">
+    <!---->
+    
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-04-19T20:38:00+08:00">
+        04/19
+      </time>-->
+      • <a href="/2021/04/PC-cillin-2021/" title="[教學] 守護電腦「琳」死角！PC-cillin 2021 雲端版防毒軟體，讓 C 琳全面照顧您的上網裝置！">[教學] 守護電腦「琳」死角！PC-cillin 2021 雲端版防毒軟體，讓 C 琳全面照顧您的上網裝置！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-01-10T23:50:00+08:00">
+        01/10
+      </time>-->
+      • <a href="/2021/01/Epson-Moverio-BT-40/" title="[開箱] Epson Moverio BT-40 智慧眼鏡，超大螢幕隨時隨地辦公追劇毫不受限！">[開箱] Epson Moverio BT-40 智慧眼鏡，超大螢幕隨時隨地辦公追劇毫不受限！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-12-28T03:00:00+08:00">
+        12/28
+      </time>-->
+      • <a href="/2020/12/DSM7-with-Synology-Photos/" title="[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！">[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-11-24T13:17:20+08:00">
+        11/24
+      </time>-->
+      • <a href="/2020/11/hexo-aplayer/" title="[教學] APlayer：為 Hexo 部落格加入個人音樂播放器">[教學] APlayer：為 Hexo 部落格加入個人音樂播放器</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-11-19T08:45:52+08:00">
+        11/19
+      </time>-->
+      • <a href="/2020/11/dream-glass-4k/" title="[心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析">[心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析</a>
+      <br>
+    </li>
+    
+	<br>
+</ul>
+</div>
+
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">目前瀏覽器不支援canvas，請更換瀏覽器後再試</canvas>
+</div>
+<script>
+(function(){
+    var WINDOW_WIDTH = 860;
+    var WINDOW_HEIGHT = 250;
+    var RADIUS = 7; //球半径
+    var NUMBER_GAP = 15; //数字之间的间隙
+    var u=0.5; //碰撞能量损耗系数
+    var context; //Canvas绘制上下文
+    var balls = []; //存储彩色的小球
+    const colors = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"]; //彩色小球的颜色
+    var currentNums = []; //屏幕显示的8个字符
+    var digit =
+        [
+            [
+                [0,0,1,1,1,0,0],
+                [0,1,1,0,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,0,1,1,0],
+                [0,0,1,1,1,0,0]
+            ],//0
+            [
+                [0,0,0,1,1,0,0],
+                [0,1,1,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [1,1,1,1,1,1,1]
+            ],//1
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,0,0,0],
+                [0,1,1,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,0,0,0,1,1],
+                [1,1,1,1,1,1,1]
+            ],//2
+            [
+                [1,1,1,1,1,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,1,0,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//3
+            [
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,1,0],
+                [0,0,1,1,1,1,0],
+                [0,1,1,0,1,1,0],
+                [1,1,0,0,1,1,0],
+                [1,1,1,1,1,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,1,1]
+            ],//4
+            [
+                [1,1,1,1,1,1,1],
+                [1,1,0,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,1,1,1,1,0],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//5
+            [
+                [0,0,0,0,1,1,0],
+                [0,0,1,1,0,0,0],
+                [0,1,1,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,0,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//6
+            [
+                [1,1,1,1,1,1,1],
+                [1,1,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0]
+            ],//7
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//8
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,1,1,0,0,0,0]
+            ],//9
+            [
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,1,1,0,0],
+                [0,0,1,1,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,1,1,0,0],
+                [0,0,1,1,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+            ]//:
+        ];
+
+    function drawDatetime(cxt){
+        var nums = [];
+
+        context.fillStyle="rgba(255,255,255,0.9)"
+        var date = new Date();
+        var offsetX = 50, offsetY = 30;
+        var hours = date.getHours();
+        var num1 = Math.floor(hours/10);
+        var num2 = hours%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+        nums.push({num: 10}); //冒号
+        var minutes = date.getMinutes();
+        var num1 = Math.floor(minutes/10);
+        var num2 = minutes%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+        nums.push({num: 10}); //冒号
+        var seconds = date.getSeconds();
+        var num1 = Math.floor(seconds/10);
+        var num2 = seconds%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+
+        for(var x = 0;x<nums.length;x++){
+            nums[x].offsetX = offsetX;
+            offsetX = drawSingleNumber(offsetX,offsetY, nums[x].num,cxt);
+            //两个数字连一块，应该间隔一些距离
+            if(x<nums.length-1){
+                if((nums[x].num!=10) &&(nums[x+1].num!=10)){
+                    offsetX+=NUMBER_GAP;
+                }
+            }
+        }
+
+        //说明这是初始化
+        if(currentNums.length ==0){
+            currentNums = nums;
+        }else{
+            //进行比较
+            for(var index = 0;index<currentNums.length;index++){
+                if(currentNums[index].num!=nums[index].num){
+                    //不一样时，添加彩色小球
+                    addBalls(nums[index]);
+                    currentNums[index].num=nums[index].num;
+                }
+            }
+        }
+        renderBalls(cxt);
+        updateBalls();
+
+        return date;
+    }
+
+    function addBalls (item) {
+        var num = item.num;
+        var numMatrix = digit[num];
+        for(var y = 0;y<numMatrix.length;y++){
+            for(var x = 0;x<numMatrix[y].length;x++){
+                if(numMatrix[y][x]==1){
+                    var ball={
+                        offsetX:item.offsetX+RADIUS+RADIUS*2*x,
+                        offsetY:30+RADIUS+RADIUS*2*y,
+                        color:colors[Math.floor(Math.random()*colors.length)],
+                        g:1.5+Math.random(),
+                        vx:Math.pow(-1, Math.ceil(Math.random()*10))*4+Math.random(),
+                        vy:-5
+                    }
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    function renderBalls(cxt){
+        for(var index = 0;index<balls.length;index++){
+            cxt.beginPath();
+            cxt.fillStyle=balls[index].color;
+            cxt.arc(balls[index].offsetX, balls[index].offsetY, RADIUS, 0, 2*Math.PI);
+            cxt.fill();
+        }
+    }
+
+    function updateBalls () {
+        var i =0;
+        for(var index = 0;index<balls.length;index++){
+            var ball = balls[index];
+            ball.offsetX += ball.vx;
+            ball.offsetY += ball.vy;
+            ball.vy+=ball.g;
+            if(ball.offsetY > (WINDOW_HEIGHT-RADIUS)){
+                ball.offsetY= WINDOW_HEIGHT-RADIUS;
+                ball.vy=-ball.vy*u;
+            }
+            if(ball.offsetX>RADIUS&&ball.offsetX<(WINDOW_WIDTH-RADIUS)){
+
+                balls[i]=balls[index];
+                i++;
+            }
+        }
+        //去除出边界的球
+        for(;i<balls.length;i++){
+            balls.pop();
+        }
+    }
+    function drawSingleNumber(offsetX, offsetY, num, cxt){
+        var numMatrix = digit[num];
+        for(var y = 0;y<numMatrix.length;y++){
+            for(var x = 0;x<numMatrix[y].length;x++){
+                if(numMatrix[y][x]==1){
+                    cxt.beginPath();
+                    cxt.arc(offsetX+RADIUS+RADIUS*2*x,offsetY+RADIUS+RADIUS*2*y,RADIUS,0,2*Math.PI);
+                    cxt.fill();
+                }
+            }
+        }
+        cxt.beginPath();
+        offsetX += numMatrix[0].length*RADIUS*2;
+        return offsetX;
+    }
+
+    var canvas = document.getElementById("canvas");
+    canvas.width=WINDOW_WIDTH;
+    canvas.height=WINDOW_HEIGHT;
+    context = canvas.getContext("2d");
+
+    //记录当前绘制的时刻
+    var currentDate = new Date();
+
+    setInterval(function(){
+        //清空整个Canvas，重新绘制内容
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+        drawDatetime(context);
+    }, 50)
+})();
+</script>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2019/08/hexo-markdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="EDEN">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑪利歐的部落格">
+      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[教學] 撰寫 Hexo 文章 - Markdown 語法大全 | 瑪利歐的部落格">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [教學] 撰寫 Hexo 文章 - Markdown 語法大全
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2019-08-09 01:15:42" itemprop="dateCreated datePublished" datetime="2019-08-09T01:15:42+08:00">2019-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/teaching/hexoblog/" itemprop="url" rel="index"><span itemprop="name">Hexo部落格</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2019/08/hexo-markdown/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] 撰寫 Hexo 文章 - Markdown 語法大全" title="閱讀次數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>5.2k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Hexo 部落格教學文系列：<br><a href="https://ed521.github.io/2019/07/hexo-install/">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格</a><br><a href="https://ed521.github.io/2019/08/hexo-admin/">[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具</a><br><a href="https://ed521.github.io/2019/08/hexo-markdown/">[教學] 撰寫 Hexo 文章 - Markdown 語法大全</a><br><a href="https://ed521.github.io/2020/05/hexo-folder-theme/">[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹</a><br><a href="https://ed521.github.io/2020/05/hexo-next-upgrade/">[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄</a><br><a href="https://ed521.github.io/2020/11/hexo-aplayer/">[教學] APlayer：為 Hexo 部落格加入個人音樂播放器</a></p>
+<p>Markdown 的目標是實現「易讀易寫」，並強調它的「可讀性」，因此 Markdown 的語法全由標點符號所組成，並經過嚴謹慎選，是為了讓它們看起來就像所要表達的意思；以下是 Markdown 大部分的語法。</p>
+<h1 id="常用語法-文字樣式"><a href="#常用語法-文字樣式" class="headerlink" title="常用語法 - 文字樣式"></a><font color=#0000FF>常用語法 - 文字樣式</font></h1><h2 id="文字字體"><a href="#文字字體" class="headerlink" title="文字字體"></a><font color=#FF6600>文字字體</font></h2><table>
+<thead>
+<tr>
+<th>類別</th>
+<th>語法</th>
+<th>顯示結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>粗體</td>
+<td><code>**我是粗體**</code></td>
+<td><strong>我是粗體</strong></td>
+</tr>
+<tr>
+<td>斜體</td>
+<td><code>*我是斜體*</code></td>
+<td><em>我是斜體</em></td>
+</tr>
+<tr>
+<td>粗斜體</td>
+<td><code>***我是粗斜體***</code></td>
+<td><em><strong>我是粗斜體</strong></em></td>
+</tr>
+<tr>
+<td>刪除線</td>
+<td><code>~~我是刪除線~~</code></td>
+<td><del>我是刪除線</del></td>
+</tr>
+<tr>
+<td>底線</td>
+<td><code>&lt;u&gt;我是底線&lt;u&gt;</code></td>
+<td><u>我是底線<u></td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+<h2 id="文字顏色"><a href="#文字顏色" class="headerlink" title="文字顏色"></a><font color=#FF6600>文字顏色</font></h2><p>Markdown 並沒有更改文字顏色的語法，因此只能我們靠自己加入 HTML 語法來修改文字顏色，只要在欲更改文字顏色的地方加入 <code>&lt;font color=#008000&gt;我是深綠色&lt;/font&gt;</code> ：<font color=#008000>我是深綠色</font>。</p>
+<p>在此附上一些常用的顏色，使用者也可以到 <a target="_blank" rel="noopener" href="https://www.ifreesite.com/color/web-color-code.htm">常用顏色表</a> 這個網站來找尋自己喜歡的顏色。</p>
+<table>
+<thead>
+<tr>
+<th>語法</th>
+<th>顯示結果</th>
+<th>語法</th>
+<th>顯示結果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;font color=#800000&gt;酒紅色&lt;/font&gt;</code></td>
+<td><font color=#800000>酒紅色</font></td>
+<td><code>&lt;font color=#FF0000&gt;紅色&lt;/font&gt;</code></td>
+<td><font color=#FF0000>紅色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#FF6600&gt;橘色&lt;/font&gt;</code></td>
+<td><font color=#FF6600>橘色</font></td>
+<td><code>&lt;font color=#FFD700&gt;金色&lt;/font&gt;</code></td>
+<td><font color=#FFD700>金色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#FFFF00&gt;黃色&lt;/font&gt;</code></td>
+<td><font color=#FFFF00>黃色</font></td>
+<td><code>&lt;font color=#00FF00&gt;綠色&lt;/font&gt;</code></td>
+<td><font color=#00FF00>綠色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#008000&gt;墨綠色&lt;/font&gt;</code></td>
+<td><font color=#008000>墨綠色</font></td>
+<td><code>&lt;font color=#00FFFF&gt;青色&lt;/font&gt;</code></td>
+<td><font color=#00FFFF>青色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#0000FF&gt;深藍色&lt;/font&gt;</code></td>
+<td><font color=#0000FF>深藍色</font></td>
+<td><code>&lt;font color=#FF00FF&gt;粉紅色&lt;/font&gt;</code></td>
+<td><font color=#FF00FF>粉紅色</font></td>
+</tr>
+<tr>
+<td><code>&lt;font color=#800080&gt;紫色&lt;/font&gt;</code></td>
+<td><font color=#800080>紫色</font></td>
+<td><code>&lt;font color=#808080&gt;灰色&lt;/font&gt;</code></td>
+<td><font color=#808080>灰色</font></td>
+</tr>
+</tbody></table>
+<h2 id="標題"><a href="#標題" class="headerlink" title="標題"></a><font color=#FF6600>標題</font></h2><p>使用 <code>#</code> 來表示等級一的標題，總共有六個等級，<font color=#800000>且 # 字符號和文字間<strong>要空一格</strong></font>。語法依此類推：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 等級一標題</span><br><span class="line">## 等級二標題</span><br><span class="line">### 等級三標題</span><br><span class="line">#### 等級四標題</span><br><span class="line">##### 等級五標題</span><br><span class="line">###### 等級六標題</span><br></pre></td></tr></table></figure>
+<p>其結果顯示如下圖：</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262146/original/6275d5fc2d1f6efe2f881a998e7eb95d.png"></p>
+<h2 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a><font color=#FF6600>程式碼</font></h2><ul>
+<li><strong><font color=#008000>文字間程式碼</font></strong></li>
+</ul>
+<p>**<font color=#800000>插入在文字間</font>**的程式碼請使用以下語法，也就是用鍵盤 Tab 鍵上方的反引號來包住：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C語言的輸入請使用 `scanf()` 函式。</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<p>C語言的輸入請使用 <code>scanf()</code> 函式。</p>
+<ul>
+<li><strong><font color=#008000>段落程式碼</font></strong></li>
+</ul>
+<p>若要以整行或整段來顯示程式碼，請使用也就是用鍵盤 Tab 上方的三個反引號來包住，且可以<font color=#800000><strong>在第一列最後方指定程式語言類型(也能不指定)，這樣會在特殊函式或語法上標示特殊顏色</strong></font>。</p>
+<p>例如使用 C 語言：</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/262148/original/69388a8d9f3a55b396d780af9ce9308c.png"></p>
+<p>其結果顯示如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HelloWorld 程式</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;HelloWorld\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>筆者查到支援的程式碼列表如下，在反引號後輸入下面括弧前的文字（<a target="_blank" rel="noopener" href="https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown">參考網站</a>）：</p>
+<ul>
+<li>Cucumber (‘*.feature’)</li>
+<li>abap (‘*.abap’)</li>
+<li>ada (‘<em>.adb’, ‘</em>.ads’, ‘*.ada’)</li>
+<li>ahk (‘<em>.ahk’, ‘</em>.ahkl’)</li>
+<li>apacheconf (‘.htaccess’, ‘apache.conf’, ‘apache2.conf’)</li>
+<li>applescript (‘*.applescript’)</li>
+<li>as (‘*.as’)</li>
+<li>as3 (‘*.as’)</li>
+<li>asy (‘*.asy’)</li>
+<li>bash (‘<em>.sh’, ‘</em>.ksh’, ‘<em>.bash’, ‘</em>.ebuild’, ‘*.eclass’)</li>
+<li>bat (‘<em>.bat’, ‘</em>.cmd’)</li>
+<li>befunge (‘*.befunge’)</li>
+<li>blitzmax (‘*.bmx’)</li>
+<li>boo (‘*.boo’)</li>
+<li>brainfuck (‘<em>.bf’, ‘</em>.b’)</li>
+<li>c (‘<em>.c’, ‘</em>.h’)</li>
+<li>cfm (‘<em>.cfm’, ‘</em>.cfml’, ‘*.cfc’)</li>
+<li>cheetah (‘<em>.tmpl’, ‘</em>.spt’)</li>
+<li>cl (‘<em>.cl’, ‘</em>.lisp’, ‘*.el’)</li>
+<li>clojure (‘<em>.clj’, ‘</em>.cljs’)</li>
+<li>cmake (‘*.cmake’, ‘CMakeLists.txt’)</li>
+<li>coffeescript (‘*.coffee’)</li>
+<li>console (‘*.sh-session’)</li>
+<li>control (‘control’)</li>
+<li>cpp (‘<em>.cpp’, ‘</em>.hpp’, ‘<em>.c++’, ‘</em>.h++’, ‘<em>.cc’, ‘</em>.hh’, ‘<em>.cxx’, ‘</em>.hxx’, ‘*.pde’)</li>
+<li>csharp (‘*.cs’)</li>
+<li>css (‘*.css’)</li>
+<li>cython (‘<em>.pyx’, ‘</em>.pxd’, ‘*.pxi’)</li>
+<li>d (‘<em>.d’, ‘</em>.di’)</li>
+<li>delphi (‘*.pas’)</li>
+<li>diff (‘<em>.diff’, ‘</em>.patch’)</li>
+<li>dpatch (‘<em>.dpatch’, ‘</em>.darcspatch’)</li>
+<li>duel (‘<em>.duel’, ‘</em>.jbst’)</li>
+<li>dylan (‘<em>.dylan’, ‘</em>.dyl’)</li>
+<li>erb (‘*.erb’)</li>
+<li>erl (‘*.erl-sh’)</li>
+<li>erlang (‘<em>.erl’, ‘</em>.hrl’)</li>
+<li>evoque (‘*.evoque’)</li>
+<li>factor (‘*.factor’)</li>
+<li>felix (‘<em>.flx’, ‘</em>.flxh’)</li>
+<li>fortran (‘<em>.f’, ‘</em>.f90’)</li>
+<li>gas (‘<em>.s’, ‘</em>.S’)</li>
+<li>genshi (‘*.kid’)</li>
+<li>glsl (‘<em>.vert’, ‘</em>.frag’, ‘*.geo’)</li>
+<li>gnuplot (‘<em>.plot’, ‘</em>.plt’)</li>
+<li>go (‘*.go’)</li>
+<li>groff (‘<em>.(1234567)’, ‘</em>.man’)</li>
+<li>haml (‘*.haml’)</li>
+<li>haskell (‘*.hs’)</li>
+<li>html (‘<em>.html’, ‘</em>.htm’, ‘<em>.xhtml’, ‘</em>.xslt’)</li>
+<li>hx (‘*.hx’)</li>
+<li>hybris (‘<em>.hy’, ‘</em>.hyb’)</li>
+<li>ini (‘<em>.ini’, ‘</em>.cfg’)</li>
+<li>io (‘*.io’)</li>
+<li>ioke (‘*.ik’)</li>
+<li>irc (‘*.weechatlog’)</li>
+<li>jade (‘*.jade’)</li>
+<li>java (‘*.java’)</li>
+<li>js (‘*.js’)</li>
+<li>jsp (‘*.jsp’)</li>
+<li>lhs (‘*.lhs’)</li>
+<li>llvm (‘*.ll’)</li>
+<li>logtalk (‘*.lgt’)</li>
+<li>lua (‘<em>.lua’, ‘</em>.wlua’)</li>
+<li>make (‘<em>.mak’, ‘Makefile’, ‘makefile’, ‘Makefile.</em>‘, ‘GNUmakefile’)</li>
+<li>mako (‘*.mao’)</li>
+<li>maql (‘*.maql’)</li>
+<li>mason (‘<em>.mhtml’, ‘</em>.mc’, ‘*.mi’, ‘autohandler’, ‘dhandler’)</li>
+<li>markdown (‘*.md’)</li>
+<li>modelica (‘*.mo’)</li>
+<li>modula2 (‘<em>.def’, ‘</em>.mod’)</li>
+<li>moocode (‘*.moo’)</li>
+<li>mupad (‘*.mu’)</li>
+<li>mxml (‘*.mxml’)</li>
+<li>myghty (‘*.myt’, ‘autodelegate’)</li>
+<li>nasm (‘<em>.asm’, ‘</em>.ASM’)</li>
+<li>newspeak (‘*.ns2’)</li>
+<li>objdump (‘*.objdump’)</li>
+<li>objectivec (‘*.m’)</li>
+<li>objectivej (‘*.j’)</li>
+<li>ocaml (‘<em>.ml’, ‘</em>.mli’, ‘<em>.mll’, ‘</em>.mly’)</li>
+<li>ooc (‘*.ooc’)</li>
+<li>perl (‘<em>.pl’, ‘</em>.pm’)</li>
+<li>php (‘<em>.php’, ‘</em>.php(345)’)</li>
+<li>postscript (‘<em>.ps’, ‘</em>.eps’)</li>
+<li>pot (‘<em>.pot’, ‘</em>.po’)</li>
+<li>pov (‘<em>.pov’, ‘</em>.inc’)</li>
+<li>prolog (‘<em>.prolog’, ‘</em>.pro’, ‘*.pl’)</li>
+<li>properties (‘*.properties’)</li>
+<li>protobuf (‘*.proto’)</li>
+<li>py3tb (‘*.py3tb’)</li>
+<li>pytb (‘*.pytb’)</li>
+<li>python (‘<em>.py’, ‘</em>.pyw’, ‘<em>.sc’, ‘SConstruct’, ‘SConscript’, ‘</em>.tac’)</li>
+<li>rb (‘<em>.rb’, ‘</em>.rbw’, ‘Rakefile’, ‘<em>.rake’, ‘</em>.gemspec’, ‘<em>.rbx’, ‘</em>.duby’)</li>
+<li>rconsole (‘*.Rout’)</li>
+<li>rebol (‘<em>.r’, ‘</em>.r3’)</li>
+<li>redcode (‘*.cw’)</li>
+<li>rhtml (‘*.rhtml’)</li>
+<li>rst (‘<em>.rst’, ‘</em>.rest’)</li>
+<li>sass (‘*.sass’)</li>
+<li>scala (‘*.scala’)</li>
+<li>scaml (‘*.scaml’)</li>
+<li>scheme (‘*.scm’)</li>
+<li>scss (‘*.scss’)</li>
+<li>smalltalk (‘*.st’)</li>
+<li>smarty (‘*.tpl’)</li>
+<li>sourceslist (‘sources.list’)</li>
+<li>splus (‘<em>.S’, ‘</em>.R’)</li>
+<li>sql (‘*.sql’)</li>
+<li>sqlite3 (‘*.sqlite3-console’)</li>
+<li>squidconf (‘squid.conf’)</li>
+<li>ssp (‘*.ssp’)</li>
+<li>tcl (‘*.tcl’)</li>
+<li>tcsh (‘<em>.tcsh’, ‘</em>.csh’)</li>
+<li>tex (‘<em>.tex’, ‘</em>.aux’, ‘*.toc’)</li>
+<li>text (‘*.txt’)</li>
+<li>v (‘<em>.v’, ‘</em>.sv’)</li>
+<li>vala (‘<em>.vala’, ‘</em>.vapi’)</li>
+<li>vbnet (‘<em>.vb’, ‘</em>.bas’)</li>
+<li>velocity (‘<em>.vm’, ‘</em>.fhtml’)</li>
+<li>vim (‘*.vim’, ‘.vimrc’)</li>
+<li>xml (‘<em>.xml’, ‘</em>.xsl’, ‘<em>.rss’, ‘</em>.xslt’, ‘<em>.xsd’, ‘</em>.wsdl’)</li>
+<li>xquery (‘<em>.xqy’, ‘</em>.xquery’)</li>
+<li>xslt (‘<em>.xsl’, ‘</em>.xslt’)</li>
+<li>yaml (‘<em>.yaml’, ‘</em>.yml’)</li>
+</ul>
+<h1 id="常用語法-其它"><a href="#常用語法-其它" class="headerlink" title="常用語法 - 其它"></a><font color=#0000FF>常用語法 - 其它</font></h1><h2 id="分隔線"><a href="#分隔線" class="headerlink" title="分隔線"></a><font color=#FF6600>分隔線</font></h2><p>一整列中輸入三個以上的 <code>***</code> 或三個以上的 <code>---</code>，且<font color=#800000>整列<strong>不能有其它文字</strong></font>，結果顯示如下：</p>
+<hr>
+<h2 id="項目符號-x2F-編號"><a href="#項目符號-x2F-編號" class="headerlink" title="項目符號&#x2F;編號"></a><font color=#FF6600>項目符號&#x2F;編號</font></h2><p><strong><font color=#008000>項目符號</font><strong>可以用 <code>*</code>、<code>+</code> 或 <code>-</code>，放在整列的開頭當作項目符號，<font color=#800000>且符號和文字間</strong>要空一格</strong></font>，語法範例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ aaa</span><br><span class="line">+ bbb</span><br><span class="line">+ ccc</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<ul>
+<li>aaa</li>
+<li>bbb</li>
+<li>ccc</li>
+</ul>
+<p>而**<font color=#008000>編號</font><strong>就是使用數字在加上 <code>.</code>，<font color=#800000>且 <code>.</code> 和文字間</strong>要空一格**</font>，語法範例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. aaa</span><br><span class="line">2. bbb</span><br><span class="line">3. ccc</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<ol>
+<li>aaa</li>
+<li>bbb</li>
+<li>ccc</li>
+</ol>
+<p>若使用**<font color=#008000>「階層式」的項目符號&#x2F;編號</font>**，只要記得空的格數要整齊即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+ 益者三友</span><br><span class="line">  + 友直</span><br><span class="line">  + 友諒</span><br><span class="line">  + 友多聞</span><br><span class="line">     + 益矣</span><br><span class="line">+ 損者三友</span><br><span class="line">  + 友便辟</span><br><span class="line">  + 友善柔</span><br><span class="line">  + 友便佞</span><br><span class="line">     + 損矣</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<ul>
+<li>益者三友<ul>
+<li>友直</li>
+<li>友諒</li>
+<li>友多聞<ul>
+<li>益矣</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>損者三友<ul>
+<li>友便辟</li>
+<li>友善柔</li>
+<li>友便佞<ul>
+<li>損矣</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="代辦事項"><a href="#代辦事項" class="headerlink" title="代辦事項"></a><font color=#FF6600>代辦事項</font></h2><p>代辦事項的語法如下，若要在框框中打勾，則需在 [ ] 中輸入 <code>x</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 空心菜</span><br><span class="line">- [x] 玉米</span><br><span class="line">- [x] 醬油</span><br><span class="line">- [ ] 豬肉</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 空心菜</li>
+<li><input checked="" disabled="" type="checkbox"> 玉米</li>
+<li><input checked="" disabled="" type="checkbox"> 醬油</li>
+<li><input disabled="" type="checkbox"> 豬肉</li>
+</ul>
+<h2 id="引用區塊"><a href="#引用區塊" class="headerlink" title="引用區塊"></a><font color=#FF6600>引用區塊</font></h2><p>使用 <code>&gt;</code> 放在整列的開頭當作引用區塊，<font color=#800000>且 <code>&gt;</code> 和文字間<strong>要空一格</strong></font>，語法範例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 人遠比自己想象的要堅強</span><br><span class="line">&gt; 特別是當你回頭看看的時候</span><br><span class="line">&gt; 你會發現自己走了一段自己都沒想到的路</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<blockquote>
+<p>人遠比自己想象的要堅強<br>特別是當你回頭看看的時候<br>你會發現自己走了一段自己都沒想到的路</p>
+</blockquote>
+<p>而”引用”也支援「階層式」顯示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 人生就像一杯茶</span><br><span class="line">&gt; &gt; 不會苦一輩子</span><br><span class="line">&gt; &gt; &gt; 但總會苦一陣子</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<blockquote>
+<p>人生就像一杯茶</p>
+<blockquote>
+<p>不會苦一輩子</p>
+<blockquote>
+<p>但總會苦一陣子</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="文字超連結"><a href="#文字超連結" class="headerlink" title="文字超連結"></a><font color=#FF6600>文字超連結</font></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[奇摩首頁](https://tw.yahoo.com/)</span><br><span class="line">[Google首頁](https://www.google.com/)</span><br><span class="line">[Facebook](https://www.facebook.com/)</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<p><a target="_blank" rel="noopener" href="https://tw.yahoo.com/">奇摩首頁</a><br><a target="_blank" rel="noopener" href="https://www.google.com/">Google首頁</a><br><a target="_blank" rel="noopener" href="https://www.facebook.com/">Facebook</a></p>
+<h2 id="圖片"><a href="#圖片" class="headerlink" title="圖片"></a><font color=#FF6600>圖片</font></h2><p>圖片的語法和文字超連結很像，只是在語法開頭再加上 <code>!</code>，<font color=#800000>中括弧內指的是圖片的”替代文字”</font>(當圖片連結失效後會顯示的文字，如下面的 FB Logo)：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![奇摩首頁Logo](https://s1.yimg.com/rz/d/yahoo_frontpage_zh-Hant-TW_s_f_p_bestfit_frontpage_2x.png)</span><br><span class="line">![Google首頁Logo](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)</span><br><span class="line">![FB Logo](123.png)</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<p><img src="https://s1.yimg.com/rz/d/yahoo_frontpage_zh-Hant-TW_s_f_p_bestfit_frontpage_2x.png" alt="奇摩首頁Logo"><br><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google首頁Logo"><br><img src="/123.png" alt="FB Logo"></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a><font color=#FF6600>表格</font></h2><p>表格的基本語法如下，第一列是表格的標題列，然後第二列固定要是以 <code>---</code> 做區隔，加欄位都是使用 <code>|</code> 來添加。注意<font color=#800000>表格的每欄寬度會<strong>自動分配</strong>，所以可以忽略一切的空格</font>(也就是<font color=#800000>每列的 <code>|</code> <strong>沒有對齊也沒關係</strong>，且加多少空格也不會影響每欄的寬度</font>)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Column 1 | Column 2 | Column 3 |</span><br><span class="line">| -------- | -------- | -------- |</span><br><span class="line">| Text1 | Text2 | Text3 |</span><br><span class="line">| Text4    | Text5    | Text6    |</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<table>
+<thead>
+<tr>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Text1</td>
+<td>Text2</td>
+<td>Text3</td>
+</tr>
+<tr>
+<td>Text4</td>
+<td>Text5</td>
+<td>Text6</td>
+</tr>
+</tbody></table>
+<p>而每欄可以決定要<font color=#800000>如何對齊</font>，對齊方式取決於第二列的 <code>---</code>，再加上 <code>:</code> 符號：</p>
+<ul>
+<li><code>:---</code> 靠左對齊。</li>
+<li><code>---:</code> 靠右對齊。</li>
+<li><code>:---:</code> 置中對齊。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 預設對齊 | 靠左對齊 | 靠右對齊 | 置中對齊 |</span><br><span class="line">| ----- | :----- | -----: | :-----: |</span><br><span class="line">| Text1 | Text2 | Text3 | Text4 |</span><br><span class="line">| Text5 | Text6 | Text7 | Text8 |</span><br><span class="line">| Text9 | Text10 | Text11 | Text12 |</span><br></pre></td></tr></table></figure>
+
+<p>其結果顯示如下：</p>
+<table>
+<thead>
+<tr>
+<th>預設對齊</th>
+<th align="left">靠左對齊</th>
+<th align="right">靠右對齊</th>
+<th align="center">置中對齊</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Text1</td>
+<td align="left">Text2</td>
+<td align="right">Text3</td>
+<td align="center">Text4</td>
+</tr>
+<tr>
+<td>Text5</td>
+<td align="left">Text6</td>
+<td align="right">Text7</td>
+<td align="center">Text8</td>
+</tr>
+<tr>
+<td>Text9</td>
+<td align="left">Text10</td>
+<td align="right">Text11</td>
+<td align="center">Text12</td>
+</tr>
+</tbody></table>
+<h1 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a><font color=#0000FF>注意事項</font></h1><ul>
+<li><p>某些語法的外觀樣式如：引用、分隔線、項目符號等，會因為<font color=#800000>使用者套用的 Hexo 主題而有不同。</font></p>
+</li>
+<li><p>圖片可以放在 Hexo 資料夾一併上傳到 GitHub，例如圖片 123.jpg 放到 <strong>myblog&#x2F;source&#x2F;images</strong> 路徑下，然後圖片語法連結的地方輸入 <strong>&#x2F;images&#x2F;123.jpg</strong> ，就會顯示該圖片。<br>不過<font color=#FF0000>這種方法<strong>筆者不建議</strong></font>(也就是<font color=#800000>不建議把 GitHub 當作圖床用</font>)，因為當文章一多，會有機會達到 GitHub Pages 的使用限制；因此可以<font color=#800000>搜尋各大免費圖床來使用，如 <a target="_blank" rel="noopener" href="https://imgur.com/">Imgur</a>, <a target="_blank" rel="noopener" href="https://upload.cc/">Upload.cc</a> 等</font>。</p>
+</li>
+<li><p>**<font color=#800000>HTML 語法盡量包在 Markdown 語法裡面</font>**，否則可能會造成一些顯示上的錯誤，舉例如下：</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">語法撰寫範例一：將「今天天氣真好。」顯示粗體並更改為紅色</span><br><span class="line">**&lt;font color=#FF0000&gt;今天天氣真好。&lt;/font&gt;**</span><br><span class="line"></span><br><span class="line">語法撰寫範例二：將「Title」設定成等級一標題並更改為藍色</span><br><span class="line"># &lt;font color=#0000FF&gt;Title&lt;/font&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>呈上，因為 HTML 語法和 Markdown 語法交錯使用，在 hexo-admin 文章後台的編輯區和預覽區可能會有顯示問題，<font color=#800000>請先 publish 後，以 <strong>localhost 的文章頁面顯示為準</strong>。</font></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexoblog/" rel="tag"># Hexo部落格</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/10/HP-Smart-Tank-515/" rel="prev" title="[開箱] HP Smart Tank 515 無線三合一印表機，工作時的最佳利器，隨時隨地想印就印！">
+                  <i class="fa fa-chevron-left"></i> [開箱] HP Smart Tank 515 無線三合一印表機，工作時的最佳利器，隨時隨地想印就印！
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/08/hexo-admin/" rel="next" title="[教學] 我的第一篇 Hexo 文章：使用 hexo-admin 後台管理工具">
+                  [教學] 我的第一篇 Hexo 文章：使用 hexo-admin 後台管理工具 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"YoLycdOLhFPQmvl9mi5Qnsge-gzGzoHsz","app_key":"YwbCQICgq3ec30JjffgxRlR6","server_url":null,"security":false}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ed521","repo":"comments","client_id":"ede825d02e67d9c5edc3","client_secret":"78710c0d61a5890dc4769c8abca4021a80568848","admin_user":"ed521","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"31227574ee07bd1df5f3225a710f488d"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+  
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>  
+  
+</body>
+</html>

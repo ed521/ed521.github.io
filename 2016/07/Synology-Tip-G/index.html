@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#43a0f7"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/android-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/android-icon-16x16.png">
+  <link rel="mask-icon" href="/images/android-icon-192x192.svg" color="#43a0f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ed521.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ G-1 利用WordPress架設部落格G-2 利用Discuz架設論壇G-3 使用自製網頁架站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[教學] Synology NAS Tip G. 架站篇">
+<meta property="og:url" content="https://ed521.github.io/2016/07/Synology-Tip-G/index.html">
+<meta property="og:site_name" content="瑪利歐的部落格">
+<meta property="og:description" content="※本文章為NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！之分支※ G-1 利用WordPress架設部落格G-2 利用Discuz架設論壇G-3 使用自製網頁架站">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270626/original/eb4f2d2da07affc98672a785196b83c9.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270671/original/fb6cd9bef13e097f492a6d85b5932bea.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270627/original/d35420599e76f001dff9f0e9166bd7cf.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270628/original/9bfd36fdc3cace28f1620001be9ea571.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270629/original/84231ed1d0709c8b224dc5d06c6f779d.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270630/original/225b891f6576da679ffc81b088ab0ac7.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270631/original/b97b73b9cbe74135f7e8d6a3f7747fa0.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270632/original/399b3e3c9ee69944aa32b5a6407a18fe.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270633/original/ccb3a62a01f3274e7b43ad1e267c9ec3.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270634/original/e234e7020a3cc0a0b11785a8f83c9fe0.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270635/original/ad9c1a7b0a18537c2f00b24694bd6ba8.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270636/original/a1614f133412cca3d0fdf2e6dbcc7aee.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270637/original/6c6d93d55907d0287dfbf17cefb0da06.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270638/original/038006717ca4e6acd2976bb807a72623.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270639/original/5f4a4fc1008751922b8d249c4d3ac62d.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270640/original/bf170ec0db33cf180fee22c871ba1cf7.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270641/original/cff8a209b1e64b254810d8a3f062fbd2.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270642/original/ffa083b56da8e29733fa2029732e93fc.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270643/original/64da8ee4bb10db54851c2321bbb8a2c1.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270644/original/e5ac7c46e1fec77341092bebdc0e039d.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270645/original/c1e5dbe8579e22911dc66b405d7f1b72.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270646/original/df4737cea94fcd0ac54d715d95d7c363.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270647/original/03add6d90c5ff696be012b3a4cefec7a.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270648/original/65d3f8a4d787192a869f7273fafe1b29.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270649/original/fbc914613c891800817dea71bfd1d35c.gif">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270650/original/91895812130e96a53a9b03eb7b6adde2.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270651/original/6e26c694cca410143e3057d2e415e110.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270672/original/831635884ffa632d9d433eedfd34aac9.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270652/original/38d2588d55ea71201a593504549b911c.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270653/original/ab605a65bd189e7e13e475af7431f621.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270654/original/a7fddb5c2d2c12236917ee674dc0a04a.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270655/original/5b345d56b2d56e7a346086c4590bd254.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270656/original/cc2b3f5fbef66970086c2e0e0d135e70.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270657/original/76ad6e99bc6bb283f9a7d7c914784840.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270658/original/0a8c6024c7cf021d256239e88bf47e8c.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270659/original/5089f6735b705b757a56013f8be62ac5.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270660/original/b2056fa47bc5e0b519978c6b3b89e14e.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270661/original/be82e55a799f3391b6451cd9fe84c825.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270662/original/9133367ea83518331cc13cd5fcd4bd8d.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270663/original/9c741144a7cdc1ee0fc5d5f94ce04f08.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270664/original/8d09945ebd31a4e83e1e3f955b1769a4.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270665/original/6be698fc069168c322301e658cb25143.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270666/original/e19732b909df2a0405057866183bbe34.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270667/original/228a72e2569fb23826f5cd7cc65f1e9b.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270673/original/b495fec65ff28cc3806a249833fab5fe.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270668/original/e1b973d7358ec0b8f40e44aafef6b3fa.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270669/original/4885aedbbdfbecd0329f2b6d53cfbc29.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270670/original/c39748884233ba898f146e6ff9b6a795.png">
+<meta property="article:published_time" content="2016-07-27T05:35:00.000Z">
+<meta property="article:modified_time" content="2016-07-27T05:35:00.000Z">
+<meta property="article:author" content="EDEN">
+<meta property="article:tag" content="Synology NAS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270626/original/eb4f2d2da07affc98672a785196b83c9.png">
+
+
+<link rel="canonical" href="https://ed521.github.io/2016/07/Synology-Tip-G/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://ed521.github.io/2016/07/Synology-Tip-G/","path":"2016/07/Synology-Tip-G/","title":"[教學] Synology NAS Tip G. 架站篇"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[教學] Synology NAS Tip G. 架站篇 | 瑪利歐的部落格</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-61473305-3","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+<script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">瑪利歐的部落格</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">17</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">23</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">64</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="EDEN"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">EDEN</p>
+  <div class="site-description" itemprop="description">文章多以開箱文、教學文為主~~</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+
+<div class="links-of-blogroll motion-element links-of-blogroll-block">
+<br>
+<div class="links-of-blogroll-title">
+    <!-- 設定你要的fa fa icon-->
+    <i class="fa fa-history fa-" aria-hidden="true"></i>
+    最新文章
+</div>
+<ul class="links-of-blogroll-list">
+    <!---->
+    
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-04-19T20:38:00+08:00">
+        04/19
+      </time>-->
+      • <a href="/2021/04/PC-cillin-2021/" title="[教學] 守護電腦「琳」死角！PC-cillin 2021 雲端版防毒軟體，讓 C 琳全面照顧您的上網裝置！">[教學] 守護電腦「琳」死角！PC-cillin 2021 雲端版防毒軟體，讓 C 琳全面照顧您的上網裝置！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-01-10T23:50:00+08:00">
+        01/10
+      </time>-->
+      • <a href="/2021/01/Epson-Moverio-BT-40/" title="[開箱] Epson Moverio BT-40 智慧眼鏡，超大螢幕隨時隨地辦公追劇毫不受限！">[開箱] Epson Moverio BT-40 智慧眼鏡，超大螢幕隨時隨地辦公追劇毫不受限！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-12-28T03:00:00+08:00">
+        12/28
+      </time>-->
+      • <a href="/2020/12/DSM7-with-Synology-Photos/" title="[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！">[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-11-24T13:17:20+08:00">
+        11/24
+      </time>-->
+      • <a href="/2020/11/hexo-aplayer/" title="[教學] APlayer：為 Hexo 部落格加入個人音樂播放器">[教學] APlayer：為 Hexo 部落格加入個人音樂播放器</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-11-19T08:45:52+08:00">
+        11/19
+      </time>-->
+      • <a href="/2020/11/dream-glass-4k/" title="[心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析">[心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析</a>
+      <br>
+    </li>
+    
+	<br>
+</ul>
+</div>
+
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">目前瀏覽器不支援canvas，請更換瀏覽器後再試</canvas>
+</div>
+<script>
+(function(){
+    var WINDOW_WIDTH = 860;
+    var WINDOW_HEIGHT = 250;
+    var RADIUS = 7; //球半径
+    var NUMBER_GAP = 15; //数字之间的间隙
+    var u=0.5; //碰撞能量损耗系数
+    var context; //Canvas绘制上下文
+    var balls = []; //存储彩色的小球
+    const colors = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"]; //彩色小球的颜色
+    var currentNums = []; //屏幕显示的8个字符
+    var digit =
+        [
+            [
+                [0,0,1,1,1,0,0],
+                [0,1,1,0,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,0,1,1,0],
+                [0,0,1,1,1,0,0]
+            ],//0
+            [
+                [0,0,0,1,1,0,0],
+                [0,1,1,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [1,1,1,1,1,1,1]
+            ],//1
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,0,0,0],
+                [0,1,1,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,0,0,0,1,1],
+                [1,1,1,1,1,1,1]
+            ],//2
+            [
+                [1,1,1,1,1,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,1,0,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//3
+            [
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,1,0],
+                [0,0,1,1,1,1,0],
+                [0,1,1,0,1,1,0],
+                [1,1,0,0,1,1,0],
+                [1,1,1,1,1,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,1,1]
+            ],//4
+            [
+                [1,1,1,1,1,1,1],
+                [1,1,0,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,1,1,1,1,0],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//5
+            [
+                [0,0,0,0,1,1,0],
+                [0,0,1,1,0,0,0],
+                [0,1,1,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,0,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//6
+            [
+                [1,1,1,1,1,1,1],
+                [1,1,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0]
+            ],//7
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//8
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,1,1,0,0,0,0]
+            ],//9
+            [
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,1,1,0,0],
+                [0,0,1,1,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,1,1,0,0],
+                [0,0,1,1,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+            ]//:
+        ];
+
+    function drawDatetime(cxt){
+        var nums = [];
+
+        context.fillStyle="rgba(255,255,255,0.9)"
+        var date = new Date();
+        var offsetX = 50, offsetY = 30;
+        var hours = date.getHours();
+        var num1 = Math.floor(hours/10);
+        var num2 = hours%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+        nums.push({num: 10}); //冒号
+        var minutes = date.getMinutes();
+        var num1 = Math.floor(minutes/10);
+        var num2 = minutes%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+        nums.push({num: 10}); //冒号
+        var seconds = date.getSeconds();
+        var num1 = Math.floor(seconds/10);
+        var num2 = seconds%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+
+        for(var x = 0;x<nums.length;x++){
+            nums[x].offsetX = offsetX;
+            offsetX = drawSingleNumber(offsetX,offsetY, nums[x].num,cxt);
+            //两个数字连一块，应该间隔一些距离
+            if(x<nums.length-1){
+                if((nums[x].num!=10) &&(nums[x+1].num!=10)){
+                    offsetX+=NUMBER_GAP;
+                }
+            }
+        }
+
+        //说明这是初始化
+        if(currentNums.length ==0){
+            currentNums = nums;
+        }else{
+            //进行比较
+            for(var index = 0;index<currentNums.length;index++){
+                if(currentNums[index].num!=nums[index].num){
+                    //不一样时，添加彩色小球
+                    addBalls(nums[index]);
+                    currentNums[index].num=nums[index].num;
+                }
+            }
+        }
+        renderBalls(cxt);
+        updateBalls();
+
+        return date;
+    }
+
+    function addBalls (item) {
+        var num = item.num;
+        var numMatrix = digit[num];
+        for(var y = 0;y<numMatrix.length;y++){
+            for(var x = 0;x<numMatrix[y].length;x++){
+                if(numMatrix[y][x]==1){
+                    var ball={
+                        offsetX:item.offsetX+RADIUS+RADIUS*2*x,
+                        offsetY:30+RADIUS+RADIUS*2*y,
+                        color:colors[Math.floor(Math.random()*colors.length)],
+                        g:1.5+Math.random(),
+                        vx:Math.pow(-1, Math.ceil(Math.random()*10))*4+Math.random(),
+                        vy:-5
+                    }
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    function renderBalls(cxt){
+        for(var index = 0;index<balls.length;index++){
+            cxt.beginPath();
+            cxt.fillStyle=balls[index].color;
+            cxt.arc(balls[index].offsetX, balls[index].offsetY, RADIUS, 0, 2*Math.PI);
+            cxt.fill();
+        }
+    }
+
+    function updateBalls () {
+        var i =0;
+        for(var index = 0;index<balls.length;index++){
+            var ball = balls[index];
+            ball.offsetX += ball.vx;
+            ball.offsetY += ball.vy;
+            ball.vy+=ball.g;
+            if(ball.offsetY > (WINDOW_HEIGHT-RADIUS)){
+                ball.offsetY= WINDOW_HEIGHT-RADIUS;
+                ball.vy=-ball.vy*u;
+            }
+            if(ball.offsetX>RADIUS&&ball.offsetX<(WINDOW_WIDTH-RADIUS)){
+
+                balls[i]=balls[index];
+                i++;
+            }
+        }
+        //去除出边界的球
+        for(;i<balls.length;i++){
+            balls.pop();
+        }
+    }
+    function drawSingleNumber(offsetX, offsetY, num, cxt){
+        var numMatrix = digit[num];
+        for(var y = 0;y<numMatrix.length;y++){
+            for(var x = 0;x<numMatrix[y].length;x++){
+                if(numMatrix[y][x]==1){
+                    cxt.beginPath();
+                    cxt.arc(offsetX+RADIUS+RADIUS*2*x,offsetY+RADIUS+RADIUS*2*y,RADIUS,0,2*Math.PI);
+                    cxt.fill();
+                }
+            }
+        }
+        cxt.beginPath();
+        offsetX += numMatrix[0].length*RADIUS*2;
+        return offsetX;
+    }
+
+    var canvas = document.getElementById("canvas");
+    canvas.width=WINDOW_WIDTH;
+    canvas.height=WINDOW_HEIGHT;
+    context = canvas.getContext("2d");
+
+    //记录当前绘制的时刻
+    var currentDate = new Date();
+
+    setInterval(function(){
+        //清空整个Canvas，重新绘制内容
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+        drawDatetime(context);
+    }, 50)
+})();
+</script>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2016/07/Synology-Tip-G/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="EDEN">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑪利歐的部落格">
+      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[教學] Synology NAS Tip G. 架站篇 | 瑪利歐的部落格">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [教學] Synology NAS Tip G. 架站篇
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2016-07-27 13:35:00" itemprop="dateCreated datePublished" datetime="2016-07-27T13:35:00+08:00">2016-07-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/teaching/synology/" itemprop="url" rel="index"><span itemprop="name">Synology NAS</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2016/07/Synology-Tip-G/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] Synology NAS Tip G. 架站篇" title="閱讀次數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>3.1k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>※本文章為<a href="https://ed521.github.io/2016/07/Synology-DS916plus/" target="_blank">NAS教戰手冊，讓Synology DS916+ “易”發不可收拾！</a>之分支※</p>
+<p><a href="#G-1">G-1 利用WordPress架設部落格</a><br><a href="#G-2">G-2 利用Discuz架設論壇</a><br><a href="#G-3">G-3 使用自製網頁架站</a></p>
+<span id="more"></span>
+
+<p>在『<span style="color: #800080;">Web Station</span>』的「<span style="color: #0000ff;">一般設定</span>」裡，有一個叫”<span style="color: #0000ff;">啟動個人網站</span>“的功能，開啟後每個使用者都能把架站用的檔案上傳到家目錄內的”www資料夾”，來建立個人網站。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270626/original/eb4f2d2da07affc98672a785196b83c9.png" />
+
+<p><a id="G-1" name="G-1"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270671/original/fb6cd9bef13e097f492a6d85b5932bea.png" /></p>
+<p>Synology本身有提供WordPress的套件，安裝一下就可以使用了；不過為了考量安裝一個以上WordPress的使用者，這裡提供”利用安裝檔安裝”的教學。</p>
+<p>在架站之前需要先到『<span style="color: #800080;">套件中心</span>』安裝『<span style="color: #800080;">Web Station</span>』和『<span style="color: #800080;">phpMyAdmin</span>』。(安裝『<span style="color: #800080;">Web Station</span>』時，『<span style="color: #800080;">PHP 5.6</span>』會要求一起安裝)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270627/original/d35420599e76f001dff9f0e9166bd7cf.png" />
+
+<p>這時NAS會幫我們建立一個web資料夾，裡面會有一個index.html檔。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270628/original/9bfd36fdc3cace28f1620001be9ea571.png" />
+
+<p>這個index.html是什麼呢？只要將網址列的port:5000拿掉，也就是192.168.0.121，就能看到這個網頁了唷！(輸入sy916.ddns.net也會有相同結果)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270629/original/84231ed1d0709c8b224dc5d06c6f779d.png" />
+
+<p>為了要安裝最新的WordPress，請到它的<a href="https://tw.WordPress.org/" target="_blank">官方網址</a>，將最新的安裝檔下載下來。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270630/original/225b891f6576da679ffc81b088ab0ac7.png" />
+
+<p>接著將此檔案上傳到web資料夾內解壓縮。(如果要輸入NAS網址就顯示此部落格，就必須放在路徑\web下)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270631/original/b97b73b9cbe74135f7e8d6a3f7747fa0.png" />
+
+<p>不過解壓縮後會出現一個”WordPress”資料夾，需將裡面的檔案全部剪下，丟到前面的路徑(也就是路徑\web)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270632/original/399b3e3c9ee69944aa32b5a6407a18fe.png" />
+
+<p>把WordPress空資料夾和原本的index.html檔刪除(<span style="color: #800000;">裡面會有index.html和index.php，要刪除的是index.html</span>，注意別刪錯了!!!)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270633/original/ccb3a62a01f3274e7b43ad1e267c9ec3.png" />
+
+<p>輸入192.168.0.121(區網)或是sy916.ddns.net(區網or外網)，WordPress的安裝畫面就出現了！(如果還是出現原本預設網站，請試著<span style="color: #800000;">重新整理網頁</span>)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270634/original/e234e7020a3cc0a0b11785a8f83c9fe0.png" />
+
+<p>不過在安裝WordPress之前，我們會需要先到phpMyAdmin建立WordPress的專屬資料庫。請到DSM開啟『<span style="color: #800080;">phpMyAdmin</span>』套件(會開新分頁)，<span style="color: #800000;">帳號輸入root(密碼欄位空白)來登入</span>。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270635/original/ad9c1a7b0a18537c2f00b24694bd6ba8.png" />
+
+<p>成功登入後，到「<span style="color: #0000ff;">使用者帳號</span>」頁面，為root帳號新增密碼；先到主機名稱”127.0.0.1”，按一下旁邊的”編輯權限”。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270636/original/a1614f133412cca3d0fdf2e6dbcc7aee.png" />
+
+<p>輸入密碼後，按下右下角的”<span style="color: #0000ff;">執行</span>“。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270637/original/6c6d93d55907d0287dfbf17cefb0da06.png" />
+
+<p>接著主機名稱為”<span style="color: #000000;">localhost”</span>也要建立密碼(可以輸入相同的)，確認兩個主機名稱的密碼皆為”是”即可。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270638/original/038006717ca4e6acd2976bb807a72623.png" />
+
+<p>到「<span style="color: #0000ff;">資料庫</span>」頁面，建立一個名為”WordPress”的資料庫(名稱自訂)，編碼選擇”utf8_unicode_ci”，按下”<span style="color: #0000ff;">建立</span>“後就能關閉此分頁。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270639/original/5f4a4fc1008751922b8d249c4d3ac62d.png" />
+
+<p>由於web伺服器是使用一個叫<span style="color: #800000;">http的使用者群組</span>來存放資料，需要提供讀寫web資料夾的權限，因此進入『<span style="color: #800080;">控制台</span>』→「<span style="color: #0000ff;">使用者群組</span>」，選擇”http”群組按下”<span style="color: #0000ff;">編輯</span>“，再到「<span style="color: #0000ff;">權限</span>」頁面並把web資料夾設為”<span style="color: #0000ff;">可讀寫</span>“狀態。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270640/original/bf170ec0db33cf180fee22c871ba1cf7.png" />
+
+<p>回到WordPress的安裝畫面，按下”<span style="color: #0000ff;">衝吧</span>“進行下一步；輸入剛才建立的資料庫名稱，以及登入phpMyAdmin時所用的帳密(帳號為root)，後兩個設定不用更動。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270641/original/cff8a209b1e64b254810d8a3f062fbd2.png" />
+
+<p>成功的話會出現以下畫面，按下”<span style="color: #0000ff;">開始安裝</span>“繼續。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270642/original/ffa083b56da8e29733fa2029732e93fc.png" />
+
+<p>若出現下圖，就代表<span style="color: #0000ff;"><span style="color: #800000;">尚未提供WordPress”讀寫web資料夾的權限”</span></span>，請將http的使用者群組對於web資料夾的讀寫權限打開。(上上上張圖)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270643/original/64da8ee4bb10db54851c2321bbb8a2c1.png" />
+
+<p>輸入網站標題、管理帳密和E-mail。(WordPress控制台還可以做更改)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270644/original/e5ac7c46e1fec77341092bebdc0e039d.png" />
+
+<p>WordPress安裝完成！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270645/original/c1e5dbe8579e22911dc66b405d7f1b72.png" />
+
+<p>下圖為WordPress登入介面；如果要進入此登入介面，只要在網址後面加上&#x2F;wp-login.php。(如：<a target="_blank" rel="noopener" href="http://sy916.ddns.net/wp-login.php">http://sy916.ddns.net/wp-login.php</a>)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270646/original/df4737cea94fcd0ac54d715d95d7c363.png" />
+
+<p>下面就是剛架設好的部落格。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270647/original/03add6d90c5ff696be012b3a4cefec7a.png" />
+
+<p>WordPress的控制台：在這裡可以新增文章、外掛，修改主題等。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270648/original/65d3f8a4d787192a869f7273fafe1b29.png" />
+
+<p>《<span style="color: #800080;">Wordpress</span>》也有自己的app。打開app後，點選”<span style="color: #0000ff;">新增網站</span>“ → “<span style="color: #0000ff;">新增自助託管的網站</span>“。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270649/original/fbc914613c891800817dea71bfd1d35c.gif" />
+
+<p>在登入介面輸入帳號密碼(wordpress的登入帳密)，以及wordpress自架的網址(下左圖)；登入後，就會出現管理頁面了唷(下右圖)！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270650/original/91895812130e96a53a9b03eb7b6adde2.png" />
+
+<p>app版的《<span style="color: #800080;">Wordpress</span>》也能編輯&#x2F;新增&#x2F;刪除文章(下左圖)，原則上，功能不比網頁版少。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270651/original/6e26c694cca410143e3057d2e415e110.png" />
+
+<p>最後，筆者提供幾個好用的外掛：</p>
+<p><strong><span style="color: #008000;">Akismet</span></strong>: 偵測垃圾留言並刪除。</p>
+<p><span style="color: #008000;"><strong>AutoFTP</strong></span>: 在更新外掛、主題都需要輸入IP位址和FTP帳密，這個外掛只需輸入一次，未來就不用再輸入。</p>
+<p><span style="color: #008000;"><strong>Better Delete Revision</strong></span>: 由於更新文章內容時都會把前面的版本保留，此外掛能將不要的舊版本文章刪除。</p>
+<p><span style="color: #008000;"><strong>Favicon XT-Manager</strong></span>: 為部落格增加專屬LOGO。(也就是網址列上方，該分頁名稱旁的小圖示)</p>
+<p><span style="color: #008000;"><strong>MP3-jPlayer</strong></span>: 為部落格建立一個音樂播放器(會放在網誌側邊)。</p>
+<p><span style="color: #008000;"><strong>UpdraftPlus - Backup&#x2F;Restore</strong></span>: 將部落格排程備份各大雲端空間或NAS中。</p>
+<p><a id="G-2" name="G-2"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270672/original/831635884ffa632d9d433eedfd34aac9.png" /></p>
+<p>先到Discuz!的<a href="http://www.comsenz.com/downloads/install/discuzx" target="_blank">下載頁面</a>把”繁體UTF-8”的安裝檔下載。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270652/original/38d2588d55ea71201a593504549b911c.png" />
+
+<p>到web資料夾建立一個資料夾，把安裝檔上傳至此並解壓縮。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270653/original/ab605a65bd189e7e13e475af7431f621.png" />
+
+<p>解壓縮完會有三個資料夾，不過要用的只有upload資料夾，所以把upload裡面的檔案全部剪下，丟到前面的路徑。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270654/original/a7fddb5c2d2c12236917ee674dc0a04a.png" />
+
+<p>這時會有用不到的upload空資料夾、readme資料夾、utility資料夾和安裝檔，將它們通通刪除。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270655/original/5b345d56b2d56e7a346086c4590bd254.png" />
+
+<p>由於剛剛架設WordPress是使用預設開啟的主機(也就是輸入網址直連的主機)，其餘的web伺服器都要設定網址名稱(此網址需註冊過DDNS，詳見 <a href="https://ed521.github.io/2016/07/Synology-Tip-B/#B-3" target="_blank">B-3 DDNS設定</a>)和主目錄(檔案安裝目錄)，因此開啟『<span style="color: #800080;">Web Station</span>』→「<span style="color: #0000ff;">虛擬主機</span>」→”<span style="color: #0000ff;">新增</span>“來新增一個web主機。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270656/original/cc2b3f5fbef66970086c2e0e0d135e70.png" />
+
+<p>接著進入『<span style="color: #800080;">phpMyAdmin</span>』→「<span style="color: #0000ff;">資料庫</span>」頁面，建立一個名為”Discuz”的資料庫(名稱自訂)，編碼選擇”utf8_unicode_ci”，按下”建立”後就能關閉此分頁。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270657/original/76ad6e99bc6bb283f9a7d7c914784840.png" />
+
+<p>輸入網址(例如剛設定的DDNS為dis916.synology.me)，就可以看到Discuz的安裝畫面了！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270658/original/0a8c6024c7cf021d256239e88bf47e8c.png" />
+
+<p><span style="color: #ff6600;"><strong>【以下為當前讀寫狀態為”X”的情形，若為”V”請忽略】</strong></span><br>按下”我同意”後，如果出現讀寫狀態為”不可寫”，就代表http使用者群組對於web資料夾只有唯讀或是禁止存取的權限。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270659/original/5089f6735b705b757a56013f8be62ac5.png" />
+
+<p>進入『<span style="color: #800080;">控制台</span>』→「<span style="color: #0000ff;">使用者群組</span>」，選擇”http”群組按下”<span style="color: #0000ff;">編輯</span>“，進入「<span style="color: #0000ff;">權限</span>」頁面並把web資料夾設為”<span style="color: #0000ff;">可讀寫</span>“狀態。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270660/original/b2056fa47bc5e0b519978c6b3b89e14e.png" />
+
+<p>重新整理頁面後，當前狀態均為綠色勾勾，才可進行以下步驟唷！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270661/original/be82e55a799f3391b6451cd9fe84c825.png" />
+
+<p>設置運行環境，選擇第一個”<span style="color: #0000ff;">全新安裝</span>“，點選下一步。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270662/original/9133367ea83518331cc13cd5fcd4bd8d.png" />
+
+<p>輸入藍色框框內的相關資訊，包含剛建立的資料庫名稱、phpMyAdmin登入帳密，以及管理員帳密和E-mail。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270663/original/9c741144a7cdc1ee0fc5d5f94ce04f08.png" />
+
+<p>約需幾分鐘的時間安裝資料庫。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270664/original/8d09945ebd31a4e83e1e3f955b1769a4.png" />
+
+<p>若成功安裝，會出現以下畫面；按一下右下角”<span style="color: #0000ff;">您的論壇已完成安裝，點此訪問</span>“。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270665/original/6be698fc069168c322301e658cb25143.png" />
+
+<p>剛架好論壇就長這樣，有沒有很熟悉呀？因為許多網路上自架的論壇都是使用Discuz，再修改一下而來的。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270666/original/e19732b909df2a0405057866183bbe34.png" />
+
+<p>如果論壇要與別人不同，控制台內有許多介面、用戶積分等設定可更改。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270667/original/228a72e2569fb23826f5cd7cc65f1e9b.png" />
+
+<p><a id="G-3" name="G-3"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270673/original/b495fec65ff28cc3806a249833fab5fe.png" /></p>
+<p>除了上述兩種現成的架站方式，應該也有人會用Dreamweaver等網頁製作軟體，做出來的網頁一樣能放到網路上唷！首先只要再web資料夾內建立一個資料夾，並且把所有網頁會用到的檔案上傳。要注意的是，這些檔案中，一定要有一個叫index的網頁檔。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270668/original/e1b973d7358ec0b8f40e44aafef6b3fa.png" />
+
+<p>開啟『<span style="color: #800080;">Web Station</span>』→「<span style="color: #0000ff;">虛擬主機</span>」→”<span style="color: #0000ff;">新增</span>“來新增一個web主機，輸入藍色框框內的網址(該網址需註冊過DDNS，詳見 <a href="https://ed521.github.io/2016/07/Synology-Tip-B/#B-3" target="_blank">B-3 DDNS設定</a>)和主目錄(檔案路徑)。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270669/original/4885aedbbdfbecd0329f2b6d53cfbc29.png" />
+
+<p>打開剛輸入的網站就可以看到剛架好的網頁了唷！(此為筆者高中時製作的班級電子書)</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2019/12/270670/original/c39748884233ba898f146e6ff9b6a795.png" />
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/synology/" rel="tag"># Synology NAS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2016/07/Synology-Tip-H/" rel="prev" title="[教學] Synology NAS Tip H. 架VPN/郵件伺服器篇">
+                  <i class="fa fa-chevron-left"></i> [教學] Synology NAS Tip H. 架VPN/郵件伺服器篇
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2016/07/Synology-Tip-F/" rel="next" title="[教學] Synology NAS Tip F. 備份與同步篇">
+                  [教學] Synology NAS Tip F. 備份與同步篇 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"YoLycdOLhFPQmvl9mi5Qnsge-gzGzoHsz","app_key":"YwbCQICgq3ec30JjffgxRlR6","server_url":null,"security":false}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ed521","repo":"comments","client_id":"ede825d02e67d9c5edc3","client_secret":"78710c0d61a5890dc4769c8abca4021a80568848","admin_user":"ed521","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"553b644d0468e7852ff7fb929b6db899"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+  
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>  
+  
+</body>
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#43a0f7"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/android-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/android-icon-16x16.png">
+  <link rel="mask-icon" href="/images/android-icon-192x192.svg" color="#43a0f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ed521.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄[教學] APla">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹">
+<meta property="og:url" content="https://ed521.github.io/2020/05/hexo-folder-theme/index.html">
+<meta property="og:site_name" content="瑪利歐的部落格">
+<meta property="og:description" content="Hexo 部落格教學文系列：[教學] 使用 GitHub Pages + Hexo 來架設個人部落格[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具[教學] 撰寫 Hexo 文章 - Markdown 語法大全[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄[教學] APla">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/02/273242/original/49f14c0059598b1e72ef0e4421004044.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276183/original/795f5f7f0ebe9efe352c4e70c8b9efbc.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276184/original/14d608e29f2715c1d6a2e6ae4529a246.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276185/original/c598c99ec673e7d506a6aa87d66b320c.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276186/original/1708d070392bc8345ceaf07e90450e25.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276187/original/7f791cb982492f4bd9c9326dafaf0f14.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276188/original/39f0acdc686a21217fdb0939765a95be.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276189/original/e67c60dfc1004ce17f019df28c78f283.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276190/original/c3e6b2af39a956951252a97355691ec2.gif">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276191/original/4314428276aa179920791879b5e2e4da.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276192/original/549ff3a38f4cff3a072ac7c0750f3d51.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276193/original/cbfef5b56d99235006161e1822e57595.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276194/original/04621a5eef86aecdec8c1c6b0b391068.png">
+<meta property="article:published_time" content="2020-05-01T18:00:00.000Z">
+<meta property="article:modified_time" content="2020-05-01T18:00:00.000Z">
+<meta property="article:author" content="EDEN">
+<meta property="article:tag" content="Hexo部落格">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn1-t17.techbang.com/system/attached_images/2020/02/273242/original/49f14c0059598b1e72ef0e4421004044.png">
+
+
+<link rel="canonical" href="https://ed521.github.io/2020/05/hexo-folder-theme/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://ed521.github.io/2020/05/hexo-folder-theme/","path":"2020/05/hexo-folder-theme/","title":"[教學] Hexo 資料夾/檔案架構、佈景主題修改介紹"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[教學] Hexo 資料夾/檔案架構、佈景主題修改介紹 | 瑪利歐的部落格</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-61473305-3","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+<script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">瑪利歐的部落格</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">17</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">23</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">64</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-%E8%B3%87%E6%96%99%E5%A4%BE-x2F-%E6%AA%94%E6%A1%88%E6%9E%B6%E6%A7%8B"><span class="nav-number">1.</span> <span class="nav-text">Hexo 資料夾&#x2F;檔案架構</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B9%E7%9B%AE%E9%8C%84-config-yml-%E4%BF%AE%E6%94%B9%E6%95%99%E5%AD%B8"><span class="nav-number">2.</span> <span class="nav-text">根目錄 _config.yml 修改教學</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%8F%9B%E4%B8%BB%E9%A1%8C%EF%BC%9A%E4%BB%A5-Stun-%E4%B8%BB%E9%A1%8C%E7%82%BA%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">更換主題：以 Stun 主題為例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%88%E6%99%AF%E4%B8%BB%E9%A1%8C-config-yml-%E4%BF%AE%E6%94%B9%E6%95%99%E5%AD%B8%EF%BC%9A%E4%BB%A5-Stun-%E4%B8%BB%E9%A1%8C%E7%82%BA%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">佈景主題 _config.yml 修改教學：以 Stun 主題為例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%84%E9%8C%84%EF%BC%9A%E5%AF%A6%E7%94%A8%E6%95%99%E5%AD%B8"><span class="nav-number">5.</span> <span class="nav-text">附錄：實用教學</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%BA%E4%BD%95%E4%B8%8D%E5%BB%BA%E8%AD%B0%E7%9B%B4%E6%8E%A5%E5%8D%87%E7%B4%9A-Hexo-%E7%89%88%E6%9C%AC%EF%BC%9F"><span class="nav-number">5.1.</span> <span class="nav-text">為何不建議直接升級 Hexo 版本？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#source-%E8%B3%87%E6%96%99%E5%A4%BE"><span class="nav-number">5.2.</span> <span class="nav-text">source 資料夾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%88%E6%99%AF%E4%B8%BB%E9%A1%8C%E5%A6%82%E4%BD%95%E6%8C%91%E9%81%B8%EF%BC%9F"><span class="nav-number">5.3.</span> <span class="nav-text">佈景主題如何挑選？</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="EDEN"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">EDEN</p>
+  <div class="site-description" itemprop="description">文章多以開箱文、教學文為主~~</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+
+<div class="links-of-blogroll motion-element links-of-blogroll-block">
+<br>
+<div class="links-of-blogroll-title">
+    <!-- 設定你要的fa fa icon-->
+    <i class="fa fa-history fa-" aria-hidden="true"></i>
+    最新文章
+</div>
+<ul class="links-of-blogroll-list">
+    <!---->
+    
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-04-19T20:38:00+08:00">
+        04/19
+      </time>-->
+      • <a href="/2021/04/PC-cillin-2021/" title="[教學] 守護電腦「琳」死角！PC-cillin 2021 雲端版防毒軟體，讓 C 琳全面照顧您的上網裝置！">[教學] 守護電腦「琳」死角！PC-cillin 2021 雲端版防毒軟體，讓 C 琳全面照顧您的上網裝置！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-01-10T23:50:00+08:00">
+        01/10
+      </time>-->
+      • <a href="/2021/01/Epson-Moverio-BT-40/" title="[開箱] Epson Moverio BT-40 智慧眼鏡，超大螢幕隨時隨地辦公追劇毫不受限！">[開箱] Epson Moverio BT-40 智慧眼鏡，超大螢幕隨時隨地辦公追劇毫不受限！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-12-28T03:00:00+08:00">
+        12/28
+      </time>-->
+      • <a href="/2020/12/DSM7-with-Synology-Photos/" title="[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！">[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-11-24T13:17:20+08:00">
+        11/24
+      </time>-->
+      • <a href="/2020/11/hexo-aplayer/" title="[教學] APlayer：為 Hexo 部落格加入個人音樂播放器">[教學] APlayer：為 Hexo 部落格加入個人音樂播放器</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-11-19T08:45:52+08:00">
+        11/19
+      </time>-->
+      • <a href="/2020/11/dream-glass-4k/" title="[心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析">[心得] Dream Glass 4K AR 智慧眼鏡體驗心得及優缺點分析</a>
+      <br>
+    </li>
+    
+	<br>
+</ul>
+</div>
+
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">目前瀏覽器不支援canvas，請更換瀏覽器後再試</canvas>
+</div>
+<script>
+(function(){
+    var WINDOW_WIDTH = 860;
+    var WINDOW_HEIGHT = 250;
+    var RADIUS = 7; //球半径
+    var NUMBER_GAP = 15; //数字之间的间隙
+    var u=0.5; //碰撞能量损耗系数
+    var context; //Canvas绘制上下文
+    var balls = []; //存储彩色的小球
+    const colors = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"]; //彩色小球的颜色
+    var currentNums = []; //屏幕显示的8个字符
+    var digit =
+        [
+            [
+                [0,0,1,1,1,0,0],
+                [0,1,1,0,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,0,1,1,0],
+                [0,0,1,1,1,0,0]
+            ],//0
+            [
+                [0,0,0,1,1,0,0],
+                [0,1,1,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [1,1,1,1,1,1,1]
+            ],//1
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,0,0,0],
+                [0,1,1,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,0,0,0,1,1],
+                [1,1,1,1,1,1,1]
+            ],//2
+            [
+                [1,1,1,1,1,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,1,0,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//3
+            [
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,1,0],
+                [0,0,1,1,1,1,0],
+                [0,1,1,0,1,1,0],
+                [1,1,0,0,1,1,0],
+                [1,1,1,1,1,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,1,1]
+            ],//4
+            [
+                [1,1,1,1,1,1,1],
+                [1,1,0,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,1,1,1,1,0],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//5
+            [
+                [0,0,0,0,1,1,0],
+                [0,0,1,1,0,0,0],
+                [0,1,1,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,0,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//6
+            [
+                [1,1,1,1,1,1,1],
+                [1,1,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0]
+            ],//7
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//8
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,1,1,0,0,0,0]
+            ],//9
+            [
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,1,1,0,0],
+                [0,0,1,1,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,1,1,0,0],
+                [0,0,1,1,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+            ]//:
+        ];
+
+    function drawDatetime(cxt){
+        var nums = [];
+
+        context.fillStyle="rgba(255,255,255,0.9)"
+        var date = new Date();
+        var offsetX = 50, offsetY = 30;
+        var hours = date.getHours();
+        var num1 = Math.floor(hours/10);
+        var num2 = hours%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+        nums.push({num: 10}); //冒号
+        var minutes = date.getMinutes();
+        var num1 = Math.floor(minutes/10);
+        var num2 = minutes%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+        nums.push({num: 10}); //冒号
+        var seconds = date.getSeconds();
+        var num1 = Math.floor(seconds/10);
+        var num2 = seconds%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+
+        for(var x = 0;x<nums.length;x++){
+            nums[x].offsetX = offsetX;
+            offsetX = drawSingleNumber(offsetX,offsetY, nums[x].num,cxt);
+            //两个数字连一块，应该间隔一些距离
+            if(x<nums.length-1){
+                if((nums[x].num!=10) &&(nums[x+1].num!=10)){
+                    offsetX+=NUMBER_GAP;
+                }
+            }
+        }
+
+        //说明这是初始化
+        if(currentNums.length ==0){
+            currentNums = nums;
+        }else{
+            //进行比较
+            for(var index = 0;index<currentNums.length;index++){
+                if(currentNums[index].num!=nums[index].num){
+                    //不一样时，添加彩色小球
+                    addBalls(nums[index]);
+                    currentNums[index].num=nums[index].num;
+                }
+            }
+        }
+        renderBalls(cxt);
+        updateBalls();
+
+        return date;
+    }
+
+    function addBalls (item) {
+        var num = item.num;
+        var numMatrix = digit[num];
+        for(var y = 0;y<numMatrix.length;y++){
+            for(var x = 0;x<numMatrix[y].length;x++){
+                if(numMatrix[y][x]==1){
+                    var ball={
+                        offsetX:item.offsetX+RADIUS+RADIUS*2*x,
+                        offsetY:30+RADIUS+RADIUS*2*y,
+                        color:colors[Math.floor(Math.random()*colors.length)],
+                        g:1.5+Math.random(),
+                        vx:Math.pow(-1, Math.ceil(Math.random()*10))*4+Math.random(),
+                        vy:-5
+                    }
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    function renderBalls(cxt){
+        for(var index = 0;index<balls.length;index++){
+            cxt.beginPath();
+            cxt.fillStyle=balls[index].color;
+            cxt.arc(balls[index].offsetX, balls[index].offsetY, RADIUS, 0, 2*Math.PI);
+            cxt.fill();
+        }
+    }
+
+    function updateBalls () {
+        var i =0;
+        for(var index = 0;index<balls.length;index++){
+            var ball = balls[index];
+            ball.offsetX += ball.vx;
+            ball.offsetY += ball.vy;
+            ball.vy+=ball.g;
+            if(ball.offsetY > (WINDOW_HEIGHT-RADIUS)){
+                ball.offsetY= WINDOW_HEIGHT-RADIUS;
+                ball.vy=-ball.vy*u;
+            }
+            if(ball.offsetX>RADIUS&&ball.offsetX<(WINDOW_WIDTH-RADIUS)){
+
+                balls[i]=balls[index];
+                i++;
+            }
+        }
+        //去除出边界的球
+        for(;i<balls.length;i++){
+            balls.pop();
+        }
+    }
+    function drawSingleNumber(offsetX, offsetY, num, cxt){
+        var numMatrix = digit[num];
+        for(var y = 0;y<numMatrix.length;y++){
+            for(var x = 0;x<numMatrix[y].length;x++){
+                if(numMatrix[y][x]==1){
+                    cxt.beginPath();
+                    cxt.arc(offsetX+RADIUS+RADIUS*2*x,offsetY+RADIUS+RADIUS*2*y,RADIUS,0,2*Math.PI);
+                    cxt.fill();
+                }
+            }
+        }
+        cxt.beginPath();
+        offsetX += numMatrix[0].length*RADIUS*2;
+        return offsetX;
+    }
+
+    var canvas = document.getElementById("canvas");
+    canvas.width=WINDOW_WIDTH;
+    canvas.height=WINDOW_HEIGHT;
+    context = canvas.getContext("2d");
+
+    //记录当前绘制的时刻
+    var currentDate = new Date();
+
+    setInterval(function(){
+        //清空整个Canvas，重新绘制内容
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+        drawDatetime(context);
+    }, 50)
+})();
+</script>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2020/05/hexo-folder-theme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="EDEN">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑪利歐的部落格">
+      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[教學] Hexo 資料夾/檔案架構、佈景主題修改介紹 | 瑪利歐的部落格">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [教學] Hexo 資料夾/檔案架構、佈景主題修改介紹
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2020-05-02 02:00:00" itemprop="dateCreated datePublished" datetime="2020-05-02T02:00:00+08:00">2020-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/teaching/" itemprop="url" rel="index"><span itemprop="name">教學文</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/teaching/hexoblog/" itemprop="url" rel="index"><span itemprop="name">Hexo部落格</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2020/05/hexo-folder-theme/" class="post-meta-item leancloud_visitors" data-flag-title="[教學] Hexo 資料夾/檔案架構、佈景主題修改介紹" title="閱讀次數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>3.9k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Hexo 部落格教學文系列：<br><a href="https://ed521.github.io/2019/07/hexo-install/">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格</a><br><a href="https://ed521.github.io/2019/08/hexo-admin/">[教學] 我的第一篇 Hexo 文章 - 使用 hexo-admin 後台管理工具</a><br><a href="https://ed521.github.io/2019/08/hexo-markdown/">[教學] 撰寫 Hexo 文章 - Markdown 語法大全</a><br><a href="https://ed521.github.io/2020/05/hexo-folder-theme/">[教學] Hexo 資料夾&#x2F;檔案架構、佈景主題修改介紹</a><br><a href="https://ed521.github.io/2020/05/hexo-next-upgrade/">[教學] Hexo 筆記 - Next 主題升級、客製功能及樣板編輯全記錄</a><br><a href="https://ed521.github.io/2020/11/hexo-aplayer/">[教學] APlayer：為 Hexo 部落格加入個人音樂播放器</a></p>
+<p>本章節將介紹本地端 Hexo 部落格的資料夾架構，讓使用者<font color=#800000>能更清楚地知道哪些資料夾和檔案的用途是什麼，或是要客製化部落格或修改文章時該怎麼做。</font>此外，Hexo 部落格的內建主題為 Landscape，說實在並不太好看；而官方提供了<a target="_blank" rel="noopener" href="https://hexo.io/themes/">數百種的佈景主題</a>供使用者來更換，讓自己的部落格能和其他人與眾不同。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="Hexo-資料夾-x2F-檔案架構"><a href="#Hexo-資料夾-x2F-檔案架構" class="headerlink" title="Hexo 資料夾&#x2F;檔案架構"></a><font color=#0000FF>Hexo 資料夾&#x2F;檔案架構</font></h1><p>我們打開電腦裡 Hexo 資料夾後，可以看到以下架構（資料夾以<strong>粗體</strong>顯示，這裡僅列出重要的架構）：</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/02/273242/original/49f14c0059598b1e72ef0e4421004044.png"></p>
+<p><strong>myblog（根目錄）</strong><br>├─ <strong>.deploy_git</strong><br>├─ <strong>node_modules</strong><br>├─ <strong>public</strong>　<em>&#x2F;&#x2F;暫存的 push 資料夾（cmd 輸入 <code>hexo g</code> 會產生該資料夾，輸入 <code>hexo cl</code> 則會被刪除）</em><br>├─ <strong>scaffolds</strong><br>├─ <strong>source</strong>　<em>&#x2F;&#x2F;這個資料夾的所有檔案都會 push 到網站上</em><br>　　├─ <strong>_discarded</strong>　<em>&#x2F;&#x2F;“已刪除”的文章會放在這裡（不會 push）</em><br>　　├─ <strong>_drafts</strong>　<em>&#x2F;&#x2F;“未發布”的文章會放在這裡（不會 push）</em><br>　　├─ <strong>_posts</strong>　<em>&#x2F;&#x2F;“已發布”的文章會放在這裡</em><br>　　├─ <strong>about</strong><br>　　　　└─ index.md　<em>&#x2F;&#x2F;撰寫部落格的[關於]頁面</em><br>　　└─ <strong>categories</strong><br>├─ themes　<em>&#x2F;&#x2F;放置佈景主題的資料夾</em><br>　　└─ <strong>landscape</strong>　<em>&#x2F;&#x2F;內建佈景主題 Landscape</em><br>　　　　├─ <strong>layout, scripts…</strong>　<em>&#x2F;&#x2F;有能力者可以修改主題樣板、增加功能等</em><br>　　　　└─ _config.yml　<em>&#x2F;&#x2F;修改佈景主題設定</em><br>└─ _config.yml　<em>&#x2F;&#x2F;部落格的通用設定，例如：部落格名稱、網址設定等</em></p>
+<p><font color=#800000><strong>注意事項：</strong></font></p>
+<ul>
+<li><font color=#008000><strong>source資料夾</strong></font>和<font color=#008000><strong>public資料夾</strong></font>的關係就相當於<font color=#008000><strong>「source資料夾 -&gt; 原始碼」</strong></font>和<font color=#008000>「public資料夾 -&gt; 執行檔」</font>，因此<font color=#800000>在<strong>public資料夾</strong>新增、修改資料是沒有用的</font>，因為執行 <code>hexo cl</code> 指令又會被刪除掉了；所以要新增檔案或修改文章務必在 <strong>source資料夾</strong> 執行。</li>
+</ul>
+<h1 id="根目錄-config-yml-修改教學"><a href="#根目錄-config-yml-修改教學" class="headerlink" title="根目錄 _config.yml 修改教學"></a><font color=#0000FF>根目錄 _config.yml 修改教學</font></h1><p>PS. 以下文件為 Hexo 3.9.0 版。yml 檔案的註解符號為「#」，參考資料 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/configuration">配置 | Hexo</a></p>
+<p>Site 部分為設定網站最基本的介紹和說明參數。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的部落格</span>  <span class="comment">#網站標題</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">一個抒發本人心情的地方</span>  <span class="comment">#網站副標題</span></span><br><span class="line"><span class="attr">description:</span>   <span class="comment">#網站描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">心情,</span> <span class="string">部落格</span>  <span class="comment">#網站的關鍵詞。使用半角逗號 , 分隔多個關鍵詞。</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">John</span>  <span class="comment">#您的名字</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-TW</span>  <span class="comment">#網站使用的語言</span></span><br><span class="line"><span class="attr">timezone:</span>  <span class="comment">#網站時區，可以留空</span></span><br></pre></td></tr></table></figure>
+
+<p>URL 部分可以到 <a href="https://ed521.github.io/2019/07/hexo-install/#%E5%B0%88%E6%A1%88%E5%90%8D%E7%A8%B1%E5%92%8C%E9%83%A8%E8%90%BD%E6%A0%BC%E7%B6%B2%E5%9D%80%E7%9A%84%E9%97%9C%E4%BF%82">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格 - 專案名稱和部落格網址的關係</a> 這章節查看更詳細介紹。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://xdxd123.github.io/test/</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/test/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
+
+<p>Directory 和 Writing 部分一般來說不用更動。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span>  <span class="comment">#原始檔案資料夾，這個資料夾用於存放您的內容</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span>  <span class="comment">#靜態檔案資料夾，這個資料夾用於存放建立完畢的檔案</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span>  <span class="comment">#標籤資料夾</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span>  <span class="comment">#彙整資料夾</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span>  <span class="comment">#分類資料夾</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span>  <span class="comment">#Include code 資料夾</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span>  <span class="comment">#國際化（i18n）資料夾</span></span><br><span class="line"><span class="attr">skip_render:</span>  <span class="comment">#跳過指定檔案的渲染</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span>  <span class="comment">#新文章的檔案名稱</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span>  <span class="comment">#預設佈局</span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span>  <span class="comment">#把標題轉換為 title case</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="literal">true</span>  <span class="comment">#在新頁籤中開啟連結</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span>  <span class="comment">#把檔案名稱轉換為: 1:小寫或 2:大寫</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span>  <span class="comment">#顯示草稿</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span>  <span class="comment">#啟動 Asset 資料夾</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span>  <span class="comment">#把連結改為與根目錄的相對位址</span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span>  <span class="comment">#顯示未來的文章</span></span><br><span class="line"><span class="attr">highlight:</span>  <span class="comment">#程式碼區塊的設定</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  <span class="comment">#開啟程式碼區塊為高亮</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span>  <span class="comment">#顯示行數</span></span><br><span class="line">  <span class="attr">auto_detect:</span> <span class="literal">false</span>  <span class="comment">#如果未指定語言，則啟用自動檢測</span></span><br><span class="line">  <span class="attr">tab_replace:</span>  <span class="comment">#用 n 個空格替換 tabs；如果值為空，則不會替換 tabs</span></span><br></pre></td></tr></table></figure>
+
+<p>Home page setting 部分可以設定首頁一頁要顯示幾篇文章，或是關閉分頁功能。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Home page setting</span></span><br><span class="line"><span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line"><span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line"><span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">10</span>  <span class="comment">#一頁顯示的文章量 (0 = 關閉分頁功能)</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br></pre></td></tr></table></figure>
+
+<p>Category &amp; Tag 部分比較重要，和文章標題一樣分為「給人看的」和「給網址看的」兩種，例如「給人看的」可以設定中文，而「給網址看的」則設定成英文。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Category &amp; Tag</span></span><br><span class="line"><span class="attr">default_category:</span> <span class="string">uncategorized</span>  <span class="comment">#預設分類</span></span><br><span class="line"><span class="attr">category_map:</span>  <span class="comment">#分類別名，和文章標題類似意思，分為「給人看的」和「給網址看的」</span></span><br><span class="line"><span class="attr">tag_map:</span>  <span class="comment">#標籤別名，分為「給人看的」和「給網址看的」</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># [下面這個是範例，設定方式為 &quot;給人看的&quot;: &quot;給網址看的&quot;]</span></span><br><span class="line"><span class="comment"># Category &amp; Tag</span></span><br><span class="line"><span class="attr">default_category:</span> <span class="string">未分類</span></span><br><span class="line"><span class="attr">category_map:</span></span><br><span class="line">  <span class="string">開箱文:</span> <span class="string">unboxing</span></span><br><span class="line">  <span class="string">未分類:</span> <span class="string">uncategorized</span></span><br><span class="line"><span class="attr">tag_map:</span></span><br><span class="line">  <span class="string">日記:</span> <span class="string">daily</span></span><br><span class="line">  <span class="string">美食:</span> <span class="string">food</span></span><br></pre></td></tr></table></figure>
+
+<p>Date &#x2F; Time format 和 Pagination 部分一般來說不用更動。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Date / Time format</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span></span><br><span class="line"><span class="attr">time_format:</span> <span class="string">HH:mm:ss</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span>  <span class="comment">#一頁顯示的文章量 (0 = 關閉分頁功能)，和首頁顯示的無關。</span></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">page</span>  <span class="comment">#分頁目錄</span></span><br></pre></td></tr></table></figure>
+
+<p>更改主題在這裡修改，請輸入 <strong>&#x2F;根目錄&#x2F;themes&#x2F;</strong> 內的”資料夾名稱”。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">landscape</span>  <span class="comment">#使用主題名稱, 設為 false 表示關閉主題功能</span></span><br></pre></td></tr></table></figure>
+
+<p>部署至網路相關設定，可以到 <a href="https://ed521.github.io/2019/07/hexo-install/#%E5%B0%88%E6%A1%88%E5%90%8D%E7%A8%B1%E5%92%8C%E9%83%A8%E8%90%BD%E6%A0%BC%E7%B6%B2%E5%9D%80%E7%9A%84%E9%97%9C%E4%BF%82">[教學] 使用 GitHub Pages + Hexo 來架設個人部落格 - 設定部署至 GitHub 的資訊</a> 這章節查看更詳細介紹。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/username/username.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="更換主題：以-Stun-主題為例"><a href="#更換主題：以-Stun-主題為例" class="headerlink" title="更換主題：以 Stun 主題為例"></a><font color=#0000FF>更換主題：以 Stun 主題為例</font></h1><p>官方提供了<a target="_blank" rel="noopener" href="https://hexo.io/themes/">數百種的佈景主題</a>供使用者來更換，這裡筆者也隨便選了一種主題：<a target="_blank" rel="noopener" href="https://github.com/liuyib/hexo-theme-stun">Stun</a>，來示範要如何更換主題以及主題的個人化設定。</p>
+<p>首先照著 Stun 主題頁面的要求，在 Hexo 根目錄，輸入以下指令</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276183/original/795f5f7f0ebe9efe352c4e70c8b9efbc.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/liuyib/hexo-theme-stun.git themes/stun</span><br><span class="line">npm install --save hexo-renderer-pug</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276184/original/14d608e29f2715c1d6a2e6ae4529a246.png"></p>
+<p>接著要在根目錄_config.yml 檔案修改 theme 那行為 stun 主題。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">stun</span>  <span class="comment">#這裡修改要用的佈景主題，輸入 /themes/ 下的資料夾名稱</span></span><br></pre></td></tr></table></figure>
+
+<p>更改完主題後，就能輸入以下指令，在本地端 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 就能看到新的主題了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo cl  //清除之前建立的靜態檔案</span><br><span class="line">hexo s  //架設本地端伺服器</span><br></pre></td></tr></table></figure>
+
+<p>只不過筆者遇到了<code>full_url_for is not a function</code>的錯誤訊息：</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276185/original/c598c99ec673e7d506a6aa87d66b320c.png"></p>
+<p>查了一下是因為 hexo 的版本太低（要 4.0.0 以上版本），這時候筆者建議兩種方法，第一種是<strong>換主題</strong>，第二種是<strong>部落格砍掉重練（重新安裝 hexo，然後再把文章、config 檔案移植過來）</strong>，砍掉重練這部分筆者有空會再寫一篇文章。因為使用升級的方式可能有版本相容性問題，而且更新上也不是這麼容易，理由詳見下方附錄。</p>
+<p>如果選擇第二種方式，那就會看到 Stun 佈景主題的部落格：</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276186/original/1708d070392bc8345ceaf07e90450e25.png"></p>
+<p>可是外觀看起來醜醜的，這是因為每個主題也會有 _config.yml 的設定檔可以客製化的緣故！</p>
+<h1 id="佈景主題-config-yml-修改教學：以-Stun-主題為例"><a href="#佈景主題-config-yml-修改教學：以-Stun-主題為例" class="headerlink" title="佈景主題 _config.yml 修改教學：以 Stun 主題為例"></a><font color=#0000FF>佈景主題 _config.yml 修改教學：以 Stun 主題為例</font></h1><p>以 Stun 主題為例，在 <strong>&#x2F;根目錄&#x2F;themes&#x2F;stun</strong> 內會看到 _config.yml 檔案，我們打開來修改它：</p>
+<p>PS. 由於每個佈景主題的 _config.yml 檔案皆不同<font color=#FF0000><strong>（無法直接取代使用）</strong></font>，這裡只會節錄一些比較重要的修改設定，請善用 Ctrl+F 搜尋。</p>
+<p>設定首頁分頁介面，例如要不要打開 categories, tags 分頁等，要打開就是把”#”註解拿掉。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Menu config</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The menu in the website header.</span></span><br><span class="line"><span class="comment"># Value before `||` is the target link, value after `||` is the name of FontAwesome icon.</span></span><br><span class="line"><span class="comment"># Usage(With Icon): `Key: /link/ || fa(s|r|l|d|b) fa-iconname`</span></span><br><span class="line"><span class="comment"># Usage(No Icon)  : `Key: /link/`</span></span><br><span class="line"><span class="comment"># Select your icon name, see: https://fontawesome.com/icons</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fas fa-layer-group</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fas fa-tags</span></span><br><span class="line">  <span class="comment"># You can add a secondary menu like follow.</span></span><br><span class="line">  <span class="comment"># xxx1: javascript:; || fa(s|r|l|d|b) fa-xxx</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Secondary menu</span></span><br><span class="line"><span class="attr">submenu:</span></span><br><span class="line">  <span class="comment"># Add item of secondary menu in here.</span></span><br><span class="line">  <span class="comment"># xxx1:</span></span><br><span class="line">  <span class="comment">#   xxx1-1: /xxx1-1/ || fa(s|r|l|d|b) fa-xxx</span></span><br><span class="line">  <span class="comment">#   xxx1-2: /xxx1-2/ || fa(s|r|l|d|b) fa-xxx</span></span><br><span class="line"></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="comment"># Only show by icon.</span></span><br><span class="line">  <span class="attr">icon_only:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Only show by text.</span></span><br><span class="line">  <span class="attr">text_only:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>瀏覽器分頁左方的小 logo，16x16 代表圖片為 16x16 像素。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">  <span class="attr">small:</span> <span class="string">/images/icons/favicon-16x16.png</span></span><br><span class="line">  <span class="attr">medium:</span> <span class="string">/images/icons/favicon-32x32.png</span></span><br><span class="line">  <span class="comment"># ! --------------------------------------------------</span></span><br><span class="line">  <span class="comment"># ! If you don&#x27;t know the following, please ignore it.</span></span><br><span class="line">  <span class="comment"># ! --------------------------------------------------</span></span><br><span class="line">  <span class="comment"># apple_touch_icon: /images/icons/apple-touch-icon.png</span></span><br><span class="line">  <span class="comment"># safari_pinned_tab: /images/icons/stun-logo.svg</span></span><br><span class="line">  <span class="comment"># msapplication: /images/icons/favicon-144x144.png</span></span><br></pre></td></tr></table></figure>
+
+
+<p>像夜間模式就是此佈景主題比較獨特的功能。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Night mode</span></span><br><span class="line"><span class="attr">night_mode:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># The button of switching to the night mode.</span></span><br><span class="line">  <span class="attr">button:</span></span><br><span class="line">    <span class="comment"># Color of button (Please use &quot;&quot; to wrap the value).</span></span><br><span class="line">    <span class="attr">color:</span> <span class="string">&quot;#fafafa&quot;</span></span><br><span class="line">    <span class="comment"># Background color of button (Please use &quot;&quot; to wrap the value).</span></span><br><span class="line">    <span class="attr">bg_color:</span> <span class="string">&quot;#8c8a8a&quot;</span></span><br><span class="line">  <span class="comment"># The icon that stand for day and night.</span></span><br><span class="line">  <span class="attr">icon:</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">🌜</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">🌞</span></span><br></pre></td></tr></table></figure>
+
+<p>網站介面的尺寸大小。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The layout for sidebar and content of site.</span></span><br><span class="line"><span class="attr">layout:</span></span><br><span class="line">  <span class="comment"># The width of the content area in website.</span></span><br><span class="line">  <span class="attr">content:</span> <span class="string">768px</span></span><br><span class="line">  <span class="comment"># The width of the sidebar in website.</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="string">300px</span></span><br><span class="line">  <span class="comment"># The width between the content and the sidebar.</span></span><br><span class="line">  <span class="attr">content_sidebar_gap:</span> <span class="string">30px</span></span><br><span class="line">  <span class="comment"># The padding property of the main tag.</span></span><br><span class="line">  <span class="comment"># e.g. Usage:</span></span><br><span class="line">  <span class="comment"># 20px</span></span><br><span class="line">  <span class="comment"># 20px 30px</span></span><br><span class="line">  <span class="comment"># 20px 20px 30px</span></span><br><span class="line">  <span class="comment"># 20px 30px 40px 25px</span></span><br><span class="line">  <span class="attr">main_padding:</span></span><br><span class="line">    <span class="comment"># Take effect when screen width in: [768px, Infinity)</span></span><br><span class="line">    <span class="attr">default:</span> <span class="string">20px</span></span><br><span class="line">    <span class="comment"># Take effect when screen width in: [576px, 768px)</span></span><br><span class="line">    <span class="attr">tablet:</span> <span class="string">15px</span></span><br><span class="line">    <span class="comment"># Take effect when screen width in: [0px, 576px)</span></span><br><span class="line">    <span class="attr">mobile:</span> <span class="string">10px</span></span><br></pre></td></tr></table></figure>
+
+<p>網頁分為 header, body, footer 三個區塊，以 header 為例，若要修改背景圖片，enable 要設定為 <code>true</code>，url 可以放網址或資料夾路徑，也就是 <strong>source 資料夾下的路徑</strong>（詳見附錄）。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The header of site.</span></span><br><span class="line"><span class="attr">header:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">show_on:</span></span><br><span class="line">    <span class="comment"># Whether to show on the article page.</span></span><br><span class="line">    <span class="attr">post:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If you set a percentage, it will be calculated based on the height of screen (Supports all CSS units)</span></span><br><span class="line">  <span class="attr">height:</span> <span class="number">80</span><span class="string">%</span></span><br><span class="line">  <span class="comment"># Background image of site header.</span></span><br><span class="line">  <span class="attr">bg_image:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#若要有背景，false 要改為 true</span></span><br><span class="line">    <span class="comment"># In theme directory (source/images): /images/avatar.png</span></span><br><span class="line">    <span class="comment"># In site directory (source/uploads): /uploads/avatar.png</span></span><br><span class="line">    <span class="comment"># You can also use a link of image.</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/images/background.jpg</span>  <span class="comment">#圖片路徑</span></span><br><span class="line">  <span class="comment"># Mask effect of the background image.</span></span><br><span class="line">  <span class="attr">mask:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># Opacity of the mask (value: 0 ~ 1)</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">nav:</span></span><br><span class="line">    <span class="comment"># Height of the navigation bar (Supports all CSS units)</span></span><br><span class="line">    <span class="attr">height:</span> <span class="string">50px</span></span><br><span class="line">    <span class="comment"># Background color of the navigation bar (Please use &quot;&quot; to wrap the value).</span></span><br><span class="line">    <span class="attr">bg_color:</span> <span class="string">&quot;#333&quot;</span></span><br><span class="line">  <span class="comment"># The icon that prompts the user to pull down.</span></span><br><span class="line">  <span class="attr">scroll_down_icon:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># Icon name in FontAwesome, see: https://fontawesome.com/icons</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">fas</span> <span class="string">fa-angle-down</span></span><br><span class="line">    <span class="attr">animation:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>language 的地方要加上 <code>zh_TW</code>。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Creative Commons 4.0 International License</span></span><br><span class="line"><span class="attr">creative_commons:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Optional values: BY | BY-SA | BY-ND | BY-NC | BY-NC-SA | BY-NC-ND</span></span><br><span class="line">  <span class="comment"># For details, please see: https://creativecommons.org/share-your-work/licensing-types-examples/</span></span><br><span class="line">  <span class="attr">license:</span> <span class="string">BY-NC-SA</span></span><br><span class="line">  <span class="comment"># Show the CC license in the sidebar.</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Show the CC license at the post bottom.</span></span><br><span class="line">  <span class="attr">post:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Optional values:</span></span><br><span class="line">  <span class="comment">#   id | ms | ca | da | de | en | es | es_ES | eo | eu | fr | gl | hr</span></span><br><span class="line">  <span class="comment">#   it | lv | lt | hu | nl | no | pt | pt_BR | pl | ro | sl | fi | sv</span></span><br><span class="line">  <span class="comment">#   tr | is | cs | el | be | ru | zh | zh_TW | uk | ar | fa | bn | ja | ko</span></span><br><span class="line">  <span class="comment"># If not set, `en` will be used by default.</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh_TW</span></span><br></pre></td></tr></table></figure>
+
+<p>側邊欄設定，包含作者頭像，邊欄置於右方還是左方等。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The sidebar of site.</span></span><br><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Optional value: left | right</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">  <span class="comment"># The distance from the top of the page when the sidebar is fixed (Only `px` unit is supported)</span></span><br><span class="line">  <span class="attr">offsetTop:</span> <span class="string">20px</span></span><br><span class="line">  <span class="comment"># Whether to show horizon line.</span></span><br><span class="line">  <span class="attr">horizon_line:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">author:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Avatar in the site sidebar.</span></span><br><span class="line">  <span class="attr">avatar:</span></span><br><span class="line">    <span class="comment"># In theme directory (source/images): /images/avatar.png</span></span><br><span class="line">    <span class="comment"># In site directory (source/uploads): /uploads/avatar.png</span></span><br><span class="line">    <span class="comment"># You can also use a link of image.</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/images/icons/stun-logo.svg</span></span><br><span class="line">    <span class="comment"># If true, the avatar would be displayed in a circle.</span></span><br><span class="line">    <span class="attr">rounded:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># Opacity of avatar (value: 0 ~ 1)</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">1</span></span><br><span class="line">    <span class="comment"># Mouse hover animation</span></span><br><span class="line">    <span class="comment"># Optional value: turn | shake</span></span><br><span class="line">    <span class="attr">animation:</span> <span class="string">turn</span></span><br><span class="line">  <span class="comment"># Your favorite motto.</span></span><br><span class="line">  <span class="attr">motto:</span> <span class="string">hello</span> <span class="string">world</span></span><br></pre></td></tr></table></figure>
+
+<p>剩下就是一些文章細節&#x2F;樣式、留言工具、網站流量分析等設定，這裡不多做贅述。</p>
+<p>不過這個主題除了英文(en)，剩下只有簡體中文(zh-CN)一種語言，因此使用者必須到 <strong>&#x2F;根目錄&#x2F;themes&#x2F;stun&#x2F;languages&#x2F;</strong> 的路徑複製 zh-CN.yml 檔案，然後更名為 zh-TW.yml，最後再把裡面的簡體改成繁體（可以使用這個<a target="_blank" rel="noopener" href="https://www.ifreesite.com/gbk-big5-gb2312-utf8.htm">繁簡轉換網站</a>），並修飾語句（例如下圖的 12 行就可以把”菜單”改為”目錄”）：</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276187/original/7f791cb982492f4bd9c9326dafaf0f14.png"></p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276188/original/39f0acdc686a21217fdb0939765a95be.png"></p>
+<p>最後可以看到修改後的佈景主題，好看多了！  </p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276189/original/e67c60dfc1004ce17f019df28c78f283.png"></p>
+<p>還有夜間模式的切換功能也很潮！</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276190/original/c3e6b2af39a956951252a97355691ec2.gif"></p>
+<h1 id="附錄：實用教學"><a href="#附錄：實用教學" class="headerlink" title="附錄：實用教學"></a><font color=#0000FF>附錄：實用教學</font></h1><h2 id="為何不建議直接升級-Hexo-版本？"><a href="#為何不建議直接升級-Hexo-版本？" class="headerlink" title="為何不建議直接升級 Hexo 版本？"></a><font color=#FF6600>為何不建議直接升級 Hexo 版本？</font></h2><p>因為 Stun 主題只支援 Hexo 4.0.0 以上版本，而筆者去年下半年開始寫 Hexo 教學文的時候，Hexo 為 3.9.0 版本。要確認自己目前 Hexo 版本，可以在 Hexo 根目錄資料夾下開啟 cmd，然後輸入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+
+<p>如圖為目前最新版本 4.2.0 版。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276191/original/4314428276aa179920791879b5e2e4da.png"></p>
+<p>除此之外，因為當初 Node.js 透過 .msi 檔安裝時，npm 預設會放在 Program Files\nodejs\npm 路徑下，然後透過 PATH 來指定到 Program Files\nodejs\npm 路徑下的 npm，但真正 Global 的位置卻是在 users\skychang\AppData\Roaming\npm 路徑下…簡單來說，就是在 Windows 下更新 npm 很有可能會沒反應。</p>
+<p>還有一個原因不建議，就是套件可能會有相容性問題，還有根目錄的 _config.yml 檔案也會變更。如下圖所示，左邊是 3.9.0 版的 _config.yml，右邊是 4.2.0 版的 _config.yml，圖中可以看到兩者 config 內容會有些許差異。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276192/original/549ff3a38f4cff3a072ac7c0750f3d51.png"></p>
+<p>因此若要將 Hexo 版本更新到 4.2.0，只能重新參照 <a href="https://ed521.github.io/2019/07/hexo-install/">使用 GitHub Pages + Hexo 來架設個人部落格</a> 這篇文章來新建一個部落格資料夾，然後將所有文章和 config 設定慢慢移植過去是最理想的方式。</p>
+<h2 id="source-資料夾"><a href="#source-資料夾" class="headerlink" title="source 資料夾"></a><font color=#FF6600>source 資料夾</font></h2><p>前面提到 source 資料夾就是會將裡面所有檔案都會 push 到網站上，除了一些前綴有底線的資料夾，還有 about, categories 等 <strong>Hexo 自動生成的資料夾</strong>會另外處理，只要使用者自己放什麼檔案就會 push 至部落格。</p>
+<p>而 source 資料夾也可以被理解成 <strong>個人網路部落格的根目錄</strong>，例如筆者在 source 資料夾下新增 ads.txt 檔案，那經過 push 後，這個檔案的網址路徑就會是 <a target="_blank" rel="noopener" href="https://username.github.io/ads.txt">https://username.github.io/ads.txt</a> 。</p>
+<p>因此前面在設定佈景主題 Avatar 或 Background 的圖片連結時（如下方的 _config.yml），例如將連結設定為<code>/images/avatar.png</code>，那就代表這張圖片的路徑就是 <strong>&#x2F;根目錄&#x2F;source&#x2F;images&#x2F;avatar.png</strong> 。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/avatar.png</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="佈景主題如何挑選？"><a href="#佈景主題如何挑選？" class="headerlink" title="佈景主題如何挑選？"></a><font color=#FF6600>佈景主題如何挑選？</font></h2><p>佈景主題首先當然是先挑自己喜歡的，然後觀察佈景主題的 GitHub 頁面，這裡一樣用 <a target="_blank" rel="noopener" href="https://github.com/liuyib/hexo-theme-stun">Stun 主題</a> 示範：</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276193/original/cbfef5b56d99235006161e1822e57595.png"></p>
+<p>如上圖，可以看到八天前還有更新，代表<font color=#800000>這個主題還有人持續在維護</font>，因此<font color=#800000>主題一定要挑選還有在持續更新的。</font></p>
+<p>再來往下看，如果下方資訊頁面有中文文檔，代表<font color=#800000>這個主題有”中文”的機會很高</font>，否則要自己翻譯是很辛苦的。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2020/05/276194/original/04621a5eef86aecdec8c1c6b0b391068.png"></p>
+<p>如果不常更新的佈景主題也不是不能用，但<font color=#800000>除了有可能無法更新到最新版本，可能也不支援各種留言、網站分析的 API，如果主題有 bug 作者也不會修復</font>，這都是在套用該主題之前要考量的問題。</p>
+<p>還有一個理由，就是像筆者目前在用的 Next 主題算是最多人用的主題，但為何大家都要用這個佈景主題呢？因為<font color=#800000>它網路上的資源最豐富，如果要新增功能或修改樣板，幾乎都查的到針對 Next 主題的教學。</font></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexoblog/" rel="tag"># Hexo部落格</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/05/hexo-next-upgrade/" rel="prev" title="[教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄">
+                  <i class="fa fa-chevron-left"></i> [教學] Hexo 部落格升級、Next 主題升級、客製功能及樣板編輯全記錄
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/04/PC-cillin-2020-mission-six/" rel="next" title="[教學] PC-cillin 2020 雲端版 電腦安全教戰守則 六部曲：家長防護網">
+                  [教學] PC-cillin 2020 雲端版 電腦安全教戰守則 六部曲：家長防護網 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"YoLycdOLhFPQmvl9mi5Qnsge-gzGzoHsz","app_key":"YwbCQICgq3ec30JjffgxRlR6","server_url":null,"security":false}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ed521","repo":"comments","client_id":"ede825d02e67d9c5edc3","client_secret":"78710c0d61a5890dc4769c8abca4021a80568848","admin_user":"ed521","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"65ffe9f659cfb2c65be0b5af9c92a91f"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+  
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>  
+  
+</body>
+</html>
