@@ -903,7 +903,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>1.3k</span>
+              <span>1.7k</span>
             </span>
 
         </div>
@@ -918,7 +918,14 @@
           <p>筆者有一台日版的華碩路由器 RT-AC68U，因為當初在 Amazon 上購買日版的 AC68U 比台灣賣的便宜了不少錢，只不過收到的時候，可能因為是日本的規定還是什麼，<strong>韌體已經寫死無法更換成別的語言</strong>，網路上查了一下好像刷韌體或系統也是一樣…下圖為日文的 ASUS Router 系統介面，可以看到畫面右上角並沒有更換語言的下拉式選單：</p>
 <img src="https://cdn1-t17.techbang.com/system/attached_images/2020/08/280288/original/1a95d545cdac5e944f00886fdf8329e6.png" />
 
-<p>因此本篇將**<font color=#800000>教學如何換成繁體中文或是其它語言</font><strong>，方法並不難，</strong>缺點是<font color=#FF0000>路由器每次「重新開機」都要再重新設定一次</font>（不過路由器除非手動更新系統，好像也不常重開機）**。筆者有試過寫開機自動執行的腳本，不過沒有成功；歡迎有試成功的人在下面留言告知唷！</p>
+<p>因此本篇將<font color=#800000><strong>教學如何換成繁體中文或是其它語言</strong></font>，方法並不難，<strong>缺點是<font color=#FF0000>路由器每次「重新開機」都要再重新設定一次</font>（不過路由器除非手動更新系統，好像也不常重開機）</strong>。筆者有試過寫開機自動執行的腳本，不過沒有成功；歡迎有試成功的人在下面留言告知唷！</p>
+<p><font color=#FF0000>2022&#x2F;07&#x2F;04 更新：謝謝熱心的網友提供了一勞永逸的教學，主要分為兩種方式：</font></p>
+<ul>
+<li><p><strong>Customertojo 網友</strong>留言：透過修改啟動腳本來自動掛載繁體中文語言檔，技術成分較高（因為還要修改檔案）。</p>
+</li>
+<li><p><strong>Lyumin80224 網友</strong>留言：透過直接把系統會讀的 JP.dict 蓋成 TW.dict，較為簡單，下面會附上這種方法~~</p>
+</li>
+</ul>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/08/asus-router-change-language/#more" rel="contents">

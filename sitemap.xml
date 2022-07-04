@@ -648,14 +648,14 @@
   </url>
   
   <url>
-    <loc>https://ed521.github.io/tags/smarthome/</loc>
+    <loc>https://ed521.github.io/tags/3C/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ed521.github.io/tags/3C/</loc>
+    <loc>https://ed521.github.io/tags/smarthome/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -776,6 +776,13 @@
   </url>
   
   <url>
+    <loc>https://ed521.github.io/categories/unboxing/smarthome/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ed521.github.io/categories/unboxing/3C/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -784,13 +791,6 @@
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/NAS/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/unboxing/smarthome/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -840,6 +840,13 @@
   
   <url>
     <loc>https://ed521.github.io/categories/teaching/asustor/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/teaching/synology/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -903,13 +910,6 @@
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/synology/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/teaching/synology/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
