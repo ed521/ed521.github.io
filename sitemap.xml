@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ed521.github.io/2022/07/Photontree-PRO/</loc>
+    
+    <lastmod>2022-07-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ed521.github.io/manifest.json</loc>
     
     <lastmod>2022-06-29</lastmod>
@@ -625,7 +634,7 @@
 
   <url>
     <loc>https://ed521.github.io/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -633,119 +642,119 @@
   
   <url>
     <loc>https://ed521.github.io/tags/asustor/</loc>
-    <lastmod>2022-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/tags/3C/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/smarthome/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/tags/3C/</loc>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/NAS/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/audio/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/router/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/ipcam/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/synology/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/smart-glasses/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/disk/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/printer/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/hackathon/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/pc-tablet/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/antivirus/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/qnap/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/watch/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/tags/hexoblog/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -754,161 +763,161 @@
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/daily/</loc>
-    <lastmod>2022-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/unboxing/smarthome/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/3C/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/NAS/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/unboxing/smarthome/</loc>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/teaching/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/asustor/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/audio/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/uncategorized/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/router/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/ipcam/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/teaching/asustor/</loc>
-    <lastmod>2022-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/teaching/synology/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/disk/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/printer/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/hackathon/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/pc-tablet/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/teaching/antivirus/</loc>
-    <lastmod>2022-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/unboxing/qnap/</loc>
-    <lastmod>2022-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/unboxing/watch/</loc>
-    <lastmod>2022-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/unboxing/synology/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/feedback/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/unboxing/qnap/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/unboxing/watch/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/unboxing/synology/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/teaching/synology/</loc>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ed521.github.io/categories/teaching/hexoblog/</loc>
-    <lastmod>2022-07-03</lastmod>
+    <lastmod>2022-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
