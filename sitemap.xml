@@ -720,14 +720,14 @@
   </url>
   
   <url>
-    <loc>https://ed521.github.io/tags/hackathon/</loc>
+    <loc>https://ed521.github.io/tags/printer/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ed521.github.io/tags/printer/</loc>
+    <loc>https://ed521.github.io/tags/hackathon/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -778,13 +778,6 @@
   </url>
   
   <url>
-    <loc>https://ed521.github.io/categories/unboxing/3C/</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ed521.github.io/categories/daily/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -793,6 +786,13 @@
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/NAS/</loc>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/unboxing/3C/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -855,13 +855,6 @@
   </url>
   
   <url>
-    <loc>https://ed521.github.io/categories/teaching/synology/</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ed521.github.io/categories/unboxing/disk/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -869,14 +862,14 @@
   </url>
   
   <url>
-    <loc>https://ed521.github.io/categories/hackathon/</loc>
+    <loc>https://ed521.github.io/categories/unboxing/printer/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ed521.github.io/categories/unboxing/printer/</loc>
+    <loc>https://ed521.github.io/categories/hackathon/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -919,6 +912,13 @@
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/synology/</loc>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/teaching/synology/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
