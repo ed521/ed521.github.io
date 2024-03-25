@@ -650,6 +650,13 @@
 
   
   <url>
+    <loc>https://ed521.github.io/tags/asustor/</loc>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ed521.github.io/tags/smarthome/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -665,13 +672,6 @@
   
   <url>
     <loc>https://ed521.github.io/tags/NAS/</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/tags/asustor/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -706,14 +706,14 @@
   </url>
   
   <url>
-    <loc>https://ed521.github.io/tags/disk/</loc>
+    <loc>https://ed521.github.io/tags/smart-glasses/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ed521.github.io/tags/smart-glasses/</loc>
+    <loc>https://ed521.github.io/tags/disk/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -785,6 +785,13 @@
   </url>
   
   <url>
+    <loc>https://ed521.github.io/categories/unboxing/3C/</loc>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ed521.github.io/categories/unboxing/NAS/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -800,13 +807,6 @@
   
   <url>
     <loc>https://ed521.github.io/categories/teaching/</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/unboxing/3C/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -849,13 +849,6 @@
   
   <url>
     <loc>https://ed521.github.io/categories/teaching/asustor/</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ed521.github.io/categories/teaching/synology/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -919,6 +912,13 @@
   
   <url>
     <loc>https://ed521.github.io/categories/unboxing/synology/</loc>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ed521.github.io/categories/teaching/synology/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
