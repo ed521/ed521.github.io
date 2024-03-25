@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#0084ff">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/android-icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/android-icon-16x16.png">
+  <link rel="mask-icon" href="/images/android-icon-192x192.svg" color="#0084ff">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ed521.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":280,"display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#0000ff","save":"manual"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="手機拍攝出來的照片影片重要性無價，因此許多人都會使用 Google One 或 iCloud 來備份手機照片，或是使用雲端硬碟空間來存放重要檔案。但是最近筆者也遇到了很多人不想面對的問題，那就是雲端空間快滿了，究竟該不該升級空間？如果從 200 GB 再升級到下個空間 2TB，每年就要支付 3300 元的訂閱費…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[開箱] 取代 Google One &#x2F; iCloud 最佳解決方案！Synology BeeStation 個人雲端儲存，照片分享及備份簡易好上手！">
+<meta property="og:url" content="https://ed521.github.io/2024/03/Synology-BeeStation/index.html">
+<meta property="og:site_name" content="瑪利歐的部落格">
+<meta property="og:description" content="手機拍攝出來的照片影片重要性無價，因此許多人都會使用 Google One 或 iCloud 來備份手機照片，或是使用雲端硬碟空間來存放重要檔案。但是最近筆者也遇到了很多人不想面對的問題，那就是雲端空間快滿了，究竟該不該升級空間？如果從 200 GB 再升級到下個空間 2TB，每年就要支付 3300 元的訂閱費…">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328441/original/598510b301c26cb7cf4ab26428cd2478.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328442/original/3f1a295d9e4e501ef183d7cbb142e43f.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328489/original/873798b8fb2d57c2de224fb1d433a69d.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328488/original/3cb260c1a8d029dafe8a515262efb4cd.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328445/original/fce6911d61a723e6b2d83296b845ca79.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328446/original/93d419f49ba072672d4430aa9bf7ec83.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328447/original/d21772cc4c43388ccef34b7567196fb7.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328448/original/f0300d5bf63d28a72052acc687649c14.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328449/original/55879a8b138f5ab7011d50ee9eb82741.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328450/original/f1446c4de5c45566dd02e8f959b24963.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328451/original/ad3a396a8eaa228d2b6ec6bc7a6152c0.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328452/original/64c18237c0c337eb0cfb6a0390157bf9.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328453/original/c07212a60eb134b6ee040f3d25a66619.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328454/original/2d03753a1fbdd4d1b40a622eadfeb784.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328455/original/487c496e4521b3ff8b34f423d90521c0.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328487/original/00bea1d8dad3b26c06e26694e0ebe133.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328457/original/db13f66d388949ae21b526a6541e20dd.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328536/original/e3a7f27fd067fa0ed50771adda8c3509.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328459/original/d7d63723e0d1e38a8b6efd0279648c92.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328483/original/b944353d3178d2d950d196778a8c3d86.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328460/original/6a981d853831644fd80291b85860a210.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328461/original/df2ee6d6ae70de6d31d09860edc8c7fe.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328462/original/051da86fb79a2212a6d932a4a588c5ca.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328463/original/4f4cf41cd67899799228c936dc2c6e8c.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328464/original/a6397a2c5b6c1c5696a73d5c1b8ee48e.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328465/original/af39b5ef390350c4ef88159cbdc1cdd7.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328466/original/52cffdb4faf967571774792b20fae33f.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328484/original/ffe1f06ab87bbfde58ddb99e63bdb293.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328467/original/3c8847e89d3968a320d73d06f8548787.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328468/original/cd9713602fe604d375039c2276fab04c.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328469/original/b4f3d741763f31df370eb9bceffcfd60.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328470/original/4f8cf443e1aeb1749900003120929c0d.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328471/original/ece7f656105407317a8ab2e883f80ff4.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328485/original/604be1cb21025e4b3e585cb7c50461af.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328472/original/36d0830824e199f64fb720e28f1b2601.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328473/original/f70a8ceeeb05fb7a71d31d007ba2c5d5.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328474/original/6e95b3079dae481612da0ea109709c70.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328475/original/fbb536294ea00488ebf2adc0dc0570c5.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328476/original/f23756a5d4482c5330a942dde77d1ad3.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328477/original/3870c862d5f2effdd37f8cb4ce368215.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328478/original/1d76a1c44fbd2ab3edca67e0282b53e9.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328479/original/6c89042a527d3df7a6419d8318f98587.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328480/original/7da8d381575f69cd7a6df38245d70b99.png">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328481/original/041cf3584e3c8ce0fe85a372b84f1e4b.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328482/original/9298206efca56c96a879c18ccc8613db.jpg">
+<meta property="og:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328486/original/e828d5a830bb88ac48a8bdaacb6da4f5.png">
+<meta property="article:published_time" content="2024-03-23T19:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-23T19:00:00.000Z">
+<meta property="article:author" content="EDEN">
+<meta property="article:tag" content="Synology NAS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328441/original/598510b301c26cb7cf4ab26428cd2478.png">
+
+<link rel="canonical" href="https://ed521.github.io/2024/03/Synology-BeeStation/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+<script data-ad-client="ca-pub-7537110101366593" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <title>[開箱] 取代 Google One / iCloud 最佳解決方案！Synology BeeStation 個人雲端儲存，照片分享及備份簡易好上手！ | 瑪利歐的部落格</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61473305-3"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-61473305-3');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">瑪利歐的部落格</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">17</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">66</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://ed521.github.io/2024/03/Synology-BeeStation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="EDEN">
+      <meta itemprop="description" content="文章多以開箱文、教學文為主~~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑪利歐的部落格">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [開箱] 取代 Google One / iCloud 最佳解決方案！Synology BeeStation 個人雲端儲存，照片分享及備份簡易好上手！
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2024-03-24 03:00:00" itemprop="dateCreated datePublished" datetime="2024-03-24T03:00:00+08:00">2024-03-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unboxing/" itemprop="url" rel="index"><span itemprop="name">開箱文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unboxing/synology/" itemprop="url" rel="index"><span itemprop="name">Synology NAS</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2024/03/Synology-BeeStation/" class="post-meta-item leancloud_visitors" data-flag-title="[開箱] 取代 Google One / iCloud 最佳解決方案！Synology BeeStation 個人雲端儲存，照片分享及備份簡易好上手！" title="閱讀次數">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="文章字數">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">文章字數：</span>
+              <span>4.6k</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328441/original/598510b301c26cb7cf4ab26428cd2478.png" />
+
+<p>手機拍攝出來的照片影片重要性無價，因此許多人都會使用 Google One 或 iCloud 來備份手機照片，或是使用雲端硬碟空間來存放重要檔案。但是最近筆者也遇到了很多人不想面對的問題，那就是<strong>雲端空間快滿了，究竟該不該升級空間？</strong>如果從 200 GB 再升級到下個空間 2TB，每年就要支付 3300 元的訂閱費…</p>
+<span id="more"></span>
+
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328442/original/3f1a295d9e4e501ef183d7cbb142e43f.jpg" />
+
+<p>另外，和朋友共享手機照片最常見的方法是透過建立 LINE 相簿，但是<strong>LINE 相簿的缺點是，照片會被壓縮為原本照片的 10~20% 大小，嚴重壓縮畫質，且影片無法放入相簿內，還要擔心朋友不小心刪除項目，沒有絕對的控制權</strong> (e.g., <a href="https://tw.news.yahoo.com/line%E6%96%B0%E5%8A%9F%E8%83%BD-%E6%89%80%E6%9C%89%E7%9B%B8%E7%B0%BF-%E9%81%AD%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B6%E5%88%AA%E9%99%A4-%E7%8F%8D%E8%B2%B4%E5%9B%9E%E6%86%B6%E5%85%A8%E6%B6%88%E5%A4%B1-%E7%B6%B2%E5%B4%A9%E6%BD%B0-073500734.html" target="_blank" rel="noopener noreferrer">LINE新功能「所有相簿」遭其他用戶刪除 珍貴回憶全消失 網崩潰</a>)。</p>
+<p>本次要介紹的 <strong>Synology BeeStation</strong> 能輕鬆地解決上述問題，更擁有<span style="color: #800000;"><strong>低廉的入手費用、不用任何技術的超簡易安裝、無痛好上手的軟體介面（畢竟使用者體驗就是 Synology 的強項），且最高支援 9 人共享使用</strong></span>；若與多人共用，除了第二年就能回本之外，每人能使用的容量也更大。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328489/original/873798b8fb2d57c2de224fb1d433a69d.png" />
+
+<p>如果不想和別人共享空間，一樣能在第三年使用時回本，同時享受更大的使用空間。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328488/original/3cb260c1a8d029dafe8a515262efb4cd.png" />
+
+<hr />
+
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328445/original/fce6911d61a723e6b2d83296b845ca79.png" />
+
+<p>★ <a href="#a">Synology BeeStation 開箱與設定</a> ★</p>
+<p>★ <a href="#b">「BeePhotos」照片影片備份 &#x2F; 瀏覽 &#x2F; AI 辨識照片</a> ★</p>
+<p>★ <a href="#c">「BeePhotos」情境應用：演唱會照片影片共享與請求</a> ★</p>
+<p>★ <a href="#d">「BeeFiles」雲端硬碟功能介紹</a> ★</p>
+<p>★ <a href="#e">總結與心得</a> ★</p>
+<hr />
+
+<p><a id="a" name="a"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328446/original/93d419f49ba072672d4430aa9bf7ec83.png" /></p>
+<p>本次要開箱的產品為 Synology BeeStation 4TB，命名 Bee 主要原因就是可以<strong>備份來自不同裝置的檔案、照片等，如同蜜蜂從各處採花蜜回到蜂巢一般。</strong></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328447/original/d21772cc4c43388ccef34b7567196fb7.jpg" />
+
+<p>盒子背面簡介產品內容物、硬體規格，以及<strong>原廠三年保固</strong>。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328448/original/f0300d5bf63d28a72052acc687649c14.jpg" />
+
+<p>產品內容物有 BeeStation 主機x1, 變壓器x1, Cat.5e 網路線x1, 快速入門指南x1</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328449/original/55879a8b138f5ab7011d50ee9eb82741.jpg" />
+
+<p>再來看到主機本體，相關插孔、按鈕說明如下圖所示；並可以看到機器上方有大量的散熱孔。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328450/original/f1446c4de5c45566dd02e8f959b24963.jpg" />
+
+<p>機器底部的散熱孔依舊做好做滿。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328451/original/ad3a396a8eaa228d2b6ec6bc7a6152c0.jpg" />
+
+<p>最後來到硬體超簡易安裝環節，只要電源線接好、網路線接到家中路由器即可開機；剛開機狀態指示燈會閃爍白燈，直到橘燈恆亮就能開始設定。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328452/original/64c18237c0c337eb0cfb6a0390157bf9.jpg" />
+
+<p>根據快速入門指南小卡，掃描 QR Code 後註冊 Synology 帳號 (支援電子郵件、Google 帳戶 &#x2F; Apple ID 註冊)，接著跟著指示動作即可。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328453/original/c07212a60eb134b6ee040f3d25a66619.jpg" />
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328454/original/2d03753a1fbdd4d1b40a622eadfeb784.jpg" />
+
+<p>比較細心的是，<strong>更新系統會預估更新時間</strong>，不用苦苦守在螢幕前等待；接著命名自己的 BeeStation 就完成安裝摟！最後在手機上安裝 BeePhotos 和 BeeFiles APP 就能開始使用了。</p>
+<p><span style="color: #008000;"><strong>「BeePhotos」</strong></span>for <a href="https://apps.apple.com/mo/app/beephotos/id6449935255" target="_blank" rel="noopener noreferrer">iOS</a> | <a href="https://play.google.com/store/apps/details?id=com.synology.bee.photos&hl=zh_TW&gl=US" target="_blank" rel="noopener noreferrer">Android</a><br><span style="color: #008000;"><strong>「BeeFiles」</strong></span>for <a href="https://apps.apple.com/tw/app/beefiles/id6446511650" target="_blank" rel="noopener noreferrer">iOS</a> | <a href="https://play.google.com/store/apps/details?id=com.synology.bee.drive" target="_blank" rel="noopener noreferrer">Android</a></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328455/original/487c496e4521b3ff8b34f423d90521c0.jpg" />
+
+<p>新增好機器後，打開 <a href="https://portal.bee.synology.com/" target="_blank" rel="noopener noreferrer">https://portal.bee.synology.com/</a>，登入後就會<span style="color: #800000;">根據網路環境 (外部網路 &#x2F; 區域網路) 連線至 BeeStation，省去繁瑣的網路設定。</span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328487/original/00bea1d8dad3b26c06e26694e0ebe133.png" />
+
+<p>打開系統設定，這裡可以觀察已使用的儲存空間、新增使用者、BeeStation 備份與還原等功能。如圖為”儲存空間”頁面，BeeStation 實際可用空間為 3.48 TB，並清楚寫明每個使用者已使用的空間大小；非常重要的是，<strong>管理員只能看到使用空間用了多少，並<span style="color: #FF0000;">無法看到其他使用者的照片、影片等私人檔案，完美保障每個使用者的隱私！</strong></span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328457/original/db13f66d388949ae21b526a6541e20dd.png" />
+
+<p>在”使用者”頁面中，我們還可以新增八個使用者（加自己共九位）加入自己的 BeeStation。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328536/original/e3a7f27fd067fa0ed50771adda8c3509.png" />
+
+<p>若以電子郵件寄送邀請連結，使用者會收到含有專屬連結的註冊信。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328459/original/d7d63723e0d1e38a8b6efd0279648c92.jpg" />
+
+<hr />
+
+<p><a id="b" name="b"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328483/original/b944353d3178d2d950d196778a8c3d86.png" /></p>
+<p><span style="color: #008000;"><strong>「BeePhotos」</strong></span>for <a href="https://apps.apple.com/mo/app/beephotos/id6449935255" target="_blank" rel="noopener noreferrer">iOS</a> | <a href="https://play.google.com/store/apps/details?id=com.synology.bee.photos&hl=zh_TW&gl=US" target="_blank" rel="noopener noreferrer">Android</a> | <a href="https://portal.bee.synology.com/" target="_blank" rel="noopener noreferrer">Web</a></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328460/original/6a981d853831644fd80291b85860a210.jpg" />
+
+<p>BeePhotos APP 為本次 Synology BeeStation 主打的重點，它可以<span style="color: #800000;">取代不管平常使用者是用 iCloud 還是 Google 相簿的備份方案</span>；備份後即可清除手機的照片影片釋出空間，同時還可異地（電腦、平板…）查看這些照片！</p>
+<p>備份設定如下，可選擇是要只上傳照片，還是充電時上傳、連接至 Wi-Fi 時上傳…等（iOS 無備份資料夾設定）。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328461/original/df2ee6d6ae70de6d31d09860edc8c7fe.jpg" />
+
+<p>iPhone 因為 iOS 限制，備份功能無法在未充電時背景穩定執行；同時<strong>建議第一次備份大量照片時，可以連接電源並啟用”專注備份”，會維持螢幕開啟但保持最低亮度繼續執行</strong>。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328462/original/051da86fb79a2212a6d932a4a588c5ca.jpg" />
+
+<p>在”相片”分類中能以「年」&#x2F;「月」&#x2F;「日」區分檢視，不過「年」分類中只會顯示部分照片。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328463/original/4f4cf41cd67899799228c936dc2c6e8c.jpg" />
+
+<p>不過要怎麼在茫茫大海中找到想要的照片呢？這邊不得不說說 <span style="color: #800000;">BeeStation 內建的強大 AI 功能，會自動根據人臉或主題將照片們分類</span>，確保使用者可以快速找到想要的照片。</p>
+<p><span style="color: #FA8000;"><strong>【人物 - AI 自動分類】</strong></span></p>
+<p>BeePhotos 會自動把相同人臉分類為一群，但因為分類嚴謹度，同一個人可能會分散不同群；等耐心手動合併後，未來要找出誰的照片就會非常方便！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328464/original/a6397a2c5b6c1c5696a73d5c1b8ee48e.jpg" />
+
+<p><span style="color: #FA8000;"><strong>【主題 - AI 自動分類】</strong></span></p>
+<p>另一種是主題分類，雖然有些主題分類並不精確，但以常見的大分類如：風景、食物、動物等都算精準。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328465/original/af39b5ef390350c4ef88159cbdc1cdd7.jpg" />
+
+<p><span style="color: #FA8000;"><strong>【地點】</strong></span></p>
+<p>還有一個是利用照片的地理位置資訊分類，如果常出國的人就能看到散落世界各地的照片，十分有趣。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328466/original/52cffdb4faf967571774792b20fae33f.jpg" />
+
+<hr />
+
+<p><a id="c" name="c"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328484/original/ffe1f06ab87bbfde58ddb99e63bdb293.png" /></p>
+<p>筆者今年 3&#x2F;16 跟朋友到宜蘭看告五人演唱會，事後朋友間要上傳分享演唱會照片影片該怎麼做呢？以目前大家習慣的作法，會建個 LINE 群組建立相簿，但最大的問題是<strong>照片會被嚴重壓縮畫質，且相簿也不支援儲存影片；若使用 AirDrop，除了浪費手機空間，沒拿 iPhone 就像是邊緣人一樣無法使用…</strong></p>
+<p>這時我們可以透過 BeePhotos 建立一個專屬”共享”相簿：</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328467/original/3c8847e89d3968a320d73d06f8548787.jpg" />
+
+<p>接著透過連結共享相簿，比較特別的是還可以<span style="color: #800000;">根據不同情境設定密碼和分享到期日，收到連結的人無需 BeePhotos APP 也能查看相簿和下載照片影片。</span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328468/original/cd9713602fe604d375039c2276fab04c.jpg" />
+
+<p>如果家人也來要演唱會影片，但相簿中還有朋友的照片怎麼辦？這時候可以<span style="color: #800000;">只選取要分享的照片影片直接分享連結出來，不用額外建立相簿</span>；同時在”分享”頁面會顯示自己分享過的連結。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328469/original/b4f3d741763f31df370eb9bceffcfd60.jpg" />
+
+<p>但照片不可能只有自己會拍，這時可以用”相片請求”功能，讓大家都把當天拍照的照片上傳到相簿；除了<span style="color: #800000;">能設定到期日，也可以設定單檔大小大小上限，防止過大的檔案被丟上來。</span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328470/original/4f8cf443e1aeb1749900003120929c0d.jpg" />
+
+<p>最後，<span style="color: #800000;">BeePhotos 支援 tvOS 和 Chromecast 投放功能</span>，我可以和朋友一起回顧演唱會當時的精彩片段！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328471/original/ece7f656105407317a8ab2e883f80ff4.jpg" />
+
+<hr />
+
+<p><a id="d" name="d"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328485/original/604be1cb21025e4b3e585cb7c50461af.png" /></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328472/original/36d0830824e199f64fb720e28f1b2601.jpg" />
+
+<p><span style="color: #008000;"><strong>「BeeFiles」</strong></span>for <a href="https://apps.apple.com/tw/app/beefiles/id6446511650" target="_blank" rel="noopener noreferrer">iOS</a> | <a href="https://play.google.com/store/apps/details?id=com.synology.bee.drive" target="_blank" rel="noopener noreferrer">Android</a> | <a href="https://portal.bee.synology.com/" target="_blank" rel="noopener noreferrer">Web</a> | <a href="https://bee.synology.com/zh-tw/BeeStation/downloads" target="_blank" rel="noopener noreferrer">BeeStation 電腦版</a></p>
+<p>BeeFiles 不管是介面設計還是使用習慣都和 Google 雲端硬碟極為相似，讓第一次使用的人也能輕鬆上手；另外，透過標籤和加星號分類，我們能更快地找出需要的檔案，如下圖所示。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328473/original/f70a8ceeeb05fb7a71d31d007ba2c5d5.png" />
+
+<p><span style="color: #800000;">照片影片.文件等常見格式支援線上預覽</span>，不用下載到電腦才能查看。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328474/original/6e95b3079dae481612da0ea109709c70.png" />
+
+<p><span style="color: #800000;">雲端服務備份支援 Dropbox, Google 雲端硬碟和 OneDrive，並可以選擇是要單向備份（雲端服務 -&gt; BeeStation）還是雙向同步</span>；但如果選擇雙向同步，要注意如果不小心從 BeeStation 刪除整個資料夾，雲端空間的資料可是會一併消失唷！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328475/original/fbb536294ea00488ebf2adc0dc0570c5.png" />
+
+<p>如果使用 BeeStation 電腦版，我們可以在電腦檔案總管看到目前在 BeeFiles 中的所有檔案（也可以設定只顯示部分資料夾）。而檔案旁邊的<strong>白雲符號代表目前沒有保留在電腦上</strong>，開啟前不會占用電腦空間；使用者也可以選擇<strong>將檔案永久保留於電腦上，這時候檔案狀態會變成綠色勾勾</strong>。</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328476/original/f23756a5d4482c5330a942dde77d1ad3.png" />
+
+<p>安裝電腦版可以更方便使用<strong>歷史版本控管</strong>功能，例如在撰寫論文或準備報告投影片時，會需要常對檔案進行修改，但有時編輯後又想拿之前的版本做參考；這時候就能透過<span style="color: #800000;">歷史版本功能下載之前的檔案來比對內容。</span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328477/original/3870c862d5f2effdd37f8cb4ce368215.png" />
+
+<p>BeeStation 亦支援 <strong>Samba 服務（網路磁碟機，預設關閉）</strong>，到 BeeStation 系統設定 -&gt; 進階設定 -&gt; 本地存取開啟後，根據指示輸入網址就能透過區域網路直接連到 BeeStation 存取資料。另外，<span style="color: #800000;">本地存取只會顯示自己帳號的資料，一樣無法查看其它使用者任何資料。</span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328478/original/1d76a1c44fbd2ab3edca67e0282b53e9.jpg" />
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328479/original/6c89042a527d3df7a6419d8318f98587.png" />
+
+<p>簡單測試區網傳檔效能：<br>（測試環境：電腦端 Intel 2.5” 512 GB SSD、1 Gigabit LAN Port 小米 AC1200 路由器）<br><strong>上傳 2.18 GB 檔案大概花 38 秒完成，<span style="color: #800000;">平均上傳速度 57 MB &#x2F; Sec</span></strong><br><strong>下載 2.18 GB 檔案大概花 25 秒完成，<span style="color: #800000;">平均下載速度 87 MB &#x2F; Sec</span></strong><br>注意：區網傳檔速度可能會因 BeeStation 當下效能而有影響</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328480/original/7da8d381575f69cd7a6df38245d70b99.png" />
+
+<p>而 BeeStation 也有行動版 APP，使用介面直覺；並且<span style="color: #800000;">支援檔案&#x2F;資料夾的連結分享，以及密碼和分享到期日的選擇性設定。</span></p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328481/original/041cf3584e3c8ce0fe85a372b84f1e4b.jpg" />
+
+<p>收到連結的人<span style="color: #800000;">無需 BeeFiles APP 也能查看檔案&#x2F;資料夾，同時支援照片影片.文件等常見格式線上預覽</span>，影片不用下載就能直接播放！</p>
+<img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328482/original/9298206efca56c96a879c18ccc8613db.jpg" />
+
+<hr />
+
+<p><a id="e" name="e"></a><br><img src="https://cdn1-t17.techbang.com/system/attached_images/2024/03/328486/original/e828d5a830bb88ac48a8bdaacb6da4f5.png" /></p>
+<p><strong>如同文章開頭提到，手機照片影片只會越來越多，那訂閱 iCloud 和 Google One 的可用空間只會越來越小，從免費空間 -&gt; 50 或 100 GB -&gt; 200 GB，其實下一個級距就是 2TB 了，費用也是一個級距提升；而這次 <span style="color: #FF0000;">Synology 針對大家最常用的雲端硬碟和手機照片備份功能提供了全新解決方案：Synology BeeStation，以買斷制取代訂閱制，並簡化機器的設定流程，目的就是讓任何人都能輕鬆好上手。</span>最後附上筆者對於 BeeStation 的優缺點分析：</strong></p>
+<p><strong><span style="color: #008000;">《優點》</span><br><span style="color: #000080;">* 價格 &amp; 4TB 空間</span>: 比起市面上公有雲價格，僅需 2~3 年即可回本，容量還更大還免訂閱費。<br><span style="color: #000080;">* 私有雲儲存於本地端</span>: 不用擔心被意外 (e.g., <a href="https://www.ithome.com.tw/news/160041" target="_blank" rel="noopener noreferrer">Google Drive不明問題導致部分用戶檔案神祕消失</a>) 或違反公有雲使用政策 (e.g., <a href="https://tw.news.yahoo.com/google%E5%B8%B3%E8%99%9F%E7%AA%81%E8%A2%AB%E5%B0%81%E9%8E%96-%E8%8B%A6%E4%B8%BB%E5%B4%A9%E6%BD%B0-%E6%AA%94%E6%A1%88%E5%85%A8%E6%95%91%E4%B8%8D%E5%9B%9E%E4%BE%86-%E9%80%991%E9%A1%9E%E6%AA%94%E6%A1%88%E5%88%A5%E4%B8%8A%E5%82%B3%E9%9B%B2%E7%AB%AF-050816132.html" target="_blank" rel="noopener noreferrer">Google帳號突被封鎖！苦主崩潰「檔案全救不回來」：這1類檔案別上傳雲端</a>) 被刪除檔案。<br><span style="color: #000080;">* 完整的分享功能</span>: BeePhotos 和 BeeFiles 能透過連結分享照片影片&#x2F;檔案&#x2F;資料夾&#x2F;相簿，並支援密碼和連結到期日的情境設定。<br><span style="color: #000080;">* 區網傳檔網速快</span>: 私有雲最大的優點，就是在區網中可以快速傳輸&#x2F;備份大量檔案或照片（BeeStation 會自動分析使用者是在區網還外網環境）。<br><span style="color: #000080;">* 每個使用者擁有完全私密空間</span>: 與 NAS 最大的不同點是，即使是管理員也看不到其他使用者的檔案。<br><span style="color: #000080;">* 簡易上手 &amp; 熟悉的介面</span>: 基本上 BeeStation 只要接上網路插上電源就能用了，不用繁雜的網路等相關知識；且 BeePhotos 和 BeeFiles 和公有雲介面相似，不用重新學習。</strong></p>
+<p><strong><span style="color: #008000;">《缺點，主要是一般人容易忽略的地方》</span><br><span style="color: #000080;">* 家中外網速度</span>: 家中網速如果過慢，可能會影響外網的檔案讀取.下載速度。<br><span style="color: #000080;">* 機器效能</span>: 初次使用時，多人同時備份容易導致備份速度變慢，且照片 AI 分析也需要花費一些時間才能完成。<br><span style="color: #000080;">* 硬碟故障、資料遺失</span>: 畢竟 BeeStation 是單硬碟 Raid 0 架構，無法保證硬碟沒有壞掉的一天，因此建議用外接硬碟或 Synology C2 定期異地備份。</strong></p>
+<p><strong><span style="color: #008000;">《截至 2024&#x2F;03&#x2F;20，BeeStation 還未支援但建議可以新增的功能》</span></p>
+<ul>
+<li>無法設定每個成員能使用多少空間: 家庭成員僅能共享同一個容量池。</li>
+<li>BeeFiles 不支援檔案請求功能。</li>
+<li>BeePhotos 不支援多位人臉出現在同一照片的篩選，例如要找小明和小華同時出現的照片。</li>
+<li>BeePhotos 照片自動回憶分析，例如上個月在哪裡的照片集錦、五年前和誰的照片集錦…等。</strong></li>
+</ul>
+<p>&lt;hr&#x2F; &gt;</p>
+<p>附上 Synology BeeStation 賣場傳送門：<br><a href="https://sy.to/ygthf" target="_blank" rel="noopener noreferrer">BeeStation 官網</a><br><a href="https://sy.to/pv7yf" target="_blank" rel="noopener noreferrer">BeeStation PChome 賣場</a><br><a href="https://sy.to/rtavs" target="_blank" rel="noopener noreferrer">BeeStation Momo 賣場</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/synology/" rel="tag"># Synology NAS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/07/Photontree-PRO/" rel="next" title="[評測] Photontree PRO｜制霸 965 吋大畫面 3D 頭戴顯示器 體驗心得及優缺點分析">
+      [評測] Photontree PRO｜制霸 965 吋大畫面 3D 頭戴顯示器 體驗心得及優缺點分析 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="EDEN"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">EDEN</p>
+  <div class="site-description" itemprop="description">文章多以開箱文、教學文為主~~</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">66</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+
+<div class="links-of-blogroll motion-element links-of-blogroll-block">
+<br>
+<div class="links-of-blogroll-title">
+    <!-- 設定你要的fa fa icon-->
+    <i class="fa fa-history fa-" aria-hidden="true"></i>
+    最新文章
+</div>
+<ul class="links-of-blogroll-list">
+    <!---->
+    
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2024-03-24T03:00:00+08:00">
+        03/24
+      </time>-->
+      • <a href="/2024/03/Synology-BeeStation/" title="[開箱] 取代 Google One / iCloud 最佳解決方案！Synology BeeStation 個人雲端儲存，照片分享及備份簡易好上手！">[開箱] 取代 Google One / iCloud 最佳解決方案！Synology BeeStation 個人雲端儲存，照片分享及備份簡易好上手！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2022-07-04T08:45:52+08:00">
+        07/04
+      </time>-->
+      • <a href="/2022/07/Photontree-PRO/" title="[評測] Photontree PRO｜制霸 965 吋大畫面 3D 頭戴顯示器 體驗心得及優缺點分析">[評測] Photontree PRO｜制霸 965 吋大畫面 3D 頭戴顯示器 體驗心得及優缺點分析</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-04-19T20:38:00+08:00">
+        04/19
+      </time>-->
+      • <a href="/2021/04/PC-cillin-2021/" title="[教學] 守護電腦「琳」死角！PC-cillin 2021 雲端版防毒軟體，讓 C 琳全面照顧您的上網裝置！">[教學] 守護電腦「琳」死角！PC-cillin 2021 雲端版防毒軟體，讓 C 琳全面照顧您的上網裝置！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2021-02-10T23:50:00+08:00">
+        02/10
+      </time>-->
+      • <a href="/2021/02/Epson-Moverio-BT-40/" title="[開箱] Epson Moverio BT-40 智慧眼鏡，超大螢幕隨時隨地辦公追劇毫不受限！">[開箱] Epson Moverio BT-40 智慧眼鏡，超大螢幕隨時隨地辦公追劇毫不受限！</a>
+      <br>
+    </li>
+    
+    <li class='pull-left' style="white-space:normal; text-align:left; font-size:12px; color:#5ccdff;" >
+      <!--<time title="創建時間" itemprop="dateCreated datePublished" datetime="2020-12-28T03:00:00+08:00">
+        12/28
+      </time>-->
+      • <a href="/2020/12/DSM7-with-Synology-Photos/" title="[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！">[教學] Synology NAS 搭配全新 DSM 7.0，透過 Synology Photos 照片管理與備份輕鬆搞定！</a>
+      <br>
+    </li>
+    
+	<br>
+</ul>
+</div>
+
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">目前瀏覽器不支援canvas，請更換瀏覽器後再試</canvas>
+</div>
+<script>
+(function(){
+    var WINDOW_WIDTH = 860;
+    var WINDOW_HEIGHT = 250;
+    var RADIUS = 7; //球半径
+    var NUMBER_GAP = 15; //数字之间的间隙
+    var u=0.5; //碰撞能量损耗系数
+    var context; //Canvas绘制上下文
+    var balls = []; //存储彩色的小球
+    const colors = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"]; //彩色小球的颜色
+    var currentNums = []; //屏幕显示的8个字符
+    var digit =
+        [
+            [
+                [0,0,1,1,1,0,0],
+                [0,1,1,0,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,0,1,1,0],
+                [0,0,1,1,1,0,0]
+            ],//0
+            [
+                [0,0,0,1,1,0,0],
+                [0,1,1,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [1,1,1,1,1,1,1]
+            ],//1
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,0,0,0],
+                [0,1,1,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,0,0,0,1,1],
+                [1,1,1,1,1,1,1]
+            ],//2
+            [
+                [1,1,1,1,1,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,1,0,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//3
+            [
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,1,0],
+                [0,0,1,1,1,1,0],
+                [0,1,1,0,1,1,0],
+                [1,1,0,0,1,1,0],
+                [1,1,1,1,1,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,1,1]
+            ],//4
+            [
+                [1,1,1,1,1,1,1],
+                [1,1,0,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,1,1,1,1,0],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//5
+            [
+                [0,0,0,0,1,1,0],
+                [0,0,1,1,0,0,0],
+                [0,1,1,0,0,0,0],
+                [1,1,0,0,0,0,0],
+                [1,1,0,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//6
+            [
+                [1,1,1,1,1,1,1],
+                [1,1,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,0,0,1,1,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0],
+                [0,0,1,1,0,0,0]
+            ],//7
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,1,1,0]
+            ],//8
+            [
+                [0,1,1,1,1,1,0],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [1,1,0,0,0,1,1],
+                [0,1,1,1,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,0,1,1],
+                [0,0,0,0,1,1,0],
+                [0,0,0,1,1,0,0],
+                [0,1,1,0,0,0,0]
+            ],//9
+            [
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,1,1,0,0],
+                [0,0,1,1,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,1,1,0,0],
+                [0,0,1,1,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+            ]//:
+        ];
+
+    function drawDatetime(cxt){
+        var nums = [];
+
+        context.fillStyle="rgba(255,255,255,0.9)"
+        var date = new Date();
+        var offsetX = 50, offsetY = 30;
+        var hours = date.getHours();
+        var num1 = Math.floor(hours/10);
+        var num2 = hours%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+        nums.push({num: 10}); //冒号
+        var minutes = date.getMinutes();
+        var num1 = Math.floor(minutes/10);
+        var num2 = minutes%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+        nums.push({num: 10}); //冒号
+        var seconds = date.getSeconds();
+        var num1 = Math.floor(seconds/10);
+        var num2 = seconds%10;
+        nums.push({num: num1});
+        nums.push({num: num2});
+
+        for(var x = 0;x<nums.length;x++){
+            nums[x].offsetX = offsetX;
+            offsetX = drawSingleNumber(offsetX,offsetY, nums[x].num,cxt);
+            //两个数字连一块，应该间隔一些距离
+            if(x<nums.length-1){
+                if((nums[x].num!=10) &&(nums[x+1].num!=10)){
+                    offsetX+=NUMBER_GAP;
+                }
+            }
+        }
+
+        //说明这是初始化
+        if(currentNums.length ==0){
+            currentNums = nums;
+        }else{
+            //进行比较
+            for(var index = 0;index<currentNums.length;index++){
+                if(currentNums[index].num!=nums[index].num){
+                    //不一样时，添加彩色小球
+                    addBalls(nums[index]);
+                    currentNums[index].num=nums[index].num;
+                }
+            }
+        }
+        renderBalls(cxt);
+        updateBalls();
+
+        return date;
+    }
+
+    function addBalls (item) {
+        var num = item.num;
+        var numMatrix = digit[num];
+        for(var y = 0;y<numMatrix.length;y++){
+            for(var x = 0;x<numMatrix[y].length;x++){
+                if(numMatrix[y][x]==1){
+                    var ball={
+                        offsetX:item.offsetX+RADIUS+RADIUS*2*x,
+                        offsetY:30+RADIUS+RADIUS*2*y,
+                        color:colors[Math.floor(Math.random()*colors.length)],
+                        g:1.5+Math.random(),
+                        vx:Math.pow(-1, Math.ceil(Math.random()*10))*4+Math.random(),
+                        vy:-5
+                    }
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    function renderBalls(cxt){
+        for(var index = 0;index<balls.length;index++){
+            cxt.beginPath();
+            cxt.fillStyle=balls[index].color;
+            cxt.arc(balls[index].offsetX, balls[index].offsetY, RADIUS, 0, 2*Math.PI);
+            cxt.fill();
+        }
+    }
+
+    function updateBalls () {
+        var i =0;
+        for(var index = 0;index<balls.length;index++){
+            var ball = balls[index];
+            ball.offsetX += ball.vx;
+            ball.offsetY += ball.vy;
+            ball.vy+=ball.g;
+            if(ball.offsetY > (WINDOW_HEIGHT-RADIUS)){
+                ball.offsetY= WINDOW_HEIGHT-RADIUS;
+                ball.vy=-ball.vy*u;
+            }
+            if(ball.offsetX>RADIUS&&ball.offsetX<(WINDOW_WIDTH-RADIUS)){
+
+                balls[i]=balls[index];
+                i++;
+            }
+        }
+        //去除出边界的球
+        for(;i<balls.length;i++){
+            balls.pop();
+        }
+    }
+    function drawSingleNumber(offsetX, offsetY, num, cxt){
+        var numMatrix = digit[num];
+        for(var y = 0;y<numMatrix.length;y++){
+            for(var x = 0;x<numMatrix[y].length;x++){
+                if(numMatrix[y][x]==1){
+                    cxt.beginPath();
+                    cxt.arc(offsetX+RADIUS+RADIUS*2*x,offsetY+RADIUS+RADIUS*2*y,RADIUS,0,2*Math.PI);
+                    cxt.fill();
+                }
+            }
+        }
+        cxt.beginPath();
+        offsetX += numMatrix[0].length*RADIUS*2;
+        return offsetX;
+    }
+
+    var canvas = document.getElementById("canvas");
+    canvas.width=WINDOW_WIDTH;
+    canvas.height=WINDOW_HEIGHT;
+    context = canvas.getContext("2d");
+
+    //记录当前绘制的时刻
+    var currentDate = new Date();
+
+    setInterval(function(){
+        //清空整个Canvas，重新绘制内容
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+        drawDatetime(context);
+    }, 50)
+})();
+</script>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EDEN</span>
+</div>
+
+        
+
+
+
+
+
+
+<script data-pjax>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"8Kt1mpf1g2omRdBPlPk7U3Fb-MdYXbMMI","app_key":"04kOlAKTbaEd7f3nkY6NJbBn","server_url":null,"security":false};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ede825d02e67d9c5edc3',
+      clientSecret: '78710c0d61a5890dc4769c8abca4021a80568848',
+      repo        : 'comments',
+      owner       : 'ed521',
+      admin       : ['ed521'],
+      id          : '95dd796070f1f36ab1d4063542fcb600',
+        language: 'zh-TW',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+    </div>
+  
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+</body>
+</html>
